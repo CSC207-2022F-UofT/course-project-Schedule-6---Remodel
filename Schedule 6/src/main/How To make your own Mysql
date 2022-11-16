@@ -1,0 +1,11 @@
+1. Go to https://dev.mysql.com/downloads/installer/ and download the installer
+2. install it onto your computer
+3. open up mysql workbench and login (during set up you will need to create a username and password
+   - this is where you use it)
+4. You should see around the bottom left hand corner a thing called schemas. click on it.
+5. Near the word Query you will see what looks like 2 hockey pucks stacked on each other click it and call it database
+   then hit apply.
+6. You will see data base on the left side now. Double click on it so it turns bold
+7. Click it again and now beside the hockey pucks you should see a table creator click it.
+8. In the resources tab you should see table-how-to. Make your table exactly like the image.
+9. Hit apply - done.
