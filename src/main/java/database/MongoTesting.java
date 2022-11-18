@@ -9,7 +9,7 @@ import java.util.List;
 public class MongoTesting {
     public static void main(String[] args) throws UnknownHostException {
 
-        MongoClient mongoClient = new MongoClient();
+        MongoClient mongoClient = new MongoClient("mongodb://localhost:27017");
 
         DB database = mongoClient.getDB("testing");
 
