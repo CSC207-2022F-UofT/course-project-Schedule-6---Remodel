@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>schedule-6-remodel-2</artifactId>
+    <artifactId>schedule-6---Remodel</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>schedule-6---Remodel</name>
 
@@ -66,8 +66,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.schedule6remodel2/com.example.schedule6remodel2.HelloApplication
-                            </mainClass>
+                            <mainClass>com.example.schedule6Remodel/com.example.schedule6Remodel.LoginPage</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
