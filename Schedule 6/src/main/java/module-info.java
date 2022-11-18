@@ -15,4 +15,5 @@ module com.example.project6maven {
     requires javafx.graphics;
     requires mysql.connector.j;
     requires com.calendarfx.view;
+    requires org.mnode.ical4j.core;
 }
