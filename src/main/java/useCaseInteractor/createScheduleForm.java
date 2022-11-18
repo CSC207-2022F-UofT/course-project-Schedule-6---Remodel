@@ -8,7 +8,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.LoginPage;
-import useCaseInteractor.userCollection;
+
 public class createScheduleForm {
 
     public static void newForm() {
