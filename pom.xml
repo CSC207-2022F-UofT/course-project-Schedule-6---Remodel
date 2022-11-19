@@ -44,6 +44,13 @@
             <artifactId>mongo-java-driver</artifactId>
             <version>3.12.11</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.calendarfx</groupId>
+            <artifactId>view</artifactId>
+            <version>11.12.3</version>
+        </dependency>
+
     </dependencies>
 
     <build>
