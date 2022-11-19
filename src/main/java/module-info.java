@@ -15,5 +15,7 @@ module com.example.project6maven {
     requires javafx.graphics;
     //requires mysql.connector.j;
     requires com.calendarfx.view;
-    requires mongo.java.driver;
+//    requires mongo.java.driver;
+    requires org.mongodb.driver.sync.client;
+    requires org.mongodb.bson;
 }
