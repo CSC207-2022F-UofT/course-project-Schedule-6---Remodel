@@ -41,8 +41,8 @@
 
         <dependency>
             <groupId>org.mongodb</groupId>
-            <artifactId>mongodb-driver-sync</artifactId>
-            <version>4.0.5</version>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.12.11</version>
         </dependency>
     </dependencies>
 
