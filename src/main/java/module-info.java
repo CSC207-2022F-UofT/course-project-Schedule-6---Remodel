@@ -2,7 +2,7 @@ module com.example.project6maven {
     requires javafx.controls;
     requires javafx.fxml;
 
-    requires org.controlsfx.controls;
+//    requires org.controlsfx.controls;
     //requires org.kordamp.bootstrapfx.core;
     requires java.sql;
 
@@ -14,6 +14,6 @@ module com.example.project6maven {
     opens entity to javafx.fxml;
     requires javafx.graphics;
     //requires mysql.connector.j;
-    requires com.calendarfx.view;
+//    requires com.calendarfx.view;
     requires mongo.java.driver;
 }
