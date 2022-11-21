@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TaskCreationController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="78.0" prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
+         <children>
+            <Label layoutX="16.0" layoutY="214.0" prefHeight="28.0" prefWidth="87.0" text="CATEGORY">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="151.0" prefHeight="28.0" prefWidth="87.0" text="PRIVACY">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="90.0" prefHeight="28.0" prefWidth="87.0" text="DATE">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="25.0" prefHeight="28.0" prefWidth="87.0" text="TITLE">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="taskTitle" layoutX="14.0" layoutY="53.0" prefHeight="25.0" prefWidth="375.0" promptText="TITLE" style="-fx-background-color: #dfe5e5;" />
+            <TextField fx:id="taskDate" layoutX="14.0" layoutY="118.0" prefHeight="25.0" prefWidth="375.0" promptText="DATE" />
+            <ComboBox fx:id="categoryComboBox" layoutX="16.0" layoutY="242.0" prefWidth="175.0" promptText="SELECT CATEGORY" />
+            <ComboBox fx:id="privacyComboBox" layoutX="16.0" layoutY="179.0" prefWidth="175.0" promptText="PUBLIC/PRIVATE" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="110.0" layoutY="14.0" text="CREATE TASK">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="49.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
