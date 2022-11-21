@@ -1,4 +1,22 @@
 package controller;
 
+import boundary.ImportInputBoundary;
+import useCaseInteractor.IcsParser;
+import useCaseInteractor.ImportRequestModel;
+import useCaseInteractor.ImportResponseModel;
+
+import java.io.FileInputStream;
+
 public class ImportController {
+    final ImportInputBoundary input;
+
+    public ImportController(ImportInputBoundary gateway) {
+        this.input = gateway;
+    }
+
+    ImportResponseModel create(FileInputStream in) {
+        ImportRequestModel requestModel = new ImportRequestModel(new IcsParser(in));
+
+        return input.create(requestModel);
+    }
 }
