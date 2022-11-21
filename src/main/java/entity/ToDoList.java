@@ -11,7 +11,7 @@ public class ToDoList {
     }
 
     public void addTask(String title, String date, String time, String description){
-        this.tasks.add(new Task(title, date, time, description));
+//        this.tasks.add(new Task(title, date, time, description));
     }
 
     public void deleteTask(Task t){
