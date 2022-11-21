@@ -16,4 +16,5 @@ module com.example.project6maven {
     //requires mysql.connector.j;
     requires com.calendarfx.view;
     requires mongo.java.driver;
+    requires org.mnode.ical4j.core;
 }
