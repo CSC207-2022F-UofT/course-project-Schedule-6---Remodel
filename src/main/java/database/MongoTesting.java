@@ -22,7 +22,6 @@ public class MongoTesting {
         DB database = mongoClient.getDB("schedule6-testingdb");
 
         DBCollection collection = database.getCollection("schedule6-testingcollection");
-
         DBObject person = new BasicDBObject("_id", "Nizar123")
                 .append("name", "Bob not the Builder");
 

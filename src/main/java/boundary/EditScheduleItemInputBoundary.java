@@ -1,8 +1,8 @@
 package boundary;
 
-import useCaseInteractor.ScheduleItemInputData;
+import useCaseInteractor.ScheduleItemRequestModel;
 import useCaseInteractor.ScheduleItemResponseModel;
 
 public interface EditScheduleItemInputBoundary {
-    ScheduleItemResponseModel edit(ScheduleItemInputData inputData);
+    ScheduleItemResponseModel edit(ScheduleItemRequestModel inputData);
 }

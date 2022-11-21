@@ -1,4 +1,8 @@
 package presenter;
 
-public class WeeklyInfoPresenter {
+import useCaseInteractor.ScheduleItemResponseModel;
+
+public interface WeeklyInfoPresenter {
+
+    ScheduleItemResponseModel prepareSuccessView(ScheduleItemResponseModel scheduleItemResponseModel);
 }
