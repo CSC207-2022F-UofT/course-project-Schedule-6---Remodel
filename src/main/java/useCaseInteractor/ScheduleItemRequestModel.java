@@ -3,7 +3,7 @@ package useCaseInteractor;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class ScheduleItemInputData {
+public class ScheduleItemRequestModel {
 
     private String title;
 
@@ -13,7 +13,7 @@ public class ScheduleItemInputData {
 
     private LocalTime endTime;
 
-    public ScheduleItemInputData(String title, LocalDate date, LocalTime startTime, LocalTime endTime) {
+    public ScheduleItemRequestModel(String title, LocalDate date, LocalTime startTime, LocalTime endTime) {
         this.title = title;
         this.date = date;
         this.startTime = startTime;

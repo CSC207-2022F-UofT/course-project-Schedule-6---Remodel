@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>schedule-6-remodel-2</artifactId>
+    <artifactId>schedule-6---Remodel</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>schedule-6-remodel-2</name>
+    <name>schedule-6---Remodel</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,7 +25,6 @@
             <artifactId>javafx-fxml</artifactId>
             <version>18.0.1</version>
         </dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -38,11 +37,15 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongo-java-driver</artifactId>
-            <version>2.12.3</version>
+            <version>3.12.11</version>
+        </dependency>
+        <dependency>
+            <groupId>com.calendarfx</groupId>
+            <artifactId>view</artifactId>
+            <version>11.12.3</version>
         </dependency>
     </dependencies>
 
@@ -66,8 +69,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.schedule6remodel2/com.example.schedule6remodel2.HelloApplication
-                            </mainClass>
+                            <mainClass>com.example.schedule6Remodel/com.example.schedule6Remodel.LoginPage</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
