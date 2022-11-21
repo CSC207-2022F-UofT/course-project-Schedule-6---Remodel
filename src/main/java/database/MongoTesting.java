@@ -18,7 +18,6 @@ public class MongoTesting {
         //Brians remote database
 //        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://123:123@cluster1.d3e1rhp.mongodb.net/?retryWrites=true&w=majority"));
 
-
         DB database = mongoClient.getDB("schedule6-testingdb");
 
         DBCollection collection = database.getCollection("schedule6-testingcollection");
