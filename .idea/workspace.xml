@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58ef2c0d-dda3-46fe-b813-6c5d6882ba56" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoTesting.java" afterDir="false" />
+    <list default="true" id="58ef2c0d-dda3-46fe-b813-6c5d6882ba56" name="Changes" comment="xml files">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +60,24 @@
       <option name="presentableId" value="Default" />
       <updated>1668802068292</updated>
       <workItem from="1668802069624" duration="3530000" />
-      <workItem from="1668807659999" duration="386000" />
+      <workItem from="1668807659999" duration="1154000" />
+      <workItem from="1669044599623" duration="4234000" />
     </task>
+    <task id="LOCAL-00001" summary="xml files">
+      <created>1668808131245</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668808131245</updated>
+    </task>
+    <task id="LOCAL-00002" summary="xml files">
+      <created>1668808143558</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668808143558</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,5 +93,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="xml files" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml files" />
   </component>
 </project>
