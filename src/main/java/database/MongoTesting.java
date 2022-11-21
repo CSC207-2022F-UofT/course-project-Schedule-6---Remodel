@@ -23,8 +23,8 @@ public class MongoTesting {
 
         DBCollection collection = database.getCollection("schedule6-testingcollection");
 
-        DBObject person = new BasicDBObject("_id", "Steven1234")
-                .append("name", "Bob the Builder");
+        DBObject person = new BasicDBObject("_id", "NewSteven0912")
+                .append("name", "lebron james");
 
         collection.insert(person);
     }
