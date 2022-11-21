@@ -6,19 +6,22 @@ import java.time.LocalDate;
 
 public class CommonTask implements Task {
 
-    private String title;
+    public String title;
 
-    private LocalDate date;
+    public LocalDate date;
+    public String privacySetting;
 
-    private String privacySetting;
+    public Category category;
 
-    private Category category;
-
-    public CommonTask(String title, LocalDate date, String privacySetting, Category category) {
+    CommonTask(String title, LocalDate date, String privacySetting, Category category){
         this.title = title;
         this.date = date;
         this.privacySetting = privacySetting;
         this.category = category;
+    }
+
+    public CommonTask() {
+
     }
 
     @Override

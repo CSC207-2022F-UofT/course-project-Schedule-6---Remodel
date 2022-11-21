@@ -13,4 +13,5 @@ public interface Task {
     String getPrivacySetting();
 
     Category getCategory();
+
 }
