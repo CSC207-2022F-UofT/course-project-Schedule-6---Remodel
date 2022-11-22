@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.ScheduleController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddScheduleController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="78.0" prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
+         <children>
+            <Label layoutX="19.0" layoutY="216.0" prefHeight="28.0" prefWidth="87.0" text="Ends">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="153.0" prefHeight="28.0" prefWidth="87.0" text="Starts">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="90.0" prefHeight="28.0" prefWidth="87.0" text="Date">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="25.0" prefHeight="28.0" prefWidth="112.0" text="Title">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="scheduleTitle" layoutX="16.0" layoutY="53.0" prefHeight="26.0" prefWidth="212.0" promptText="Event title" />
+            <Button fx:id="addScheduleButton" layoutX="335.0" layoutY="305.0" mnemonicParsing="false" onAction="#create" style="-fx-background-color: #87ae69;" text="ADD">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="startTime" layoutX="16.0" layoutY="181.0" prefHeight="26.0" prefWidth="112.0" promptText="HH:MM" />
+            <TextField fx:id="endTime" layoutX="16.0" layoutY="244.0" prefHeight="26.0" prefWidth="112.0" promptText="HH:MM" />
+            <ChoiceBox fx:id="startAMPM" layoutX="129.0" layoutY="181.0" prefHeight="26.0" prefWidth="55.0" />
+            <ChoiceBox fx:id="endAMPM" layoutX="129.0" layoutY="244.0" prefHeight="26.0" prefWidth="55.0" />
+            <DatePicker fx:id="scheduleDate" layoutX="16.0" layoutY="118.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="95.0" layoutY="14.0" text="Add Event">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="49.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
