@@ -2,8 +2,8 @@ package controller;
 
 import boundary.ImportInputBoundary;
 import useCaseInteractor.IcsParser;
-import useCaseInteractor.ImportRequestModel;
-import useCaseInteractor.ImportResponseModel;
+import requestModel.ImportRequestModel;
+import responseModel.ImportResponseModel;
 
 import java.io.FileInputStream;
 

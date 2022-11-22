@@ -1,6 +1,9 @@
 package boundary;
 
+import requestModel.ImportRequestModel;
+import responseModel.ImportResponseModel;
+
 public interface ImportInputBoundary {
-    useCaseInteractor.ImportResponseModel create(useCaseInteractor.ImportRequestModel requestModel);
+    ImportResponseModel create(ImportRequestModel requestModel);
 
 }

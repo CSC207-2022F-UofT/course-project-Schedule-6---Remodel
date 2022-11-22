@@ -1,6 +1,6 @@
 package presenter;
 
-import useCaseInteractor.ScheduleItemResponseModel;
+import responseModel.ScheduleItemResponseModel;
 
 public interface WeeklyInfoPresenter {
 

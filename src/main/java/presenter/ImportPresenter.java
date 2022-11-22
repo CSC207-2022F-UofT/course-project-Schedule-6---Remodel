@@ -1,7 +1,7 @@
 package presenter;
 
 import boundary.ImportOutputBoundary;
-import useCaseInteractor.ImportResponseModel;
+import responseModel.ImportResponseModel;
 
 public class ImportPresenter implements ImportOutputBoundary {
     @Override

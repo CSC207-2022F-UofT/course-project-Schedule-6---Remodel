@@ -3,8 +3,8 @@ package controller;
 // Temporarily using "pretend inputs" as variables for implementing feature 2
 
 import boundary.AddScheduleItemInputBoundary;
-import useCaseInteractor.ScheduleItemRequestModel;
-import useCaseInteractor.ScheduleItemResponseModel;
+import requestModel.ScheduleItemRequestModel;
+import responseModel.ScheduleItemResponseModel;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

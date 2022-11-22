@@ -1,4 +1,4 @@
-package useCaseInteractor;
+package requestModel;
 
 public class TaskRequestModel {
 }

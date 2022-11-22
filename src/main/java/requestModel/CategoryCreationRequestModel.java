@@ -1,4 +1,4 @@
-package useCaseInteractor;
+package requestModel;
 
 public class CategoryCreationRequestModel {
     private String name;

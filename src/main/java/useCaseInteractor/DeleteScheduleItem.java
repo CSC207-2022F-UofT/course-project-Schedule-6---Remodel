@@ -1,6 +1,8 @@
 package useCaseInteractor;
 
 import boundary.DeleteScheduleItemInputBoundary;
+import requestModel.ScheduleItemRequestModel;
+import responseModel.ScheduleItemResponseModel;
 
 public class DeleteScheduleItem implements DeleteScheduleItemInputBoundary {
 

@@ -1,4 +1,6 @@
-package useCaseInteractor;
+package requestModel;
+
+import useCaseInteractor.IcsParser;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
