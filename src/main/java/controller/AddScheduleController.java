@@ -56,13 +56,13 @@ public class AddScheduleController {
     }
 
     public void setTimes() {
-        String[] parseStartTime = this.startTime.getText().split(";");
+        String[] parseStartTime = this.startTime.getText().split(":");
         if (this.startAMPM.getValue().equals("PM")) {
             parseStartTime[0] = Integer.toString(Integer.parseInt(parseStartTime[0]) + 12);
         }
         this.inputStartTime = LocalTime.of(Integer.parseInt(parseStartTime[0]), Integer.parseInt(parseStartTime[1]));
 
-        String[] parseEndTime = this.endTime.getText().split(";");
+        String[] parseEndTime = this.endTime.getText().split(":");
         if (this.endAMPM.getValue().equals("PM")) {
             parseStartTime[0] = Integer.toString(Integer.parseInt(parseEndTime[0]) + 12);
         }

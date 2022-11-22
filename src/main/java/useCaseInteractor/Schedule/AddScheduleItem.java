@@ -29,8 +29,16 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
     public ScheduleItemResponseModel create(ScheduleItemRequestModel inputData) {
         ScheduleItem scheduleItem = scheduleItemFactory.create(inputData.getTitle(),
                 inputData.getDate(), inputData.getStartTime(), inputData.getEndTime());
-        // created a CommonScheduleItem but need to store it in User
-        return null;
-//        return schedulePresenter.prepareSuccessView();
+
+        // needs to store it in MongoDB
+        // needs to store to a specific user
+        ScheduleItemRequestModel newData = new ScheduleItemRequestModel(scheduleItem.getTitle(),
+                scheduleItem.getDate(), scheduleItem.getStartTime(), scheduleItem.getEndTime());
+        dataAccess.savetoDB(newData);
+
+        // presents the week view
+        ScheduleItemResponseModel responseModel = new ScheduleItemResponseModel(scheduleItem.getTitle(),
+                scheduleItem.getDate(), scheduleItem.getStartTime(), scheduleItem.getEndTime());
+        return schedulePresenter.prepareSuccessView(responseModel);
     }
 }
