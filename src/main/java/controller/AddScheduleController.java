@@ -6,8 +6,8 @@ import boundary.AddScheduleItemInputBoundary;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import useCaseInteractor.ScheduleItemRequestModel;
-import useCaseInteractor.ScheduleItemResponseModel;
+import requestModel.ScheduleItemRequestModel;
+import responseModel.ScheduleItemResponseModel;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

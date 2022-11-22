@@ -6,9 +6,11 @@ import entity.ScheduleItemFactory;
 import presenter.WeeklyInfoPresenter;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.ScheduleItemResponseModel;
+import useCaseInteractor.DataAccess;
 
 public class AddScheduleItem implements AddScheduleItemInputBoundary {
 
+    final DataAccess dataAccess;
     final ScheduleItemFactory scheduleItemFactory;
 
     final WeeklyInfoPresenter schedulePresenter;
@@ -16,7 +18,9 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
     // need to add CommonUser variable so it knows where to add the ScheduleItem
 
 
-    public AddScheduleItem(ScheduleItemFactory scheduleItemFactory, WeeklyInfoPresenter presenter) {
+    public AddScheduleItem(DataAccess dataAccess, ScheduleItemFactory scheduleItemFactory,
+                           WeeklyInfoPresenter presenter) {
+        this.dataAccess = dataAccess;
         this.scheduleItemFactory = scheduleItemFactory;
         this.schedulePresenter = presenter;
     }

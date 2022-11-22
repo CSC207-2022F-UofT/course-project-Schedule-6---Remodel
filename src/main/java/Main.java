@@ -4,7 +4,9 @@ import controller.AddScheduleController;
 import entity.CommonScheduleItemFactory;
 import entity.ScheduleItemFactory;
 import entity.User;
-import useCaseInteractor.AddScheduleItem;
+import presenter.WeeklyInfoPresenter;
+import useCaseInteractor.DataAccess;
+import useCaseInteractor.Schedule.AddScheduleItem;
 
 import java.net.UnknownHostException;
 
@@ -15,12 +17,11 @@ public class Main {
         DB database = mongoClient.getDB("schedule6-testingdb");
         DBCollection collection = database.getCollection("schedule6-testingcollection");
 
-
+        DataAccess dataAccess = null;
+        WeeklyInfoPresenter presenter = null;
         ScheduleItemFactory scheduleItemFactory = new CommonScheduleItemFactory();
-//        AddScheduleItemInputBoundary interactor = new AddScheduleItem();
-//        AddScheduleController addScheduleController = new AddScheduleController(interactor);
-
-
+        AddScheduleItemInputBoundary interactor = new AddScheduleItem(dataAccess, scheduleItemFactory, presenter);
+        AddScheduleController addScheduleController = new AddScheduleController(interactor);
 
 
         DBObject person = new BasicDBObject("_id", "Nizar123")
