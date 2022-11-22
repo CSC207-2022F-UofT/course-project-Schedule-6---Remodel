@@ -9,14 +9,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.DataConnection;
-import useCaseInteractor.createAccountForm;
-import useCaseInteractor.createScheduleForm;
+import useCaseInteractor.User.createAccountForm;
+import useCaseInteractor.Schedule.createScheduleForm;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import useCaseInteractor.setUsername;
-import useCaseInteractor.userCollection;
+import useCaseInteractor.User.setUsername;
+import useCaseInteractor.User.userCollection;
 
 public class LoginPageController {
     @FXML
