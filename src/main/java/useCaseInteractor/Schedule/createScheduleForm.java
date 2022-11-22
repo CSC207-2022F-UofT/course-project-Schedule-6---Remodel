@@ -1,4 +1,4 @@
-package useCaseInteractor;
+package useCaseInteractor.Schedule;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;

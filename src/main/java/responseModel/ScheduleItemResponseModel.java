@@ -1,4 +1,4 @@
-package useCaseInteractor;
+package responseModel;
 
 public class ScheduleItemResponseModel {
 }

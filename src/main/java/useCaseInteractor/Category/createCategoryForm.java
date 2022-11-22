@@ -1,4 +1,4 @@
-package useCaseInteractor;
+package useCaseInteractor.Category;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

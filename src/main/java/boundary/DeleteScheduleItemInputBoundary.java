@@ -1,7 +1,7 @@
 package boundary;
 
-import useCaseInteractor.ScheduleItemRequestModel;
-import useCaseInteractor.ScheduleItemResponseModel;
+import requestModel.ScheduleItemRequestModel;
+import responseModel.ScheduleItemResponseModel;
 
 public interface DeleteScheduleItemInputBoundary {
     ScheduleItemResponseModel delete(ScheduleItemRequestModel inputData);
