@@ -13,8 +13,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class AddScheduleController {
-    final AddScheduleItemInputBoundary userInput;
-
     @FXML
     private Button addScheduleButton;
 
@@ -38,6 +36,8 @@ public class AddScheduleController {
 
     @FXML
     private Label errorMessage;
+
+    final AddScheduleItemInputBoundary userInput;
 
     private String inputTitle;
 
@@ -75,21 +75,23 @@ public class AddScheduleController {
                 startTime.getText().isBlank() || endTime.getText().isBlank()) {
             errorMessage.setText("Please Fill in All Fields");
         } else if (!inputTimeChecker()) {
-            errorMessage.setText("Please Format Time as HH:MM");
+            errorMessage.setText("Please Insert a Valid Time as HH:MM");
         } else {
             create(this.inputTitle, this.inputDate, this.inputStartTime, this.inputEndTime);
         }
     }
 
+    // Checks if user inputs startTime and endTime is formatted and withing boundaries
     public boolean inputTimeChecker() {
-        String[] time = (this.startTime.getText() + this.endTime.getText()).split(";");
-        if (this.startTime.getText().matches("\\d{2}:\\d{2}") &&
-                this.startTime.getText().matches("\\d{2}:\\d{2}") &&
-                (Integer.parseInt(time[0]) <= 12) && (Integer.parseInt(time[2]) <= 12) &&
-                (Integer.parseInt(time[1]) <= 59) && (Integer.parseInt(time[3]) <= 59)) {
-            return true;
-        }
-        return false;
+        String start = this.startTime.getText();
+        String end = this.endTime.getText();
+        String[] time = (start + ":" + end).split(":");
+        //if startTime = "12:30" and endTime is "2:15", then time = ["12", "30", "2", "15"]
+        return (start.matches("\\d{2}:\\d{2}") || start.matches("\\d:\\d{2}")) &&
+                (end.matches("\\d{2}:\\d{2}") || end.matches("\\d:\\d{2}")) &&
+                (Integer.parseInt(time[0]) <= 12) && (Integer.parseInt(time[0]) > 0) &&
+                (Integer.parseInt(time[2]) <= 12) && (Integer.parseInt(time[2]) > 0) &&
+                (Integer.parseInt(time[1]) <= 59) && (Integer.parseInt(time[3]) <= 59);
     }
 
     public ScheduleItemResponseModel create(String title, LocalDate date, LocalTime startTime, LocalTime endTime) {
