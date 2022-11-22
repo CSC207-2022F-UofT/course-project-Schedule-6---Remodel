@@ -1,4 +1,4 @@
-package useCaseInteractor;
+package useCaseInteractor.Schedule;
 
 import boundary.DeleteScheduleItemInputBoundary;
 import requestModel.ScheduleItemRequestModel;

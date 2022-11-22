@@ -1,4 +1,4 @@
-package useCaseInteractor;
+package useCaseInteractor.User;
 
 import entity.User;
 

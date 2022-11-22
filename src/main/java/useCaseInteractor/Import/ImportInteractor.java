@@ -1,4 +1,4 @@
-package useCaseInteractor;
+package useCaseInteractor.Import;
 
 import boundary.ImportInputBoundary;
 import boundary.ImportOutputBoundary;

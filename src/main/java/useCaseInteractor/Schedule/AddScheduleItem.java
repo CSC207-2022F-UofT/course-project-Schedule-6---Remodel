@@ -1,4 +1,4 @@
-package useCaseInteractor;
+package useCaseInteractor.Schedule;
 
 import boundary.AddScheduleItemInputBoundary;
 import entity.ScheduleItem;

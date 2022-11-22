@@ -1,7 +1,7 @@
 package controller;
 
 import boundary.ImportInputBoundary;
-import useCaseInteractor.IcsParser;
+import useCaseInteractor.Import.IcsParser;
 import requestModel.ImportRequestModel;
 import responseModel.ImportResponseModel;
 
