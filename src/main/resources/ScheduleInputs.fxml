@@ -33,7 +33,7 @@
                     </font>
                 </Label>
                 <TextField fx:id="scheduleTitle" layoutX="16.0" layoutY="53.0" prefHeight="26.0" prefWidth="212.0" promptText="Event title" />
-                <Button fx:id="addScheduleButton" layoutX="335.0" layoutY="305.0" mnemonicParsing="false" onAction="#create" style="-fx-background-color: #87ae69;" text="ADD">
+                <Button fx:id="addScheduleButton" layoutX="335.0" layoutY="305.0" mnemonicParsing="false" onAction="#addScheduleAction" style="-fx-background-color: #87ae69;" text="ADD">
                     <font>
                         <Font name="Gill Sans MT Condensed" size="14.0" />
                     </font>
@@ -43,6 +43,11 @@
                 <ChoiceBox fx:id="startAMPM" layoutX="129.0" layoutY="181.0" prefHeight="26.0" prefWidth="55.0" />
                 <ChoiceBox fx:id="endAMPM" layoutX="129.0" layoutY="244.0" prefHeight="26.0" prefWidth="55.0" />
                 <DatePicker fx:id="scheduleDate" layoutX="16.0" layoutY="118.0" />
+            <Label fx:id="errorMessage" layoutX="20.0" layoutY="291.0" prefHeight="28.0" prefWidth="219.0" style="-fx-background-color: #dfe5e5;" textFill="RED">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
             </children>
         </AnchorPane>
         <Label layoutX="95.0" layoutY="14.0" text="Add Event">
