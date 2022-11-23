@@ -1,3 +1,5 @@
+package main;
+
 import boundary.AddScheduleItemInputBoundary;
 import com.mongodb.*;
 import controller.AddScheduleController;
@@ -19,11 +21,11 @@ public class Main {
         DBObject person = new BasicDBObject("_id", "TestUser")
                 .append("name", "Steven Li");
 
-        DataAccess dataAccess = null;
-        WeeklyInfoPresenter presenter = null;
-        ScheduleItemFactory scheduleItemFactory = new CommonScheduleItemFactory();
-        AddScheduleItemInputBoundary interactor = new AddScheduleItem(dataAccess, scheduleItemFactory, presenter);
-        AddScheduleController addScheduleController = new AddScheduleController(interactor);
+//        DataAccess dataAccess = null;
+//        WeeklyInfoPresenter presenter = null;
+//        ScheduleItemFactory scheduleItemFactory = new CommonScheduleItemFactory();
+//        AddScheduleItemInputBoundary interactor = new AddScheduleItem(dataAccess, scheduleItemFactory, presenter);
+//        AddScheduleController addScheduleController = new AddScheduleController(interactor);
 
         collection.insert(person);
     }
