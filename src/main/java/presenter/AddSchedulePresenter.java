@@ -2,7 +2,8 @@ package presenter;
 
 import responseModel.ScheduleItemResponseModel;
 
-public interface WeeklyInfoPresenter {
-
+public interface AddSchedulePresenter {
     ScheduleItemResponseModel prepareSuccessView(ScheduleItemResponseModel scheduleItemResponseModel);
+
+    ScheduleItemResponseModel prepareFailView(String error);
 }

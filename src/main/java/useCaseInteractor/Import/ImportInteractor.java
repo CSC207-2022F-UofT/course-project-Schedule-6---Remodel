@@ -30,6 +30,7 @@ public class ImportInteractor implements ImportInputBoundary {
         // TODO: implement the view of failedImport
         LocalDateTime creation = LocalDateTime.now();
         ImportResponseModel responseModel = new ImportResponseModel(creation.toString());
-        return ImportOutputBoundary.successfulImport(responseModel);
+//        return ImportOutputBoundary.successfulImport(responseModel);
+        return null;
     }
 }
