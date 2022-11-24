@@ -6,4 +6,6 @@ import responseModel.ScheduleItemResponseModel;
 
 public interface DataAccess {
     void savetoDB(ScheduleItemRequestModel requestModel);
+
+    void pullfromDB();
 }

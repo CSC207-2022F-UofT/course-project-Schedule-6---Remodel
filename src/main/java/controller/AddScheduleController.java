@@ -1,8 +1,7 @@
 package controller;
 
-// Temporarily using "pretend inputs" as variables for implementing feature 2
-
 import boundary.AddScheduleItemInputBoundary;
+import presenter.AddSchedulePresenter;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.ScheduleItemResponseModel;
 
@@ -11,26 +10,25 @@ import java.time.LocalTime;
 
 public class AddScheduleController {
 
-    final AddScheduleItemInputBoundary userInput;
+    final AddScheduleItemInputBoundary addScheduleItemInputBoundary;
 
-    public AddScheduleController(AddScheduleItemInputBoundary input) {
-        this.userInput = input;
+    final AddSchedulePresenter presenter;
+
+    public AddScheduleController(AddScheduleItemInputBoundary inputBoundary, AddSchedulePresenter presenter) {
+        this.addScheduleItemInputBoundary = inputBoundary;
+        this.presenter = presenter;
     }
 
     public ScheduleItemResponseModel create(String title, LocalDate date, String startTime, String endTime,
                                             String startAMPM, String endAMPM) {
-        errorMessage.setText("");
         if (title.isBlank() || (date == null) || startTime.isBlank() || endTime.isBlank()) {
-            errorMessage.setText("Please Fill in All Fields");
+            return presenter.prepareFailView("Please Fill in All Fields");
         } else if (!this.inputTimeChecker(startTime, endTime)) {
-            errorMessage.setText("Please Insert a Valid Time as HH:MM");
-        } else {
-            LocalTime fixedStartTime = timeConverter(startTime, startAMPM);
-            LocalTime fixedEndTime = timeConverter(endTime, endAMPM);
-            ScheduleItemRequestModel inputData = new ScheduleItemRequestModel(
-                    title, date, fixedStartTime, fixedEndTime);
-            return userInput.create(inputData);
+            return presenter.prepareFailView("Please Insert a Valid Time as HH:MM");
         }
+        ScheduleItemRequestModel inputData = new ScheduleItemRequestModel(
+                title, date, timeConverter(startTime, startAMPM), timeConverter(endTime, endAMPM));
+        return addScheduleItemInputBoundary.create(inputData);
     }
 
     // Checks if user inputs startTime and endTime is valid

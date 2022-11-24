@@ -3,7 +3,7 @@ package useCaseInteractor.Schedule;
 import boundary.AddScheduleItemInputBoundary;
 import entity.ScheduleItem;
 import entity.ScheduleItemFactory;
-import presenter.WeeklyInfoPresenter;
+import presenter.AddSchedulePresenter;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.ScheduleItemResponseModel;
 import useCaseInteractor.DataAccess;
@@ -13,13 +13,13 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
     final DataAccess dataAccess;
     final ScheduleItemFactory scheduleItemFactory;
 
-    final WeeklyInfoPresenter schedulePresenter;
+    final AddSchedulePresenter schedulePresenter;
 
     // need to add CommonUser variable so it knows where to add the ScheduleItem
 
 
     public AddScheduleItem(DataAccess dataAccess, ScheduleItemFactory scheduleItemFactory,
-                           WeeklyInfoPresenter presenter) {
+                           AddSchedulePresenter presenter) {
         this.dataAccess = dataAccess;
         this.scheduleItemFactory = scheduleItemFactory;
         this.schedulePresenter = presenter;
