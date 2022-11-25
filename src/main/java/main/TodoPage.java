@@ -9,19 +9,20 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.net.URL;
 
-public class ScheduleButton extends Application {
-    @Override
+import static javafx.application.Application.launch;
+
+public class TodoPage extends Application {
     public void start(Stage stage) throws IOException {
-        URL location = ScheduleButton.class.getClassLoader().getResource("ScheduleInputs.fxml");
+
+        URL location = LoginPage.class.getClassLoader().getResource("todo.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
-        Scene scene = new Scene(fxmlLoader.load());
+        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
         stage.initStyle(StageStyle.DECORATED);
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch(args);
+        launch();
     }
-
 }
