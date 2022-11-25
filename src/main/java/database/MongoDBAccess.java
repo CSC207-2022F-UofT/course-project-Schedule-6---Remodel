@@ -1,5 +1,6 @@
 package database;
 
+import com.mongodb.DBCollection;
 import com.mongodb.client.MongoClient;
 import entity.CommonScheduleItem;
 import entity.CommonTask;
@@ -7,16 +8,18 @@ import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 import useCaseInteractor.DataAccess;
 import java.util.ArrayList;
+import entity.User;
 
 public class MongoDBAccess implements DataAccess {
 
-    private final MongoClient mongoClient;
     private final String username;
 
-    public MongoDBAccess(MongoClient mongoClient, String username) {
+    private final DBCollection collection;
 
-        this.mongoClient = mongoClient;
+    public MongoDBAccess(DBCollection collection, String username) {
+
         this.username = username;
+        this.collection = collection;
     }
 
 
@@ -24,7 +27,10 @@ public class MongoDBAccess implements DataAccess {
     public void savetoDB(ScheduleItemRequestModel requestModel) {
         // needs to find the user to save to
         //Will give each user an id, we'll use the id to run through DB
+
     }
+
+
 
     @Override
     public ArrayList<CommonScheduleItem> getUserSchedule(ScheduleItemRequestModel requestModel) {
@@ -47,9 +53,11 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public String getUsername(){
+    public ArrayList<User> getUserData(){
         return null;
     }
+
+    //public
 
     @Override
     public void setUsername(String username){
@@ -57,7 +65,7 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public String getFollowing(){
+    public ArrayList<User> getFollowing(){
         return null;
     }
 
@@ -75,6 +83,7 @@ public class MongoDBAccess implements DataAccess {
     public void appendRequests(String username){
 
     }
+
 
 
 
