@@ -1,13 +1,14 @@
 package database;
 
+import com.mongodb.BasicDBObject;
 import com.mongodb.DBCollection;
+import com.mongodb.DBObject;
 import entity.CommonScheduleItem;
 import entity.CommonTask;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 import useCaseInteractor.DataAccess;
 import java.util.ArrayList;
-import entity.User;
 
 public class MongoDBAccess implements DataAccess {
 
@@ -20,6 +21,7 @@ public class MongoDBAccess implements DataAccess {
         this.username = username;
         this.collection = collection;
     }
+
 
     @Override
     public void setSchedule(ScheduleItemRequestModel requestModel) {
@@ -38,6 +40,7 @@ public class MongoDBAccess implements DataAccess {
 
     @Override
     public void setTask(TaskRequestModel requestModel) {
+
     }
 
     @Override
@@ -51,34 +54,78 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
+    public void savetoDB(ScheduleItemRequestModel requestModel) {
+        // needs to find the user to save to
+        //Will give each user an id, we'll use the id to run through DB
+
+    }
+
+
+
+    @Override
+    public ArrayList<CommonScheduleItem> getUserSchedule(ScheduleItemRequestModel requestModel) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<CommonTask> getUserTask(TaskRequestModel requestModel) {
+        return null;
+    }
+
+    @Override
+    public void deleteFromDB(ScheduleItemRequestModel requestModel) {
+
+    }
+
+    @Override
     public boolean getUserExist(String username){
-        return false;
+        return this.collection.findOne(username) != null;
     }
 
     @Override
-    public ArrayList<User> getUserData(){
-        return null;
+    public DBObject getUserData(){
+        return collection.findOne(this.username);
     }
 
     @Override
-    public void setUsername(String username){
+    public void setPassword(String password){
+        DBObject query = new BasicDBObject("_id", this.username);
+
+        DBObject updateObj = new BasicDBObject("password", password);
+
+        collection.update(query, updateObj);
     }
 
     @Override
-    public ArrayList<User> getFollowing(){
-        return null;
+    public Object getFollowing(){
+        return collection.findOne(this.username).get("followers");
     }
 
     @Override
     public void appendFollowing(String username){
+        DBObject query = new BasicDBObject("_id", this.username);
+
+        DBObject updateObj = new BasicDBObject("followers", username);
+
+        collection.update(query, new BasicDBObject("$push", updateObj));
     }
 
     @Override
-    public String getRequests(){
-        return null;
+    public Object getRequests(){
+        return collection.findOne(this.username).get("requests");
     }
 
     @Override
     public void appendRequests(String username){
+        DBObject query = new BasicDBObject("_id", this.username);
+
+        DBObject updateObj = new BasicDBObject("requests", username);
+
+        collection.update(query, new BasicDBObject("$push", updateObj));
     }
+
+
+
+
+
 }

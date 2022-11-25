@@ -25,17 +25,25 @@ public interface DataAccess {
 
     ArrayList<CommonTask> getUserEntireTask();
 
+    void savetoDB(ScheduleItemRequestModel requestModel);
+
+    ArrayList<CommonScheduleItem> getUserSchedule(ScheduleItemRequestModel requestModel);
+
+    ArrayList<CommonTask> getUserTask(TaskRequestModel requestModel);
+
+    void deleteFromDB(ScheduleItemRequestModel requestModel);
+
     boolean getUserExist(String username);
 
-    ArrayList<User> getUserData();
+    Object getUserData();
 
-    void setUsername(String username);
+    void setPassword(String password);
 
-    ArrayList<User> getFollowing();
+    Object getFollowing();
 
     void appendFollowing(String username);
 
-    String getRequests();
+    Object getRequests();
 
     void appendRequests(String username);
 }
