@@ -1,9 +1,6 @@
 package database;//package database;
 
 import com.mongodb.*;
-import com.mongodb.client.model.Filters;
-import org.bson.Document;
-import org.bson.conversions.Bson;
 
 import java.net.UnknownHostException;
 import java.util.ArrayList;
@@ -26,20 +23,14 @@ public class MongoTesting {
         DB database = mongoClient.getDB("schedule6-testingdb");
 
         DBCollection collection = database.getCollection("schedule6-testingcollection");
-//        ArrayList<String> list = new ArrayList<>();
-//        list.add("Apple");
-//        list.add("Orange");
-//        list.add("Banana");
-//        DBObject person = new BasicDBObject("_id", "steven123")
-//                .append("name", list);
-//
-//        collection.insert(person);
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Orange");
+        list.add("Banana");
+        DBObject person = new BasicDBObject("_id", "steven123")
+                .append("name", list);
 
-        DBObject query = new BasicDBObject("_id", "steven123");
-
-        DBObject updateObj = new BasicDBObject("name", "waffles");
-
-        collection.update(query, new BasicDBObject("$push", updateObj));
+        collection.insert(person);
     }
 }
 

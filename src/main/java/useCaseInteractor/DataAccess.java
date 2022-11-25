@@ -4,6 +4,7 @@ import boundary.AddScheduleItemInputBoundary;
 import com.mongodb.client.MongoCollection;
 import entity.CommonScheduleItem;
 import entity.CommonTask;
+import entity.User;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 import responseModel.ScheduleItemResponseModel;
@@ -22,4 +23,19 @@ public interface DataAccess {
     ArrayList<CommonTask> getUserEntireTask(TaskRequestModel requestModel);
 
     void deleteFromDB(ScheduleItemRequestModel requestModel);
+
+
+    boolean getUserExist(String username);
+
+    ArrayList<User> getUserData();
+
+    void setUsername(String username);
+
+    ArrayList<User> getFollowing();
+
+    void appendFollowing(String username);
+
+    String getRequests();
+
+    void appendRequests(String username);
 }
