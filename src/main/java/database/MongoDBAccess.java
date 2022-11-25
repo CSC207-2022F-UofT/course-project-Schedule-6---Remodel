@@ -1,7 +1,6 @@
 package database;
 
 import com.mongodb.DBCollection;
-import com.mongodb.client.MongoClient;
 import entity.CommonScheduleItem;
 import entity.CommonTask;
 import requestModel.ScheduleItemRequestModel;
@@ -22,29 +21,33 @@ public class MongoDBAccess implements DataAccess {
         this.collection = collection;
     }
 
-
     @Override
-    public void savetoDB(ScheduleItemRequestModel requestModel) {
-        // needs to find the user to save to
-        //Will give each user an id, we'll use the id to run through DB
+    public void setSchedule(ScheduleItemRequestModel requestModel) {
 
     }
 
-
-
     @Override
-    public ArrayList<CommonScheduleItem> getUserSchedule(ScheduleItemRequestModel requestModel) {
+    public CommonScheduleItem getSingleSchedule(ScheduleItemRequestModel requestModel) {
         return null;
     }
 
     @Override
-    public ArrayList<CommonTask> getUserTask(TaskRequestModel requestModel) {
+    public ArrayList<CommonScheduleItem> getUserEntireSchedule() {
         return null;
     }
 
     @Override
-    public void deleteFromDB(ScheduleItemRequestModel requestModel) {
+    public void setTask(TaskRequestModel requestModel) {
+    }
 
+    @Override
+    public CommonTask getSingleTask(TaskRequestModel requestModel) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<CommonTask> getUserEntireTask() {
+        return null;
     }
 
     @Override
@@ -57,11 +60,8 @@ public class MongoDBAccess implements DataAccess {
         return null;
     }
 
-    //public
-
     @Override
     public void setUsername(String username){
-
     }
 
     @Override
@@ -71,7 +71,6 @@ public class MongoDBAccess implements DataAccess {
 
     @Override
     public void appendFollowing(String username){
-
     }
 
     @Override
@@ -81,11 +80,5 @@ public class MongoDBAccess implements DataAccess {
 
     @Override
     public void appendRequests(String username){
-
     }
-
-
-
-
-
 }

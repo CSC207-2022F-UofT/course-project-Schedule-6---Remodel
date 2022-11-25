@@ -13,17 +13,17 @@ import java.util.ArrayList;
 
 public interface DataAccess {
 
-    void saveSchedule(ScheduleItemRequestModel requestModel);
+    void setSchedule(ScheduleItemRequestModel requestModel);
 
-    void saveTask(TaskRequestModel requestModel);
+    CommonScheduleItem getSingleSchedule(ScheduleItemRequestModel requestModel);
 
-    ArrayList<CommonScheduleItem> getUserEntireSchedule(ScheduleItemRequestModel requestModel);
+    ArrayList<CommonScheduleItem> getUserEntireSchedule();
 
-    // should return some type of mongoDB, probably a collection
-    ArrayList<CommonTask> getUserEntireTask(TaskRequestModel requestModel);
+    void setTask(TaskRequestModel requestModel);
 
-    void deleteFromDB(ScheduleItemRequestModel requestModel);
+    CommonTask getSingleTask(TaskRequestModel requestModel);
 
+    ArrayList<CommonTask> getUserEntireTask();
 
     boolean getUserExist(String username);
 
