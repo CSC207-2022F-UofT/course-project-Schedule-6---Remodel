@@ -11,12 +11,15 @@ import responseModel.ScheduleItemResponseModel;
 import java.util.ArrayList;
 
 public interface DataAccess {
-    void savetoDB(ScheduleItemRequestModel requestModel);
 
-    ArrayList<CommonScheduleItem> getUserSchedule(ScheduleItemRequestModel requestModel);
+    void saveSchedule(ScheduleItemRequestModel requestModel);
+
+    void saveTask(TaskRequestModel requestModel);
+
+    ArrayList<CommonScheduleItem> getUserEntireSchedule(ScheduleItemRequestModel requestModel);
 
     // should return some type of mongoDB, probably a collection
-    ArrayList<CommonTask> getUserTask(TaskRequestModel requestModel);
+    ArrayList<CommonTask> getUserEntireTask(TaskRequestModel requestModel);
 
     void deleteFromDB(ScheduleItemRequestModel requestModel);
 }
