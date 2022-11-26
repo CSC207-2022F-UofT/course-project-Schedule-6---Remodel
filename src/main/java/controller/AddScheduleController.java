@@ -6,6 +6,7 @@ import boundary.AddScheduleItemInputBoundary;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 import javafx.util.converter.DateTimeStringConverter;
 import org.w3c.dom.Text;
 import useCaseInteractor.ScheduleItemRequestModel;
@@ -17,6 +18,7 @@ import java.time.format.DateTimeFormatter;
 
 public class AddScheduleController {
     final AddScheduleItemInputBoundary userInput;
+    public Button cancelScheduleButton;
 
     @FXML
     private Button addScheduleButton;
@@ -52,7 +54,10 @@ public class AddScheduleController {
 
         this.inputTitle = scheduleTitle.getText();
         this.inputDate = scheduleDate.getValue();
-        this.setTimes(); //Still need to figure out how to go from TextField to LocalTime with "HH:MM"
+        this.setTimes(); //Still need to figure out how to go from TextField to LocalTime with "HH:MM;
+        //Steven feel free to modify this as you wish. This is just getting the value that is selected
+        String sAMPM = startAMPM.getValue();
+        String eAMPM = endAMPM.getValue();
     }
 
     public ScheduleItemResponseModel create(String title, LocalDate date, LocalTime startTime, LocalTime endTime) {
@@ -62,5 +67,10 @@ public class AddScheduleController {
     }
 
     public void setTimes() {
+    }
+
+    public void cancelScheduleAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) cancelScheduleButton.getScene().getWindow();
+        stage.close();
     }
 }

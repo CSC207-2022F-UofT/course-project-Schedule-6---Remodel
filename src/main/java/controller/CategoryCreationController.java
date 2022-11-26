@@ -3,11 +3,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import java.lang.String;
+import java.util.Objects;
 
 public class CategoryCreationController {
 
+    public Label categoryError;
+    public Button categoryCancelButton;
     @FXML
     private Button categoryCreateAddButton;
 
@@ -26,9 +32,12 @@ public class CategoryCreationController {
     @FXML
     public void addCategory(ActionEvent event) {
         String name_ = categoryTitle.getText();
-        String hex_ = categoryHex.getText();
-        //boolean status_ = categoryComboBox.
+        boolean isPrivate_ = Objects.equals((java.lang.String) privacyComboBox.getValue(), "Private");
 
     }
 
+    public void cancelCategory(ActionEvent actionEvent) {
+        Stage stage = (Stage) categoryCancelButton.getScene().getWindow();
+        stage.close();
+    }
 }
