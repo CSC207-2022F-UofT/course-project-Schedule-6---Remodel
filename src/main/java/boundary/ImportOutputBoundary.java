@@ -1,6 +1,6 @@
 package boundary;
 
-import useCaseInteractor.ImportResponseModel;
+import responseModel.ImportResponseModel;
 
 public interface ImportOutputBoundary {
     ImportResponseModel successfulImport(ImportResponseModel calendar);
