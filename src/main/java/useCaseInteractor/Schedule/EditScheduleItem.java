@@ -22,7 +22,8 @@ public class EditScheduleItem implements EditScheduleItemInputBoundary {
     public ScheduleItemResponseModel edit(ScheduleItemRequestModel newInputData,
                                           ScheduleItemRequestModel oldInputData) {
 
-//        dataAccess.editScheduleItem(newInputData, oldInputData);
+//        dataAccess.deleteScheduleItem(oldInputData);
+//        dataAccess.setScheduleItem(oldInputData);
 
         // not sure about response model yet depends on UI
         ScheduleItemResponseModel responseModel = new ScheduleItemResponseModel(newInputData.getTitle(),
