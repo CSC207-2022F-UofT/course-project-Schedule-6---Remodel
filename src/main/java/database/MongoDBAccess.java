@@ -1,8 +1,6 @@
 package database;
 
 import com.mongodb.*;
-import entity.CommonScheduleItem;
-import entity.CommonTask;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 import useCaseInteractor.DataAccess;
@@ -24,30 +22,32 @@ public class MongoDBAccess implements DataAccess {
     public void setSchedule(ScheduleItemRequestModel requestModel) {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(0, requestModel.getTitle());
-        lst.add(1, requestModel.getDate());
-        lst.add(2, requestModel.getStartTime());
-        lst.add(3, requestModel.getEndTime());
+        lst.add(requestModel.getTitle());
+        lst.add(requestModel.getDate());
+        lst.add(requestModel.getStartTime());
+        lst.add(requestModel.getEndTime());
         DBObject updateObj = new BasicDBObject("schedule", lst);
         this.collection.update(query, new BasicDBObject("$push", updateObj));
     }
 
 
-    // Still unsure about this method, depends on how editing schedule will be implimented
+    // Still unsure about this method, depends on how editing schedule will be implemented
     @Override
     public ArrayList<Object> getSingleSchedule(ScheduleItemRequestModel requestModel) {
-        ArrayList<Object> list = new ArrayList<>();
-        list.add(0, requestModel.getTitle());
-        list.add(1, requestModel.getDate());
-        list.add(2, requestModel.getStartTime());
-        list.add(3, requestModel.getEndTime());
+        ArrayList<Object> lst = new ArrayList<>();
+        lst.add(requestModel.getTitle());
+        lst.add(requestModel.getDate());
+        lst.add(requestModel.getStartTime());
+        lst.add(requestModel.getEndTime());
+
         ArrayList<ArrayList<Object>> entireSchedule = this.getUserEntireSchedule();
-        for (int i = 0; i < entireSchedule.size(); i++) {
-            if (entireSchedule.get(i).equals(list)) {
-                return entireSchedule.get(i);
+
+        for (ArrayList<Object> objects : entireSchedule) {
+            if (objects.equals(lst)) {
+                return objects;
             }
         }
-        return list;
+        return lst;
     }
 
     @Override
@@ -59,6 +59,27 @@ public class MongoDBAccess implements DataAccess {
             entireList.add((ArrayList<Object>) sublist);
         }
         return entireList;
+    }
+
+    @Override
+    public void deleteScheduleItem(ScheduleItemRequestModel requestModel) {
+        DBObject query = new BasicDBObject("_id", this.username);
+
+        ArrayList<Object> lst = new ArrayList<>();
+        lst.add(requestModel.getTitle());
+        lst.add(requestModel.getDate());
+        lst.add(requestModel.getStartTime());
+        lst.add(requestModel.getEndTime());
+
+        ArrayList<ArrayList<Object>> entireSchedule = this.getUserEntireSchedule();
+
+        for (ArrayList<Object> objects : entireSchedule) {
+            if (objects.equals(lst)) {
+                entireSchedule.remove(objects);
+                DBObject updateObj = new BasicDBObject("schedule", entireSchedule);
+                collection.update(query, new BasicDBObject("$set", updateObj));
+            }
+        }
     }
 
     @Override

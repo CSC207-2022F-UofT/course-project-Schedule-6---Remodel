@@ -19,6 +19,8 @@ public interface DataAccess {
 
     ArrayList<ArrayList<Object>> getUserEntireSchedule();
 
+    void deleteScheduleItem(ScheduleItemRequestModel requestModel);
+
     void setTask(TaskRequestModel requestModel);
 
     ArrayList<Object> getSingleTask(TaskRequestModel requestModel);
