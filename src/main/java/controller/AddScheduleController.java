@@ -7,17 +7,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import javafx.util.converter.DateTimeStringConverter;
-import org.w3c.dom.Text;
-import useCaseInteractor.ScheduleItemRequestModel;
-import useCaseInteractor.ScheduleItemResponseModel;
+import presenter.AddSchedulePresenter;
+import requestModel.ScheduleItemRequestModel;
+import responseModel.ScheduleItemResponseModel;
+
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 
 public class AddScheduleController {
     final AddScheduleItemInputBoundary userInput;
+    @FXML
     public Button cancelScheduleButton;
 
     @FXML
@@ -49,7 +49,7 @@ public class AddScheduleController {
 
     private LocalTime inputEndTime;
 
-    public AddScheduleController(AddScheduleItemInputBoundary input) {
+    public AddScheduleController(AddScheduleItemInputBoundary input, AddSchedulePresenter presenter) {
         this.userInput = input;
 
         this.inputTitle = scheduleTitle.getText();
@@ -70,7 +70,13 @@ public class AddScheduleController {
     }
 
     public void cancelScheduleAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) cancelScheduleButton.getScene().getWindow();
-        stage.close();
+//        Stage stage = (Stage) cancelScheduleButton.getScene().getWindow();
+//        stage.close();
+    }
+
+    public void create(String text, LocalDate value, String text1, String text2, String value1, String value2) {
+    }
+
+    public void addScheduleAction(ActionEvent event) {
     }
 }
