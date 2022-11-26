@@ -27,7 +27,7 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
         ScheduleItem scheduleItem = scheduleItemFactory.create(inputData.getTitle(),
                 inputData.getDate(), inputData.getStartTime(), inputData.getEndTime());
 
-        dataAccess.savetoDB(inputData);
+        dataAccess.setSchedule(inputData);
 
         // presents the week view
         ScheduleItemResponseModel responseModel = new ScheduleItemResponseModel(scheduleItem.getTitle(),

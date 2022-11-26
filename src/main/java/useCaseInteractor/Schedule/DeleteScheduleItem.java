@@ -25,7 +25,7 @@ public class DeleteScheduleItem implements DeleteScheduleItemInputBoundary {
     @Override
     public ScheduleItemResponseModel delete(ScheduleItemRequestModel inputData) {
 
-//        dataAccess.deleteScheduleItem(inputData);
+        dataAccess.deleteScheduleItem(inputData);
 
         // not sure about response model yet depends on UI
         ScheduleItemResponseModel responseModel = new ScheduleItemResponseModel(inputData.getTitle(),

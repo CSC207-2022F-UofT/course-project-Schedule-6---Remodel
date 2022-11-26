@@ -1,76 +1,55 @@
 package controller;
 
-// Temporarily using "pretend inputs" as variables for implementing feature 2
-
 import boundary.AddScheduleItemInputBoundary;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.stage.Stage;
-import javafx.util.converter.DateTimeStringConverter;
-import org.w3c.dom.Text;
-import useCaseInteractor.ScheduleItemRequestModel;
-import useCaseInteractor.ScheduleItemResponseModel;
+import boundary.EditScheduleItemInputBoundary;
+import presenter.AddSchedulePresenter;
+import presenter.WeekViewPresenter;
+import requestModel.ScheduleItemRequestModel;
+import responseModel.ScheduleItemResponseModel;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 
 public class AddScheduleController {
-    final AddScheduleItemInputBoundary userInput;
-    public Button cancelScheduleButton;
 
-    @FXML
-    private Button addScheduleButton;
+    final AddScheduleItemInputBoundary addScheduleItemInputBoundary;
 
-    @FXML
-    private TextField scheduleTitle;
+    final AddSchedulePresenter presenter;
 
-    @FXML
-    private DatePicker scheduleDate;
-
-    @FXML
-    private TextField startTime;
-
-    @FXML
-    private TextField endTime;
-
-    @FXML
-    private ChoiceBox<String> startAMPM;
-
-    @FXML
-    private ChoiceBox<String> endAMPM;
-
-    private String inputTitle;
-
-    private LocalDate inputDate;
-
-    private LocalTime inputStartTime;
-
-    private LocalTime inputEndTime;
-
-    public AddScheduleController(AddScheduleItemInputBoundary input) {
-        this.userInput = input;
-
-        this.inputTitle = scheduleTitle.getText();
-        this.inputDate = scheduleDate.getValue();
-        this.setTimes(); //Still need to figure out how to go from TextField to LocalTime with "HH:MM;
-        //Steven feel free to modify this as you wish. This is just getting the value that is selected
-        String sAMPM = startAMPM.getValue();
-        String eAMPM = endAMPM.getValue();
+    public AddScheduleController(AddScheduleItemInputBoundary inputBoundary, AddSchedulePresenter presenter) {
+        this.addScheduleItemInputBoundary = inputBoundary;
+        this.presenter = presenter;
     }
 
-    public ScheduleItemResponseModel create(String title, LocalDate date, LocalTime startTime, LocalTime endTime) {
-        ScheduleItemRequestModel inputData = new ScheduleItemRequestModel(title, date, startTime, endTime);
-        return userInput.create(inputData);
-        // Can change into the userinputs now
+    public ScheduleItemResponseModel edit(String Title, LocalDate Date, String startTime, String endTime,
+                                          String startAMPM, String endAMPM) {
+        if (Title.isBlank() || (Date == null) || startTime.isBlank() || endTime.isBlank()) {
+            return presenter.prepareFailView("Please Fill in All Fields");
+        } else if (!this.inputTimeChecker(startTime, endTime)) {
+            return presenter.prepareFailView("Please Insert a Valid Time as HH:MM");
+        }
+        ScheduleItemRequestModel newInputData = new ScheduleItemRequestModel(
+                Title, Date, timeConverter(startTime, startAMPM), timeConverter(endTime, endAMPM));
+        return addScheduleItemInputBoundary.create(newInputData);
     }
 
-    public void setTimes() {
+    // Checks if user inputs startTime and endTime is valid
+    public boolean inputTimeChecker(String startTime, String endTime) {
+        String[] time = (startTime + ":" + endTime).split(":");
+        //if startTime = "12:30" and endTime is "2:15", then time = ["12", "30", "2", "15"]
+        return (startTime.matches("\\d{2}:\\d{2}") || startTime.matches("\\d:\\d{2}")) &&
+                (endTime.matches("\\d{2}:\\d{2}") || endTime.matches("\\d:\\d{2}")) &&
+                (Integer.parseInt(time[0]) <= 12) && (Integer.parseInt(time[0]) > 0) &&
+                (Integer.parseInt(time[2]) <= 12) && (Integer.parseInt(time[2]) > 0) &&
+                (Integer.parseInt(time[1]) <= 59) && (Integer.parseInt(time[3]) <= 59);
     }
 
-    public void cancelScheduleAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) cancelScheduleButton.getScene().getWindow();
-        stage.close();
+    // changes time from String to LocalTime, and checks if its AM or PM time
+    public LocalTime timeConverter(String time, String AMPM) {
+        String[] parsedTime = time.split(":");
+        if (AMPM.equals("PM")) {
+            parsedTime[0] = Integer.toString(Integer.parseInt(parsedTime[0]) + 12);
+        }
+        return LocalTime.of(Integer.parseInt(parsedTime[0]), Integer.parseInt(parsedTime[1]));
     }
 }
