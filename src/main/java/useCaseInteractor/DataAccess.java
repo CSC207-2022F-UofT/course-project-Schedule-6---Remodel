@@ -15,23 +15,15 @@ public interface DataAccess {
 
     void setSchedule(ScheduleItemRequestModel requestModel);
 
-    CommonScheduleItem getSingleSchedule(ScheduleItemRequestModel requestModel);
+    ArrayList<Object> getSingleSchedule(ScheduleItemRequestModel requestModel);
 
-    ArrayList<CommonScheduleItem> getUserEntireSchedule();
+    ArrayList<ArrayList<Object>> getUserEntireSchedule();
 
     void setTask(TaskRequestModel requestModel);
 
-    CommonTask getSingleTask(TaskRequestModel requestModel);
+    ArrayList<Object> getSingleTask(TaskRequestModel requestModel);
 
-    ArrayList<CommonTask> getUserEntireTask();
-
-    void savetoDB(ScheduleItemRequestModel requestModel);
-
-    ArrayList<CommonScheduleItem> getUserSchedule(ScheduleItemRequestModel requestModel);
-
-    ArrayList<CommonTask> getUserTask(TaskRequestModel requestModel);
-
-    void deleteFromDB(ScheduleItemRequestModel requestModel);
+    ArrayList<ArrayList<Object>> getUserEntireTask();
 
     boolean getUserExist(String username);
 
