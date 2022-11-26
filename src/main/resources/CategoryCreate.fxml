@@ -7,39 +7,48 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CategoryCreationController">
-    <children>
-        <AnchorPane fx:id="statusComboBox" layoutX="1.0" layoutY="78.0" prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
-            <children>
-                <Label layoutX="16.0" layoutY="151.0" prefHeight="28.0" prefWidth="87.0" text="STATUS">
-                    <font>
-                        <Font name="Gill Sans MT Condensed" size="23.0" />
-                    </font>
-                </Label>
-                <Label layoutX="16.0" layoutY="90.0" prefHeight="28.0" prefWidth="87.0" text="HEX">
-                    <font>
-                        <Font name="Gill Sans MT Condensed" size="23.0" />
-                    </font>
-                </Label>
-                <Label layoutX="16.0" layoutY="25.0" prefHeight="28.0" prefWidth="87.0" text="TITLE">
-                    <font>
-                        <Font name="Gill Sans MT Condensed" size="23.0" />
-                    </font>
-                </Label>
-                <Button fx:id="categoryCreateAddButton" layoutX="322.0" layoutY="310.0" mnemonicParsing="false" onAction="#addCategory" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #87ae69;" text="ADD" textFill="WHITE">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Button>
-                <TextField fx:id="categoryTitle" layoutX="13.0" layoutY="53.0" prefHeight="25.0" prefWidth="375.0" promptText="TITLE" style="-fx-background-color: #dfe5e5;" />
-                <ComboBox fx:id="privacyComboBox" layoutX="16.0" layoutY="179.0" prefWidth="175.0" promptText="STATUS" />
-                <TextField fx:id="categoryHex" layoutX="13.0" layoutY="124.0" prefHeight="25.0" prefWidth="375.0" promptText="HEX" style="-fx-background-color: #dfe5e5;" />
-            </children>
-        </AnchorPane>
-        <Label layoutX="71.0" layoutY="14.0" text="CREATE CATEGORY">
-            <font>
-                <Font name="Gill Sans MT Condensed" size="49.0" />
-            </font>
-        </Label>
-    </children>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="293.0" prefWidth="401.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CategoryCreationController">
+   <children>
+      <AnchorPane fx:id="statusComboBox" layoutX="1.0" layoutY="78.0" prefHeight="225.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
+         <children>
+            <Label layoutX="13.0" layoutY="68.0" prefHeight="28.0" prefWidth="87.0" text="STATUS">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="14.0" prefHeight="28.0" prefWidth="87.0" text="TITLE">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="23.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="privacyComboBox" layoutX="13.0" layoutY="96.0" prefHeight="26.0" prefWidth="235.0" promptText="STATUS">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Public"/>
+                     <String fx:value="Private"/>
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <Label fx:id="categoryError" layoutX="13.0" layoutY="135.0" prefHeight="30.0" prefWidth="363.0" textFill="RED" />
+            <TextField layoutX="13.0" layoutY="42.0" prefHeight="26.0" prefWidth="235.0" promptText="Title" />
+            <Button fx:id="categoryCreateAddButton" layoutX="311.0" layoutY="172.0" mnemonicParsing="false" onAction="#addCategory" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #87ae69;" text="ADD">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="categoryCancelButton" layoutX="13.0" layoutY="172.0" mnemonicParsing="false" onAction="#cancelCategory" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #87ae69;" text="CANCEL">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="71.0" layoutY="14.0" text="CREATE CATEGORY">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="49.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
