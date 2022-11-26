@@ -1,9 +1,10 @@
 package database;//package database;
 
 import com.mongodb.*;
+import javafx.scene.control.TextField;
 
 import java.net.UnknownHostException;
-import java.util.ArrayList;
+import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,21 +24,6 @@ public class MongoTesting {
         DB database = mongoClient.getDB("schedule6-testingdb");
 
         DBCollection collection = database.getCollection("schedule6-testingcollection");
-//        ArrayList<String> list = new ArrayList<>();
-//        list.add("Apple");
-//        list.add("Orange");
-//        list.add("Banana");
-//        DBObject person = new BasicDBObject("_id", "steven123")
-//                .append("name", list);
-//
-//        collection.insert(person);
-        DBObject query = new BasicDBObject("_id", "nizar1234");
-
-        DBObject updateObj = new BasicDBObject("name", "pineapple");
-
-        collection.update(query, new BasicDBObject("$push", updateObj));
     }
 }
-
-
 
