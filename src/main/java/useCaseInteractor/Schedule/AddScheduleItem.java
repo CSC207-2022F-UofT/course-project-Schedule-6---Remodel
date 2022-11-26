@@ -34,7 +34,7 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
         // needs to store to a specific user
         ScheduleItemRequestModel newData = new ScheduleItemRequestModel(scheduleItem.getTitle(),
                 scheduleItem.getDate(), scheduleItem.getStartTime(), scheduleItem.getEndTime());
-        dataAccess.savetoDB(newData);
+        dataAccess.setSchedule(newData);
 
         // presents the week view
         ScheduleItemResponseModel responseModel = new ScheduleItemResponseModel(scheduleItem.getTitle(),

@@ -5,8 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-import java.time.LocalDate;
-
 public class AddScheduleScreen {
 
     @FXML
@@ -33,10 +31,9 @@ public class AddScheduleScreen {
     @FXML
     private Label errorMessage;
 
-    private AddScheduleController addScheduleController;
+    private final AddScheduleController addScheduleController;
 
     public AddScheduleScreen(AddScheduleController controller) {
-
         this.addScheduleController = controller;
     }
 

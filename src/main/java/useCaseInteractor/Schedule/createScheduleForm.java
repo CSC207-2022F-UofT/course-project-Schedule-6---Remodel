@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import main.LoginPage;
+import main.ScheduleButton;
 
 public class createScheduleForm {
 
@@ -17,7 +17,7 @@ public class createScheduleForm {
             Group root = new Group();
             root.getChildren().add(label);
 
-            FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("userTimeTable.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(ScheduleButton.class.getClassLoader().getResource("ScheduleInputs.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1099, 700);
             Stage loginStage = new Stage();
             loginStage.initStyle(StageStyle.DECORATED);
