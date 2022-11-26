@@ -1,9 +1,7 @@
 package controller;
 
 import boundary.AddScheduleItemInputBoundary;
-import boundary.EditScheduleItemInputBoundary;
 import presenter.AddSchedulePresenter;
-import presenter.WeekViewPresenter;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.ScheduleItemResponseModel;
 
@@ -21,7 +19,7 @@ public class AddScheduleController {
         this.presenter = presenter;
     }
 
-    public ScheduleItemResponseModel edit(String Title, LocalDate Date, String startTime, String endTime,
+    public ScheduleItemResponseModel create(String Title, LocalDate Date, String startTime, String endTime,
                                           String startAMPM, String endAMPM) {
         if (Title.isBlank() || (Date == null) || startTime.isBlank() || endTime.isBlank()) {
             return presenter.prepareFailView("Please Fill in All Fields");
