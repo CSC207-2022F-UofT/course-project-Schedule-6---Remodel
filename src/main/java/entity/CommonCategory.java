@@ -1,5 +1,5 @@
 package entity;
-//new entity
+//common category
 public class CommonCategory implements Category {
     private final String name;
     private final boolean status;
