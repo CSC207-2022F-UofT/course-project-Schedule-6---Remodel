@@ -9,9 +9,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import screens.scheduleInputsScreen;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.ZoneId;
 
 
 public class TimetableController {
@@ -20,9 +22,26 @@ public class TimetableController {
     private Label TimetableUserName;
     @FXML
     private GridPane Gridlock;
+    @FXML
+    private Button saveButton;
+    @FXML
+    private Button newEvent;
     public static Label usernameChageLabel;
 
     private CalendarView calendar;
+
+    ZoneId TIMEZONE_ET = ZoneId.of("America/Toronto");
+    LocalDate startDate = LocalDate.of(-99999,1,1);
+    LocalDate endDate = LocalDate.of(99999,12,31);
+    @FXML
+    private void printCalendarEntries(){
+        for (Calendar temp : calendar.getCalendars()) {
+            System.out.println(temp.findEntries(startDate, endDate, TIMEZONE_ET));
+        }
+    }
+    @FXML
+    public void scheduleInputsButton(ActionEvent event){scheduleInputsScreen.newForm();}
+
 
 
     private void loadCalendar() {

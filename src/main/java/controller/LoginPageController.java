@@ -9,7 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.DataConnection;
-import useCaseInteractor.User.createAccountForm;
+import screens.createAccountForm;
 import useCaseInteractor.Schedule.createScheduleForm;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

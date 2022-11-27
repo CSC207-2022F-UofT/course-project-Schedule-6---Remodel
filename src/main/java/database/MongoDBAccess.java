@@ -1,10 +1,6 @@
 package database;
 
-import com.mongodb.BasicDBObject;
-import com.mongodb.DBCollection;
-import com.mongodb.DBObject;
-import entity.CommonScheduleItem;
-import entity.CommonTask;
+import com.mongodb.*;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 import useCaseInteractor.DataAccess;
@@ -22,20 +18,68 @@ public class MongoDBAccess implements DataAccess {
         this.collection = collection;
     }
 
-
     @Override
     public void setSchedule(ScheduleItemRequestModel requestModel) {
+        DBObject query = new BasicDBObject("_id", this.username);
+        ArrayList<Object> lst = new ArrayList<>();
+        lst.add(requestModel.getTitle());
+        lst.add(requestModel.getDate());
+        lst.add(requestModel.getStartTime());
+        lst.add(requestModel.getEndTime());
+        DBObject updateObj = new BasicDBObject("schedule", lst);
+        this.collection.update(query, new BasicDBObject("$push", updateObj));
+    }
 
+
+    // Still unsure about this method, depends on how editing schedule will be implemented
+    @Override
+    public ArrayList<Object> getSingleSchedule(ScheduleItemRequestModel requestModel) {
+        ArrayList<Object> lst = new ArrayList<>();
+        lst.add(requestModel.getTitle());
+        lst.add(requestModel.getDate());
+        lst.add(requestModel.getStartTime());
+        lst.add(requestModel.getEndTime());
+
+        ArrayList<ArrayList<Object>> entireSchedule = this.getUserEntireSchedule();
+
+        for (ArrayList<Object> objects : entireSchedule) {
+            if (objects.equals(lst)) {
+                return objects;
+            }
+        }
+        return lst;
     }
 
     @Override
-    public CommonScheduleItem getSingleSchedule(ScheduleItemRequestModel requestModel) {
-        return null;
+    public ArrayList<ArrayList<Object>>  getUserEntireSchedule() {
+        DBObject document = collection.findOne(this.username);
+        BasicDBList list = (BasicDBList) document.get("schedule");
+        ArrayList<ArrayList<Object>> entireList = new ArrayList<>();
+        for (Object sublist: list) {
+            entireList.add((ArrayList<Object>) sublist);
+        }
+        return entireList;
     }
 
     @Override
-    public ArrayList<CommonScheduleItem> getUserEntireSchedule() {
-        return null;
+    public void deleteScheduleItem(ScheduleItemRequestModel requestModel) {
+        DBObject query = new BasicDBObject("_id", this.username);
+
+        ArrayList<Object> lst = new ArrayList<>();
+        lst.add(requestModel.getTitle());
+        lst.add(requestModel.getDate());
+        lst.add(requestModel.getStartTime());
+        lst.add(requestModel.getEndTime());
+
+        ArrayList<ArrayList<Object>> entireSchedule = this.getUserEntireSchedule();
+
+        for (ArrayList<Object> objects : entireSchedule) {
+            if (objects.equals(lst)) {
+                entireSchedule.remove(objects);
+                DBObject updateObj = new BasicDBObject("schedule", entireSchedule);
+                collection.update(query, new BasicDBObject("$set", updateObj));
+            }
+        }
     }
 
     @Override
@@ -44,37 +88,13 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public CommonTask getSingleTask(TaskRequestModel requestModel) {
+    public ArrayList<Object> getSingleTask(TaskRequestModel requestModel) {
         return null;
     }
 
     @Override
-    public ArrayList<CommonTask> getUserEntireTask() {
+    public ArrayList<ArrayList<Object>> getUserEntireTask() {
         return null;
-    }
-
-    @Override
-    public void savetoDB(ScheduleItemRequestModel requestModel) {
-        // needs to find the user to save to
-        //Will give each user an id, we'll use the id to run through DB
-
-    }
-
-
-
-    @Override
-    public ArrayList<CommonScheduleItem> getUserSchedule(ScheduleItemRequestModel requestModel) {
-        return null;
-    }
-
-    @Override
-    public ArrayList<CommonTask> getUserTask(TaskRequestModel requestModel) {
-        return null;
-    }
-
-    @Override
-    public void deleteFromDB(ScheduleItemRequestModel requestModel) {
-
     }
 
     @Override
