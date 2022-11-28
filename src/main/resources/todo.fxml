@@ -5,17 +5,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #89ae6d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #89ae6d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TodoController">
    <children>
       <AnchorPane layoutY="67.0" prefHeight="533.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
          <children>
-            <Label layoutX="161.0" layoutY="255.0" text="NO TASKS YET">
+            <Label fx:id="noTasksLabel" layoutX="161.0" layoutY="255.0" text="NO TASKS YET">
                <font>
                   <Font name="Gill Sans MT Condensed" size="19.0" />
                </font>
             </Label>
-            <Button fx:id="todoAddButton" layoutX="310.0" layoutY="493.0" mnemonicParsing="false" onAction="#todoAddButtonAction" prefWidth="75.0" style="-fx-background-color: #87ae69;" text="ADD" />
+            <Button fx:id="todoAddButton" layoutX="264.0" layoutY="478.0" mnemonicParsing="false" onAction="#todoAddButtonAction" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #87ae69;" text="ADD TASK">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="20.0" />
+               </font></Button>
+            <Button fx:id="addCategoryButton" layoutX="264.0" layoutY="429.0" mnemonicParsing="false" onAction="#todoAddCategory" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #87ae69;" text="ADD CATEGORY">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="20.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <Label layoutX="161.0" layoutY="7.0" text="TODO">

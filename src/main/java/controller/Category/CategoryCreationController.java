@@ -17,8 +17,8 @@ public class CategoryCreationController {
     @FXML
     private Button categoryCreateAddButton;
 
-    @FXML
-    private TextField categoryHex;
+    //@FXML
+    //private TextField categoryHex;
 
     @FXML
     private TextField categoryTitle;
