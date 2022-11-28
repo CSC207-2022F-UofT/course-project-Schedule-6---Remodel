@@ -20,16 +20,9 @@ public class TodoController {
     @FXML
     private Button addTaskButton;
 
-
-    @FXML
-    public void addCategoryButtonAction(ActionEvent event) {
-        //createCategoryForm.newForm();
-
+    public void todoAddButtonAction(ActionEvent actionEvent) {
     }
 
-    @FXML
-    public void addTaskButtonAction(ActionEvent event) {
-       //createTaskForm.newForm();
+    public void todoAddCategory(ActionEvent actionEvent) {
     }
-
 }
