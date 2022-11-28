@@ -1,11 +1,11 @@
 package useCaseInteractor.Schedule;
 
-import boundary.AddScheduleItemInputBoundary;
-import entity.ScheduleItem;
-import entity.ScheduleItemFactory;
+import boundary.Schedule.AddScheduleItemInputBoundary;
+import entity.Schedule.ScheduleItem;
+import entity.Schedule.ScheduleItemFactory;
 import presenter.AddSchedulePresenter;
 import requestModel.ScheduleItemRequestModel;
-import responseModel.ScheduleItemResponseModel;
+import responseModel.Schedule.ScheduleItemResponseModel;
 import useCaseInteractor.DataAccess;
 
 public class AddScheduleItem implements AddScheduleItemInputBoundary {

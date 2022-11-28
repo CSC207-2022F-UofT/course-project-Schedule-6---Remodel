@@ -1,6 +1,6 @@
 package presenter;
 
-import responseModel.ScheduleItemResponseModel;
+import responseModel.Schedule.ScheduleItemResponseModel;
 
 public interface AddSchedulePresenter {
     ScheduleItemResponseModel prepareSuccessView(ScheduleItemResponseModel scheduleItemResponseModel);

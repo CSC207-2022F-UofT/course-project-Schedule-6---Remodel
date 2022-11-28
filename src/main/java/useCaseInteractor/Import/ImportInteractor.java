@@ -1,12 +1,11 @@
 package useCaseInteractor.Import;
 
-import boundary.ImportInputBoundary;
-import boundary.ImportOutputBoundary;
-import entity.ScheduleItem;
-import entity.ScheduleItemFactory;
+import boundary.Import.ImportInputBoundary;
+import entity.Schedule.ScheduleItem;
+import entity.Schedule.ScheduleItemFactory;
 import presenter.ImportPresenter;
 import requestModel.ImportRequestModel;
-import responseModel.ImportResponseModel;
+import responseModel.Import.ImportResponseModel;
 
 import java.time.LocalDateTime;
 

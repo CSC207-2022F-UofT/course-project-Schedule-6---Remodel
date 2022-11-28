@@ -1,7 +1,7 @@
 package presenter;
 
-import boundary.ImportOutputBoundary;
-import responseModel.ImportResponseModel;
+import boundary.Import.ImportOutputBoundary;
+import responseModel.Import.ImportResponseModel;
 
 public class ImportPresenter implements ImportOutputBoundary {
     @Override
