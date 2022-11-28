@@ -134,6 +134,14 @@ public class MongoDBAccess implements DataAccess {
         collection.update(query, new BasicDBObject("$push", updateObj));
     }
 
+    @Override
+    public void setFollowing(ArrayList<String> following){
+        DBObject query = new BasicDBObject("_id", this.username);
+
+        DBObject updateObj = new BasicDBObject("followers", this.username);
+
+        this.collection.update(query, updateObj);
+    }
     //returns current request, you can accept or decline a request
     @Override
     public Object getRequests(){
@@ -151,12 +159,13 @@ public class MongoDBAccess implements DataAccess {
     }
 
     //sets a new request list when a request is accepted or declined
+    @Override
     public void setRequests(ArrayList<String> usernames){
         DBObject query = new BasicDBObject("_id", this.username);
 
-        DBObject updateObj = new BasicDBObject("requests", username);
+        DBObject updateObj = new BasicDBObject("requests", this.username);
 
-        collection.update(query, updateObj);
+        this.collection.update(query, updateObj);
     }
 
 
