@@ -75,40 +75,7 @@ public class LoginPageController {
     public void registerButtonAction(ActionEvent event){createAccountForm.newForm();}
 
 
-    //STABLE
-    public  User Login() {
-        User user = null;
-        DataConnection connection = new DataConnection();
-        Connection connectionDataBase = connection.getConnection();
 
-        String verifyLogin = "SELECT * FROM useraccounts WHERE username=? AND password=?";
-
-        try {
-            Statement statement = connectionDataBase.createStatement();
-            PreparedStatement preparedStatement = connection.databaseuser.prepareStatement(verifyLogin);
-            preparedStatement.setString(1, usernameTextField.getText());
-            preparedStatement.setString(2, passwordTextField.getText());
-
-            ResultSet results = preparedStatement.executeQuery();
-
-            if (results.next()) {
-                user = new User();
-                user.firstname = results.getString("firstname");
-                user.lastname = results.getString("lastname");
-                user.username = results.getString("username");
-                user.password = results.getString("password");
-            }
-            statement.close();
-            connectionDataBase.close();
-
-        } catch (Exception e) {
-            System.out.println(connection);
-            e.printStackTrace();
-            e.getCause();
-        }
-
-        return user;
-    }
 
     public User login(DBCollection collection){
         User user = null;
