@@ -1,26 +1,11 @@
 package entity.User;
 
-public class Request {
+import com.mongodb.DBCollection;
 
-    private String from;
+public interface Request {
 
-    public Request(String from){
-        this.from = from;
-    }
+    void accept(DBCollection collection);
 
-
-    public String accept(){
-        /**
-         Moves from to friends list, moves current user to from's friend list in DB.
-         **/
-        return this.from + " added as a friend.";
-    }
-
-    public String decline(){
-        /**
-         Removes from's request
-         **/
-        return this.from + " was not added as a friend";
-    }
+    void decline(DBCollection collection);
 }
 
