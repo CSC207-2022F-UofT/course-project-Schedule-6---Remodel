@@ -1,6 +1,6 @@
 package screens;
 
-import controller.AddScheduleController;
+import controller.Schedule.AddScheduleController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;

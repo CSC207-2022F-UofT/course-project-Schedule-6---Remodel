@@ -4,7 +4,7 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
-import entity.Search;
+import Search;
 import database.MongoDBAccess;
 
 import java.net.UnknownHostException;
