@@ -1,4 +1,8 @@
 package entity;
+import entity.Category.Category;
+import entity.Category.CommonCategory;
+import entity.Task.Task;
+
 import java.util.ArrayList;
 
 public class ToDoList {

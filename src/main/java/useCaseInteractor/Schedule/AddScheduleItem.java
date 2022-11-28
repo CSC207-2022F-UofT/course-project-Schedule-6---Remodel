@@ -1,10 +1,11 @@
 package useCaseInteractor.Schedule;
 
-import boundary.AddScheduleItemInputBoundary;
-import entity.ScheduleItem;
-import entity.ScheduleItemFactory;
+import boundary.Schedule.AddScheduleItemInputBoundary;
+import entity.Schedule.ScheduleItem;
+import entity.Schedule.ScheduleItemFactory;
 import presenter.AddSchedulePresenter;
-import responseModel.ScheduleItemResponseModel;
+import requestModel.ScheduleItemRequestModel;
+import responseModel.Schedule.ScheduleItemResponseModel;
 import useCaseInteractor.DataAccess;
 
 public class AddScheduleItem implements AddScheduleItemInputBoundary {
@@ -13,9 +14,6 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
     final ScheduleItemFactory scheduleItemFactory;
 
     final AddSchedulePresenter schedulePresenter;
-
-    // need to add CommonUser variable so it knows where to add the ScheduleItem
-
 
     public AddScheduleItem(DataAccess dataAccess, ScheduleItemFactory scheduleItemFactory,
                            AddSchedulePresenter presenter) {
@@ -29,11 +27,7 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
         ScheduleItem scheduleItem = scheduleItemFactory.create(inputData.getTitle(),
                 inputData.getDate(), inputData.getStartTime(), inputData.getEndTime());
 
-        // needs to store it in MongoDB
-        // needs to store to a specific user
-        ScheduleItemRequestModel newData = new ScheduleItemRequestModel(scheduleItem.getTitle(),
-                scheduleItem.getDate(), scheduleItem.getStartTime(), scheduleItem.getEndTime());
-        dataAccess.savetoDB(newData);
+        dataAccess.setSchedule(inputData);
 
         // presents the week view
         ScheduleItemResponseModel responseModel = new ScheduleItemResponseModel(scheduleItem.getTitle(),

@@ -1,6 +1,6 @@
 package useCaseInteractor.User;
 
-import controller.TimetableController;
+import controller.Schedule.TimetableController;
 
 public class setUsername {
 
