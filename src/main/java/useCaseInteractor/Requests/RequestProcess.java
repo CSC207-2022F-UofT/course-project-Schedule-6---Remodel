@@ -20,17 +20,19 @@ public class RequestProcess implements Request {
         this.from = from;
     }
 
+    //Accepts users by making them follow each other
     public void accept(DBCollection collection){
         MongoDBAccess client = new MongoDBAccess(collection, userCollection.getUsername());
 
-        client.appendRequests(this.from);
+        client.appendFollowing(this.from);
 
         MongoDBAccess client2 = new MongoDBAccess(collection, this.from);
 
-        client2.appendRequests(userCollection.getUsername());
+        client2.appendFollowing(userCollection.getUsername());
 
     }
 
+    //Declines the request by removing out of the db
     public void decline(DBCollection collection){
         MongoDBAccess client = new MongoDBAccess(collection, this.from);
         ArrayList<String> currRequests = (ArrayList<String>) client.getRequests();
@@ -38,6 +40,7 @@ public class RequestProcess implements Request {
         client.setRequests(currRequests);
     }
 
+    //Creates client and collects collection.
     public void main(String[] args) throws UnknownHostException {
         MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
 

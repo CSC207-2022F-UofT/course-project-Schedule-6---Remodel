@@ -18,6 +18,7 @@ public class launchSearch implements Search {
         this.username = username;
     }
 
+    //sends a request if the user <username> exists
     @Override
     public boolean sendRequest(DBCollection collection) {
 
@@ -31,6 +32,7 @@ public class launchSearch implements Search {
 
     }
 
+    //connects to DB and adds follow request
     public void main(String[] args) throws UnknownHostException {
         MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
 

@@ -102,11 +102,13 @@ public class MongoDBAccess implements DataAccess {
         return this.collection.findOne(username) != null;
     }
 
+    //returns all user data
     @Override
     public DBObject getUserData(){
         return collection.findOne(this.username);
     }
 
+    //reset/setting password
     @Override
     public void setPassword(String password){
         DBObject query = new BasicDBObject("_id", this.username);
@@ -116,11 +118,13 @@ public class MongoDBAccess implements DataAccess {
         collection.update(query, updateObj);
     }
 
+    //returns following list
     @Override
     public Object getFollowing(){
         return collection.findOne(this.username).get("followers");
     }
 
+    //add follower to following list
     @Override
     public void appendFollowing(String username){
         DBObject query = new BasicDBObject("_id", this.username);
@@ -130,11 +134,13 @@ public class MongoDBAccess implements DataAccess {
         collection.update(query, new BasicDBObject("$push", updateObj));
     }
 
+    //returns current request, you can accept or decline a request
     @Override
     public Object getRequests(){
         return collection.findOne(this.username).get("requests");
     }
 
+    //adds a request to list of requests.
     @Override
     public void appendRequests(String username){
         DBObject query = new BasicDBObject("_id", this.username);
@@ -144,6 +150,7 @@ public class MongoDBAccess implements DataAccess {
         collection.update(query, new BasicDBObject("$push", updateObj));
     }
 
+    //sets a new request list when a request is accepted or declined
     public void setRequests(ArrayList<String> usernames){
         DBObject query = new BasicDBObject("_id", this.username);
 
