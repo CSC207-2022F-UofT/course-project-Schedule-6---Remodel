@@ -9,7 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-import screens.scheduleInputsScreen;
+//import screens.scheduleInputsScreen;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -40,7 +40,7 @@ public class TimetableController {
         }
     }
     @FXML
-    public void scheduleInputsButton(ActionEvent event){scheduleInputsScreen.newForm();}
+    //public void scheduleInputsButton(ActionEvent event){scheduleInputsScreen.newForm();}
 
 
 
