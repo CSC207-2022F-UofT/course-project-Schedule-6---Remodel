@@ -144,6 +144,14 @@ public class MongoDBAccess implements DataAccess {
         collection.update(query, new BasicDBObject("$push", updateObj));
     }
 
+    public void setRequests(ArrayList<String> usernames){
+        DBObject query = new BasicDBObject("_id", this.username);
+
+        DBObject updateObj = new BasicDBObject("requests", username);
+
+        collection.update(query, updateObj);
+    }
+
 
 
 
