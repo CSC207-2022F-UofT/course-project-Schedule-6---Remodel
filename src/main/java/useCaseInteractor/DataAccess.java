@@ -31,7 +31,12 @@ public interface DataAccess {
 
     void appendFollowing(String username);
 
+    void setFollowing(ArrayList<String> following);
+
     Object getRequests();
 
     void appendRequests(String username);
+
+    //sets a new request list when a request is accepted or declined
+    void setRequests(ArrayList<String> usernames);
 }
