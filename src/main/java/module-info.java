@@ -8,10 +8,26 @@ module com.example.project6maven {
 
     opens main to javafx.fxml;
     exports main;
-    exports controller;
-    opens controller to javafx.fxml;
     exports entity;
     opens entity to javafx.fxml;
+    exports controller.Schedule;
+    opens controller.Schedule to javafx.fxml;
+    exports controller.Task;
+    opens controller.Task to javafx.fxml;
+    exports controller.Category;
+    opens controller.Category to javafx.fxml;
+    exports controller.User;
+    opens controller.User to javafx.fxml;
+    exports controller.Import;
+    opens controller.Import to javafx.fxml;
+    exports entity.Category;
+    opens entity.Category to javafx.fxml;
+    exports entity.Schedule;
+    opens entity.Schedule to javafx.fxml;
+    exports entity.Task;
+    opens entity.Task to javafx.fxml;
+    exports entity.User;
+    opens entity.User to javafx.fxml;
     requires javafx.graphics;
     //requires mysql.connector.j;
     requires com.calendarfx.view;

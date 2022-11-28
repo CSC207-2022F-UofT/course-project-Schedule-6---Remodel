@@ -1,20 +1,14 @@
 package main;
 
-import boundary.AddScheduleItemInputBoundary;
+import boundary.Schedule.AddScheduleItemInputBoundary;
 import com.mongodb.*;
-import controller.AddScheduleController;
-import entity.CommonScheduleItemFactory;
-import entity.ScheduleItemFactory;
-import entity.User;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.StageStyle;
+import controller.Schedule.AddScheduleController;
+import entity.Schedule.CommonScheduleItemFactory;
+import entity.Schedule.ScheduleItemFactory;
 import presenter.AddSchedulePresenter;
-import screens.AddScheduleScreen;
 import useCaseInteractor.DataAccess;
 import useCaseInteractor.Schedule.AddScheduleItem;
 
-import java.net.URL;
 import java.net.UnknownHostException;
 
 public class Main {
