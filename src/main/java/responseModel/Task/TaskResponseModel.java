@@ -1,7 +1,7 @@
 package responseModel.Task;
 
 
-import entity.CommonCategory;
+import entity.Category.CommonCategory;
 
 import java.time.LocalDate;
 
