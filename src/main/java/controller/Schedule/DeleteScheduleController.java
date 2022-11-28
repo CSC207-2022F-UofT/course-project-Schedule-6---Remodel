@@ -1,11 +1,11 @@
 package controller.Schedule;
 
-import boundary.AddScheduleItemInputBoundary;
-import boundary.DeleteScheduleItemInputBoundary;
+import boundary.Schedule.AddScheduleItemInputBoundary;
+import boundary.Schedule.DeleteScheduleItemInputBoundary;
 import presenter.AddSchedulePresenter;
 import presenter.WeekViewPresenter;
 import requestModel.ScheduleItemRequestModel;
-import responseModel.ScheduleItemResponseModel;
+import responseModel.Schedule.ScheduleItemResponseModel;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

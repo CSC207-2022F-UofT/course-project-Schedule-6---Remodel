@@ -1,9 +1,9 @@
-package controller;
+package controller.Schedule;
 
-import boundary.AddScheduleItemInputBoundary;
+import boundary.Schedule.AddScheduleItemInputBoundary;
 import presenter.AddSchedulePresenter;
 import requestModel.ScheduleItemRequestModel;
-import responseModel.ScheduleItemResponseModel;
+import responseModel.Schedule.ScheduleItemResponseModel;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
