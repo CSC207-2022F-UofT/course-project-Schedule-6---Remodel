@@ -1,6 +1,6 @@
 package useCaseInteractor.User;
 
-import entity.User;
+import entity.User.User;
 
 public class userCollection {
 

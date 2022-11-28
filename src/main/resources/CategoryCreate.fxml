@@ -9,7 +9,7 @@
 
 <?import javafx.collections.FXCollections?>
 <?import java.lang.String?>
-<AnchorPane prefHeight="293.0" prefWidth="401.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CategoryCreationController">
+<AnchorPane prefHeight="293.0" prefWidth="401.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Category.CategoryCreationController">
    <children>
       <AnchorPane fx:id="statusComboBox" layoutX="1.0" layoutY="78.0" prefHeight="225.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
          <children>
