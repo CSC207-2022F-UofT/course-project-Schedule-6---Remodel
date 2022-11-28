@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58ef2c0d-dda3-46fe-b813-6c5d6882ba56" name="Changes" comment="pull issue from misc">
+    <list default="true" id="58ef2c0d-dda3-46fe-b813-6c5d6882ba56" name="Changes" comment="reorganized packages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CategoryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/CategoryFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategoryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategoryFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +70,7 @@
       <workItem from="1669426214323" duration="1955000" />
       <workItem from="1669584312630" duration="260000" />
       <workItem from="1669584585127" duration="4428000" />
+      <workItem from="1669615677647" duration="1066000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -109,7 +114,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669615586305</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="pull issue from misc">
+      <created>1669615697867</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669615697867</updated>
+    </task>
+    <task id="LOCAL-00008" summary="reorganized packages">
+      <created>1669615912380</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669615912380</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +150,7 @@
     <MESSAGE value="MongoTesting" />
     <MESSAGE value="update from main" />
     <MESSAGE value="pull issue from misc" />
-    <option name="LAST_COMMIT_MESSAGE" value="pull issue from misc" />
+    <MESSAGE value="reorganized packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="reorganized packages" />
   </component>
 </project>
