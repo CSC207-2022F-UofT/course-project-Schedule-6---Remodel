@@ -25,6 +25,4 @@ public class CategoryCreationRequestModel {
     void setStatus(boolean status) {
         this.status = status;
     }
-
-
 }

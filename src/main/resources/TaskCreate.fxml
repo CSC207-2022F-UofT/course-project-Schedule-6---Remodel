@@ -11,7 +11,7 @@
 <?import java.lang.String?>
 
 
-<AnchorPane prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TaskCreationController">
+<AnchorPane prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Task.TaskCreationController">
    <children>
       <AnchorPane layoutX="1.0" layoutY="78.0" prefHeight="371.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
          <children>
