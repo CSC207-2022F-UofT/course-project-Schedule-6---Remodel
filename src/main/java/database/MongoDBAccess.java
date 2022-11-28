@@ -102,6 +102,10 @@ public class MongoDBAccess implements DataAccess {
         return this.collection.findOne(username) != null;
     }
 
+
+    @Override
+    public boolean getUserExist(){return this.collection.findOne(this.username) != null;}
+
     //returns all user data
     @Override
     public DBObject getUserData(){
@@ -132,6 +136,11 @@ public class MongoDBAccess implements DataAccess {
         DBObject updateObj = new BasicDBObject("followers", username);
 
         collection.update(query, new BasicDBObject("$push", updateObj));
+    }
+
+    @Override
+    public boolean checkPassword(String password){
+        return collection.findOne(this.username).get("password") == password;
     }
 
     @Override
