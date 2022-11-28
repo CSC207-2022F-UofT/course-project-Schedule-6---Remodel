@@ -49,5 +49,4 @@ public class AddScheduleController {
             parsedTime[0] = Integer.toString(Integer.parseInt(parsedTime[0]) + 12);
         }
         return LocalTime.of(Integer.parseInt(parsedTime[0]), Integer.parseInt(parsedTime[1]));
-    }
 }

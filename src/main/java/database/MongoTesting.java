@@ -40,9 +40,9 @@ public class MongoTesting {
         sublist_2.add(LocalTime.of(3, 30));
         list.add(sublist_2);
         list.add(sublist_1);
-//        DBObject person = new BasicDBObject("_id", "test_user123")
-//                .append("schedule", list);
-//        collection.insert(person);
+        DBObject person = new BasicDBObject("_id", "nizar")
+                .append("schedule", list);
+        collection.insert(person);
 
         DBObject query = new BasicDBObject("_id", "test_user123");
 
