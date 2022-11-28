@@ -104,7 +104,7 @@ public class MongoDBAccess implements DataAccess {
 
 
     @Override
-    public boolean getUserExist(){return this.collection.findOne(this.username) != null;}
+    public boolean getUserExist(){ return this.collection.findOne(this.username) != null;}
 
     //returns all user data
     @Override
@@ -140,7 +140,7 @@ public class MongoDBAccess implements DataAccess {
 
     @Override
     public boolean checkPassword(String password){
-        return collection.findOne(this.username).get("password") == password;
+        return collection.findOne(this.username).get("password").equals(password);
     }
 
     @Override
