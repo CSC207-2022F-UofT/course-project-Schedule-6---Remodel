@@ -7,6 +7,7 @@ import entity.ScheduleItemFactory;
 import presenter.ImportPresenter;
 import requestModel.ImportRequestModel;
 import responseModel.ImportResponseModel;
+import useCaseInteractor.Schedule.AddScheduleItem;
 
 import java.time.LocalDateTime;
 
@@ -30,7 +31,7 @@ public class ImportInteractor implements ImportInputBoundary {
         // TODO: implement the view of failedImport
         LocalDateTime creation = LocalDateTime.now();
         ImportResponseModel responseModel = new ImportResponseModel(creation.toString());
-//        return ImportOutputBoundary.successfulImport(responseModel);
-        return null;
+        ImportOutputBoundary output = new ImportPresenter();
+        return output.successfulImport(responseModel);
     }
 }

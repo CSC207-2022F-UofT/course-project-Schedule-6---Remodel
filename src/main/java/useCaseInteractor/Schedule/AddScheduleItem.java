@@ -4,7 +4,6 @@ import boundary.AddScheduleItemInputBoundary;
 import entity.ScheduleItem;
 import entity.ScheduleItemFactory;
 import presenter.AddSchedulePresenter;
-import requestModel.ScheduleItemRequestModel;
 import responseModel.ScheduleItemResponseModel;
 import useCaseInteractor.DataAccess;
 

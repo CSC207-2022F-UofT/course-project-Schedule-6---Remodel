@@ -31,8 +31,9 @@ public class IcsParser {
         ArrayList<String> titles = new ArrayList<>();
         for (CalendarComponent component:this.components) {
             if (component instanceof VEvent) {
-                String eventTitle = String.valueOf(component.getProperty(Property.SUMMARY));
-                titles.add(eventTitle);
+                String eventSummary = String.valueOf(component.getProperty(Property.SUMMARY));
+                String title = eventSummary.substring(eventSummary.indexOf(":") + 1, eventSummary.indexOf("]"));
+                titles.add(title.strip());
             }
         }
         return titles;

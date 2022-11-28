@@ -17,6 +17,6 @@ public class ImportController {
     ImportResponseModel create(FileInputStream in) {
         ImportRequestModel requestModel = new ImportRequestModel(new IcsParser(in));
 
-        return input.create(requestModel);
+        return this.input.create(requestModel);
     }
 }

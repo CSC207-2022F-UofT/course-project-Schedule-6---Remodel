@@ -2,7 +2,6 @@ package controller;
 
 import boundary.AddScheduleItemInputBoundary;
 import presenter.AddSchedulePresenter;
-import requestModel.ScheduleItemRequestModel;
 import responseModel.ScheduleItemResponseModel;
 
 import java.time.LocalDate;
