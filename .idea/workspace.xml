@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58ef2c0d-dda3-46fe-b813-6c5d6882ba56" name="Changes" comment="reorganized packages">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CategoryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/CategoryFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategoryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategoryFactory.java" afterDir="false" />
-    </list>
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Deleting ToDoList.java" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +13,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feature-2-schedule-editor" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

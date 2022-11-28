@@ -3,11 +3,13 @@ package requestModel;
 public class CategoryCreationRequestModel {
     private String name;
     private boolean status;
+    private String hex;
 
 
-    public CategoryCreationRequestModel(String name, boolean status) {
+    public CategoryCreationRequestModel(String name, boolean status, String hex) {
         this.name = name;
         this.status = status;
+        this.hex = hex;
     }
 
     String getName() {
@@ -25,4 +27,18 @@ public class CategoryCreationRequestModel {
     void setStatus(boolean status) {
         this.status = status;
     }
+
+    String getHex() {
+        return hex;
+    }
+
+    void setHex() {
+        this.hex = hex;
+    }
+
+
+
+
+
+
 }
