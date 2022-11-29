@@ -4,11 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Deleting ToDoList.java" />
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Deleting ToDoList.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ToDoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ToDoList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/DataConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/createAccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateRegistrationScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/RegistrationPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project6.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -28,6 +46,14 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2HjcjUqh7888EexIO8QR2YAnepC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,15 +70,39 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/RAZER/IdeaProjects/Remodel&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
+      <module name="schedule-6---Remodel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LoginPage" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="58ef2c0d-dda3-46fe-b813-6c5d6882ba56" name="Changes" comment="" />
+      <changelist id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Deleting ToDoList.java" />
       <created>1668802068292</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -65,6 +115,7 @@
       <workItem from="1669584312630" duration="260000" />
       <workItem from="1669584585127" duration="4428000" />
       <workItem from="1669615677647" duration="1066000" />
+      <workItem from="1669688229778" duration="9895000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>

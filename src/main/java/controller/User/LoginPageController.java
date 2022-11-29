@@ -12,16 +12,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import main.DataConnection;
-import screens.createAccountForm;
+import screens.CreateRegistrationScreen;
 import useCaseInteractor.Schedule.createScheduleForm;
 
 import java.net.UnknownHostException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 import useCaseInteractor.User.setUsername;
 import useCaseInteractor.User.userCollection;
 import database.MongoDBAccess;
@@ -53,18 +47,13 @@ public class LoginPageController {
                 loginMessageLabel.setText("LOGIN SUCCESSFUL");
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 stage.close();
-
                 //Username of the person logged in is Stored in the user collector
                 userCollection.setUser(loginAttempt);
                 //The schedule form opens
                 createScheduleForm.newForm();
                 setUsername.setName();
-                System.out.println("Successful Authentication of: " + loginAttempt.username);
-                System.out.println("           First name: " + loginAttempt.firstname);
-                System.out.println("           Last name: " + loginAttempt.lastname);
-
             }
-            else {
+            if (loginAttempt == null) {
                 loginMessageLabel.setText("USERNAME OR PASSWORD INCORRECT");
             }
         } else {
@@ -72,9 +61,8 @@ public class LoginPageController {
         }
 
     }
-    public void registerButtonAction(ActionEvent event){createAccountForm.newForm();}
-
-
+    public void registerButtonAction(ActionEvent event){
+        CreateRegistrationScreen.newForm();}
 
 
     public User login(DBCollection collection){
@@ -87,8 +75,6 @@ public class LoginPageController {
 
         if(client.getUserExist(usernameTextField.getText()) && client.checkPassword(passwordTextField.getText())){
             user = new User();
-            //user.firstname = results.getString("firstname");
-            //user.lastname = results.getString("lastname");
             user.username = usernameTextField.getText();
             user.password = passwordTextField.getText();
         }
@@ -100,16 +86,9 @@ public class LoginPageController {
     public User main() throws UnknownHostException {
 
         MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
-
-        //Brians remote database
-//        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://123:123@cluster1.d3e1rhp.mongodb.net/?retryWrites=true&w=majority"));
-
-
         DB database = mongoClient.getDB("schedule6-testingdb");
         DBCollection collection = database.getCollection("schedule6-testingcollection");
-
         System.out.println(1);
-
         return this.login(collection);
     }
 }
