@@ -5,7 +5,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import database.MongoDBAccess;
-import entity.Request;
+import entity.User.Request;
 import useCaseInteractor.User.userCollection;
 
 import java.net.UnknownHostException;
