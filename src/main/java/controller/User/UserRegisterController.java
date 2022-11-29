@@ -1,5 +1,11 @@
 package controller.User;
 
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import database.MongoDBAccess;
+import entity.User.User;
 import javafx.animation.PauseTransition;
 import javafx.util.Duration;
 import main.DataConnection;
@@ -10,6 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.net.UnknownHostException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -40,7 +47,7 @@ public class UserRegisterController {
         Stage stage = (Stage) RGclosebutton.getScene().getWindow();
         stage.close();
     }
-    public void registerButtononAction(ActionEvent event) {
+    public void registerButtononAction(ActionEvent event) throws UnknownHostException {
         registrationMessage.setText("");
         passwordMisMatch.setText("");
         if (RGfirstname.getText().isBlank() || RGlastname.getText().isBlank() || RGusername.getText().isBlank() ||
@@ -55,14 +62,35 @@ public class UserRegisterController {
             }
         }
     }
-    public void registerUser() {
+    public void registerUser() throws UnknownHostException {
         DataConnection connection = new DataConnection();
         Connection connectionDB = connection.getConnection();
 
+        DBCollection collection = this.main();
+        MongoDBAccess client = new MongoDBAccess(collection, RGusername.getText());
         String firstName_ = RGfirstname.getText();
         String lastName_ = RGlastname.getText();
         String username_ = RGusername.getText();
         String password_ = RGpassword.getText();
+
+        if(client.createUser(password_, firstName_, lastName_)){
+            registrationMessage.setText("USER REGISTRATION SUCCESSFUL");
+            PauseTransition delay = new PauseTransition(Duration.seconds(4.5));
+            Stage stage = (Stage) RGclosebutton.getScene().getWindow();
+            delay.setOnFinished( event -> stage.close() );
+            delay.play();
+            passwordMisMatch.setText("");
+        }
+        else{
+            inuselabel.setText("USERNAME IN USE");
+        }
+
+        /**
+        String firstName_ = RGfirstname.getText();
+        String lastName_ = RGlastname.getText();
+        String username_ = RGusername.getText();
+        String password_ = RGpassword.getText();
+
         try {
             PreparedStatement stmt = connectionDB.prepareStatement
                     ("INSERT INTO useraccounts(firstname, lastname, username, password) VALUE (?, ?, ?, ?)");
@@ -82,6 +110,24 @@ public class UserRegisterController {
             e.printStackTrace();
             e.getCause();
         }
+         **/
+    }
+
+
+    public DBCollection main() throws UnknownHostException {
+
+        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
+
+        //Brians remote database
+//        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://123:123@cluster1.d3e1rhp.mongodb.net/?retryWrites=true&w=majority"));
+
+
+        DB database = mongoClient.getDB("schedule6-testingdb");
+        DBCollection collection = database.getCollection("schedule6-testingcollection");
+
+        System.out.println(1);
+
+        return collection;
     }
 
 
