@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 public interface DataAccess {
 
+    boolean createUser(String password, String fName, String lName);
+
     void setSchedule(ScheduleItemRequestModel requestModel);
 
     ArrayList<Object> getSingleSchedule(ScheduleItemRequestModel requestModel);
@@ -23,6 +25,8 @@ public interface DataAccess {
 
     boolean getUserExist(String username);
 
+    boolean getUserExist();
+
     Object getUserData();
 
     void setPassword(String password);
@@ -30,6 +34,8 @@ public interface DataAccess {
     Object getFollowing();
 
     void appendFollowing(String username);
+
+    boolean checkPassword(String password);
 
     void setFollowing(ArrayList<String> following);
 
