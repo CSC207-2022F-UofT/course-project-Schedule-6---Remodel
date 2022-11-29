@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 public interface DataAccess {
 
+    boolean createUser(String password, String fName, String lName);
+
     void setSchedule(ScheduleItemRequestModel requestModel);
 
     ArrayList<Object> getSingleSchedule(ScheduleItemRequestModel requestModel);

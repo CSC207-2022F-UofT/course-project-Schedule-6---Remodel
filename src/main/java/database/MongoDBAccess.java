@@ -19,6 +19,22 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
+    public boolean createUser(String password, String fName, String lName){
+        if(this.getUserExist()){
+            return false;
+        }
+        ArrayList<Object> schedule = new ArrayList<>();
+        ArrayList<Object> tasks = new ArrayList<>();
+        ArrayList<Object> followers = new ArrayList<>();
+        ArrayList<Object> requests = new ArrayList<>();
+        DBObject person = new BasicDBObject("_id", this.username)
+                .append("password", password).append("firstName", fName).append("lastName", lName)
+                .append("schedule", schedule).append("tasks", tasks).append("followers", followers)
+                .append("requests", requests);
+        collection.insert(person);
+        return true;
+    }
+    @Override
     public void setSchedule(ScheduleItemRequestModel requestModel) {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
