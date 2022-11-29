@@ -1,6 +1,7 @@
 package database;
 
 import com.mongodb.*;
+import entity.Category.Category;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 import useCaseInteractor.DataAccess;
@@ -192,6 +193,16 @@ public class MongoDBAccess implements DataAccess {
 
         this.collection.update(query, updateObj);
     }
+
+    @Override
+    public void addCategories(Category c){
+    }
+
+    @Override
+    public Object getCategories(){
+        return collection.findOne(this.username).get("categories");
+    }
+
 
 
 
