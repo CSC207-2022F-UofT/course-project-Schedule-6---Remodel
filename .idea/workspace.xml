@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Deleting ToDoList.java">
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ToDoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ToDoList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/DataConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/createAccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateRegistrationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/RegistrationPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/project6.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +72,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TodoPage">
     <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
       <module name="schedule-6---Remodel" />
@@ -93,8 +86,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="schedule-6---Remodel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScheduleButton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.ScheduleButton" />
+      <module name="schedule-6---Remodel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.TodoPage" />
+      <module name="schedule-6---Remodel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TodoPage" />
+        <item itemvalue="Application.ScheduleButton" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.LoginPage" />
       </list>
     </recent_temporary>
@@ -115,7 +150,8 @@
       <workItem from="1669584312630" duration="260000" />
       <workItem from="1669584585127" duration="4428000" />
       <workItem from="1669615677647" duration="1066000" />
-      <workItem from="1669688229778" duration="9895000" />
+      <workItem from="1669688229778" duration="10150000" />
+      <workItem from="1669741252610" duration="1513000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -173,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669615912380</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better.">
+      <created>1669703154808</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669703154808</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +239,7 @@
     <MESSAGE value="update from main" />
     <MESSAGE value="pull issue from misc" />
     <MESSAGE value="reorganized packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="reorganized packages" />
+    <MESSAGE value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
   </component>
 </project>

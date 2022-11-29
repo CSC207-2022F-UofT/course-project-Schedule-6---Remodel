@@ -21,26 +21,16 @@ import useCaseInteractor.User.userCollection;
 import database.MongoDBAccess;
 
 public class LoginPageController {
-    @FXML
-    private Button cancelButton;
-    @FXML
-    private Label loginMessageLabel;
-    @FXML
-    private TextField usernameTextField;
-    @FXML
-    private TextField passwordTextField;
-    @FXML
-    private Button loginButton;
 
-
-    public void cancelButtonAction(ActionEvent event){
+    public void cancelButtonAction(ActionEvent event, Button cancelButton){
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
-    public void loginButtonAction(ActionEvent event) throws UnknownHostException {
+    public void loginButtonAction(ActionEvent event, TextField usernameTextField, TextField passwordTextField,
+                                  Button loginButton, Label loginMessageLabel) throws UnknownHostException {
 
         if (!usernameTextField.getText().isBlank() && !passwordTextField.getText().isBlank()) {
-            User loginAttempt = this.main();
+            User loginAttempt = this.main(usernameTextField, passwordTextField);
             if (loginAttempt != null){
 
                 //If the Login is successful then the window closes
@@ -64,8 +54,7 @@ public class LoginPageController {
     public void registerButtonAction(ActionEvent event){
         CreateRegistrationScreen.newForm();}
 
-
-    public User login(DBCollection collection){
+    public User login(DBCollection collection, TextField usernameTextField, TextField passwordTextField){
         User user = null;
 
         MongoDBAccess client = new MongoDBAccess(collection, usernameTextField.getText());
@@ -80,15 +69,14 @@ public class LoginPageController {
         }
         System.out.println(user);
         return user;
-
     }
+    public User main(TextField usernameTextField, TextField passwordTextField) throws UnknownHostException {
 
-    public User main() throws UnknownHostException {
-
-        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
+        MongoClient mongoClient = new MongoClient(new MongoClientURI
+                ("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
         DB database = mongoClient.getDB("schedule6-testingdb");
         DBCollection collection = database.getCollection("schedule6-testingcollection");
         System.out.println(1);
-        return this.login(collection);
+        return this.login(collection, usernameTextField, passwordTextField);
     }
 }
