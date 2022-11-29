@@ -7,14 +7,12 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import entity.User.User;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import screens.CreateRegistrationScreen;
-import useCaseInteractor.Schedule.createScheduleForm;
-
+import screens.CreateScheduleScreen;
 import java.net.UnknownHostException;
 import useCaseInteractor.User.setUsername;
 import useCaseInteractor.User.userCollection;
@@ -40,7 +38,7 @@ public class LoginPageController {
                 //Username of the person logged in is Stored in the user collector
                 userCollection.setUser(loginAttempt);
                 //The schedule form opens
-                createScheduleForm.newForm();
+                CreateScheduleScreen.newForm();
                 setUsername.setName();
             }
             if (loginAttempt == null) {
