@@ -63,8 +63,6 @@ public class UserRegisterController {
         }
     }
     public void registerUser() throws UnknownHostException {
-        DataConnection connection = new DataConnection();
-        Connection connectionDB = connection.getConnection();
 
         DBCollection collection = this.main();
         MongoDBAccess client = new MongoDBAccess(collection, RGusername.getText());
@@ -85,32 +83,6 @@ public class UserRegisterController {
             inuselabel.setText("USERNAME IN USE");
         }
 
-        /**
-        String firstName_ = RGfirstname.getText();
-        String lastName_ = RGlastname.getText();
-        String username_ = RGusername.getText();
-        String password_ = RGpassword.getText();
-
-        try {
-            PreparedStatement stmt = connectionDB.prepareStatement
-                    ("INSERT INTO useraccounts(firstname, lastname, username, password) VALUE (?, ?, ?, ?)");
-            stmt.setString(1, firstName_);
-            stmt.setString(2, lastName_);
-            stmt.setString(3, username_);
-            stmt.setString(4, password_);
-            stmt.executeUpdate();
-            registrationMessage.setText("USER REGISTRATION SUCCESSFUL");
-            PauseTransition delay = new PauseTransition(Duration.seconds(4.5));
-            Stage stage = (Stage) RGclosebutton.getScene().getWindow();
-            delay.setOnFinished( event -> stage.close() );
-            delay.play();
-            passwordMisMatch.setText("");
-        } catch (Exception e) {
-            inuselabel.setText("USERNAME IN USE");
-            e.printStackTrace();
-            e.getCause();
-        }
-         **/
     }
 
 
