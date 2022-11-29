@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Deleting ToDoList.java" />
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -52,7 +62,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="58ef2c0d-dda3-46fe-b813-6c5d6882ba56" name="Changes" comment="" />
+      <changelist id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="deleted hex in CategoryCreationRequestModel.java" />
       <created>1668802068292</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -65,6 +75,8 @@
       <workItem from="1669584312630" duration="260000" />
       <workItem from="1669584585127" duration="4428000" />
       <workItem from="1669615677647" duration="1066000" />
+      <workItem from="1669690561614" duration="1350000" />
+      <workItem from="1669757497731" duration="946000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -122,7 +134,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669615912380</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="deleted hex in CategoryCreationRequestModel.java">
+      <created>1669690219411</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669690219411</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added AddCateogoryPresenter.java">
+      <created>1669691637842</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669691637842</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added AddCategoryController.java, work in progess">
+      <created>1669691684423</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669691684423</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +178,9 @@
     <MESSAGE value="update from main" />
     <MESSAGE value="pull issue from misc" />
     <MESSAGE value="reorganized packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="reorganized packages" />
+    <MESSAGE value="deleted hex in CategoryCreationRequestModel.java" />
+    <MESSAGE value="added AddCateogoryPresenter.java" />
+    <MESSAGE value="added AddCategoryController.java, work in progess" />
+    <option name="LAST_COMMIT_MESSAGE" value="added AddCategoryController.java, work in progess" />
   </component>
 </project>
