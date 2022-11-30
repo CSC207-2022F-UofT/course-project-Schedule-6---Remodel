@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Fixed all the errors that were add" />
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Reverted some of the changes to fix the errors.">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,7 +151,7 @@
       <workItem from="1669688229778" duration="10150000" />
       <workItem from="1669741252610" duration="5437000" />
       <workItem from="1669817334281" duration="2686000" />
-      <workItem from="1669833293663" duration="1150000" />
+      <workItem from="1669833293663" duration="1513000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -312,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669834153797</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Reverted some of the changes to fix the errors.">
+      <created>1669834745175</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1669834745175</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +356,8 @@
     <MESSAGE value="AddCategoryPresenter" />
     <MESSAGE value="AddCategoryController" />
     <MESSAGE value="Fixed all the errors that were add" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed all the errors that were add" />
+    <MESSAGE value="Reverted some of the changes to fix the errors." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reverted some of the changes to fix the errors." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
