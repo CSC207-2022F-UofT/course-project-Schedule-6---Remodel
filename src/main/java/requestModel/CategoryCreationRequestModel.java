@@ -9,19 +9,19 @@ public class CategoryCreationRequestModel {
         this.status = status;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    boolean getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    void setStatus(boolean status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 }
