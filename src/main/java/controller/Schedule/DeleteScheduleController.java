@@ -1,8 +1,6 @@
 package controller.Schedule;
 
-import boundary.Schedule.AddScheduleItemInputBoundary;
 import boundary.Schedule.DeleteScheduleItemInputBoundary;
-import presenter.AddSchedulePresenter;
 import presenter.WeekViewPresenter;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.Schedule.ScheduleItemResponseModel;

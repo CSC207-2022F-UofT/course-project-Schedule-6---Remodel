@@ -1,9 +1,16 @@
 package presenter;
 
+import boundary.Schedule.AddScheduleOutputBoundary;
 import responseModel.Schedule.ScheduleItemResponseModel;
 
-public interface AddSchedulePresenter {
-    ScheduleItemResponseModel prepareSuccessView(ScheduleItemResponseModel scheduleItemResponseModel);
+public class AddSchedulePresenter implements AddScheduleOutputBoundary {
+    @Override
+    public ScheduleItemResponseModel prepareSuccessView(ScheduleItemResponseModel scheduleItemResponseModel) {
+        return null;
+    }
 
-    ScheduleItemResponseModel prepareFailView(String error);
+    @Override
+    public ScheduleItemResponseModel prepareFailView(String error) {
+        return null;
+    }
 }

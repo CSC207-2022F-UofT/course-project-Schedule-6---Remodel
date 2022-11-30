@@ -1,6 +1,7 @@
 package controller.Schedule;
 
 import boundary.Schedule.AddScheduleItemInputBoundary;
+import boundary.Schedule.AddScheduleOutputBoundary;
 import presenter.AddSchedulePresenter;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.Schedule.ScheduleItemResponseModel;

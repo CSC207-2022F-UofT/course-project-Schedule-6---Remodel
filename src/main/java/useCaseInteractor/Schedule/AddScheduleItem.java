@@ -3,7 +3,7 @@ package useCaseInteractor.Schedule;
 import boundary.Schedule.AddScheduleItemInputBoundary;
 import entity.Schedule.ScheduleItem;
 import entity.Schedule.ScheduleItemFactory;
-import presenter.AddSchedulePresenter;
+import boundary.Schedule.AddScheduleOutputBoundary;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.Schedule.ScheduleItemResponseModel;
 import useCaseInteractor.DataAccess;
@@ -13,13 +13,13 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
     final DataAccess dataAccess;
     final ScheduleItemFactory scheduleItemFactory;
 
-    final AddSchedulePresenter schedulePresenter;
+    final AddScheduleOutputBoundary outputBoundary;
 
     public AddScheduleItem(DataAccess dataAccess, ScheduleItemFactory scheduleItemFactory,
-                           AddSchedulePresenter presenter) {
+                           AddScheduleOutputBoundary outputBoundary) {
         this.dataAccess = dataAccess;
         this.scheduleItemFactory = scheduleItemFactory;
-        this.schedulePresenter = presenter;
+        this.outputBoundary = outputBoundary;
     }
 
     @Override
@@ -32,6 +32,6 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
         // presents the week view
         ScheduleItemResponseModel responseModel = new ScheduleItemResponseModel(scheduleItem.getTitle(),
                 scheduleItem.getDate(), scheduleItem.getStartTime(), scheduleItem.getEndTime());
-        return schedulePresenter.prepareSuccessView(responseModel);
+        return outputBoundary.prepareSuccessView(responseModel);
     }
 }

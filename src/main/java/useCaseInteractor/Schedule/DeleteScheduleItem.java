@@ -1,9 +1,6 @@
 package useCaseInteractor.Schedule;
 
 import boundary.Schedule.DeleteScheduleItemInputBoundary;
-import entity.Schedule.ScheduleItem;
-import entity.Schedule.ScheduleItemFactory;
-import presenter.AddSchedulePresenter;
 import presenter.WeekViewPresenter;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.Schedule.ScheduleItemResponseModel;
