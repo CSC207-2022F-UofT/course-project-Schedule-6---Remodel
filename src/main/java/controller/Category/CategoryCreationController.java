@@ -3,7 +3,7 @@ package controller.Category;
 import boundary.Category.CategoryCreationInputBoundary;
 import presenter.AddCategoryPresenter;
 import requestModel.CategoryCreationRequestModel;
-import responseModel.Category.CategoryCreationResponseModel;
+import responseModel.Category.CategoryResponseModel;
 
 public class CategoryCreationController {
     final CategoryCreationInputBoundary addCategoryInputBoundary;
@@ -15,7 +15,7 @@ public class CategoryCreationController {
         this.presenter = presenter;
     }
 
-    public CategoryCreationResponseModel create(String title, Boolean status){
+    public CategoryResponseModel create(String title, Boolean status){
         if (title.isBlank() || (status == null)){
             return presenter.prepareFailView("Please Fill in ALl Fields");
         }

@@ -1,11 +1,11 @@
 package presenter;
 
-import responseModel.Category.CategoryCreationResponseModel;
+import responseModel.Category.CategoryResponseModel;
 
 
 public interface AddCategoryPresenter {
-    CategoryCreationResponseModel prepareSuccessView(CategoryCreationResponseModel categoryCreationResponseModel);
+    CategoryResponseModel prepareSuccessView(CategoryResponseModel categoryResponseModel);
 
 
-    CategoryCreationResponseModel prepareFailView(String error);
+    CategoryResponseModel prepareFailView(String error);
 }

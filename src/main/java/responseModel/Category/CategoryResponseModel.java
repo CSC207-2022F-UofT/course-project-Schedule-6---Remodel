@@ -1,10 +1,10 @@
 package responseModel.Category;
 
-public class CategoryCreationResponseModel {
+public class CategoryResponseModel {
     String name;
     boolean status;
 
-    public CategoryCreationResponseModel (String name, boolean status) {
+    public CategoryResponseModel(String name, boolean status) {
         this.name = name;
         this.status = status;
     }
