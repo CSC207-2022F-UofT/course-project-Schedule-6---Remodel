@@ -12,7 +12,7 @@ import java.net.URL;
 public class LoginPage extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        URL location = LoginPage.class.getClassLoader().getResource("project6.fxml");
+        URL location = LoginPage.class.getClassLoader().getResource("LoginPage.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
         Scene scene = new Scene(fxmlLoader.load(), 468, 600);
         stage.initStyle(StageStyle.DECORATED);

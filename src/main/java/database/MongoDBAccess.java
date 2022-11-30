@@ -19,6 +19,22 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
+    public boolean createUser(String password, String fName, String lName){
+        if(this.getUserExist()){
+            return false;
+        }
+        ArrayList<Object> schedule = new ArrayList<>();
+        ArrayList<Object> tasks = new ArrayList<>();
+        ArrayList<Object> followers = new ArrayList<>();
+        ArrayList<Object> requests = new ArrayList<>();
+        DBObject person = new BasicDBObject("_id", this.username)
+                .append("password", password).append("firstName", fName).append("lastName", lName)
+                .append("schedule", schedule).append("tasks", tasks).append("followers", followers)
+                .append("requests", requests);
+        collection.insert(person);
+        return true;
+    }
+    @Override
     public void setSchedule(ScheduleItemRequestModel requestModel) {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
@@ -102,6 +118,10 @@ public class MongoDBAccess implements DataAccess {
         return this.collection.findOne(username) != null;
     }
 
+
+    @Override
+    public boolean getUserExist(){ return this.collection.findOne(this.username) != null;}
+
     //returns all user data
     @Override
     public DBObject getUserData(){
@@ -134,6 +154,19 @@ public class MongoDBAccess implements DataAccess {
         collection.update(query, new BasicDBObject("$push", updateObj));
     }
 
+    @Override
+    public boolean checkPassword(String password){
+        return collection.findOne(this.username).get("password").equals(password);
+    }
+
+    @Override
+    public void setFollowing(ArrayList<String> following){
+        DBObject query = new BasicDBObject("_id", this.username);
+
+        DBObject updateObj = new BasicDBObject("followers", this.username);
+
+        this.collection.update(query, updateObj);
+    }
     //returns current request, you can accept or decline a request
     @Override
     public Object getRequests(){
@@ -151,12 +184,13 @@ public class MongoDBAccess implements DataAccess {
     }
 
     //sets a new request list when a request is accepted or declined
+    @Override
     public void setRequests(ArrayList<String> usernames){
         DBObject query = new BasicDBObject("_id", this.username);
 
-        DBObject updateObj = new BasicDBObject("requests", username);
+        DBObject updateObj = new BasicDBObject("requests", this.username);
 
-        collection.update(query, updateObj);
+        this.collection.update(query, updateObj);
     }
 
 

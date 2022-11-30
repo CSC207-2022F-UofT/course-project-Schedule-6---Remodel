@@ -3,13 +3,10 @@ package entity.Category;
 public class CommonCategory implements Category {
     private final String name;
     private final boolean status;
-    private final String hex;
 
-
-    public CommonCategory(String name, boolean status, String hex) {
+    public CommonCategory(String name, boolean status) {
         this.name = name;
         this.status = status;
-        this.hex = hex;
     }
 
     public String getName() {
@@ -18,9 +15,5 @@ public class CommonCategory implements Category {
 
     public boolean isStatus() {
         return status;
-    }
-
-    public String getHex() {
-        return hex;
     }
 }
