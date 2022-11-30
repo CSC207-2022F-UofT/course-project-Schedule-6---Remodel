@@ -35,6 +35,11 @@
                   <Font name="Gill Sans MT Condensed" size="16.0" />
                </font>
             </Button>
+            <Label fx:id="allEntriesSavedLabel" layoutX="456.0" layoutY="20.0" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="33.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <GridPane fx:id="Gridlock" layoutX="21.0" layoutY="96.0" prefHeight="584.0" prefWidth="1057.0">
