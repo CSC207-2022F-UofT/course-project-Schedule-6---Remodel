@@ -1,16 +1,16 @@
 package controller.Category;
 
 import boundary.Category.CategoryCreationInputBoundary;
-import presenter.AddCateogoryPresenter;
+import presenter.AddCategoryPresenter;
 import requestModel.CategoryCreationRequestModel;
 import responseModel.Category.CategoryCreationResponseModel;
 
 public class AddCategoryController {
     final  CategoryCreationInputBoundary categoryCreationInputBoundary;
 
-    final AddCateogoryPresenter presenter;
+    final AddCategoryPresenter presenter;
 
-    public AddCategoryController(CategoryCreationInputBoundary categoryCreationInputBoundary, AddCateogoryPresenter presenter) {
+    public AddCategoryController(CategoryCreationInputBoundary categoryCreationInputBoundary, AddCategoryPresenter presenter) {
         this.categoryCreationInputBoundary = categoryCreationInputBoundary;
         this.presenter = presenter;
     }
