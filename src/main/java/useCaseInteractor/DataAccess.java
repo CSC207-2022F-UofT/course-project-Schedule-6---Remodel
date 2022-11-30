@@ -23,6 +23,8 @@ public interface DataAccess {
 
     ArrayList<ArrayList<Object>> getUserEntireTask();
 
+    void deleteTask(TaskRequestModel requestModel);
+
     boolean getUserExist(String username);
 
     boolean getUserExist();
