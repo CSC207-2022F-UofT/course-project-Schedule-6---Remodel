@@ -56,8 +56,6 @@ public class LoginPageController {
         User user = null;
 
         MongoDBAccess client = new MongoDBAccess(collection, usernameTextField.getText());
-        System.out.println(client.getUserExist(usernameTextField.getText()));
-        System.out.println(client.checkPassword(passwordTextField.getText()));
 
 
         if(client.getUserExist(usernameTextField.getText()) && client.checkPassword(passwordTextField.getText())){
@@ -74,7 +72,8 @@ public class LoginPageController {
                 ("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
         DB database = mongoClient.getDB("schedule6-testingdb");
         DBCollection collection = database.getCollection("schedule6-testingcollection");
-        System.out.println(1);
         return this.login(collection, usernameTextField, passwordTextField);
     }
+
+
 }

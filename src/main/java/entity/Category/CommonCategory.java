@@ -17,4 +17,9 @@ public class CommonCategory implements Category {
 
         return status;
     }
+
+    @Override
+    public boolean getStatus() {
+        return false;
+    }
 }
