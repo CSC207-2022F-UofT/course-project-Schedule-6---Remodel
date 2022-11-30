@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="workspace.xml update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Category/AddCommonCategory.java" afterDir="false" />
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="AddCategoryController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Category/AddCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Category/AddCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/AddCateogoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/AddCategoryPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/CategoryCreationRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/CategoryCreationRequestModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +151,7 @@
       <workItem from="1669615677647" duration="1066000" />
       <workItem from="1669688229778" duration="10150000" />
       <workItem from="1669741252610" duration="5437000" />
-      <workItem from="1669817334281" duration="1352000" />
+      <workItem from="1669817334281" duration="2686000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -257,7 +251,63 @@
       <option name="project" value="LOCAL" />
       <updated>1669783676850</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="workspace.xml update">
+      <created>1669818714583</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818714583</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added setCategory to DataAccess">
+      <created>1669818753831</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818753831</updated>
+    </task>
+    <task id="LOCAL-00017" summary="changed isStatus to getStatus">
+      <created>1669818773542</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818773542</updated>
+    </task>
+    <task id="LOCAL-00018" summary="made everything public">
+      <created>1669818795490</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818795490</updated>
+    </task>
+    <task id="LOCAL-00019" summary="changed isStatus to getStatus">
+      <created>1669818808358</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818808358</updated>
+    </task>
+    <task id="LOCAL-00020" summary="implemented AddCommonCategory">
+      <created>1669818853252</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818853252</updated>
+    </task>
+    <task id="LOCAL-00021" summary="AddCategoryPresenter">
+      <created>1669818878150</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818878150</updated>
+    </task>
+    <task id="LOCAL-00022" summary="AddCategoryController">
+      <created>1669818910431</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818910431</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +335,13 @@
     <MESSAGE value="removed creationTime and added status to CategoryCreationResponseModel" />
     <MESSAGE value="implemented CCResponseModel in AddCategoryController, nameChecker WIP" />
     <MESSAGE value="workspace.xml update" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml update" />
+    <MESSAGE value="added setCategory to DataAccess" />
+    <MESSAGE value="made everything public" />
+    <MESSAGE value="changed isStatus to getStatus" />
+    <MESSAGE value="implemented AddCommonCategory" />
+    <MESSAGE value="AddCategoryPresenter" />
+    <MESSAGE value="AddCategoryController" />
+    <option name="LAST_COMMIT_MESSAGE" value="AddCategoryController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
