@@ -1,6 +1,7 @@
 package database;
 
 import com.mongodb.*;
+import entity.Category.Category;
 import requestModel.CategoryCreationRequestModel;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
@@ -29,11 +30,11 @@ public class MongoDBAccess implements DataAccess {
         ArrayList<Object> categories = new ArrayList<>();
         ArrayList<Object> followers = new ArrayList<>();
         ArrayList<Object> requests = new ArrayList<>();
+        ArrayList<Object> categories = new ArrayList<>();
         DBObject person = new BasicDBObject("_id", this.username)
                 .append("password", password).append("firstName", fName).append("lastName", lName)
-                .append("schedules", schedules).append("tasks", tasks).append("categories", categories)
-                .append("followers", followers)
-                .append("requests", requests);
+                .append("schedule", schedule).append("tasks", tasks).append("followers", followers)
+                .append("requests", requests).append("categories", categories);
         collection.insert(person);
         return true;
     }
@@ -239,6 +240,14 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
+    public void addCategories(Category c){
+    }
+
+    @Override
+    public Object getCategories(){
+        return collection.findOne(this.username).get("categories");
+    }
+    
     public void setCategory(CategoryCreationRequestModel requestModel) {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
