@@ -13,7 +13,7 @@ public class CommonTask implements Task {
 
     public Category category;
 
-    CommonTask(String title, LocalDate date, String privacySetting, Category category){
+    protected CommonTask(String title, LocalDate date, String privacySetting, Category category){
         this.title = title;
         this.date = date;
         this.privacySetting = privacySetting;

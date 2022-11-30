@@ -1,6 +1,6 @@
 package requestModel;
 
-import entity.Category;
+import entity.Category.Category;
 
 import java.time.LocalDate;
 

@@ -34,4 +34,6 @@ public interface DataAccess {
     Object getRequests();
 
     void appendRequests(String username);
+
+    void deleteTask(TaskRequestModel requestModel);
 }
