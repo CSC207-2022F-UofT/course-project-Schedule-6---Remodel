@@ -40,11 +40,11 @@ public class TimetableController {
 
         ArrayList<Calendar> calendars = new ArrayList<>();
 
-        for(String e : followers){
-            Calendar friends = new Calendar(e);
-            friends.setStyle(Calendar.Style.STYLE7);
-            calendars.add(friends);
-        }
+//        for(String e : followers){
+//            Calendar friends = new Calendar(e);
+//            friends.setStyle(Calendar.Style.STYLE7);
+//            calendars.add(friends);
+//        }
 
         //EVERYTHING BELOW IS STABLE
         //Calendar classes = new Calendar("null");
