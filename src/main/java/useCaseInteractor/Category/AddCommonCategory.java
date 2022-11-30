@@ -5,7 +5,7 @@ import entity.Category.Category;
 import entity.Category.CategoryFactory;
 import presenter.AddCategoryPresenter;
 import requestModel.CategoryCreationRequestModel;
-import responseModel.Category.CategoryCreationResponseModel;
+import responseModel.Category.CategoryResponseModel;
 import useCaseInteractor.DataAccess;
 
 public class AddCommonCategory implements CategoryCreationInputBoundary {
@@ -22,10 +22,10 @@ public class AddCommonCategory implements CategoryCreationInputBoundary {
     }
 
     @Override
-    public CategoryCreationResponseModel create(CategoryCreationRequestModel requestModel) {
+    public CategoryResponseModel create(CategoryCreationRequestModel requestModel) {
         Category category = categoryFactory.create(requestModel.getName(), requestModel.getStatus());
         dataAccess.setCategory(requestModel);
-        CategoryCreationResponseModel responseModel = new CategoryCreationResponseModel(category.getName(), category.getStatus());
+        CategoryResponseModel responseModel = new CategoryResponseModel(category.getName(), category.isStatus());
         return categoryPresenter.prepareSuccessView(responseModel);
     }
 }

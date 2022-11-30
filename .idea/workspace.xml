@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Reverted some of the changes to fix the errors.">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="workspace.xml update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,13 +16,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feature-2-schedule-editor" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,6 +55,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "Git.Branch.Popup.ShowAllRemotes": "true",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -65,7 +67,8 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.508046"
   }
@@ -150,8 +153,8 @@
       <workItem from="1669615677647" duration="1066000" />
       <workItem from="1669688229778" duration="10150000" />
       <workItem from="1669741252610" duration="5437000" />
-      <workItem from="1669817334281" duration="2686000" />
-      <workItem from="1669833293663" duration="1513000" />
+      <workItem from="1669817334281" duration="7904000" />
+      <workItem from="1669825733264" duration="7660000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -307,21 +310,49 @@
       <option name="project" value="LOCAL" />
       <updated>1669818910431</updated>
     </task>
-    <task id="LOCAL-00023" summary="Fixed all the errors that were add">
-      <created>1669834153797</created>
+    <task id="LOCAL-00023" summary="implemented setCategory">
+      <created>1669820235345</created>
       <option name="number" value="00023" />
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1669834153797</updated>
+      <updated>1669820235345</updated>
     </task>
-    <task id="LOCAL-00024" summary="Reverted some of the changes to fix the errors.">
-      <created>1669834745175</created>
+    <task id="LOCAL-00024" summary="update workspace.xml">
+      <created>1669820324774</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1669834745175</updated>
+      <updated>1669820324774</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="moved createCategoryForm from useCase to screen">
+      <created>1669825508522</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1669825508522</updated>
+    </task>
+    <task id="LOCAL-00026" summary="renamed CategoryCreationResponseModel to CategoryResponseModel">
+      <created>1669834068354</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669834068354</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Added EditCategory and EditCategoryInputBoundary">
+      <created>1669834096118</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1669834096118</updated>
+    </task>
+    <task id="LOCAL-00028" summary="workspace.xml update">
+      <created>1669834109976</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1669834109976</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,16 +379,19 @@
     <MESSAGE value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
     <MESSAGE value="removed creationTime and added status to CategoryCreationResponseModel" />
     <MESSAGE value="implemented CCResponseModel in AddCategoryController, nameChecker WIP" />
-    <MESSAGE value="workspace.xml update" />
     <MESSAGE value="added setCategory to DataAccess" />
     <MESSAGE value="made everything public" />
     <MESSAGE value="changed isStatus to getStatus" />
     <MESSAGE value="implemented AddCommonCategory" />
     <MESSAGE value="AddCategoryPresenter" />
     <MESSAGE value="AddCategoryController" />
-    <MESSAGE value="Fixed all the errors that were add" />
-    <MESSAGE value="Reverted some of the changes to fix the errors." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reverted some of the changes to fix the errors." />
+    <MESSAGE value="implemented setCategory" />
+    <MESSAGE value="update workspace.xml" />
+    <MESSAGE value="moved createCategoryForm from useCase to screen" />
+    <MESSAGE value="renamed CategoryCreationResponseModel to CategoryResponseModel" />
+    <MESSAGE value="Added EditCategory and EditCategoryInputBoundary" />
+    <MESSAGE value="workspace.xml update" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
