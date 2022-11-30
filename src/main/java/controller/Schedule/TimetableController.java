@@ -28,11 +28,15 @@ public class TimetableController {
             System.out.println(temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone()));
         }
     }
+    public void setUsernameChangeLabel(String name){
+        for (Calendar temp: calendar.getCalendars()) {
+            temp.setName(name);
+        }
+    }
     public void scheduleInputsButton(ActionEvent event){}
     
     public void loadCalendar(GridPane Gridlock) throws UnknownHostException {
         calendar = new CalendarView();
-
 
         MongoDBAccess client = new MongoDBAccess(this.main(), userCollection.getUsername());
 
@@ -53,12 +57,11 @@ public class TimetableController {
         //classes.setStyle(Calendar.Style.STYLE7);
         //meetings.setStyle(Calendar.Style.STYLE2);
 
-        CalendarSource myCalendarSource = new CalendarSource("Timetable");
+        CalendarSource myCalendarSource = new CalendarSource("");
         myCalendarSource.getCalendars().addAll(calendars);
-
-
         calendar.getCalendarSources().addAll(myCalendarSource);
-
+        System.out.println(calendar.getCalendarSources());
+        calendar.getCalendarSources().remove(1);
         calendar.setRequestedTime(LocalTime.now());
 
         Thread updateTimeThread = new Thread("Calendar: Update Time Thread") {
@@ -88,6 +91,7 @@ public class TimetableController {
         calendar.setShowAddCalendarButton(true);
         calendar.setShowPrintButton(false);
         calendar.setShowDeveloperConsole(false);
+        calendar.setShowAddCalendarButton(false);
         Gridlock.getChildren().add(calendar);
     }
 
