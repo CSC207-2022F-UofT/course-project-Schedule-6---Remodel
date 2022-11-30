@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Added DB methods for Task" />
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="workspace.xml update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Category/AddCommonCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Category/AddCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Category/AddCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/AddCateogoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/AddCategoryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/CategoryCreationRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/CategoryCreationRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,6 +157,7 @@
       <workItem from="1669615677647" duration="1066000" />
       <workItem from="1669688229778" duration="10150000" />
       <workItem from="1669741252610" duration="5437000" />
+      <workItem from="1669817334281" duration="1352000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -240,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669783503635</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="workspace.xml update">
+      <created>1669783676850</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669783676850</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
