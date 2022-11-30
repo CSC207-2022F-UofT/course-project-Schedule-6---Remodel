@@ -2,26 +2,26 @@ package requestModel;
 
 public class CategoryCreationRequestModel {
     private String name;
-    private boolean status;
+    private Boolean status;
 
-    public CategoryCreationRequestModel(String name, boolean status) {
+    public CategoryCreationRequestModel(String name, Boolean status) {
         this.name = name;
         this.status = status;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    boolean getStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
-    void setStatus(boolean status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 }

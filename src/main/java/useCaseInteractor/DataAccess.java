@@ -1,5 +1,7 @@
 package useCaseInteractor;
 
+import entity.Category.Category;
+import requestModel.CategoryCreationRequestModel;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 
@@ -47,4 +49,9 @@ public interface DataAccess {
 
     //sets a new request list when a request is accepted or declined
     void setRequests(ArrayList<String> usernames);
+
+    void addCategories(Category c);
+
+    Object getCategories();
+    void setCategory(CategoryCreationRequestModel requestModel);
 }

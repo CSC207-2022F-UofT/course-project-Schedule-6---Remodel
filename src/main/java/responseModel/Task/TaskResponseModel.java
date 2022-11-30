@@ -12,9 +12,9 @@ public class TaskResponseModel {
 
     private CommonCategory category;
 
-    private boolean isPrivate;
+    private Boolean isPrivate;
 
-    public TaskResponseModel(String title, LocalDate date, boolean isPrivate, CommonCategory category){
+    public TaskResponseModel(String title, LocalDate date, Boolean isPrivate, CommonCategory category){
         this.title = title;
         this.date = date;
         this.isPrivate = isPrivate;

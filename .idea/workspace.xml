@@ -14,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -64,6 +65,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
@@ -150,6 +152,9 @@
       <workItem from="1669615677647" duration="1066000" />
       <workItem from="1669688229778" duration="10150000" />
       <workItem from="1669741252610" duration="5437000" />
+      <workItem from="1669817334281" duration="7904000" />
+      <workItem from="1669825733264" duration="7660000" />
+      <workItem from="1669836924977" duration="4222000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -221,7 +226,147 @@
       <option name="project" value="LOCAL" />
       <updated>1669742784809</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="removed creationTime and added status to CategoryCreationResponseModel">
+      <created>1669783434218</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669783434218</updated>
+    </task>
+    <task id="LOCAL-00012" summary="implemented CCResponseModel in AddCategoryController, nameChecker WIP">
+      <created>1669783486316</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669783486316</updated>
+    </task>
+    <task id="LOCAL-00013" summary="workspace.xml update">
+      <created>1669783503635</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669783503635</updated>
+    </task>
+    <task id="LOCAL-00014" summary="workspace.xml update">
+      <created>1669783676850</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669783676850</updated>
+    </task>
+    <task id="LOCAL-00015" summary="workspace.xml update">
+      <created>1669818714583</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818714583</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added setCategory to DataAccess">
+      <created>1669818753831</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818753831</updated>
+    </task>
+    <task id="LOCAL-00017" summary="changed isStatus to getStatus">
+      <created>1669818773542</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818773542</updated>
+    </task>
+    <task id="LOCAL-00018" summary="made everything public">
+      <created>1669818795490</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818795490</updated>
+    </task>
+    <task id="LOCAL-00019" summary="changed isStatus to getStatus">
+      <created>1669818808358</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818808358</updated>
+    </task>
+    <task id="LOCAL-00020" summary="implemented AddCommonCategory">
+      <created>1669818853252</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818853252</updated>
+    </task>
+    <task id="LOCAL-00021" summary="AddCategoryPresenter">
+      <created>1669818878150</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818878150</updated>
+    </task>
+    <task id="LOCAL-00022" summary="AddCategoryController">
+      <created>1669818910431</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818910431</updated>
+    </task>
+    <task id="LOCAL-00023" summary="implemented setCategory">
+      <created>1669820235345</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669820235345</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update workspace.xml">
+      <created>1669820324774</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1669820324774</updated>
+    </task>
+    <task id="LOCAL-00025" summary="moved createCategoryForm from useCase to screen">
+      <created>1669825508522</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1669825508522</updated>
+    </task>
+    <task id="LOCAL-00026" summary="renamed CategoryCreationResponseModel to CategoryResponseModel">
+      <created>1669834068354</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669834068354</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Added EditCategory and EditCategoryInputBoundary">
+      <created>1669834096118</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1669834096118</updated>
+    </task>
+    <task id="LOCAL-00028" summary="workspace.xml update">
+      <created>1669834109976</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1669834109976</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button.">
+      <created>1669838510849</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1669838510850</updated>
+    </task>
+    <task id="LOCAL-00030" summary="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch.">
+      <created>1669841110300</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1669841110300</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +391,23 @@
     <MESSAGE value="reorganized packages" />
     <MESSAGE value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
     <MESSAGE value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
+    <MESSAGE value="removed creationTime and added status to CategoryCreationResponseModel" />
+    <MESSAGE value="implemented CCResponseModel in AddCategoryController, nameChecker WIP" />
+    <MESSAGE value="added setCategory to DataAccess" />
+    <MESSAGE value="made everything public" />
+    <MESSAGE value="changed isStatus to getStatus" />
+    <MESSAGE value="implemented AddCommonCategory" />
+    <MESSAGE value="AddCategoryPresenter" />
+    <MESSAGE value="AddCategoryController" />
+    <MESSAGE value="implemented setCategory" />
+    <MESSAGE value="update workspace.xml" />
+    <MESSAGE value="moved createCategoryForm from useCase to screen" />
+    <MESSAGE value="renamed CategoryCreationResponseModel to CategoryResponseModel" />
+    <MESSAGE value="Added EditCategory and EditCategoryInputBoundary" />
+    <MESSAGE value="workspace.xml update" />
+    <MESSAGE value="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button." />
+    <MESSAGE value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

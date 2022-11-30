@@ -1,6 +1,8 @@
 package database;
 
 import com.mongodb.*;
+import entity.Category.Category;
+import requestModel.CategoryCreationRequestModel;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 import useCaseInteractor.DataAccess;

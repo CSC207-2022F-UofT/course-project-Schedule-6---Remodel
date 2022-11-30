@@ -1,43 +1,28 @@
 package controller.Category;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-import java.lang.String;
-import java.util.Objects;
+
+import boundary.Category.CategoryCreationInputBoundary;
+import presenter.AddCategoryPresenter;
+import requestModel.CategoryCreationRequestModel;
+import responseModel.Category.CategoryResponseModel;
 
 public class CategoryCreationController {
+    final CategoryCreationInputBoundary addCategoryInputBoundary;
 
-    public Label categoryError;
-    public Button categoryCancelButton;
-    @FXML
-    private Button categoryCreateAddButton;
+    final AddCategoryPresenter presenter;
 
-    //@FXML
-    //private TextField categoryHex;
+    public CategoryCreationController(CategoryCreationInputBoundary inputBoundary, AddCategoryPresenter presenter){
+        this.addCategoryInputBoundary = inputBoundary;
+        this.presenter = presenter;
+    }
 
-    @FXML
-    private TextField categoryTitle;
+    public CategoryResponseModel create(String title, Boolean status){
+        if (title.isBlank() || (status == null)){
+            return presenter.prepareFailView("Please Fill in ALl Fields");
+        }
 
-    @FXML
-    private ComboBox<?> privacyComboBox;
-
-    @FXML
-    private AnchorPane statusComboBox;
-
-    @FXML
-    public void addCategory(ActionEvent event) {
-        String name_ = categoryTitle.getText();
-        boolean isPrivate_ = Objects.equals((java.lang.String) privacyComboBox.getValue(), "Private");
+        CategoryCreationRequestModel newInputData = new CategoryCreationRequestModel(title, status);
+        return addCategoryInputBoundary.create(newInputData);
 
     }
 
-    public void cancelCategory(ActionEvent actionEvent) {
-        Stage stage = (Stage) categoryCancelButton.getScene().getWindow();
-        stage.close();
-    }
 }
