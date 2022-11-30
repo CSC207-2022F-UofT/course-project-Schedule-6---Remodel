@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Reverted some of the changes to fix the errors. pt.4">
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +159,7 @@
       <workItem from="1669741252610" duration="5437000" />
       <workItem from="1669817334281" duration="7904000" />
       <workItem from="1669825733264" duration="7660000" />
-      <workItem from="1669836924977" duration="1308000" />
+      <workItem from="1669836924977" duration="3886000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -357,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669834109976</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button.">
+      <created>1669838510849</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1669838510850</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +403,8 @@
     <MESSAGE value="renamed CategoryCreationResponseModel to CategoryResponseModel" />
     <MESSAGE value="Added EditCategory and EditCategoryInputBoundary" />
     <MESSAGE value="workspace.xml update" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml update" />
+    <MESSAGE value="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
