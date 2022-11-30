@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Added DB methods for Task">
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
-    </list>
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Added DB methods for Task" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,7 +219,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669742784809</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="removed creationTime and added status to CategoryCreationResponseModel">
+      <created>1669783434218</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669783434218</updated>
+    </task>
+    <task id="LOCAL-00012" summary="implemented CCResponseModel in AddCategoryController, nameChecker WIP">
+      <created>1669783486316</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669783486316</updated>
+    </task>
+    <task id="LOCAL-00013" summary="workspace.xml update">
+      <created>1669783503635</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669783503635</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +265,10 @@
     <MESSAGE value="reorganized packages" />
     <MESSAGE value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
     <MESSAGE value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
+    <MESSAGE value="removed creationTime and added status to CategoryCreationResponseModel" />
+    <MESSAGE value="implemented CCResponseModel in AddCategoryController, nameChecker WIP" />
+    <MESSAGE value="workspace.xml update" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
