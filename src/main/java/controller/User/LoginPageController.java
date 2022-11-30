@@ -72,6 +72,8 @@ public class LoginPageController {
                 ("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
         DB database = mongoClient.getDB("schedule6-testingdb");
         DBCollection collection = database.getCollection("schedule6-testingcollection");
-        return this.login(collection);
+        return this.login(collection, usernameTextField, passwordTextField);
     }
+
+
 }

@@ -30,10 +30,9 @@ public class MongoDBAccess implements DataAccess {
         ArrayList<Object> categories = new ArrayList<>();
         ArrayList<Object> followers = new ArrayList<>();
         ArrayList<Object> requests = new ArrayList<>();
-        ArrayList<Object> categories = new ArrayList<>();
         DBObject person = new BasicDBObject("_id", this.username)
                 .append("password", password).append("firstName", fName).append("lastName", lName)
-                .append("schedule", schedule).append("tasks", tasks).append("followers", followers)
+                .append("schedule", schedules).append("tasks", tasks).append("followers", followers)
                 .append("requests", requests).append("categories", categories);
         collection.insert(person);
         return true;
