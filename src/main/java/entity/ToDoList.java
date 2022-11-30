@@ -22,9 +22,9 @@ public class ToDoList {
         this.tasks.remove(t);
     }
 
-    public void addCategory(String name, boolean status, String hex){
-        this.categories.add(new CommonCategory(name, status, hex));
-    }
+//    public void addCategory(String name, boolean status, String hex){
+//        this.categories.add(new CommonCategory(name, status, hex));
+//    }
 
     public void deleteCategory(Category category){
         this.categories.remove(category);

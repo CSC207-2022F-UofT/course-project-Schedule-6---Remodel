@@ -1,6 +1,7 @@
 package useCaseInteractor;
 
 import entity.Category.Category;
+import requestModel.CategoryCreationRequestModel;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 
@@ -23,6 +24,8 @@ public interface DataAccess {
     ArrayList<Object> getSingleTask(TaskRequestModel requestModel);
 
     ArrayList<ArrayList<Object>> getUserEntireTask();
+
+    void deleteTask(TaskRequestModel requestModel);
 
     boolean getUserExist(String username);
 
@@ -50,4 +53,5 @@ public interface DataAccess {
     void addCategories(Category c);
 
     Object getCategories();
+    void setCategory(CategoryCreationRequestModel requestModel);
 }

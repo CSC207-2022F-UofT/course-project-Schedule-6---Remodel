@@ -7,13 +7,11 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import entity.Schedule.TimeManagement;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-
 import java.net.UnknownHostException;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -21,36 +19,20 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import database.MongoDBAccess;
 import useCaseInteractor.User.userCollection;
-
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class TimetableController {
-
-    @FXML
-    private Label TimetableUserName;
-    @FXML
-    private GridPane Gridlock;
-    @FXML
-    private Button saveButton;
-    @FXML
-    private Button newEvent;
-    public static Label usernameChageLabel;
-
+    public static Label usernameChangeLabel;
     private CalendarView calendar;
-
-    ZoneId TIMEZONE_ET = ZoneId.of("America/Toronto");
-    LocalDate startDate = LocalDate.of(-99999,1,1);
-    LocalDate endDate = LocalDate.of(99999,12,31);
-    @FXML
-    private void printCalendarEntries(){
+    private TimeManagement TM = new TimeManagement();
+    public void printCalendarEntries(ActionEvent event){
         for (Calendar temp : calendar.getCalendars()) {
-            System.out.println(temp.findEntries(startDate, endDate, TIMEZONE_ET));
+            System.out.println(temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone()));
         }
     }
-    @FXML
     public void scheduleInputsButton(ActionEvent event){}
-
-
-
+    
     private void loadCalendar() throws UnknownHostException {
         calendar = new CalendarView();
 
@@ -82,7 +64,6 @@ public class TimetableController {
 
         calendar.setRequestedTime(LocalTime.now());
 
-
         Thread updateTimeThread = new Thread("Calendar: Update Time Thread") {
             @Override
             public void run() {
@@ -106,7 +87,6 @@ public class TimetableController {
         updateTimeThread.setPriority(Thread.MIN_PRIORITY);
         updateTimeThread.setDaemon(true);
         updateTimeThread.start();
-        //calendar.showMonthPage();
         calendar.showWeekPage();
         calendar.setShowAddCalendarButton(true);
         calendar.setShowPrintButton(false);
