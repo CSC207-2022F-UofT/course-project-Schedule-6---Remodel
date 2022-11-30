@@ -2,7 +2,7 @@ package presenter;
 
 import responseModel.Category.CategoryCreationResponseModel;
 
-public interface AddCateogoryPresenter {
+public interface AddCategoryPresenter {
     CategoryCreationResponseModel prepareSuccessView(CategoryCreationResponseModel categoryCreationResponseModel);
 
     CategoryCreationResponseModel prepareFailView(String error);

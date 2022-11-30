@@ -2,11 +2,11 @@ package responseModel.Category;
 
 public class CategoryCreationResponseModel {
     String name;
-    String creationTime;
+    boolean status;
 
-    public void CategoryCreationResponseModel (String name, String creationTime) {
+    public CategoryCreationResponseModel (String name, boolean status) {
         this.name = name;
-        this.creationTime = creationTime;
+        this.status = status;
     }
 
     public String getName() {
@@ -17,11 +17,11 @@ public class CategoryCreationResponseModel {
         this.name = name;
     }
 
-    public String getCreationTime() {
-        return creationTime;
+    public boolean getStatus() {
+        return status;
     }
 
-    public void setCreationTime(String creationTime) {
-        this.creationTime = creationTime;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 }
