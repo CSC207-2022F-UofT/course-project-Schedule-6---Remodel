@@ -13,7 +13,7 @@ public class CommonCategory implements Category {
         return name;
     }
 
-    public boolean isStatus() {
+    public boolean getStatus() {
         return status;
     }
 }
