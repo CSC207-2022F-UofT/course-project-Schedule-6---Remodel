@@ -2,7 +2,7 @@ package entity.Category;
 //new entity
 public class CommonCategory implements Category {
     private final String name;
-    private final Boolean status;
+    private final boolean status;
 
     public CommonCategory(String name, boolean status) {
         this.name = name;
@@ -13,7 +13,7 @@ public class CommonCategory implements Category {
         return name;
     }
 
-    public Boolean isStatus() {
+    public boolean getStatus() {
         return status;
     }
 }

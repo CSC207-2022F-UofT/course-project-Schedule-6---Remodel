@@ -1,4 +1,4 @@
-package useCaseInteractor.Schedule;
+package screens;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
@@ -8,14 +8,15 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.ScheduleButton;
 
-public class createScheduleForm {
+public class CreateScheduleScreen {
 
     public static void newForm() {
         try {
             Label label = new Label("My Label");
             Group root = new Group();
             root.getChildren().add(label);
-            FXMLLoader fxmlLoader = new FXMLLoader(ScheduleButton.class.getClassLoader().getResource("userTimeTable.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(ScheduleButton.class.getClassLoader().getResource
+                    ("userTimeTable.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1099, 700);
             Stage loginStage = new Stage();
             loginStage.initStyle(StageStyle.DECORATED);
