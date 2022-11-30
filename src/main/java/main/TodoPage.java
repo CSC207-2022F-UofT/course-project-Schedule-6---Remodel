@@ -13,15 +13,13 @@ import static javafx.application.Application.launch;
 
 public class TodoPage extends Application {
     public void start(Stage stage) throws IOException {
-
-        URL location = LoginPage.class.getClassLoader().getResource("todo.fxml");
+        URL location = TodoPage.class.getClassLoader().getResource("todo.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
-        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
+        Scene todoScene = new Scene(fxmlLoader.load(), 400, 600);
         stage.initStyle(StageStyle.DECORATED);
-        stage.setScene(scene);
+        stage.setScene(todoScene);
         stage.show();
     }
-
     public static void main(String[] args) {
         launch();
     }
