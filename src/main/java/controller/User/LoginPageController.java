@@ -5,6 +5,7 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import controller.Schedule.TimetableController;
 import entity.User.User;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
@@ -39,6 +40,7 @@ public class LoginPageController {
                 userCollection.setUser(loginAttempt);
                 //The schedule form opens
                 CreateScheduleScreen.newForm();
+
                 setUsername.setName();
             }
             if (loginAttempt == null) {
