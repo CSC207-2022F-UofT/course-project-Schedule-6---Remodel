@@ -4,19 +4,24 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import main.LoginPage;
+import main.TodoPage;
 
 import java.io.IOException;
 import java.net.URL;
 
 public class createCategoryForm {
-    public void start(Stage stage) throws IOException {
+    public static void newForm() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(TodoPage.class.getClassLoader().getResource("CategoryCreate.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 400, 300);
+            Stage categoryStage = new Stage();
+            categoryStage.initStyle(StageStyle.DECORATED);
+            categoryStage.setScene(scene);
+            categoryStage.show();
 
-        URL location = LoginPage.class.getClassLoader().getResource("CategoryCreate.fxml");
-        FXMLLoader fxmlLoader = new FXMLLoader(location);
-        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
-        stage.initStyle(StageStyle.DECORATED);
-        stage.setScene(scene);
-        stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
     }
 }

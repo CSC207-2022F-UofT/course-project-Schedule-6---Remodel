@@ -2,9 +2,9 @@ package requestModel;
 
 public class CategoryCreationRequestModel {
     private String name;
-    private boolean status;
+    private Boolean status;
 
-    public CategoryCreationRequestModel(String name, boolean status) {
+    public CategoryCreationRequestModel(String name, Boolean status) {
         this.name = name;
         this.status = status;
     }
@@ -17,11 +17,11 @@ public class CategoryCreationRequestModel {
         this.name = name;
     }
 
-    public boolean getStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 }
