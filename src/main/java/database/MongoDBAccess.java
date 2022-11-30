@@ -2,6 +2,7 @@ package database;
 
 import com.mongodb.*;
 import entity.Category.Category;
+import requestModel.CategoryCreationRequestModel;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 import useCaseInteractor.DataAccess;
@@ -246,10 +247,15 @@ public class MongoDBAccess implements DataAccess {
     public Object getCategories(){
         return collection.findOne(this.username).get("categories");
     }
-
-
-
-
+    
+    public void setCategory(CategoryCreationRequestModel requestModel) {
+        DBObject query = new BasicDBObject("_id", this.username);
+        ArrayList<Object> lst = new ArrayList<>();
+        lst.add(requestModel.getName());
+        lst.add(requestModel.getStatus());
+        DBObject updateObj = new BasicDBObject("categories", lst);
+        this.collection.update(query, new BasicDBObject("$push", updateObj));
+    }
 
 
 }
