@@ -14,6 +14,7 @@ public class CommonCategory implements Category {
     }
 
     public Boolean isStatus() {
+
         return status;
     }
 }
