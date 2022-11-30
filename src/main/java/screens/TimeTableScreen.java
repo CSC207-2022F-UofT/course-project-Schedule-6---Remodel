@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import useCaseInteractor.User.userCollection;
 
 public class TimeTableScreen {
     @FXML
@@ -27,6 +28,7 @@ public class TimeTableScreen {
     public void initialize(){
         TTC.loadCalendar(Gridlock);
         usernameChangeLabel = TimetableUserName;
+        TTC.setUsernameChangeLabel(userCollection.getUsername());
     }
 }
 
