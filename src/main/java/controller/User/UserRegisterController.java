@@ -39,7 +39,9 @@ public class UserRegisterController {
             }
         }
     }
-    public void registerUser() throws UnknownHostException {
+    public void registerUser(Label registrationMessage, Label passwordMisMatch,
+                             TextField RGfirstname, TextField RGlastname, TextField RGusername,
+                             TextField RGpassword, Button RGclosebutton, Label inuselabel) throws UnknownHostException {
 
         DBCollection collection = this.main();
         MongoDBAccess client = new MongoDBAccess(collection, RGusername.getText());

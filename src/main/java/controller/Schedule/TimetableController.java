@@ -15,12 +15,9 @@ import javafx.scene.layout.GridPane;
 import java.net.UnknownHostException;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.ZoneId;
 import java.util.ArrayList;
 import database.MongoDBAccess;
 import useCaseInteractor.User.userCollection;
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 public class TimetableController {
     public static Label usernameChangeLabel;
@@ -33,7 +30,7 @@ public class TimetableController {
     }
     public void scheduleInputsButton(ActionEvent event){}
     
-    private void loadCalendar() throws UnknownHostException {
+    public void loadCalendar(GridPane Gridlock) throws UnknownHostException {
         calendar = new CalendarView();
 
 
@@ -43,11 +40,11 @@ public class TimetableController {
 
         ArrayList<Calendar> calendars = new ArrayList<>();
 
-        for(String e : followers){
-            Calendar friends = new Calendar(e);
-            friends.setStyle(Calendar.Style.STYLE7);
-            calendars.add(friends);
-        }
+//        for(String e : followers){
+//            Calendar friends = new Calendar(e);
+//            friends.setStyle(Calendar.Style.STYLE7);
+//            calendars.add(friends);
+//        }
 
         //EVERYTHING BELOW IS STABLE
         //Calendar classes = new Calendar("null");
@@ -92,12 +89,6 @@ public class TimetableController {
         calendar.setShowPrintButton(false);
         calendar.setShowDeveloperConsole(false);
         Gridlock.getChildren().add(calendar);
-    }
-
-
-    public void initialize() throws UnknownHostException {
-        usernameChageLabel = TimetableUserName;
-        loadCalendar();
     }
 
 
