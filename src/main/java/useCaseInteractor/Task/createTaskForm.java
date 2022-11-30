@@ -4,7 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import main.LoginPage;
+import main.TodoPage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -12,8 +12,8 @@ import java.net.URL;
 public class createTaskForm{
     public static void newForm() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("TaskCreate.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 468, 600);
+            FXMLLoader fxmlLoader = new FXMLLoader(TodoPage.class.getClassLoader().getResource("TaskCreate.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 400, 450);
             Stage taskStage = new Stage();
             taskStage.initStyle(StageStyle.DECORATED);
             taskStage.setScene(scene);
