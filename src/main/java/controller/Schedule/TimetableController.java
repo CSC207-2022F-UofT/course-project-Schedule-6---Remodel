@@ -17,31 +17,36 @@ import javafx.scene.layout.GridPane;
 import java.net.UnknownHostException;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import database.MongoDBAccess;
 import javafx.util.Duration;
-import presenter.TimetablePresenter;
 import useCaseInteractor.User.userCollection;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class TimetableController {
     public static Label usernameChangeLabel;
     private CalendarView calendar;
     private TimeManagement TM = new TimeManagement();
-    private TimetablePresenter TTP = new TimetablePresenter();
-
 
     public void printCalendarEntries(ActionEvent event, Label entriesSaved) throws InterruptedException {
-        TTP.printCalendarEntries(entriesSaved, calendar);
-    }
+        for (Calendar temp : calendar.getCalendars()) {
+            System.out.println(temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone()));
+            entriesSaved.setVisible(true);
+            entriesSaved.setText("ALL ENTIRES SAVED");
 
+        }
+    }
     public void setUsernameChangeLabel(String name){
         for (Calendar temp: calendar.getCalendars()) {
             temp.setName(name);
+
         }
     }
     public void scheduleInputsButton(ActionEvent event){}
     
-    public void loadCalendar(GridPane Gridlock) throws UnknownHostException {
+    private void loadCalendar() throws UnknownHostException {
         calendar = new CalendarView();
 
         MongoDBAccess client = new MongoDBAccess(this.main(), userCollection.getUsername());
@@ -98,6 +103,12 @@ public class TimetableController {
         calendar.setShowDeveloperConsole(false);
         calendar.setShowAddCalendarButton(false);
         Gridlock.getChildren().add(calendar);
+    }
+
+
+    public void initialize() throws UnknownHostException {
+        usernameChageLabel = TimetableUserName;
+        loadCalendar();
     }
 
 
