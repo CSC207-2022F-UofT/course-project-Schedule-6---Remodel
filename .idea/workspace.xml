@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="update from main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,7 +155,7 @@
       <workItem from="1669817334281" duration="7904000" />
       <workItem from="1669825733264" duration="7660000" />
       <workItem from="1669836924977" duration="4222000" />
-      <workItem from="1669909158160" duration="314000" />
+      <workItem from="1669909158160" duration="976000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -372,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669841110300</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="update from main">
+      <created>1669909488528</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1669909488528</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +394,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="xml files" />
     <MESSAGE value="MongoTesting" />
-    <MESSAGE value="update from main" />
     <MESSAGE value="pull issue from misc" />
     <MESSAGE value="reorganized packages" />
     <MESSAGE value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
@@ -413,7 +414,8 @@
     <MESSAGE value="workspace.xml update" />
     <MESSAGE value="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button." />
     <MESSAGE value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
+    <MESSAGE value="update from main" />
+    <option name="LAST_COMMIT_MESSAGE" value="update from main" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
