@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bd19a57-981d-4d2a-8f85-a8488fc34eea" name="Changes" comment="update from workspace.xml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Task/TodoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/screens/CreateTODOScreen.java" afterDir="false" />
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/TimetablePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/TimetablePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/CreateScheduleScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateScheduleScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/createCategoryForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/createCategoryScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/todo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Category/CategoryCreationInputBoundary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Category/EditCategoryInputBoundary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Category/AddCategoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Category/CategoryCreationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/AddCategoryPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/Category/CategoryResponseModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Category/AddCommonCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Category/EditCategory.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,31 +60,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/RAZER/IdeaProjects/Remodel&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/RAZER/IdeaProjects/Remodel",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.508046"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.LoginPage">
     <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../Library/Java/JavaVirtualMachines/corretto-18.0.2/Contents/Home" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
-      <module name="schedule-6---Remodel" />
+      <module name="course-project-Schedule-6---Remodel" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="main.*" />
@@ -136,13 +136,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.LoginPage" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.ScheduleButton" />
+      <item itemvalue="Application.TodoPage" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.LoginPage" />
         <item itemvalue="Application.TodoPage" />
         <item itemvalue="Application.ScheduleButton" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.LoginPage" />
+        <item itemvalue="Application.TodoPage" />
       </list>
     </recent_temporary>
   </component>
@@ -167,6 +173,7 @@
       <workItem from="1669817334281" duration="7904000" />
       <workItem from="1669825733264" duration="7660000" />
       <workItem from="1669836924977" duration="11194000" />
+      <workItem from="1669925219335" duration="918000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -378,14 +385,70 @@
       <option name="project" value="LOCAL" />
       <updated>1669841110300</updated>
     </task>
-    <task id="LOCAL-00031" summary="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch.">
-      <created>1669847499632</created>
+    <task id="LOCAL-00031" summary="resolved errors related to the removal of category entity">
+      <created>1669911507063</created>
       <option name="number" value="00031" />
       <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
-      <updated>1669847499632</updated>
+      <updated>1669911507063</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="deleted unneeded file">
+      <created>1669911655041</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911655041</updated>
+    </task>
+    <task id="LOCAL-00033" summary="workspace update">
+      <created>1669911665904</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911665904</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fixed all errors related to data">
+      <created>1669911870053</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911870053</updated>
+    </task>
+    <task id="LOCAL-00035" summary="update from workspace">
+      <created>1669911899157</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911899157</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fixes">
+      <created>1669924961951</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1669924961951</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fixes">
+      <created>1669925363045</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1669925363045</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fixes">
+      <created>1669925431303</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1669925431303</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fixes">
+      <created>1669925497594</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1669925497594</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,10 +466,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="xml files" />
-    <MESSAGE value="MongoTesting" />
-    <MESSAGE value="update from main" />
-    <MESSAGE value="pull issue from misc" />
     <MESSAGE value="reorganized packages" />
     <MESSAGE value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
     <MESSAGE value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
@@ -426,7 +485,13 @@
     <MESSAGE value="workspace.xml update" />
     <MESSAGE value="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button." />
     <MESSAGE value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
+    <MESSAGE value="resolved errors related to the removal of category entity" />
+    <MESSAGE value="deleted unneeded file" />
+    <MESSAGE value="workspace update" />
+    <MESSAGE value="fixed all errors related to data" />
+    <MESSAGE value="update from workspace" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -69,7 +69,6 @@ public class LoginPageController {
             user.username = usernameTextField.getText();
             user.password = passwordTextField.getText();
         }
-        System.out.println(user);
         return user;
     }
     public User main(TextField usernameTextField, TextField passwordTextField) throws UnknownHostException {

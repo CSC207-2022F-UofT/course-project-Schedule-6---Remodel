@@ -9,9 +9,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+
 import javafx.scene.layout.Pane;
 import main.LoginPage;
 import useCaseInteractor.User.userCollection;
+
 
 import java.io.IOException;
 import java.net.UnknownHostException;
@@ -39,14 +41,12 @@ public class TimeTableScreen {
     public void scheduleInputsButton(ActionEvent event) {TTC.scheduleInputsButton(event);}
 
 
-
     public void initialize() throws IOException {
         TTC.loadCalendar(Gridlock);
         usernameChangeLabel = TimetableUserName;
         TTC.setUsernameChangeLabel(userCollection.getUsername());
         FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("todo.fxml"));
         TODO.getChildren().add(fxmlLoader.load());
-
     }
 }
 
