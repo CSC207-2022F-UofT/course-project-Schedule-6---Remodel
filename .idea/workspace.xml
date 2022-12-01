@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Edited Task DB features" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LoginPage" />
         <item itemvalue="Application.TodoPage" />
         <item itemvalue="Application.ScheduleButton" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.LoginPage" />
+        <item itemvalue="Application.TodoPage" />
       </list>
     </recent_temporary>
   </component>
