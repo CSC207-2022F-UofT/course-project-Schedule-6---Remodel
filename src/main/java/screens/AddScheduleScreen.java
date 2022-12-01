@@ -40,8 +40,7 @@ public class AddScheduleScreen {
     public void addScheduleAction(ActionEvent event) {
         System.out.println("Click" + event.getEventType());
 
-        // add try and catch to catch errorMessage from controller
-        addScheduleController.create(this.scheduleTitle.getText(), this.scheduleDate.getValue(),
+        addScheduleController.create(errorMessage, this.scheduleTitle.getText(), this.scheduleDate.getValue(),
                 this.startTime.getText(), this.endTime.getText(), this.startAMPM.getValue(), this.endAMPM.getValue());
     }
 }

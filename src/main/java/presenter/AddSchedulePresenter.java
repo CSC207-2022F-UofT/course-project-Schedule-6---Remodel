@@ -1,16 +1,16 @@
 package presenter;
 
 import boundary.Schedule.AddScheduleOutputBoundary;
+import javafx.scene.control.Label;
 import responseModel.Schedule.ScheduleItemResponseModel;
 
 public class AddSchedulePresenter implements AddScheduleOutputBoundary {
     @Override
-    public ScheduleItemResponseModel prepareSuccessView(ScheduleItemResponseModel scheduleItemResponseModel) {
-        return null;
+    public void prepareSuccessView(Label text, String message) {
+        text.setText(message);
     }
 
-    @Override
-    public ScheduleItemResponseModel prepareFailView(String error) {
-        return null;
+    public void prepareFailView(Label text, String message) {
+        text.setText(message);
     }
 }

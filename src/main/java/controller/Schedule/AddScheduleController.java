@@ -2,6 +2,7 @@ package controller.Schedule;
 
 import boundary.Schedule.AddScheduleItemInputBoundary;
 import boundary.Schedule.AddScheduleOutputBoundary;
+import javafx.scene.control.Label;
 import presenter.AddSchedulePresenter;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.Schedule.ScheduleItemResponseModel;
@@ -20,16 +21,18 @@ public class AddScheduleController {
         this.presenter = presenter;
     }
 
-    public ScheduleItemResponseModel create(String Title, LocalDate Date, String startTime, String endTime,
-                                          String startAMPM, String endAMPM) {
+    public void create(Label message, String Title, LocalDate Date,
+                                            String startTime, String endTime,
+                                            String startAMPM, String endAMPM) {
         if (Title.isBlank() || (Date == null) || startTime.isBlank() || endTime.isBlank()) {
-            return presenter.prepareFailView("Please Fill in All Fields");
+            presenter.prepareFailView(message, "Please Fill in All Fields");
         } else if (!this.inputTimeChecker(startTime, endTime)) {
-            return presenter.prepareFailView("Please Insert a Valid Time as HH:MM");
+            presenter.prepareFailView(message, "Please Insert a Valid Time as HH:MM");
         }
         ScheduleItemRequestModel newInputData = new ScheduleItemRequestModel(
                 Title, Date, timeConverter(startTime, startAMPM), timeConverter(endTime, endAMPM));
-        return addScheduleItemInputBoundary.create(newInputData);
+        addScheduleItemInputBoundary.create(newInputData);
+        presenter.prepareSuccessView(message, "Event Added!");
     }
 
     // Checks if user inputs startTime and endTime is valid

@@ -26,8 +26,9 @@ public class TimeTableScreen {
 
     private TimetableController TTC = new TimetableController();
 
-    public void printCalendarEntries(ActionEvent event) throws InterruptedException
-    {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
+    public void printCalendarEntries(ActionEvent event) throws InterruptedException {
+        TTC.printCalendarEntries(event, allEntriesSavedLabel);
+    }
     public void scheduleInputsButton(ActionEvent event) {TTC.scheduleInputsButton(event);}
 
 

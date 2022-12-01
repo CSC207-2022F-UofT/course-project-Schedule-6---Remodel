@@ -1,9 +1,10 @@
 package boundary.Schedule;
 
+import javafx.scene.control.Label;
 import responseModel.Schedule.ScheduleItemResponseModel;
 
 public interface AddScheduleOutputBoundary {
-    ScheduleItemResponseModel prepareSuccessView(ScheduleItemResponseModel scheduleItemResponseModel);
+    void prepareSuccessView(Label message, String error);
 
-    ScheduleItemResponseModel prepareFailView(String error);
+    void prepareFailView(Label message, String error);
 }

@@ -23,15 +23,13 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
     }
 
     @Override
-    public ScheduleItemResponseModel create(ScheduleItemRequestModel inputData) {
+    public void create(ScheduleItemRequestModel inputData) {
         ScheduleItem scheduleItem = scheduleItemFactory.create(inputData.getTitle(),
                 inputData.getDate(), inputData.getStartTime(), inputData.getEndTime());
 
         dataAccess.setSchedule(inputData);
 
-        // presents the week view
         ScheduleItemResponseModel responseModel = new ScheduleItemResponseModel(scheduleItem.getTitle(),
                 scheduleItem.getDate(), scheduleItem.getStartTime(), scheduleItem.getEndTime());
-        return outputBoundary.prepareSuccessView(responseModel);
     }
 }
