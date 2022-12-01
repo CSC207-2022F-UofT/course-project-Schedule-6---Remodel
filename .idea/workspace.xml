@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="update from workspace.xml">
+    <list default="true" id="0bd19a57-981d-4d2a-8f85-a8488fc34eea" name="Changes" comment="update from workspace.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Task/TodoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/CreateTODOScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/TimetablePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/TimetablePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/CreateScheduleScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateScheduleScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/createCategoryForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/createCategoryScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/todo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,15 +25,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="calendarEntries" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -132,7 +142,7 @@
         <item itemvalue="Application.TodoPage" />
         <item itemvalue="Application.ScheduleButton" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.TodoPage" />
+        <item itemvalue="Application.LoginPage" />
       </list>
     </recent_temporary>
   </component>
@@ -156,10 +166,7 @@
       <workItem from="1669741252610" duration="5437000" />
       <workItem from="1669817334281" duration="7904000" />
       <workItem from="1669825733264" duration="7660000" />
-      <workItem from="1669836924977" duration="4222000" />
-      <workItem from="1669917430658" duration="916000" />
-      <workItem from="1669918383105" duration="3476000" />
-      <workItem from="1669921872089" duration="2245000" />
+      <workItem from="1669836924977" duration="11194000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -371,105 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669841110300</updated>
     </task>
-    <task id="LOCAL-00031" summary="resolved errors related to the removal of category entity">
-      <created>1669911507063</created>
+    <task id="LOCAL-00031" summary="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch.">
+      <created>1669847499632</created>
       <option name="number" value="00031" />
       <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
-      <updated>1669911507063</updated>
+      <updated>1669847499632</updated>
     </task>
-    <task id="LOCAL-00032" summary="deleted unneeded file">
-      <created>1669911655041</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1669911655041</updated>
-    </task>
-    <task id="LOCAL-00033" summary="workspace update">
-      <created>1669911665904</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1669911665904</updated>
-    </task>
-    <task id="LOCAL-00034" summary="fixed all errors related to data">
-      <created>1669911870053</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1669911870053</updated>
-    </task>
-    <task id="LOCAL-00035" summary="update from workspace">
-      <created>1669911899157</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1669911899157</updated>
-    </task>
-    <task id="LOCAL-00036" summary="deleted export entity">
-      <created>1669912582760</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1669912582760</updated>
-    </task>
-    <task id="LOCAL-00037" summary="update from workspace.xml">
-      <created>1669912598213</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1669912598213</updated>
-    </task>
-    <task id="LOCAL-00038" summary="implemented AddTask useCaseInteractor">
-      <created>1669921210624</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1669921210624</updated>
-    </task>
-    <task id="LOCAL-00039" summary="deleted createTaskForm.java">
-      <created>1669921280209</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1669921280209</updated>
-    </task>
-    <task id="LOCAL-00040" summary="improvised DataAccess, TaskRequestModel and TaskResponseModel">
-      <created>1669921340371</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1669921340371</updated>
-    </task>
-    <task id="LOCAL-00041" summary="update workspace.xml">
-      <created>1669921352185</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1669921352185</updated>
-    </task>
-    <task id="LOCAL-00042" summary="TaskCreate.fxml">
-      <created>1669921448669</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1669921448669</updated>
-    </task>
-    <task id="LOCAL-00043" summary="update from workspace.xml">
-      <created>1669923638907</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1669923638907</updated>
-    </task>
-    <task id="LOCAL-00044" summary="update from workspace.xml">
-      <created>1669923649314</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1669923649314</updated>
-    </task>
-    <option name="localTasksCounter" value="45" />
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,6 +403,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="xml files" />
+    <MESSAGE value="MongoTesting" />
+    <MESSAGE value="update from main" />
+    <MESSAGE value="pull issue from misc" />
+    <MESSAGE value="reorganized packages" />
+    <MESSAGE value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
+    <MESSAGE value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
+    <MESSAGE value="removed creationTime and added status to CategoryCreationResponseModel" />
+    <MESSAGE value="implemented CCResponseModel in AddCategoryController, nameChecker WIP" />
     <MESSAGE value="added setCategory to DataAccess" />
     <MESSAGE value="made everything public" />
     <MESSAGE value="changed isStatus to getStatus" />
@@ -494,25 +419,14 @@
     <MESSAGE value="AddCategoryPresenter" />
     <MESSAGE value="AddCategoryController" />
     <MESSAGE value="implemented setCategory" />
+    <MESSAGE value="update workspace.xml" />
     <MESSAGE value="moved createCategoryForm from useCase to screen" />
     <MESSAGE value="renamed CategoryCreationResponseModel to CategoryResponseModel" />
     <MESSAGE value="Added EditCategory and EditCategoryInputBoundary" />
     <MESSAGE value="workspace.xml update" />
     <MESSAGE value="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button." />
     <MESSAGE value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
-    <MESSAGE value="resolved errors related to the removal of category entity" />
-    <MESSAGE value="deleted unneeded file" />
-    <MESSAGE value="workspace update" />
-    <MESSAGE value="fixed all errors related to data" />
-    <MESSAGE value="update from workspace" />
-    <MESSAGE value="deleted export entity" />
-    <MESSAGE value="implemented AddTask useCaseInteractor" />
-    <MESSAGE value="deleted createTaskForm.java" />
-    <MESSAGE value="improvised DataAccess, TaskRequestModel and TaskResponseModel" />
-    <MESSAGE value="update workspace.xml" />
-    <MESSAGE value="TaskCreate.fxml" />
-    <MESSAGE value="update from workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="update from workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -25,8 +25,6 @@ public class TimetablePresenter {
         ft.setToValue(0.0);
         ft.setAutoReverse(true);
         ft.play();
-
-
         }
     }
 }

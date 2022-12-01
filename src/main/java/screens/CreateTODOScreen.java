@@ -1,21 +1,18 @@
 package screens;
 
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import main.LoginPage;
 import main.ScheduleButton;
 
-public class CreateScheduleScreen {
+public class CreateTODOScreen {
 
     public static void newForm() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource
-                    ("userTimeTable.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1500, 700);
+            FXMLLoader fxmlLoader = new FXMLLoader(ScheduleButton.class.getClassLoader().getResource
+                    ("todo.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 400, 700);
             Stage loginStage = new Stage();
             loginStage.initStyle(StageStyle.DECORATED);
             loginStage.setScene(scene);

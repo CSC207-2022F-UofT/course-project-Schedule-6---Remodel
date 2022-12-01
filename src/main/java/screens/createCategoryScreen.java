@@ -6,10 +6,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.TodoPage;
 
-import java.io.IOException;
-import java.net.URL;
-
-public class createCategoryForm {
+public class createCategoryScreen {
     public static void newForm() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(TodoPage.class.getClassLoader().getResource("CategoryCreate.fxml"));
