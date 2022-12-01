@@ -30,6 +30,7 @@ public class TimeTableScreen {
     {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
     public void scheduleInputsButton(ActionEvent event) {TTC.scheduleInputsButton(event);}
 
+
     public void initialize() throws UnknownHostException {
         TTC.loadCalendar(Gridlock);
         usernameChangeLabel = TimetableUserName;
