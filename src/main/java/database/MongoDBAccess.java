@@ -25,11 +25,12 @@ public class MongoDBAccess implements DataAccess {
         }
         ArrayList<Object> schedules = new ArrayList<>();
         ArrayList<Object> tasks = new ArrayList<>();
+        ArrayList<Object> categories = new ArrayList<>();
         ArrayList<Object> followers = new ArrayList<>();
         ArrayList<Object> requests = new ArrayList<>();
         DBObject person = new BasicDBObject("_id", this.username)
                 .append("password", password).append("firstName", fName).append("lastName", lName)
-                .append("schedules", schedules).append("tasks", tasks)
+                .append("schedules", schedules).append("tasks", tasks).append("categories", categories)
                 .append("followers", followers)
                 .append("requests", requests);
         collection.insert(person);
@@ -104,7 +105,7 @@ public class MongoDBAccess implements DataAccess {
         lst.add(requestModel.getTitle());
         lst.add(requestModel.getDate());
         lst.add(requestModel.getCategory());
-        DBObject updateObj = new BasicDBObject("tasks", lst);
+        DBObject updateObj = new BasicDBObject("categories", lst);
         this.collection.update(query, new BasicDBObject("$push", updateObj));
     }
 
@@ -115,9 +116,9 @@ public class MongoDBAccess implements DataAccess {
         lst.add(requestModel.getDate());
         lst.add(requestModel.getCategory());
 
-        ArrayList<ArrayList<Object>> entireTask = this.getUserEntireTask();
+        ArrayList<ArrayList<Object>> entireSchedule = this.getUserEntireTask();
 
-        for (ArrayList<Object> objects : entireTask) {
+        for (ArrayList<Object> objects : entireSchedule) {
             if (objects.equals(lst)) {
                 return objects;
             }
@@ -128,7 +129,7 @@ public class MongoDBAccess implements DataAccess {
     @Override
     public ArrayList<ArrayList<Object>> getUserEntireTask() {
         DBObject document = collection.findOne(this.username);
-        BasicDBList list = (BasicDBList) document.get("tasks");
+        BasicDBList list = (BasicDBList) document.get("categories");
         ArrayList<ArrayList<Object>> entireList = new ArrayList<>();
         for (Object sublist: list) {
             entireList.add((ArrayList<Object>) sublist);
@@ -150,7 +151,7 @@ public class MongoDBAccess implements DataAccess {
         for (ArrayList<Object> objects : entireTask) {
             if (objects.equals(lst)) {
                 entireTask.remove(objects);
-                DBObject updateObj = new BasicDBObject("tasks", entireTask);
+                DBObject updateObj = new BasicDBObject("categories", entireTask);
                 collection.update(query, new BasicDBObject("$set", updateObj));
             }
         }
@@ -235,8 +236,9 @@ public class MongoDBAccess implements DataAccess {
 
         this.collection.update(query, updateObj);
     }
-    @Override
-    public Object getCategories(){
-        return collection.findOne(this.username).get("categories");
-    }
+
+
+
+
+
 }

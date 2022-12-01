@@ -1,5 +1,6 @@
 package requestModel;
 
+
 import java.time.LocalDate;
 
 public class TaskRequestModel {
@@ -33,7 +34,4 @@ public class TaskRequestModel {
 
     public String getCategory() { return this.category;}
 
-    public Boolean getPrivacySetting() {
-        return this.isPrivate;
-    }
 }

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -10,52 +8,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="436.0" prefWidth="401.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.AddTaskScreen">
+<AnchorPane prefHeight="386.0" prefWidth="400.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.AddTaskScreen">
    <children>
-      <AnchorPane layoutX="1.0" layoutY="78.0" prefHeight="371.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
+      <AnchorPane layoutX="1.0" layoutY="78.0" prefHeight="308.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
          <children>
-            <Label layoutX="16.0" layoutY="214.0" prefHeight="28.0" prefWidth="87.0" text="CATEGORY">
+            <Label layoutX="14.0" layoutY="148.0" prefHeight="28.0" prefWidth="87.0" text="CATEGORY">
                <font>
                   <Font name="Gill Sans MT Condensed" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="16.0" layoutY="151.0" prefHeight="28.0" prefWidth="87.0" text="PRIVACY">
+            <Label layoutX="16.0" layoutY="79.0" prefHeight="28.0" prefWidth="87.0" text="DATE">
                <font>
                   <Font name="Gill Sans MT Condensed" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="16.0" layoutY="90.0" prefHeight="28.0" prefWidth="87.0" text="DATE">
+            <Label layoutX="16.0" layoutY="14.0" prefHeight="28.0" prefWidth="87.0" text="TITLE">
                <font>
                   <Font name="Gill Sans MT Condensed" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="16.0" layoutY="25.0" prefHeight="28.0" prefWidth="87.0" text="TITLE">
-               <font>
-                  <Font name="Gill Sans MT Condensed" size="23.0" />
-               </font>
-            </Label>
-            <ComboBox fx:id="categoryComboBox" layoutX="16.0" layoutY="242.0" prefHeight="26.0" prefWidth="226.0" promptText="SELECT CATEGORY" />
-            <ComboBox fx:id="privacyComboBox" layoutX="16.0" layoutY="179.0" prefHeight="26.0" prefWidth="226.0" promptText="PUBLIC/PRIVATE">
-               <items>
-                  <FXCollections fx:factory="observableArrayList">
-                     <String fx:value="Public" />
-                     <String fx:value="Private" />
-                  </FXCollections>
-               </items>
-            </ComboBox>
-            <Button fx:id="taskCreateAddButton" layoutX="311.0" layoutY="318.0" mnemonicParsing="false" onAction="#addTask" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #87ae69;" text="ADD">
+            <ComboBox fx:id="categoryComboBox" layoutX="14.0" layoutY="176.0" prefHeight="26.0" prefWidth="226.0" promptText="SELECT CATEGORY" />
+            <Label fx:id="taskError" layoutX="13.0" layoutY="213.0" prefHeight="26.0" prefWidth="358.0" textFill="RED" />
+            <TextField fx:id="taskTitle" layoutX="14.0" layoutY="42.0" prefHeight="26.0" prefWidth="226.0" promptText="Title" />
+            <DatePicker fx:id="taskDate" layoutX="13.0" layoutY="107.0" prefHeight="26.0" prefWidth="226.0" promptText="Date" />
+            <Button fx:id="taskCreateAddButton" layoutX="310.0" layoutY="250.0" mnemonicParsing="false" onAction="#addTask" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #87ae69;" text="ADD">
                <font>
                   <Font name="Gill Sans MT Condensed" size="20.0" />
                </font>
             </Button>
-            <Label fx:id="taskError" layoutX="16.0" layoutY="283.0" prefHeight="26.0" prefWidth="358.0" textFill="RED" />
-            <Button fx:id="taskCancelButton" layoutX="14.0" layoutY="318.0" mnemonicParsing="false" onAction="#taskCancelAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #87ae69;" text="CANCEL">
+            <Button fx:id="taskCancelButton" layoutX="13.0" layoutY="250.0" mnemonicParsing="false" onAction="#taskCancelAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #87ae69;" text="CANCEL">
                <font>
                   <Font name="Gill Sans MT Condensed" size="20.0" />
                </font>
             </Button>
-            <TextField fx:id="taskTitle" layoutX="14.0" layoutY="53.0" prefHeight="26.0" prefWidth="226.0" promptText="Title" />
-            <DatePicker fx:id="taskDate" layoutX="13.0" layoutY="118.0" prefHeight="26.0" prefWidth="226.0" promptText="Date" />
          </children>
       </AnchorPane>
       <Label layoutX="110.0" layoutY="14.0" text="CREATE TASK">
