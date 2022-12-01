@@ -8,8 +8,10 @@ import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import entity.Schedule.TimeManagement;
+import javafx.animation.FadeTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import java.net.UnknownHostException;
@@ -17,17 +19,21 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import database.MongoDBAccess;
+import javafx.util.Duration;
+import presenter.TimetablePresenter;
 import useCaseInteractor.User.userCollection;
 
 public class TimetableController {
     public static Label usernameChangeLabel;
     private CalendarView calendar;
     private TimeManagement TM = new TimeManagement();
-    public void printCalendarEntries(ActionEvent event){
-        for (Calendar temp : calendar.getCalendars()) {
-            System.out.println(temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone()));
-        }
+    private TimetablePresenter TTP = new TimetablePresenter();
+
+
+    public void printCalendarEntries(ActionEvent event, Label entriesSaved) throws InterruptedException {
+        TTP.printCalendarEntries(entriesSaved, calendar);
     }
+
     public void setUsernameChangeLabel(String name){
         for (Calendar temp: calendar.getCalendars()) {
             temp.setName(name);
@@ -60,7 +66,6 @@ public class TimetableController {
         CalendarSource myCalendarSource = new CalendarSource("");
         myCalendarSource.getCalendars().addAll(calendars);
         calendar.getCalendarSources().addAll(myCalendarSource);
-        System.out.println(calendar.getCalendarSources());
         calendar.getCalendarSources().remove(1);
         calendar.setRequestedTime(LocalTime.now());
 

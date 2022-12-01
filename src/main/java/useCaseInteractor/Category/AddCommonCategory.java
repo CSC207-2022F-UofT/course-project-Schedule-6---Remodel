@@ -5,7 +5,11 @@ import entity.Category.Category;
 import entity.Category.CategoryFactory;
 import presenter.AddCategoryPresenter;
 import requestModel.CategoryCreationRequestModel;
+<<<<<<< HEAD
 import responseModel.Category.CategoryCreationResponseModel;
+=======
+import responseModel.Category.CategoryResponseModel;
+>>>>>>> origin/feature-8-user
 import useCaseInteractor.DataAccess;
 
 public class AddCommonCategory implements CategoryCreationInputBoundary {
@@ -22,10 +26,17 @@ public class AddCommonCategory implements CategoryCreationInputBoundary {
     }
 
     @Override
+<<<<<<< HEAD
     public CategoryCreationResponseModel create(CategoryCreationRequestModel requestModel) {
         Category category = categoryFactory.create(requestModel.getName(), requestModel.getStatus());
         dataAccess.setCategory(requestModel);
         CategoryCreationResponseModel responseModel = new CategoryCreationResponseModel(category.getName(), category.getStatus());
+=======
+    public CategoryResponseModel create(CategoryCreationRequestModel requestModel) {
+        Category category = categoryFactory.create(requestModel.getName(), requestModel.getStatus());
+        dataAccess.setCategory(requestModel);
+        CategoryResponseModel responseModel = new CategoryResponseModel(category.getName(), category.isStatus());
+>>>>>>> origin/feature-8-user
         return categoryPresenter.prepareSuccessView(responseModel);
     }
 }
