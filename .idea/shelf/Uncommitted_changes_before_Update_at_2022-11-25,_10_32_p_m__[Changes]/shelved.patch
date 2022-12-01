@@ -1,0 +1,559 @@
+Index: src/main/java/database/MongoDBAccess.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/database/MongoDBAccess.java b/src/main/java/database/MongoDBAccess.java
+--- a/src/main/java/database/MongoDBAccess.java	
++++ b/src/main/java/database/MongoDBAccess.java	
+@@ -1,12 +1,16 @@
+ package database;
+ 
++import com.mongodb.BasicDBObject;
+ import com.mongodb.DBCollection;
++import com.mongodb.DBObject;
+ import entity.CommonScheduleItem;
+ import entity.CommonTask;
+ import requestModel.ScheduleItemRequestModel;
+ import requestModel.TaskRequestModel;
+ import useCaseInteractor.DataAccess;
+ import java.util.ArrayList;
++import java.util.Objects;
++
+ import entity.User;
+ 
+ public class MongoDBAccess implements DataAccess {
+@@ -15,25 +19,42 @@
+ 
+     private final DBCollection collection;
+ 
++    private final DBObject query;
++
+     public MongoDBAccess(DBCollection collection, String username) {
+ 
+         this.username = username;
+         this.collection = collection;
++        this.query = new BasicDBObject("_id", this.username);
+     }
+ 
+     @Override
+     public void setSchedule(ScheduleItemRequestModel requestModel) {
+ 
++        ArrayList<Object> lst = new ArrayList<>();
++        lst.add(0, requestModel.getTitle());
++        lst.add(1, requestModel.getDate());
++        lst.add(2, requestModel.getStartTime());
++        lst.add(3, requestModel.getEndTime());
++
++        DBObject updateObj = new BasicDBObject("schedule", lst);
++
++        this.collection.update(this.query, new BasicDBObject("$push", updateObj));
+     }
+ 
+     @Override
+     public CommonScheduleItem getSingleSchedule(ScheduleItemRequestModel requestModel) {
++        ArrayList<Object> lst = (ArrayList<Object>) this.getUserEntireSchedule();
++        for (int i = 0; i < lst.toArray().length; i++) {
++            if (requestModel.getTitle().equals(lst.get(i))) {
++            }
++        }
+         return null;
+     }
+ 
+     @Override
+-    public ArrayList<CommonScheduleItem> getUserEntireSchedule() {
+-        return null;
++    public Object getUserEntireSchedule() {
++        return this.collection.find(this.query).toArray().get(0).get("name");
+     }
+ 
+     @Override
+@@ -46,8 +67,8 @@
+     }
+ 
+     @Override
+-    public ArrayList<CommonTask> getUserEntireTask() {
+-        return null;
++    public Object getUserEntireTask() {
++        return this.collection.findOne(this.username).get("task");
+     }
+ 
+     @Override
+Index: src/main/java/useCaseInteractor/DataAccess.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/DataAccess.java b/src/main/java/useCaseInteractor/DataAccess.java
+--- a/src/main/java/useCaseInteractor/DataAccess.java	
++++ b/src/main/java/useCaseInteractor/DataAccess.java	
+@@ -17,13 +17,13 @@
+ 
+     CommonScheduleItem getSingleSchedule(ScheduleItemRequestModel requestModel);
+ 
+-    ArrayList<CommonScheduleItem> getUserEntireSchedule();
++    Object getUserEntireSchedule();
+ 
+     void setTask(TaskRequestModel requestModel);
+ 
+     CommonTask getSingleTask(TaskRequestModel requestModel);
+ 
+-    ArrayList<CommonTask> getUserEntireTask();
++    Object getUserEntireTask();
+ 
+     boolean getUserExist(String username);
+ 
+Index: src/main/java/database/MongoTesting.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/database/MongoTesting.java b/src/main/java/database/MongoTesting.java
+--- a/src/main/java/database/MongoTesting.java	
++++ b/src/main/java/database/MongoTesting.java	
+@@ -3,9 +3,7 @@
+ import com.mongodb.*;
+ 
+ import java.net.UnknownHostException;
+-import java.util.ArrayList;
+-import java.util.Arrays;
+-import java.util.List;
++import java.util.*;
+ 
+ public class MongoTesting {
+     public static void main(String[] args) throws UnknownHostException {
+@@ -23,19 +21,31 @@
+         DB database = mongoClient.getDB("schedule6-testingdb");
+ 
+         DBCollection collection = database.getCollection("schedule6-testingcollection");
+-//        ArrayList<String> list = new ArrayList<>();
+-//        list.add("Apple");
+-//        list.add("Orange");
+-//        list.add("Banana");
++//        ArrayList<Object> list = new ArrayList<>();
++//        ArrayList<Object> sublist1 = new ArrayList<>();
++//        sublist1.add("Apple");
++//        sublist1.add("Orange");
++//        sublist1.add("Banana");
++//        ArrayList<Object> sublist2 = new ArrayList<>();
++//        sublist2.add("Pizza");
++//        sublist2.add("Burger");
++//        sublist2.add("Taco");
++//        list.add(sublist1);
++//        list.add(sublist2);
+ //        DBObject person = new BasicDBObject("_id", "steven123")
+ //                .append("name", list);
+ //
+ //        collection.insert(person);
+-        DBObject query = new BasicDBObject("_id", "nizar1234");
+ 
+-        DBObject updateObj = new BasicDBObject("name", "pineapple");
++        // Adding data
++        DBObject query = new BasicDBObject("_id", "steven123");
++//
++//        DBObject updateObj = new BasicDBObject("name", "pineapple");
++//
++//        collection.update(query, new BasicDBObject("$push", updateObj));
+ 
+-        collection.update(query, new BasicDBObject("$push", updateObj));
++        // Getting Data
++//        collection.findOne("steven123").get("name");
+     }
+ }
+ 
+Index: src/main/java/controller/LoginPageController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/LoginPageController.java b/src/main/java/controller/LoginPageController.java
+--- a/src/main/java/controller/LoginPageController.java	
++++ b/src/main/java/controller/LoginPageController.java	
+@@ -1,103 +1,103 @@
+-package controller;
+-
+-
+-import entity.User;
+-import javafx.event.ActionEvent;
+-import javafx.fxml.FXML;
+-import javafx.scene.control.Button;
+-import javafx.scene.control.Label;
+-import javafx.scene.control.TextField;
+-import javafx.stage.Stage;
+-import main.DataConnection;
+-import useCaseInteractor.User.createAccountForm;
+-import useCaseInteractor.Schedule.createScheduleForm;
+-import java.sql.Connection;
+-import java.sql.PreparedStatement;
+-import java.sql.ResultSet;
+-import java.sql.Statement;
+-import useCaseInteractor.User.setUsername;
+-import useCaseInteractor.User.userCollection;
+-
+-public class LoginPageController {
+-    @FXML
+-    private Button cancelButton;
+-    @FXML
+-    private Label loginMessageLabel;
+-    @FXML
+-    private TextField usernameTextField;
+-    @FXML
+-    private TextField passwordTextField;
+-    @FXML
+-    private Button loginButton;
+-
+-
+-    public void cancelButtonAction(ActionEvent event){
+-        Stage stage = (Stage) cancelButton.getScene().getWindow();
+-        stage.close();
+-    }
+-    public void loginButtonAction(ActionEvent event){
+-
+-        if (!usernameTextField.getText().isBlank() && !passwordTextField.getText().isBlank()) {
+-            User loginAttempt = Login();
+-            if (loginAttempt != null){
+-
+-                //If the Login is successful then the window closes
+-                loginMessageLabel.setText("LOGIN SUCCESSFUL");
+-                Stage stage = (Stage) loginButton.getScene().getWindow();
+-                stage.close();
+-
+-                //Username of the person logged in is Stored in the user collector
+-                userCollection.setUser(loginAttempt);
+-                //The schedule form opens
+-                createScheduleForm.newForm();
+-                setUsername.setName();
+-                System.out.println("Successful Authentication of: " + loginAttempt.username);
+-                System.out.println("           First name: " + loginAttempt.firstname);
+-                System.out.println("           Last name: " + loginAttempt.lastname);
+-
+-            }
+-            else {
+-                loginMessageLabel.setText("USERNAME OR PASSWORD INCORRECT");
+-            }
+-        } else {
+-            loginMessageLabel.setText("PLEASE ENTER A USERNAME AND PASSWORD");
+-        }
+-
+-    }
+-    public void registerButtonAction(ActionEvent event){createAccountForm.newForm();}
+-
+-
+-    public  User Login() {
+-        User user = null;
+-        DataConnection connection = new DataConnection();
+-        Connection connectionDataBase = connection.getConnection();
+-
+-        String verifyLogin = "SELECT * FROM useraccounts WHERE username=? AND password=?";
+-
+-        try {
+-            Statement statement = connectionDataBase.createStatement();
+-            PreparedStatement preparedStatement = connection.databaseuser.prepareStatement(verifyLogin);
+-            preparedStatement.setString(1, usernameTextField.getText());
+-            preparedStatement.setString(2, passwordTextField.getText());
+-
+-            ResultSet results = preparedStatement.executeQuery();
+-
+-            if (results.next()) {
+-                user = new User();
+-                user.firstname = results.getString("firstname");
+-                user.lastname = results.getString("lastname");
+-                user.username = results.getString("username");
+-                user.password = results.getString("password");
+-            }
+-            statement.close();
+-            connectionDataBase.close();
+-
+-        } catch (Exception e) {
+-            System.out.println(connection);
+-            e.printStackTrace();
+-            e.getCause();
+-        }
+-
+-        return user;
+-    }
+-}
+\ No newline at end of file
++//package controller;
++//
++//
++//import entity.User;
++//import javafx.event.ActionEvent;
++//import javafx.fxml.FXML;
++//import javafx.scene.control.Button;
++//import javafx.scene.control.Label;
++//import javafx.scene.control.TextField;
++//import javafx.stage.Stage;
++//import main.DataConnection;
++//import useCaseInteractor.User.createAccountForm;
++//import useCaseInteractor.Schedule.createScheduleForm;
++//import java.sql.Connection;
++//import java.sql.PreparedStatement;
++//import java.sql.ResultSet;
++//import java.sql.Statement;
++//import useCaseInteractor.User.setUsername;
++//import useCaseInteractor.User.userCollection;
++//
++//public class LoginPageController {
++//    @FXML
++//    private Button cancelButton;
++//    @FXML
++//    private Label loginMessageLabel;
++//    @FXML
++//    private TextField usernameTextField;
++//    @FXML
++//    private TextField passwordTextField;
++//    @FXML
++//    private Button loginButton;
++//
++//
++//    public void cancelButtonAction(ActionEvent event){
++//        Stage stage = (Stage) cancelButton.getScene().getWindow();
++//        stage.close();
++//    }
++//    public void loginButtonAction(ActionEvent event){
++//
++//        if (!usernameTextField.getText().isBlank() && !passwordTextField.getText().isBlank()) {
++//            User loginAttempt = Login();
++//            if (loginAttempt != null){
++//
++//                //If the Login is successful then the window closes
++//                loginMessageLabel.setText("LOGIN SUCCESSFUL");
++//                Stage stage = (Stage) loginButton.getScene().getWindow();
++//                stage.close();
++//
++//                //Username of the person logged in is Stored in the user collector
++//                userCollection.setUser(loginAttempt);
++//                //The schedule form opens
++//                createScheduleForm.newForm();
++//                setUsername.setName();
++//                System.out.println("Successful Authentication of: " + loginAttempt.username);
++//                System.out.println("           First name: " + loginAttempt.firstname);
++//                System.out.println("           Last name: " + loginAttempt.lastname);
++//
++//            }
++//            else {
++//                loginMessageLabel.setText("USERNAME OR PASSWORD INCORRECT");
++//            }
++//        } else {
++//            loginMessageLabel.setText("PLEASE ENTER A USERNAME AND PASSWORD");
++//        }
++//
++//    }
++//    public void registerButtonAction(ActionEvent event){createAccountForm.newForm();}
++//
++//
++//    public  User Login() {
++//        User user = null;
++//        DataConnection connection = new DataConnection();
++//        Connection connectionDataBase = connection.getConnection();
++//
++//        String verifyLogin = "SELECT * FROM useraccounts WHERE username=? AND password=?";
++//
++//        try {
++//            Statement statement = connectionDataBase.createStatement();
++//            PreparedStatement preparedStatement = connection.databaseuser.prepareStatement(verifyLogin);
++//            preparedStatement.setString(1, usernameTextField.getText());
++//            preparedStatement.setString(2, passwordTextField.getText());
++//
++//            ResultSet results = preparedStatement.executeQuery();
++//
++//            if (results.next()) {
++//                user = new User();
++//                user.firstname = results.getString("firstname");
++//                user.lastname = results.getString("lastname");
++//                user.username = results.getString("username");
++//                user.password = results.getString("password");
++//            }
++//            statement.close();
++//            connectionDataBase.close();
++//
++//        } catch (Exception e) {
++//            System.out.println(connection);
++//            e.printStackTrace();
++//            e.getCause();
++//        }
++//
++//        return user;
++//    }
++//}
+\ No newline at end of file
+Index: src/main/java/useCaseInteractor/Task/createTaskForm.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/Task/createTaskForm.java b/src/main/java/useCaseInteractor/Task/createTaskForm.java
+--- a/src/main/java/useCaseInteractor/Task/createTaskForm.java	
++++ b/src/main/java/useCaseInteractor/Task/createTaskForm.java	
+@@ -1,28 +1,28 @@
+-package useCaseInteractor.Task;
+-
+-import javafx.fxml.FXMLLoader;
+-import javafx.scene.Scene;
+-import javafx.stage.Stage;
+-import javafx.stage.StageStyle;
+-import main.LoginPage;
+-
+-import java.io.IOException;
+-import java.net.URL;
+-
+-public class createTaskForm{
+-    public static void newForm() {
+-        try {
+-            FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("TaskCreate.fxml"));
+-            Scene scene = new Scene(fxmlLoader.load(), 468, 600);
+-            Stage taskStage = new Stage();
+-            taskStage.initStyle(StageStyle.DECORATED);
+-            taskStage.setScene(scene);
+-            taskStage.show();
+-
+-        } catch (Exception e) {
+-            e.printStackTrace();
+-            e.getCause();
+-        }
+-    }
+-
+-}
+\ No newline at end of file
++//package useCaseInteractor.Task;
++//
++//import javafx.fxml.FXMLLoader;
++//import javafx.scene.Scene;
++//import javafx.stage.Stage;
++//import javafx.stage.StageStyle;
++//import main.LoginPage;
++//
++//import java.io.IOException;
++//import java.net.URL;
++//
++//public class createTaskForm{
++//    public static void newForm() {
++//        try {
++//            FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("TaskCreate.fxml"));
++//            Scene scene = new Scene(fxmlLoader.load(), 468, 600);
++//            Stage taskStage = new Stage();
++//            taskStage.initStyle(StageStyle.DECORATED);
++//            taskStage.setScene(scene);
++//            taskStage.show();
++//
++//        } catch (Exception e) {
++//            e.printStackTrace();
++//            e.getCause();
++//        }
++//    }
++//
++//}
+\ No newline at end of file
+Index: src/main/java/useCaseInteractor/User/createAccountForm.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/User/createAccountForm.java b/src/main/java/useCaseInteractor/User/createAccountForm.java
+--- a/src/main/java/useCaseInteractor/User/createAccountForm.java	
++++ b/src/main/java/useCaseInteractor/User/createAccountForm.java	
+@@ -1,24 +1,24 @@
+-package useCaseInteractor.User;
+-import javafx.fxml.FXMLLoader;
+-import javafx.scene.Scene;
+-import javafx.stage.Stage;
+-import javafx.stage.StageStyle;
+-import main.LoginPage;
+-
+-public class createAccountForm {
+-
+-    public static void newForm() {
+-        try {
+-            FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("Register.fxml"));
+-            Scene scene = new Scene(fxmlLoader.load(), 468, 600);
+-            Stage loginStage = new Stage();
+-            loginStage.initStyle(StageStyle.DECORATED);
+-            loginStage.setScene(scene);
+-            loginStage.show();
+-
+-        } catch (Exception e) {
+-            e.printStackTrace();
+-            e.getCause();
+-        }
+-    }
+-}
+\ No newline at end of file
++//package useCaseInteractor.User;
++//import javafx.fxml.FXMLLoader;
++//import javafx.scene.Scene;
++//import javafx.stage.Stage;
++//import javafx.stage.StageStyle;
++//import main.LoginPage;
++//
++//public class createAccountForm {
++//
++//    public static void newForm() {
++//        try {
++//            FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("Register.fxml"));
++//            Scene scene = new Scene(fxmlLoader.load(), 468, 600);
++//            Stage loginStage = new Stage();
++//            loginStage.initStyle(StageStyle.DECORATED);
++//            loginStage.setScene(scene);
++//            loginStage.show();
++//
++//        } catch (Exception e) {
++//            e.printStackTrace();
++//            e.getCause();
++//        }
++//    }
++//}
+\ No newline at end of file
+Index: src/main/java/useCaseInteractor/Category/createCategoryForm.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/Category/createCategoryForm.java b/src/main/java/useCaseInteractor/Category/createCategoryForm.java
+--- a/src/main/java/useCaseInteractor/Category/createCategoryForm.java	
++++ b/src/main/java/useCaseInteractor/Category/createCategoryForm.java	
+@@ -1,22 +1,22 @@
+-package useCaseInteractor.Category;
+-
+-import javafx.fxml.FXMLLoader;
+-import javafx.scene.Scene;
+-import javafx.stage.Stage;
+-import javafx.stage.StageStyle;
+-import main.LoginPage;
+-
+-import java.io.IOException;
+-import java.net.URL;
+-
+-public class createCategoryForm {
+-    public void start(Stage stage) throws IOException {
+-
+-        URL location = LoginPage.class.getClassLoader().getResource("CategoryCreate.fxml");
+-        FXMLLoader fxmlLoader = new FXMLLoader(location);
+-        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
+-        stage.initStyle(StageStyle.DECORATED);
+-        stage.setScene(scene);
+-        stage.show();
+-    }
+-}
++//package useCaseInteractor.Category;
++//
++//import javafx.fxml.FXMLLoader;
++//import javafx.scene.Scene;
++//import javafx.stage.Stage;
++//import javafx.stage.StageStyle;
++//import main.LoginPage;
++//
++//import java.io.IOException;
++//import java.net.URL;
++//
++//public class createCategoryForm {
++//    public void start(Stage stage) throws IOException {
++//
++//        URL location = LoginPage.class.getClassLoader().getResource("CategoryCreate.fxml");
++//        FXMLLoader fxmlLoader = new FXMLLoader(location);
++//        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
++//        stage.initStyle(StageStyle.DECORATED);
++//        stage.setScene(scene);
++//        stage.show();
++//    }
++//}

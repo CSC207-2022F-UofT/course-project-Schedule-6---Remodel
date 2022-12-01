@@ -1,0 +1,2181 @@
+Index: src/main/java/controller/Task/TodoController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/Task/TodoController.java b/src/main/java/controller/Task/TodoController.java
+--- a/src/main/java/controller/Task/TodoController.java	
++++ b/src/main/java/controller/Task/TodoController.java	
+@@ -5,6 +5,8 @@
+ import javafx.event.ActionEvent;
+ import javafx.fxml.FXML;
+ import javafx.scene.control.Button;
++import screens.createCategoryScreen;
++import useCaseInteractor.Task.createTaskForm;
+ 
+ public class TodoController {
+ 
+@@ -21,8 +23,10 @@
+     private Button addTaskButton;
+ 
+     public void todoAddButtonAction(ActionEvent actionEvent) {
++        createTaskForm.newForm();
+     }
+ 
+     public void todoAddCategory(ActionEvent actionEvent) {
++        createCategoryScreen.newForm();
+     }
+ }
+Index: src/main/java/entity/ToDoList.java
+===================================================================
+diff --git a/src/main/java/entity/ToDoList.java b/src/main/java/entity/ToDoList.java
+deleted file mode 100644
+--- a/src/main/java/entity/ToDoList.java	
++++ /dev/null	
+@@ -1,41 +0,0 @@
+-package entity;
+-import entity.Category.Category;
+-import entity.Category.CommonCategory;
+-import entity.Task.Task;
+-
+-import java.util.ArrayList;
+-
+-public class ToDoList {
+-    private ArrayList<Task> tasks;
+-    private ArrayList<CommonCategory> categories;
+-
+-    public void ToDo(){
+-        this.tasks = new ArrayList<>();
+-        this.categories = new ArrayList<>();
+-    }
+-
+-    public void addTask(String title, String date, String time, String description){
+-//        this.tasks.add(new Task(title, date, time, description));
+-    }
+-
+-    public void deleteTask(Task t){
+-        this.tasks.remove(t);
+-    }
+-
+-    public void addCategory(String name, boolean status, String hex){
+-        this.categories.add(new CommonCategory(name, status, hex));
+-    }
+-
+-    public void deleteCategory(Category category){
+-        this.categories.remove(category);
+-    }
+-
+-    public ArrayList<Task> getTasks(){
+-        return this.tasks;
+-    }
+-
+-    public ArrayList<CommonCategory> getCategories(){
+-        return this.categories;
+-    }
+-
+-}
+Index: src/main/java/responseModel/Category/CategoryCreationResponseModel.java
+===================================================================
+diff --git a/src/main/java/responseModel/Category/CategoryCreationResponseModel.java b/src/main/java/responseModel/Category/CategoryCreationResponseModel.java
+deleted file mode 100644
+--- a/src/main/java/responseModel/Category/CategoryCreationResponseModel.java	
++++ /dev/null	
+@@ -1,27 +0,0 @@
+-package responseModel.Category;
+-
+-public class CategoryCreationResponseModel {
+-    String name;
+-    String creationTime;
+-
+-    public void CategoryCreationResponseModel (String name, String creationTime) {
+-        this.name = name;
+-        this.creationTime = creationTime;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    public String getCreationTime() {
+-        return creationTime;
+-    }
+-
+-    public void setCreationTime(String creationTime) {
+-        this.creationTime = creationTime;
+-    }
+-}
+Index: src/main/java/entity/Category/CommonCategory.java
+===================================================================
+diff --git a/src/main/java/entity/Category/CommonCategory.java b/src/main/java/entity/Category/CommonCategory.java
+deleted file mode 100644
+--- a/src/main/java/entity/Category/CommonCategory.java	
++++ /dev/null	
+@@ -1,19 +0,0 @@
+-package entity.Category;
+-//new entity
+-public class CommonCategory implements Category {
+-    private final String name;
+-    private final boolean status;
+-
+-    public CommonCategory(String name, boolean status) {
+-        this.name = name;
+-        this.status = status;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public boolean isStatus() {
+-        return status;
+-    }
+-}
+Index: src/main/java/useCaseInteractor/Task/EditTask.java
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/Task/EditTask.java b/src/main/java/useCaseInteractor/Task/EditTask.java
+deleted file mode 100644
+--- a/src/main/java/useCaseInteractor/Task/EditTask.java	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-package useCaseInteractor.Task;
+-
+-public class EditTask {
+-}
+Index: src/main/java/useCaseInteractor/Category/createCategoryForm.java
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/Category/createCategoryForm.java b/src/main/java/useCaseInteractor/Category/createCategoryForm.java
+deleted file mode 100644
+--- a/src/main/java/useCaseInteractor/Category/createCategoryForm.java	
++++ /dev/null	
+@@ -1,22 +0,0 @@
+-package useCaseInteractor.Category;
+-
+-import javafx.fxml.FXMLLoader;
+-import javafx.scene.Scene;
+-import javafx.stage.Stage;
+-import javafx.stage.StageStyle;
+-import main.LoginPage;
+-
+-import java.io.IOException;
+-import java.net.URL;
+-
+-public class createCategoryForm {
+-    public void start(Stage stage) throws IOException {
+-
+-        URL location = LoginPage.class.getClassLoader().getResource("CategoryCreate.fxml");
+-        FXMLLoader fxmlLoader = new FXMLLoader(location);
+-        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
+-        stage.initStyle(StageStyle.DECORATED);
+-        stage.setScene(scene);
+-        stage.show();
+-    }
+-}
+Index: src/main/java/repo/CategoryRepository.java
+===================================================================
+diff --git a/src/main/java/repo/CategoryRepository.java b/src/main/java/repo/CategoryRepository.java
+deleted file mode 100644
+--- a/src/main/java/repo/CategoryRepository.java	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-package repo;
+-
+-public class CategoryRepository {
+-}
+Index: src/main/java/entity/Category/Category.java
+===================================================================
+diff --git a/src/main/java/entity/Category/Category.java b/src/main/java/entity/Category/Category.java
+deleted file mode 100644
+--- a/src/main/java/entity/Category/Category.java	
++++ /dev/null	
+@@ -1,6 +0,0 @@
+-package entity.Category;
+-
+-public interface Category {
+-    String getName();
+-    boolean isStatus();
+-}
+Index: src/main/java/entity/Category/CategoryFactory.java
+===================================================================
+diff --git a/src/main/java/entity/Category/CategoryFactory.java b/src/main/java/entity/Category/CategoryFactory.java
+deleted file mode 100644
+--- a/src/main/java/entity/Category/CategoryFactory.java	
++++ /dev/null	
+@@ -1,5 +0,0 @@
+-package entity.Category;
+-
+-public interface CategoryFactory {
+-    Category create(String name, boolean status);
+-}
+Index: src/main/java/requestModel/CategoryCreationRequestModel.java
+===================================================================
+diff --git a/src/main/java/requestModel/CategoryCreationRequestModel.java b/src/main/java/requestModel/CategoryCreationRequestModel.java
+deleted file mode 100644
+--- a/src/main/java/requestModel/CategoryCreationRequestModel.java	
++++ /dev/null	
+@@ -1,44 +0,0 @@
+-package requestModel;
+-
+-public class CategoryCreationRequestModel {
+-    private String name;
+-    private boolean status;
+-    private String hex;
+-
+-
+-    public CategoryCreationRequestModel(String name, boolean status, String hex) {
+-        this.name = name;
+-        this.status = status;
+-        this.hex = hex;
+-    }
+-
+-    String getName() {
+-        return name;
+-    }
+-
+-    void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    boolean getStatus() {
+-        return status;
+-    }
+-
+-    void setStatus(boolean status) {
+-        this.status = status;
+-    }
+-
+-    String getHex() {
+-        return hex;
+-    }
+-
+-    void setHex() {
+-        this.hex = hex;
+-    }
+-
+-
+-
+-
+-
+-
+-}
+Index: src/main/java/boundary/Category/CategoryCreationOutputBoundary.java
+===================================================================
+diff --git a/src/main/java/boundary/Category/CategoryCreationOutputBoundary.java b/src/main/java/boundary/Category/CategoryCreationOutputBoundary.java
+deleted file mode 100644
+--- a/src/main/java/boundary/Category/CategoryCreationOutputBoundary.java	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-package boundary.Category;
+-
+-public class CategoryCreationOutputBoundary {
+-}
+Index: src/main/java/boundary/Category/CategoryCreationInputBoundary.java
+===================================================================
+diff --git a/src/main/java/boundary/Category/CategoryCreationInputBoundary.java b/src/main/java/boundary/Category/CategoryCreationInputBoundary.java
+deleted file mode 100644
+--- a/src/main/java/boundary/Category/CategoryCreationInputBoundary.java	
++++ /dev/null	
+@@ -1,8 +0,0 @@
+-package boundary.Category;
+-
+-import requestModel.CategoryCreationRequestModel;
+-import responseModel.Category.CategoryCreationResponseModel;
+-
+-public interface CategoryCreationInputBoundary {
+-    CategoryCreationResponseModel create(CategoryCreationRequestModel requestModel);
+-}
+Index: src/main/java/entity/Category/CommonCategoryFactory.java
+===================================================================
+diff --git a/src/main/java/entity/Category/CommonCategoryFactory.java b/src/main/java/entity/Category/CommonCategoryFactory.java
+deleted file mode 100644
+--- a/src/main/java/entity/Category/CommonCategoryFactory.java	
++++ /dev/null	
+@@ -1,8 +0,0 @@
+-package entity.Category;
+-
+-public class CommonCategoryFactory implements CategoryFactory{
+-    @Override
+-    public Category create(String name, boolean status) {
+-        return new CommonCategory(name, status);
+-    }
+-}
+Index: src/main/java/main/DataConnection.java
+===================================================================
+diff --git a/src/main/java/main/DataConnection.java b/src/main/java/main/DataConnection.java
+deleted file mode 100644
+--- a/src/main/java/main/DataConnection.java	
++++ /dev/null	
+@@ -1,25 +0,0 @@
+-package main;
+-import java.sql.Connection;
+-import java.sql.DriverManager;
+-
+-
+-
+-public class DataConnection {
+-    public Connection databaseuser;
+-
+-    public Connection getConnection(){
+-        String databaseUser = "root";
+-        String databasePassword = "root";
+-        String url = "jdbc:mysql://localhost:3306/database";
+-
+-        try {
+-            Class.forName("com.mysql.cj.jdbc.Driver");
+-            databaseuser = DriverManager.getConnection(url, databaseUser, databasePassword);
+-
+-        }catch(Exception e){
+-            e.printStackTrace();
+-            e.getCause();
+-        }
+-        return databaseuser;
+-    }
+-}
+\ No newline at end of file
+Index: src/main/java/responseModel/Category/CategoryAddTaskResponseModel.java
+===================================================================
+diff --git a/src/main/java/responseModel/Category/CategoryAddTaskResponseModel.java b/src/main/java/responseModel/Category/CategoryAddTaskResponseModel.java
+deleted file mode 100644
+--- a/src/main/java/responseModel/Category/CategoryAddTaskResponseModel.java	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-package responseModel.Category;
+-
+-public class CategoryAddTaskResponseModel {
+-}
+Index: src/main/java/responseModel/Category/CategoryDeleteTaskResponseModel.java
+===================================================================
+diff --git a/src/main/java/responseModel/Category/CategoryDeleteTaskResponseModel.java b/src/main/java/responseModel/Category/CategoryDeleteTaskResponseModel.java
+deleted file mode 100644
+--- a/src/main/java/responseModel/Category/CategoryDeleteTaskResponseModel.java	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-package responseModel.Category;
+-
+-public class CategoryDeleteTaskResponseModel {
+-}
+Index: src/main/java/controller/Task/TaskCreationController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/Task/TaskCreationController.java b/src/main/java/controller/Task/TaskCreationController.java
+--- a/src/main/java/controller/Task/TaskCreationController.java	
++++ b/src/main/java/controller/Task/TaskCreationController.java	
+@@ -1,45 +1,30 @@
+ package controller.Task;
+ 
+-import javafx.event.ActionEvent;
+-import javafx.fxml.FXML;
+-import javafx.scene.control.*;
+-import javafx.stage.Stage;
+-import java.lang.String;
++import boundary.Task.AddTaskItemInputBoundary;
++import javafx.scene.control.ComboBox;
++import presenter.AddTaskPresenter;
++import requestModel.TaskRequestModel;
++import responseModel.Task.TaskResponseModel;
++
+ import java.time.LocalDate;
+-import java.util.Objects;
+-
+ 
+ public class TaskCreationController<String> {
+ 
+-    public Button taskCancelButton;
+-    public Label taskError;
+-    @FXML
+-    private ComboBox<?> categoryComboBox;
+-
+-    @FXML
+-    private ComboBox<?> privacyComboBox;
+-
+-    @FXML
+-    private Button taskCreateAddButton;
++    final AddTaskItemInputBoundary addTaskItemInputBoundary;
+ 
+-    @FXML
+-    private DatePicker taskDate;
++    final AddTaskPresenter presenter;
+ 
+-    @FXML
+-    private TextField taskTitle;
++    public TaskCreationController(AddTaskItemInputBoundary inputBoundary, AddTaskPresenter presenter){
++        this.addTaskItemInputBoundary = inputBoundary;
++        this.presenter = presenter;
++    }
+ 
+-    @FXML
+-    public void addTask(ActionEvent event) {
+-        String title_ = (String) taskTitle.getText();
+-        LocalDate date_ = taskDate.getValue();
+-        boolean isPrivate_ = Objects.equals((java.lang.String) privacyComboBox.getValue(), "Private");
+-
+-        //Category category_ = categoryComboBox.
++    public TaskResponseModel create(java.lang.String title, LocalDate date, Boolean isPrivate, java.lang.String category){
++        if (title.isBlank() || (date == null) || (isPrivate == null) || (category == null)){
++            return presenter.prepareFailView("Please Fill in All Fields");
++        }
++        TaskRequestModel newInputData = new TaskRequestModel(title, date, isPrivate, category);
++        return addTaskItemInputBoundary.create(newInputData);
+     }
+ 
+-
+-    public void taskCancelAction(ActionEvent actionEvent) {
+-        Stage stage = (Stage) taskCancelButton.getScene().getWindow();
+-        stage.close();
+-    }
+ }
+Index: src/main/java/useCaseInteractor/Search/launchSearch.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/Search/launchSearch.java b/src/main/java/useCaseInteractor/Search/launchSearch.java
+--- a/src/main/java/useCaseInteractor/Search/launchSearch.java	
++++ b/src/main/java/useCaseInteractor/Search/launchSearch.java	
+@@ -4,7 +4,7 @@
+ import com.mongodb.DBCollection;
+ import com.mongodb.MongoClient;
+ import com.mongodb.MongoClientURI;
+-import Search;
++import entity.User.Search;
+ import database.MongoDBAccess;
+ 
+ import java.net.UnknownHostException;
+Index: src/main/java/entity/Task/TaskFactory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/entity/Task/TaskFactory.java b/src/main/java/entity/Task/TaskFactory.java
+--- a/src/main/java/entity/Task/TaskFactory.java	
++++ b/src/main/java/entity/Task/TaskFactory.java	
+@@ -1,9 +1,7 @@
+ package entity.Task;
+ 
+-import entity.Category.Category;
+-
+ import java.time.LocalDate;
+ 
+ public interface TaskFactory {
+-    Task create(String title, LocalDate date, String privacySetting, Category category);
++    Task create(String title, LocalDate date, Boolean privacySetting, String category);
+ }
+Index: src/main/java/useCaseInteractor/Requests/RequestProcess.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/Requests/RequestProcess.java b/src/main/java/useCaseInteractor/Requests/RequestProcess.java
+--- a/src/main/java/useCaseInteractor/Requests/RequestProcess.java	
++++ b/src/main/java/useCaseInteractor/Requests/RequestProcess.java	
+@@ -5,7 +5,7 @@
+ import com.mongodb.MongoClient;
+ import com.mongodb.MongoClientURI;
+ import database.MongoDBAccess;
+-import entity.Request;
++import entity.User.Request;
+ import useCaseInteractor.User.userCollection;
+ 
+ import java.net.UnknownHostException;
+Index: src/main/java/entity/Task/Task.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/entity/Task/Task.java b/src/main/java/entity/Task/Task.java
+--- a/src/main/java/entity/Task/Task.java	
++++ b/src/main/java/entity/Task/Task.java	
+@@ -1,7 +1,5 @@
+ package entity.Task;
+ 
+-import entity.Category.Category;
+-
+ import java.time.LocalDate;
+ 
+ public interface Task {
+@@ -10,7 +8,7 @@
+ 
+     LocalDate getDate();
+ 
+-    String getPrivacySetting();
++    Boolean getPrivacySetting();
+ 
+-    Category getCategory();
++    String getCategory();
+ }
+Index: src/main/java/database/MongoDBAccess.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/database/MongoDBAccess.java b/src/main/java/database/MongoDBAccess.java
+--- a/src/main/java/database/MongoDBAccess.java	
++++ b/src/main/java/database/MongoDBAccess.java	
+@@ -18,6 +18,23 @@
+         this.collection = collection;
+     }
+ 
++    @Override
++    public boolean createUser(String password, String fName, String lName){
++        if(this.getUserExist()){
++            return false;
++        }
++        ArrayList<Object> schedules = new ArrayList<>();
++        ArrayList<Object> tasks = new ArrayList<>();
++        ArrayList<Object> followers = new ArrayList<>();
++        ArrayList<Object> requests = new ArrayList<>();
++        DBObject person = new BasicDBObject("_id", this.username)
++                .append("password", password).append("firstName", fName).append("lastName", lName)
++                .append("schedules", schedules).append("tasks", tasks)
++                .append("followers", followers)
++                .append("requests", requests);
++        collection.insert(person);
++        return true;
++    }
+     @Override
+     public void setSchedule(ScheduleItemRequestModel requestModel) {
+         DBObject query = new BasicDBObject("_id", this.username);
+@@ -26,12 +43,10 @@
+         lst.add(requestModel.getDate());
+         lst.add(requestModel.getStartTime());
+         lst.add(requestModel.getEndTime());
+-        DBObject updateObj = new BasicDBObject("schedule", lst);
++        DBObject updateObj = new BasicDBObject("schedules", lst);
+         this.collection.update(query, new BasicDBObject("$push", updateObj));
+     }
+ 
+-
+-    // Still unsure about this method, depends on how editing schedule will be implemented
+     @Override
+     public ArrayList<Object> getSingleSchedule(ScheduleItemRequestModel requestModel) {
+         ArrayList<Object> lst = new ArrayList<>();
+@@ -53,7 +68,7 @@
+     @Override
+     public ArrayList<ArrayList<Object>>  getUserEntireSchedule() {
+         DBObject document = collection.findOne(this.username);
+-        BasicDBList list = (BasicDBList) document.get("schedule");
++        BasicDBList list = (BasicDBList) document.get("schedules");
+         ArrayList<ArrayList<Object>> entireList = new ArrayList<>();
+         for (Object sublist: list) {
+             entireList.add((ArrayList<Object>) sublist);
+@@ -76,7 +91,7 @@
+         for (ArrayList<Object> objects : entireSchedule) {
+             if (objects.equals(lst)) {
+                 entireSchedule.remove(objects);
+-                DBObject updateObj = new BasicDBObject("schedule", entireSchedule);
++                DBObject updateObj = new BasicDBObject("schedules", entireSchedule);
+                 collection.update(query, new BasicDBObject("$set", updateObj));
+             }
+         }
+@@ -84,17 +99,61 @@
+ 
+     @Override
+     public void setTask(TaskRequestModel requestModel) {
+-
++        DBObject query = new BasicDBObject("_id", this.username);
++        ArrayList<Object> lst = new ArrayList<>();
++        lst.add(requestModel.getTitle());
++        lst.add(requestModel.getDate());
++        lst.add(requestModel.getCategory());
++        DBObject updateObj = new BasicDBObject("tasks", lst);
++        this.collection.update(query, new BasicDBObject("$push", updateObj));
+     }
+ 
+     @Override
+     public ArrayList<Object> getSingleTask(TaskRequestModel requestModel) {
+-        return null;
++        ArrayList<Object> lst = new ArrayList<>();
++        lst.add(requestModel.getTitle());
++        lst.add(requestModel.getDate());
++        lst.add(requestModel.getCategory());
++
++        ArrayList<ArrayList<Object>> entireTask = this.getUserEntireTask();
++
++        for (ArrayList<Object> objects : entireTask) {
++            if (objects.equals(lst)) {
++                return objects;
++            }
++        }
++        return lst;
+     }
+ 
+     @Override
+     public ArrayList<ArrayList<Object>> getUserEntireTask() {
+-        return null;
++        DBObject document = collection.findOne(this.username);
++        BasicDBList list = (BasicDBList) document.get("tasks");
++        ArrayList<ArrayList<Object>> entireList = new ArrayList<>();
++        for (Object sublist: list) {
++            entireList.add((ArrayList<Object>) sublist);
++        }
++        return entireList;
++    }
++
++    @Override
++    public void deleteTask(TaskRequestModel requestModel) {
++        DBObject query = new BasicDBObject("_id", this.username);
++
++        ArrayList<Object> lst = new ArrayList<>();
++        lst.add(requestModel.getTitle());
++        lst.add(requestModel.getDate());
++        lst.add(requestModel.getCategory());
++
++        ArrayList<ArrayList<Object>> entireTask = this.getUserEntireTask();
++
++        for (ArrayList<Object> objects : entireTask) {
++            if (objects.equals(lst)) {
++                entireTask.remove(objects);
++                DBObject updateObj = new BasicDBObject("tasks", entireTask);
++                collection.update(query, new BasicDBObject("$set", updateObj));
++            }
++        }
+     }
+ 
+     @Override
+@@ -102,6 +161,10 @@
+         return this.collection.findOne(username) != null;
+     }
+ 
++
++    @Override
++    public boolean getUserExist(){ return this.collection.findOne(this.username) != null;}
++
+     //returns all user data
+     @Override
+     public DBObject getUserData(){
+@@ -134,6 +197,19 @@
+         collection.update(query, new BasicDBObject("$push", updateObj));
+     }
+ 
++    @Override
++    public boolean checkPassword(String password){
++        return collection.findOne(this.username).get("password").equals(password);
++    }
++
++    @Override
++    public void setFollowing(ArrayList<String> following){
++        DBObject query = new BasicDBObject("_id", this.username);
++
++        DBObject updateObj = new BasicDBObject("followers", this.username);
++
++        this.collection.update(query, updateObj);
++    }
+     //returns current request, you can accept or decline a request
+     @Override
+     public Object getRequests(){
+@@ -151,16 +227,16 @@
+     }
+ 
+     //sets a new request list when a request is accepted or declined
++    @Override
+     public void setRequests(ArrayList<String> usernames){
+         DBObject query = new BasicDBObject("_id", this.username);
+ 
+-        DBObject updateObj = new BasicDBObject("requests", username);
++        DBObject updateObj = new BasicDBObject("requests", this.username);
+ 
+-        collection.update(query, updateObj);
++        this.collection.update(query, updateObj);
+     }
+-
+-
+-
+-
+-
++    @Override
++    public Object getCategories(){
++        return collection.findOne(this.username).get("categories");
++    }
+ }
+Index: src/main/java/entity/Task/CommonTaskFactory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/entity/Task/CommonTaskFactory.java b/src/main/java/entity/Task/CommonTaskFactory.java
+--- a/src/main/java/entity/Task/CommonTaskFactory.java	
++++ b/src/main/java/entity/Task/CommonTaskFactory.java	
+@@ -1,12 +1,10 @@
+ package entity.Task;
+ 
+-import entity.Category.Category;
+-
+ import java.time.LocalDate;
+ 
+ public class CommonTaskFactory implements TaskFactory {
+     @Override
+-    public Task create(String title, LocalDate date, String privacySetting, Category category) {
++    public Task create(String title, LocalDate date, Boolean privacySetting, String category) {
+         return new CommonTask(title, date, privacySetting, category);
+     }
+ 
+Index: src/main/java/entity/Task/CommonTask.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/entity/Task/CommonTask.java b/src/main/java/entity/Task/CommonTask.java
+--- a/src/main/java/entity/Task/CommonTask.java	
++++ b/src/main/java/entity/Task/CommonTask.java	
+@@ -1,7 +1,5 @@
+ package entity.Task;
+ 
+-import entity.Category.Category;
+-
+ import java.time.LocalDate;
+ 
+ public class CommonTask implements Task {
+@@ -10,11 +8,11 @@
+ 
+     private LocalDate date;
+ 
+-    private String privacySetting;
++    private Boolean privacySetting;
+ 
+-    private Category category;
++    private String category;
+ 
+-    public CommonTask(String title, LocalDate date, String privacySetting, Category category) {
++    public CommonTask(String title, LocalDate date, Boolean privacySetting, String category) {
+         this.title = title;
+         this.date = date;
+         this.privacySetting = privacySetting;
+@@ -32,12 +30,12 @@
+     }
+ 
+     @Override
+-    public String getPrivacySetting() {
++    public Boolean getPrivacySetting() {
+         return this.privacySetting;
+     }
+ 
+     @Override
+-    public Category getCategory() {
++    public String getCategory() {
+         return this.category;
+     }
+ }
+\ No newline at end of file
+Index: src/main/java/module-info.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/module-info.java b/src/main/java/module-info.java
+--- a/src/main/java/module-info.java	
++++ b/src/main/java/module-info.java	
+@@ -1,35 +1,25 @@
+ module com.example.project6maven {
+     requires javafx.controls;
+     requires javafx.fxml;
+-
+     requires org.controlsfx.controls;
+-    //requires org.kordamp.bootstrapfx.core;
+-    requires java.sql;
+-
+     opens main to javafx.fxml;
++    opens screens to javafx.fxml;
+     exports main;
+-    exports entity;
+     opens entity to javafx.fxml;
+     exports controller.Schedule;
+     opens controller.Schedule to javafx.fxml;
+     exports controller.Task;
+     opens controller.Task to javafx.fxml;
+-    exports controller.Category;
+-    opens controller.Category to javafx.fxml;
+     exports controller.User;
+     opens controller.User to javafx.fxml;
+     exports controller.Import;
+     opens controller.Import to javafx.fxml;
+-    exports entity.Category;
+-    opens entity.Category to javafx.fxml;
+     exports entity.Schedule;
+     opens entity.Schedule to javafx.fxml;
+     exports entity.Task;
+     opens entity.Task to javafx.fxml;
+     exports entity.User;
+     opens entity.User to javafx.fxml;
+-    requires javafx.graphics;
+-    //requires mysql.connector.j;
+     requires com.calendarfx.view;
+     requires mongo.java.driver;
+     requires org.mnode.ical4j.core;
+Index: src/main/java/responseModel/Task/TaskResponseModel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/responseModel/Task/TaskResponseModel.java b/src/main/java/responseModel/Task/TaskResponseModel.java
+--- a/src/main/java/responseModel/Task/TaskResponseModel.java	
++++ b/src/main/java/responseModel/Task/TaskResponseModel.java	
+@@ -1,8 +1,5 @@
+ package responseModel.Task;
+ 
+-
+-import entity.Category.CommonCategory;
+-
+ import java.time.LocalDate;
+ 
+ public class TaskResponseModel {
+@@ -10,11 +7,11 @@
+ 
+     private LocalDate date;
+ 
+-    private CommonCategory category;
++    private String category;
+ 
+-    private boolean isPrivate;
++    private Boolean isPrivate;
+ 
+-    public TaskResponseModel(String title, LocalDate date, boolean isPrivate, CommonCategory category){
++    public TaskResponseModel(String title, LocalDate date, Boolean isPrivate, String category){
+         this.title = title;
+         this.date = date;
+         this.isPrivate = isPrivate;
+@@ -33,6 +30,6 @@
+         }
+     }
+ 
+-    public CommonCategory getCategory() { return this.category;}
++    public String getCategory() { return this.category;}
+ 
+ }
+Index: src/main/java/screens/TimeTableScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/screens/TimeTableScreen.java b/src/main/java/screens/TimeTableScreen.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/screens/TimeTableScreen.java	
+@@ -0,0 +1,52 @@
++package screens;
++
++import com.calendarfx.view.CalendarView;
++import controller.Schedule.TimetableController;
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.control.Button;
++import javafx.scene.control.Label;
++import javafx.scene.layout.BorderPane;
++import javafx.scene.layout.GridPane;
++import javafx.scene.layout.Pane;
++import main.LoginPage;
++import useCaseInteractor.User.userCollection;
++
++import java.io.IOException;
++import java.net.UnknownHostException;
++import java.util.Objects;
++
++public class TimeTableScreen {
++    @FXML
++    private Label TimetableUserName;
++    @FXML
++    private GridPane Gridlock;
++    @FXML
++    private Button saveButton;
++    @FXML
++    private Button newEvent;
++    @FXML
++    private Label allEntriesSavedLabel;
++    @FXML
++    private GridPane TODO;
++    public static Label usernameChangeLabel;
++
++    private TimetableController TTC = new TimetableController();
++
++    public void printCalendarEntries(ActionEvent event) throws InterruptedException
++    {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
++    public void scheduleInputsButton(ActionEvent event) {TTC.scheduleInputsButton(event);}
++
++
++
++    public void initialize() throws IOException {
++        TTC.loadCalendar(Gridlock);
++        usernameChangeLabel = TimetableUserName;
++        TTC.setUsernameChangeLabel(userCollection.getUsername());
++        FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("todo.fxml"));
++        TODO.getChildren().add(fxmlLoader.load());
++
++    }
++}
++
+Index: src/main/java/screens/RegistrationScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/screens/RegistrationScreen.java b/src/main/java/screens/RegistrationScreen.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/screens/RegistrationScreen.java	
+@@ -0,0 +1,38 @@
++package screens;
++
++import controller.User.UserRegisterController;
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.scene.control.Button;
++import javafx.scene.control.Label;
++import javafx.scene.control.TextField;
++import java.net.UnknownHostException;
++public class RegistrationScreen {
++    @FXML
++    private Button RGregisterbutton;
++    @FXML
++    public Button RGclosebutton;
++    @FXML
++    private TextField RGfirstname;
++    @FXML
++    private TextField RGlastname;
++    @FXML
++    private TextField RGusername;
++    @FXML
++    private TextField RGpassword;
++    @FXML
++    private TextField RGconfirmpassword;
++    @FXML
++    private Label registrationMessage;
++    @FXML
++    private Label inuselabel;
++    @FXML
++    private Label passwordMisMatch;
++
++    private UserRegisterController URG = new UserRegisterController();
++    public void cancelButtonAction(ActionEvent event) {URG.cancelButtonAction(event, RGclosebutton);}
++    public void registerButtonOnAction(ActionEvent event) throws UnknownHostException
++    {URG.registerButtonOnAction(event, registrationMessage, passwordMisMatch, RGfirstname,
++            RGlastname, RGusername, RGpassword, RGconfirmpassword, RGclosebutton, inuselabel);}
++}
++
+Index: src/main/java/useCaseInteractor/User/setUsername.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/User/setUsername.java b/src/main/java/useCaseInteractor/User/setUsername.java
+--- a/src/main/java/useCaseInteractor/User/setUsername.java	
++++ b/src/main/java/useCaseInteractor/User/setUsername.java	
+@@ -1,10 +1,12 @@
+ package useCaseInteractor.User;
+ 
++
+ import controller.Schedule.TimetableController;
++import screens.TimeTableScreen;
+ 
+ public class setUsername {
+ 
+     public static void setName() {
+-        TimetableController.usernameChageLabel.setText(userCollection.getUsername());
++        TimeTableScreen.usernameChangeLabel.setText(userCollection.getUsername());
+     }
+ }
+Index: src/main/java/screens/CreateTODOScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/screens/CreateTODOScreen.java b/src/main/java/screens/CreateTODOScreen.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/screens/CreateTODOScreen.java	
+@@ -0,0 +1,26 @@
++package screens;
++
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Scene;
++import javafx.stage.Stage;
++import javafx.stage.StageStyle;
++import main.ScheduleButton;
++
++public class CreateTODOScreen {
++
++    public static void newForm() {
++        try {
++            FXMLLoader fxmlLoader = new FXMLLoader(ScheduleButton.class.getClassLoader().getResource
++                    ("todo.fxml"));
++            Scene scene = new Scene(fxmlLoader.load(), 400, 700);
++            Stage loginStage = new Stage();
++            loginStage.initStyle(StageStyle.DECORATED);
++            loginStage.setScene(scene);
++            loginStage.show();
++
++        } catch (Exception e) {
++            e.printStackTrace();
++            e.getCause();
++        }
++    }
++}
+Index: src/main/java/useCaseInteractor/Task/DeleteTask.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/Task/DeleteTask.java b/src/main/java/useCaseInteractor/Task/DeleteTask.java
+--- a/src/main/java/useCaseInteractor/Task/DeleteTask.java	
++++ b/src/main/java/useCaseInteractor/Task/DeleteTask.java	
+@@ -1,4 +1,19 @@
+ package useCaseInteractor.Task;
++import requestModel.TaskRequestModel;
++import responseModel.Task.TaskResponseModel;
++import useCaseInteractor.DataAccess;
++import boundary.Task.DeleteTaskInputBoundary;
++public class DeleteTask implements DeleteTaskInputBoundary {
++    final DataAccess dataAccess;
++
++    public DeleteTask (DataAccess dataAccess){
++        this.dataAccess = dataAccess;
++    }
+ 
+-public class DeleteTask {
+-}
++
++        @Override
++        public TaskResponseModel delete(TaskRequestModel inputData) {
++            dataAccess.deleteTask(inputData);
++            return null;
++        }
++    }
+Index: src/main/java/screens/AddTaskScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/screens/AddTaskScreen.java b/src/main/java/screens/AddTaskScreen.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/screens/AddTaskScreen.java	
+@@ -0,0 +1,48 @@
++package screens;
++
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.scene.control.*;
++import javafx.stage.Stage;
++
++import java.time.LocalDate;
++import java.util.Objects;
++
++public class AddTaskScreen {
++    public Button taskCancelButton;
++
++    public Label taskError;
++    @FXML
++    private ComboBox<?> categoryComboBox;
++
++    @FXML
++    private ComboBox<?> privacyComboBox;
++
++    @FXML
++    private Button taskCreateAddButton;
++
++    @FXML
++    private DatePicker taskDate;
++
++    @FXML
++    private TextField taskTitle;
++
++    @FXML
++    public TableView todoTable;
++
++    @FXML
++    public void addTask(ActionEvent event) {
++        String title_ = (String) taskTitle.getText();
++        LocalDate date_ = taskDate.getValue();
++        Boolean isPrivate_ = Objects.equals((java.lang.String) privacyComboBox.getValue(), "Private");
++
++        //Category category_ = categoryComboBox.
++    }
++
++
++
++    public void taskCancelAction(ActionEvent actionEvent) {
++        Stage stage = (Stage) taskCancelButton.getScene().getWindow();
++        stage.close();
++    }
++}
+Index: src/main/java/boundary/Task/EditTaskInputBoundary.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/boundary/Task/EditTaskInputBoundary.java b/src/main/java/boundary/Task/EditTaskInputBoundary.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/boundary/Task/EditTaskInputBoundary.java	
+@@ -0,0 +1,9 @@
++package boundary.Task;
++
++import requestModel.ScheduleItemRequestModel;
++import requestModel.TaskRequestModel;
++import responseModel.Task.TaskResponseModel;
++
++public interface EditTaskInputBoundary {
++    TaskResponseModel edit(TaskRequestModel newInputData, TaskRequestModel oldInputData);
++}
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	
++++ b/.gitignore	
+@@ -8,6 +8,7 @@
+ .idea/jarRepositories.xml
+ .idea/compiler.xml
+ .idea/libraries/
++.idea/workspace.xml
+ *.iws
+ *.iml
+ *.ipr
+Index: src/main/java/useCaseInteractor/Task/AddTask.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/Task/AddTask.java b/src/main/java/useCaseInteractor/Task/AddTask.java
+--- a/src/main/java/useCaseInteractor/Task/AddTask.java	
++++ b/src/main/java/useCaseInteractor/Task/AddTask.java	
+@@ -1,4 +1,31 @@
+ package useCaseInteractor.Task;
++import boundary.Task.AddTaskItemInputBoundary;
++import entity.Task.Task;
++import entity.Task.TaskFactory;
++import requestModel.TaskRequestModel;
++import responseModel.Task.TaskResponseModel;
++import useCaseInteractor.DataAccess;
++
++public class AddTask implements AddTaskItemInputBoundary {
+ 
+-public class AddTask {
+-}
++    final DataAccess dataAccess;
++    final TaskFactory TaskFactory;
++    final presenter.AddTaskPresenter AddTaskPresenter;
++
++    public AddTask(DataAccess dataAccess, entity.Task.TaskFactory taskFactory, presenter.AddTaskPresenter addTaskPresenter) {
++        this.dataAccess = dataAccess;
++        TaskFactory = taskFactory;
++        AddTaskPresenter = addTaskPresenter;
++    }
++
++    public TaskResponseModel create(TaskRequestModel inputData) {
++        Task Task = TaskFactory.create(inputData.getTitle(),
++                inputData.getDate(), inputData.getPrivacySetting(), inputData.getCategory());
++
++        dataAccess.setTask(inputData);
++
++        TaskResponseModel responseModel = new TaskResponseModel(Task.getTitle(),
++                Task.getDate(), Task.getPrivacySetting(), Task.getCategory());
++        return AddTaskPresenter.prepareSuccessView(responseModel);
++    }
++}
+\ No newline at end of file
+Index: src/main/java/screens/createCategoryScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/screens/createCategoryScreen.java b/src/main/java/screens/createCategoryScreen.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/screens/createCategoryScreen.java	
+@@ -0,0 +1,24 @@
++package screens;
++
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Scene;
++import javafx.stage.Stage;
++import javafx.stage.StageStyle;
++import main.TodoPage;
++
++public class createCategoryScreen {
++    public static void newForm() {
++        try {
++            FXMLLoader fxmlLoader = new FXMLLoader(TodoPage.class.getClassLoader().getResource("CategoryCreate.fxml"));
++            Scene scene = new Scene(fxmlLoader.load(), 400, 300);
++            Stage categoryStage = new Stage();
++            categoryStage.initStyle(StageStyle.DECORATED);
++            categoryStage.setScene(scene);
++            categoryStage.show();
++
++        } catch (Exception e) {
++            e.printStackTrace();
++            e.getCause();
++        }
++    }
++}
+Index: src/main/java/screens/LoginScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/screens/LoginScreen.java b/src/main/java/screens/LoginScreen.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/screens/LoginScreen.java	
+@@ -0,0 +1,30 @@
++package screens;
++
++import controller.User.LoginPageController;
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.scene.control.Button;
++import javafx.scene.control.Label;
++import javafx.scene.control.TextField;
++
++import java.net.UnknownHostException;
++
++public class LoginScreen {
++    @FXML
++    private Button cancelButton;
++    @FXML
++    private Label loginMessageLabel;
++    @FXML
++    private TextField usernameTextField;
++    @FXML
++    private TextField passwordTextField;
++    @FXML
++    private Button loginButton;
++
++    private LoginPageController LPC = new LoginPageController();
++
++    public void cancelButtonAction(ActionEvent event) {LPC.cancelButtonAction(event, cancelButton);}
++    public void loginButtonAction(ActionEvent event) throws UnknownHostException
++    {LPC.loginButtonAction(event, usernameTextField, passwordTextField, loginButton, loginMessageLabel);}
++    public void registerButtonAction(ActionEvent event){LPC.registerButtonAction(event);}
++}
+Index: src/main/resources/userTimeTable.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/userTimeTable.fxml b/src/main/resources/userTimeTable.fxml
+--- a/src/main/resources/userTimeTable.fxml	
++++ b/src/main/resources/userTimeTable.fxml	
+@@ -2,8 +2,6 @@
+ 
+ <?import javafx.scene.control.Button?>
+ <?import javafx.scene.control.Label?>
+-<?import javafx.scene.image.Image?>
+-<?import javafx.scene.image.ImageView?>
+ <?import javafx.scene.layout.AnchorPane?>
+ <?import javafx.scene.layout.ColumnConstraints?>
+ <?import javafx.scene.layout.GridPane?>
+@@ -11,16 +9,11 @@
+ <?import javafx.scene.layout.RowConstraints?>
+ <?import javafx.scene.text.Font?>
+ 
+-<AnchorPane prefHeight="700.0" prefWidth="1099.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Schedule.TimetableController">
++<AnchorPane prefHeight="700.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.TimeTableScreen">
+    <children>
+       <Pane prefHeight="78.0" prefWidth="1099.0" style="-fx-background-color: #82AA68;">
+          <children>
+-            <ImageView fitHeight="61.0" fitWidth="114.0" layoutX="6.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+-               <image>
+-                  <Image url="@Images/person-circle.png" />
+-               </image>
+-            </ImageView>
+-            <Label fx:id="TimetableUserName" layoutX="126.0" layoutY="19.0" text="USERNAME" textFill="WHITE">
++            <Label fx:id="TimetableUserName" layoutX="182.0" layoutY="19.0" text="USERNAME" textFill="WHITE">
+                <font>
+                   <Font name="Gill Sans MT Condensed" size="33.0" />
+                </font>
+@@ -35,9 +28,27 @@
+                   <Font name="Gill Sans MT Condensed" size="16.0" />
+                </font>
+             </Button>
++            <Label fx:id="allEntriesSavedLabel" layoutX="456.0" layoutY="20.0" textFill="WHITE">
++               <font>
++                  <Font name="Gill Sans MT Condensed" size="33.0" />
++               </font>
++            </Label>
++            <Label layoutX="14.0" layoutY="20.0" text="WELCOME BACK:" textFill="WHITE">
++               <font>
++                  <Font name="Gill Sans MT Condensed" size="33.0" />
++               </font>
++            </Label>
+          </children>
+       </Pane>
+       <GridPane fx:id="Gridlock" layoutX="21.0" layoutY="96.0" prefHeight="584.0" prefWidth="1057.0">
++        <columnConstraints>
++          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
++        </columnConstraints>
++        <rowConstraints>
++          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
++        </rowConstraints>
++      </GridPane>
++      <GridPane fx:id="TODO" layoutX="1099.0" prefHeight="700.0" prefWidth="400.0">
+         <columnConstraints>
+           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+Index: src/main/java/useCaseInteractor/Task/EditTask_new.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/Task/EditTask_new.java b/src/main/java/useCaseInteractor/Task/EditTask_new.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/useCaseInteractor/Task/EditTask_new.java	
+@@ -0,0 +1,19 @@
++package useCaseInteractor.Task;
++import boundary.Task.EditTaskInputBoundary;
++import requestModel.TaskRequestModel;
++import responseModel.Task.TaskResponseModel;
++import useCaseInteractor.DataAccess;
++public class EditTask_new implements EditTaskInputBoundary {
++    final DataAccess dataAccess;
++
++    public EditTask_new(DataAccess dataAccess) {
++        this.dataAccess = dataAccess;
++    }
++
++    @Override
++    public TaskResponseModel edit(TaskRequestModel newInputData, TaskRequestModel oldInputData) {
++        dataAccess.deleteTask(oldInputData);
++        dataAccess.setTask(oldInputData);
++        return null;
++    }
++}
+Index: src/main/java/entity/Schedule/TimeManagement.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/entity/Schedule/TimeManagement.java b/src/main/java/entity/Schedule/TimeManagement.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/entity/Schedule/TimeManagement.java	
+@@ -0,0 +1,22 @@
++package entity.Schedule;
++
++import java.time.LocalDate;
++import java.time.ZoneId;
++
++public class TimeManagement {
++    ZoneId TIMEZONE_ET = ZoneId.of("America/Toronto");
++    LocalDate startDate = LocalDate.of(-99999,1,1);
++    LocalDate endDate = LocalDate.of(99999,12,31);
++
++
++    public ZoneId getTimeZone() {
++        return TIMEZONE_ET;
++    }
++    public LocalDate getStartDate(){
++        return startDate;
++    }
++    public LocalDate getEndDate(){
++        return endDate;
++    }
++
++}
+Index: src/main/java/controller/Schedule/TimetableController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/Schedule/TimetableController.java b/src/main/java/controller/Schedule/TimetableController.java
+--- a/src/main/java/controller/Schedule/TimetableController.java	
++++ b/src/main/java/controller/Schedule/TimetableController.java	
+@@ -3,63 +3,72 @@
+ import com.calendarfx.view.CalendarView;
+ import com.calendarfx.model.Calendar;
+ import com.calendarfx.model.CalendarSource;
++import com.mongodb.DB;
++import com.mongodb.DBCollection;
++import com.mongodb.MongoClient;
++import com.mongodb.MongoClientURI;
++import entity.Schedule.TimeManagement;
++import javafx.animation.FadeTransition;
+ import javafx.application.Platform;
+ import javafx.event.ActionEvent;
+-import javafx.fxml.FXML;
+-import javafx.scene.control.Button;
++import javafx.event.EventHandler;
+ import javafx.scene.control.Label;
+ import javafx.scene.layout.GridPane;
+-
++import java.net.UnknownHostException;
+ import java.time.LocalDate;
+ import java.time.LocalTime;
+-import java.time.ZoneId;
+-
++import java.util.ArrayList;
++import database.MongoDBAccess;
++import javafx.util.Duration;
++import presenter.TimetablePresenter;
++import useCaseInteractor.User.userCollection;
+ 
+ public class TimetableController {
+-
+-    @FXML
+-    private Label TimetableUserName;
+-    @FXML
+-    private GridPane Gridlock;
+-    @FXML
+-    private Button saveButton;
+-    @FXML
+-    private Button newEvent;
+-    public static Label usernameChageLabel;
+-
++    public static Label usernameChangeLabel;
+     private CalendarView calendar;
++    private TimeManagement TM = new TimeManagement();
++    private TimetablePresenter TTP = new TimetablePresenter();
++
+ 
+-    ZoneId TIMEZONE_ET = ZoneId.of("America/Toronto");
+-    LocalDate startDate = LocalDate.of(-99999,1,1);
+-    LocalDate endDate = LocalDate.of(99999,12,31);
+-    @FXML
+-    private void printCalendarEntries(){
+-        for (Calendar temp : calendar.getCalendars()) {
+-            System.out.println(temp.findEntries(startDate, endDate, TIMEZONE_ET));
++    public void printCalendarEntries(ActionEvent event, Label entriesSaved) throws InterruptedException {
++        TTP.printCalendarEntries(entriesSaved, calendar);
++    }
++
++    public void setUsernameChangeLabel(String name){
++        for (Calendar temp: calendar.getCalendars()) {
++            temp.setName(name);
+         }
+     }
+-    @FXML
+     public void scheduleInputsButton(ActionEvent event){}
+-
+-
+-
+-    private void loadCalendar() {
++    
++    public void loadCalendar(GridPane Gridlock) throws UnknownHostException {
+         calendar = new CalendarView();
+ 
+-        Calendar classes = new Calendar("null");
+-        Calendar meetings = new Calendar("Meetings");
++        MongoDBAccess client = new MongoDBAccess(this.main(), userCollection.getUsername());
++
++        ArrayList<String> followers = (ArrayList<String>) client.getFollowing();
+ 
+-        classes.setStyle(Calendar.Style.STYLE7);
+-        meetings.setStyle(Calendar.Style.STYLE2);
++        ArrayList<Calendar> calendars = new ArrayList<>();
+ 
+-        CalendarSource myCalendarSource = new CalendarSource("Timetable");
+-        myCalendarSource.getCalendars().addAll(classes, meetings);
++//        for(String e : followers){
++//            Calendar friends = new Calendar(e);
++//            friends.setStyle(Calendar.Style.STYLE7);
++//            calendars.add(friends);
++//        }
+ 
++        //EVERYTHING BELOW IS STABLE
++        //Calendar classes = new Calendar("null");
++        //Calendar meetings = new Calendar("Meetings");
++
++        //classes.setStyle(Calendar.Style.STYLE7);
++        //meetings.setStyle(Calendar.Style.STYLE2);
++
++        CalendarSource myCalendarSource = new CalendarSource("");
++        myCalendarSource.getCalendars().addAll(calendars);
+         calendar.getCalendarSources().addAll(myCalendarSource);
+-
++        calendar.getCalendarSources().remove(1);
+         calendar.setRequestedTime(LocalTime.now());
+ 
+-
+         Thread updateTimeThread = new Thread("Calendar: Update Time Thread") {
+             @Override
+             public void run() {
+@@ -83,16 +92,27 @@
+         updateTimeThread.setPriority(Thread.MIN_PRIORITY);
+         updateTimeThread.setDaemon(true);
+         updateTimeThread.start();
+-        //calendar.showMonthPage();
+         calendar.showWeekPage();
+         calendar.setShowAddCalendarButton(true);
+         calendar.setShowPrintButton(false);
+         calendar.setShowDeveloperConsole(false);
++        calendar.setShowAddCalendarButton(false);
+         Gridlock.getChildren().add(calendar);
+     }
+ 
+-    public void initialize(){
+-        usernameChageLabel = TimetableUserName;
+-        loadCalendar();
++
++
++    public DBCollection main() throws UnknownHostException {
++        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
++
++        //Brians remote database
++//        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://123:123@cluster1.d3e1rhp.mongodb.net/?retryWrites=true&w=majority"));
++
++
++        DB database = mongoClient.getDB("schedule6-testingdb");
++        DBCollection collection = database.getCollection("schedule6-testingcollection");
++
++        //this.loadCalendar(collection);
++        return collection;
+     }
+ }
+Index: src/main/java/useCaseInteractor/Task/createTaskForm.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/Task/createTaskForm.java b/src/main/java/useCaseInteractor/Task/createTaskForm.java
+--- a/src/main/java/useCaseInteractor/Task/createTaskForm.java	
++++ b/src/main/java/useCaseInteractor/Task/createTaskForm.java	
+@@ -4,7 +4,7 @@
+ import javafx.scene.Scene;
+ import javafx.stage.Stage;
+ import javafx.stage.StageStyle;
+-import main.LoginPage;
++import main.TodoPage;
+ 
+ import java.io.IOException;
+ import java.net.URL;
+@@ -12,8 +12,8 @@
+ public class createTaskForm{
+     public static void newForm() {
+         try {
+-            FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("TaskCreate.fxml"));
+-            Scene scene = new Scene(fxmlLoader.load(), 468, 600);
++            FXMLLoader fxmlLoader = new FXMLLoader(TodoPage.class.getClassLoader().getResource("TaskCreate.fxml"));
++            Scene scene = new Scene(fxmlLoader.load(), 400, 450);
+             Stage taskStage = new Stage();
+             taskStage.initStyle(StageStyle.DECORATED);
+             taskStage.setScene(scene);
+Index: src/main/java/boundary/Task/AddTaskItemInputBoundary.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/boundary/Task/AddTaskItemInputBoundary.java b/src/main/java/boundary/Task/AddTaskItemInputBoundary.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/boundary/Task/AddTaskItemInputBoundary.java	
+@@ -0,0 +1,8 @@
++package boundary.Task;
++
++import requestModel.TaskRequestModel;
++import responseModel.Task.TaskResponseModel;
++
++public interface AddTaskItemInputBoundary {
++    TaskResponseModel create(TaskRequestModel inputData);
++}
+Index: src/main/java/boundary/Task/DeleteTaskInputBoundary.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/boundary/Task/DeleteTaskInputBoundary.java b/src/main/java/boundary/Task/DeleteTaskInputBoundary.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/boundary/Task/DeleteTaskInputBoundary.java	
+@@ -0,0 +1,8 @@
++package boundary.Task;
++
++import requestModel.TaskRequestModel;
++import responseModel.Task.TaskResponseModel;
++
++public interface DeleteTaskInputBoundary {
++    TaskResponseModel delete(TaskRequestModel inputData);
++}
+Index: src/main/java/useCaseInteractor/DataAccess.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/DataAccess.java b/src/main/java/useCaseInteractor/DataAccess.java
+--- a/src/main/java/useCaseInteractor/DataAccess.java	
++++ b/src/main/java/useCaseInteractor/DataAccess.java	
+@@ -7,6 +7,8 @@
+ 
+ public interface DataAccess {
+ 
++    boolean createUser(String password, String fName, String lName);
++
+     void setSchedule(ScheduleItemRequestModel requestModel);
+ 
+     ArrayList<Object> getSingleSchedule(ScheduleItemRequestModel requestModel);
+@@ -21,8 +23,12 @@
+ 
+     ArrayList<ArrayList<Object>> getUserEntireTask();
+ 
++    void deleteTask(TaskRequestModel requestModel);
++
+     boolean getUserExist(String username);
+ 
++    boolean getUserExist();
++
+     Object getUserData();
+ 
+     void setPassword(String password);
+@@ -31,7 +37,16 @@
+ 
+     void appendFollowing(String username);
+ 
++    boolean checkPassword(String password);
++
++    void setFollowing(ArrayList<String> following);
++
+     Object getRequests();
+ 
+     void appendRequests(String username);
++
++    //sets a new request list when a request is accepted or declined
++    void setRequests(ArrayList<String> usernames);
++
++    Object getCategories();
+ }
+Index: src/main/java/presenter/TimetablePresenter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/presenter/TimetablePresenter.java b/src/main/java/presenter/TimetablePresenter.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/presenter/TimetablePresenter.java	
+@@ -0,0 +1,30 @@
++package presenter;
++
++import com.calendarfx.model.Calendar;
++import com.calendarfx.view.CalendarView;
++import controller.Schedule.TimetableController;
++import javafx.animation.FadeTransition;
++import javafx.scene.control.Label;
++import javafx.util.Duration;
++import entity.Schedule.TimeManagement;
++
++
++
++public class TimetablePresenter {
++
++    private final TimeManagement TM  = new TimeManagement();
++
++
++    public void printCalendarEntries(Label entriesSaved, CalendarView calendar) {
++        for (Calendar temp : calendar.getCalendars()) {
++            System.out.println(temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone()));
++
++        entriesSaved.setText("ALL ENTIRES SAVED");
++        FadeTransition ft = new FadeTransition(Duration.millis(1850), entriesSaved);
++        ft.setFromValue(1.0);
++        ft.setToValue(0.0);
++        ft.setAutoReverse(true);
++        ft.play();
++        }
++    }
++}
+Index: src/main/java/presenter/AddTaskPresenter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/presenter/AddTaskPresenter.java b/src/main/java/presenter/AddTaskPresenter.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/presenter/AddTaskPresenter.java	
+@@ -0,0 +1,9 @@
++package presenter;
++
++import responseModel.Task.TaskResponseModel;
++
++public interface AddTaskPresenter {
++    TaskResponseModel prepareSuccessView(TaskResponseModel taskItemResponseModel);
++
++    TaskResponseModel prepareFailView(String error);
++}
+Index: src/main/java/main/LoginPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/main/LoginPage.java b/src/main/java/main/LoginPage.java
+--- a/src/main/java/main/LoginPage.java	
++++ b/src/main/java/main/LoginPage.java	
+@@ -12,7 +12,7 @@
+ public class LoginPage extends Application {
+     @Override
+     public void start(Stage stage) throws IOException {
+-        URL location = LoginPage.class.getClassLoader().getResource("project6.fxml");
++        URL location = LoginPage.class.getClassLoader().getResource("LoginPage.fxml");
+         FXMLLoader fxmlLoader = new FXMLLoader(location);
+         Scene scene = new Scene(fxmlLoader.load(), 468, 600);
+         stage.initStyle(StageStyle.DECORATED);
+Index: src/main/resources/todo.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/todo.fxml b/src/main/resources/todo.fxml
+--- a/src/main/resources/todo.fxml	
++++ b/src/main/resources/todo.fxml	
+@@ -2,33 +2,38 @@
+ 
+ <?import javafx.scene.control.Button?>
+ <?import javafx.scene.control.Label?>
++<?import javafx.scene.control.TableColumn?>
++<?import javafx.scene.control.TableView?>
+ <?import javafx.scene.layout.AnchorPane?>
+ <?import javafx.scene.text.Font?>
+ 
+-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #89ae6d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TodoController">
++<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700" prefWidth="400" style="-fx-background-color: #89ae6d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Task.TodoController">
+    <children>
+-      <AnchorPane layoutY="67.0" prefHeight="533.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
++      <AnchorPane layoutY="77.0" prefHeight="700" prefWidth="400" style="-fx-background-color: #dfe5e5;">
+          <children>
+-            <Label fx:id="noTasksLabel" layoutX="161.0" layoutY="255.0" text="NO TASKS YET">
+-               <font>
+-                  <Font name="Gill Sans MT Condensed" size="19.0" />
+-               </font>
+-            </Label>
+-            <Button fx:id="todoAddButton" layoutX="264.0" layoutY="478.0" mnemonicParsing="false" onAction="#todoAddButtonAction" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #87ae69;" text="ADD TASK">
+-               <font>
+-                  <Font name="Gill Sans MT Condensed" size="20.0" />
+-               </font></Button>
+-            <Button fx:id="addCategoryButton" layoutX="264.0" layoutY="429.0" mnemonicParsing="false" onAction="#todoAddCategory" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #87ae69;" text="ADD CATEGORY">
+-               <font>
+-                  <Font name="Gill Sans MT Condensed" size="20.0" />
+-               </font>
+-            </Button>
+-         </children>
+-      </AnchorPane>
+-      <Label layoutX="161.0" layoutY="7.0" text="TODO">
++            <TableView fx:id="todoTable" prefHeight="523.0" prefWidth="482.0">
++              <columns>
++                <TableColumn prefWidth="257.0" text="TASK" />
++                  <TableColumn minWidth="0.0" prefWidth="120.0" text="CATEGORY" />
++                <TableColumn minWidth="0.0" prefWidth="104.0" text="DATE" />
++              </columns>
++            </TableView>
++         </children>
++      </AnchorPane>
++      <Label layoutX="202.0" layoutY="14.0" text="TODO">
++         <font>
++            <Font name="Gill Sans MT Condensed" size="49.0" />
++         </font>
++      </Label>
++      <Button fx:id="addCategoryButton" layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#todoAddCategory" prefHeight="29.0" prefWidth="89.0" style="-fx-background-color: #dfe5e5;" text="ADD CATEGORY">
++         <font>
++            <Font name="Gill Sans MT Condensed" size="14.0" />
++         </font>
++      </Button>
++      <Button fx:id="todoAddButton" layoutX="384.0" layoutY="14.0" mnemonicParsing="false" onAction="#todoAddButtonAction" prefHeight="29.0" prefWidth="78.0" style="-fx-background-color: #dfe5e5 #dfe5e5;" text="ADD TASK">
+          <font>
+-            <Font name="Gill Sans MT Condensed" size="49.0" />
++            <Font name="Gill Sans MT Condensed" size="14.0" />
+          </font>
+-      </Label>
++      </Button>
+    </children>
+ </AnchorPane>
+Index: src/main/java/controller/User/UserRegisterController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/User/UserRegisterController.java b/src/main/java/controller/User/UserRegisterController.java
+--- a/src/main/java/controller/User/UserRegisterController.java	
++++ b/src/main/java/controller/User/UserRegisterController.java	
+@@ -1,46 +1,28 @@
+ package controller.User;
+-
++import com.mongodb.DB;
++import com.mongodb.DBCollection;
++import com.mongodb.MongoClient;
++import com.mongodb.MongoClientURI;
++import database.MongoDBAccess;
+ import javafx.animation.PauseTransition;
++import javafx.scene.control.Button;
++import javafx.scene.control.TextField;
+ import javafx.util.Duration;
+-import main.DataConnection;
+ import javafx.event.ActionEvent;
+-import javafx.fxml.FXML;
+-import javafx.scene.control.Button;
+ import javafx.scene.control.Label;
+-import javafx.scene.control.TextField;
+ import javafx.stage.Stage;
+-
+-import java.sql.Connection;
+-import java.sql.PreparedStatement;
+-
++import java.net.UnknownHostException;
+ 
+ public class UserRegisterController {
+-    @FXML
+-    private Button RGregisterbutton;
+-    @FXML
+-    private Button RGclosebutton;
+-    @FXML
+-    private TextField RGfirstname;
+-    @FXML
+-    private TextField RGlastname;
+-    @FXML
+-    private TextField RGusername;
+-    @FXML
+-    private TextField RGpassword;
+-    @FXML
+-    private TextField RGconfirmpassword;
+-    @FXML
+-    private Label registrationMessage;
+-    @FXML
+-    private Label inuselabel;
+-    @FXML
+-    private Label passwordMisMatch;
+ 
+-    public void cancelButtonAction(ActionEvent event) {
++    public void cancelButtonAction(ActionEvent event, Button RGclosebutton) {
+         Stage stage = (Stage) RGclosebutton.getScene().getWindow();
+         stage.close();
+     }
+-    public void registerButtononAction(ActionEvent event) {
++    public void registerButtonOnAction(ActionEvent event, Label registrationMessage, Label passwordMisMatch,
++                                       TextField RGfirstname, TextField RGlastname, TextField RGusername,
++                                       TextField RGpassword, TextField RGconfirmpassword,
++                                       Button RGclosebutton, Label inuselabel) throws UnknownHostException {
+         registrationMessage.setText("");
+         passwordMisMatch.setText("");
+         if (RGfirstname.getText().isBlank() || RGlastname.getText().isBlank() || RGusername.getText().isBlank() ||
+@@ -49,40 +31,45 @@
+         } else {
+             if (RGpassword.getText().equals(RGconfirmpassword.getText())) {
+                 passwordMisMatch.setText("");
+-                registerUser();
++                registerUser(registrationMessage, passwordMisMatch,
++                        RGfirstname, RGlastname, RGusername,
++                        RGpassword, RGclosebutton, inuselabel);
+             } else {
+                 passwordMisMatch.setText("PASSWORDS DO NOT MATCH");
+             }
+         }
+     }
+-    public void registerUser() {
+-        DataConnection connection = new DataConnection();
+-        Connection connectionDB = connection.getConnection();
++    public void registerUser(Label registrationMessage, Label passwordMisMatch,
++                             TextField RGfirstname, TextField RGlastname, TextField RGusername,
++                             TextField RGpassword, Button RGclosebutton, Label inuselabel) throws UnknownHostException {
+ 
++        DBCollection collection = this.main();
++        MongoDBAccess client = new MongoDBAccess(collection, RGusername.getText());
+         String firstName_ = RGfirstname.getText();
+         String lastName_ = RGlastname.getText();
+         String username_ = RGusername.getText();
+         String password_ = RGpassword.getText();
+-        try {
+-            PreparedStatement stmt = connectionDB.prepareStatement
+-                    ("INSERT INTO useraccounts(firstname, lastname, username, password) VALUE (?, ?, ?, ?)");
+-            stmt.setString(1, firstName_);
+-            stmt.setString(2, lastName_);
+-            stmt.setString(3, username_);
+-            stmt.setString(4, password_);
+-            stmt.executeUpdate();
++
++        if(client.createUser(password_, firstName_, lastName_)){
+             registrationMessage.setText("USER REGISTRATION SUCCESSFUL");
+             PauseTransition delay = new PauseTransition(Duration.seconds(4.5));
+             Stage stage = (Stage) RGclosebutton.getScene().getWindow();
+             delay.setOnFinished( event -> stage.close() );
+             delay.play();
+             passwordMisMatch.setText("");
+-        } catch (Exception e) {
++        }
++        else{
+             inuselabel.setText("USERNAME IN USE");
+-            e.printStackTrace();
+-            e.getCause();
+         }
++
+     }
++    public DBCollection main() throws UnknownHostException {
++        MongoClient mongoClient = new MongoClient(new MongoClientURI
++                ("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
++        DB database = mongoClient.getDB("schedule6-testingdb");
++        DBCollection collection = database.getCollection("schedule6-testingcollection");
++        System.out.println(1);
++        return collection;
++    }
+ 
+-
+ }
+\ No newline at end of file
+Index: src/main/resources/TaskCreate.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/TaskCreate.fxml b/src/main/resources/TaskCreate.fxml
+--- a/src/main/resources/TaskCreate.fxml	
++++ b/src/main/resources/TaskCreate.fxml	
+@@ -1,5 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
++<?import java.lang.String?>
++<?import javafx.collections.FXCollections?>
+ <?import javafx.scene.control.Button?>
+ <?import javafx.scene.control.ComboBox?>
+ <?import javafx.scene.control.DatePicker?>
+@@ -7,11 +9,8 @@
+ <?import javafx.scene.control.TextField?>
+ <?import javafx.scene.layout.AnchorPane?>
+ <?import javafx.scene.text.Font?>
+-<?import javafx.collections.FXCollections?>
+-<?import java.lang.String?>
+ 
+-
+-<AnchorPane prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Task.TaskCreationController">
++<AnchorPane prefHeight="436.0" prefWidth="401.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.AddTaskScreen">
+    <children>
+       <AnchorPane layoutX="1.0" layoutY="78.0" prefHeight="371.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
+          <children>
+@@ -36,11 +35,11 @@
+                </font>
+             </Label>
+             <ComboBox fx:id="categoryComboBox" layoutX="16.0" layoutY="242.0" prefHeight="26.0" prefWidth="226.0" promptText="SELECT CATEGORY" />
+-            <ComboBox fx:id="privacyComboBox" layoutX="16.0" layoutY="179.0" prefHeight="26.0" prefWidth="226.0" promptText="PUBLIC/PRIVATE" >
++            <ComboBox fx:id="privacyComboBox" layoutX="16.0" layoutY="179.0" prefHeight="26.0" prefWidth="226.0" promptText="PUBLIC/PRIVATE">
+                <items>
+                   <FXCollections fx:factory="observableArrayList">
+-                     <String fx:value="Public"/>
+-                     <String fx:value="Private"/>
++                     <String fx:value="Public" />
++                     <String fx:value="Private" />
+                   </FXCollections>
+                </items>
+             </ComboBox>
+Index: src/main/java/controller/User/LoginPageController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/User/LoginPageController.java b/src/main/java/controller/User/LoginPageController.java
+--- a/src/main/java/controller/User/LoginPageController.java	
++++ b/src/main/java/controller/User/LoginPageController.java	
+@@ -1,62 +1,53 @@
+ package controller.User;
+ 
+ 
++import com.mongodb.DB;
++import com.mongodb.DBCollection;
++import com.mongodb.MongoClient;
++import com.mongodb.MongoClientURI;
++import controller.Schedule.TimetableController;
+ import entity.User.User;
+ import javafx.event.ActionEvent;
+-import javafx.fxml.FXML;
+ import javafx.scene.control.Button;
+ import javafx.scene.control.Label;
+ import javafx.scene.control.TextField;
++import javafx.scene.layout.GridPane;
+ import javafx.stage.Stage;
+-import main.DataConnection;
+-import screens.createAccountForm;
+-import useCaseInteractor.Schedule.createScheduleForm;
+-import java.sql.Connection;
+-import java.sql.PreparedStatement;
+-import java.sql.ResultSet;
+-import java.sql.Statement;
++import screens.CreateRegistrationScreen;
++import screens.CreateScheduleScreen;
++import java.net.UnknownHostException;
++
++import screens.CreateTODOScreen;
+ import useCaseInteractor.User.setUsername;
+ import useCaseInteractor.User.userCollection;
++import database.MongoDBAccess;
+ 
+ public class LoginPageController {
+-    @FXML
+-    private Button cancelButton;
+-    @FXML
+-    private Label loginMessageLabel;
+-    @FXML
+-    private TextField usernameTextField;
+-    @FXML
+-    private TextField passwordTextField;
+-    @FXML
+-    private Button loginButton;
+ 
+-
+-    public void cancelButtonAction(ActionEvent event){
++    public void cancelButtonAction(ActionEvent event, Button cancelButton){
+         Stage stage = (Stage) cancelButton.getScene().getWindow();
+         stage.close();
+     }
+-    public void loginButtonAction(ActionEvent event){
++    public void loginButtonAction(ActionEvent event, TextField usernameTextField, TextField passwordTextField,
++                                  Button loginButton, Label loginMessageLabel) throws UnknownHostException {
+ 
+         if (!usernameTextField.getText().isBlank() && !passwordTextField.getText().isBlank()) {
+-            User loginAttempt = Login();
++            User loginAttempt = this.main(usernameTextField, passwordTextField);
+             if (loginAttempt != null){
+ 
+                 //If the Login is successful then the window closes
+                 loginMessageLabel.setText("LOGIN SUCCESSFUL");
+                 Stage stage = (Stage) loginButton.getScene().getWindow();
+                 stage.close();
+-
+                 //Username of the person logged in is Stored in the user collector
+                 userCollection.setUser(loginAttempt);
+                 //The schedule form opens
+-                createScheduleForm.newForm();
++                CreateScheduleScreen.newForm();
++                //CreateTODOScreen.newForm();
++
+                 setUsername.setName();
+-                System.out.println("Successful Authentication of: " + loginAttempt.username);
+-                System.out.println("           First name: " + loginAttempt.firstname);
+-                System.out.println("           Last name: " + loginAttempt.lastname);
+-
+             }
+-            else {
++            if (loginAttempt == null) {
+                 loginMessageLabel.setText("USERNAME OR PASSWORD INCORRECT");
+             }
+         } else {
+@@ -64,40 +55,31 @@
+         }
+ 
+     }
+-    public void registerButtonAction(ActionEvent event){createAccountForm.newForm();}
++    public void registerButtonAction(ActionEvent event){
++        CreateRegistrationScreen.newForm();}
+ 
+-
+-    public  User Login() {
++    public User login(DBCollection collection, TextField usernameTextField, TextField passwordTextField){
+         User user = null;
+-        DataConnection connection = new DataConnection();
+-        Connection connectionDataBase = connection.getConnection();
+ 
+-        String verifyLogin = "SELECT * FROM useraccounts WHERE username=? AND password=?";
++        MongoDBAccess client = new MongoDBAccess(collection, usernameTextField.getText());
+ 
+-        try {
+-            Statement statement = connectionDataBase.createStatement();
+-            PreparedStatement preparedStatement = connection.databaseuser.prepareStatement(verifyLogin);
+-            preparedStatement.setString(1, usernameTextField.getText());
+-            preparedStatement.setString(2, passwordTextField.getText());
+ 
+-            ResultSet results = preparedStatement.executeQuery();
+-
+-            if (results.next()) {
+-                user = new User();
+-                user.firstname = results.getString("firstname");
+-                user.lastname = results.getString("lastname");
+-                user.username = results.getString("username");
+-                user.password = results.getString("password");
+-            }
+-            statement.close();
+-            connectionDataBase.close();
+-
+-        } catch (Exception e) {
+-            System.out.println(connection);
+-            e.printStackTrace();
+-            e.getCause();
++        if(client.getUserExist(usernameTextField.getText()) && client.checkPassword(passwordTextField.getText())){
++            user = new User();
++            user.username = usernameTextField.getText();
++            user.password = passwordTextField.getText();
+         }
+-
++        System.out.println(user);
+         return user;
+     }
++    public User main(TextField usernameTextField, TextField passwordTextField) throws UnknownHostException {
++
++        MongoClient mongoClient = new MongoClient(new MongoClientURI
++                ("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
++        DB database = mongoClient.getDB("schedule6-testingdb");
++        DBCollection collection = database.getCollection("schedule6-testingcollection");
++        return this.login(collection, usernameTextField, passwordTextField);
++    }
++
++
+ }
+\ No newline at end of file
+Index: src/main/java/requestModel/TaskRequestModel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/requestModel/TaskRequestModel.java b/src/main/java/requestModel/TaskRequestModel.java
+--- a/src/main/java/requestModel/TaskRequestModel.java	
++++ b/src/main/java/requestModel/TaskRequestModel.java	
+@@ -1,7 +1,5 @@
+ package requestModel;
+ 
+-import entity.Category.CommonCategory;
+-
+ import java.time.LocalDate;
+ 
+ public class TaskRequestModel {
+@@ -10,11 +8,11 @@
+ 
+     private LocalDate date;
+ 
+-    private CommonCategory category;
++    private String category;
+ 
+-    private boolean isPrivate;
++    private Boolean isPrivate;
+ 
+-    public TaskRequestModel(String title, LocalDate date, boolean isPrivate, CommonCategory category){
++    public TaskRequestModel(String title, LocalDate date, Boolean isPrivate, String category){
+         this.title = title;
+         this.date = date;
+         this.isPrivate = isPrivate;
+@@ -33,6 +31,9 @@
+         }
+     }
+ 
+-    public CommonCategory getCategory() { return this.category;}
++    public String getCategory() { return this.category;}
+ 
++    public Boolean getPrivacySetting() {
++        return this.isPrivate;
++    }
+ }
+Index: src/main/java/main/TodoPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/main/TodoPage.java b/src/main/java/main/TodoPage.java
+--- a/src/main/java/main/TodoPage.java	
++++ b/src/main/java/main/TodoPage.java	
+@@ -13,15 +13,13 @@
+ 
+ public class TodoPage extends Application {
+     public void start(Stage stage) throws IOException {
+-
+-        URL location = LoginPage.class.getClassLoader().getResource("todo.fxml");
++        URL location = TodoPage.class.getClassLoader().getResource("todo.fxml");
+         FXMLLoader fxmlLoader = new FXMLLoader(location);
+-        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
++        Scene todoScene = new Scene(fxmlLoader.load(), 400, 600);
+         stage.initStyle(StageStyle.DECORATED);
+-        stage.setScene(scene);
++        stage.setScene(todoScene);
+         stage.show();
+     }
+-
+     public static void main(String[] args) {
+         launch();
+     }
