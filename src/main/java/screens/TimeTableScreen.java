@@ -9,6 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import useCaseInteractor.User.userCollection;
 
+import java.net.UnknownHostException;
+
 public class TimeTableScreen {
     @FXML
     private Label TimetableUserName;
@@ -28,7 +30,7 @@ public class TimeTableScreen {
     {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
     public void scheduleInputsButton(ActionEvent event) {TTC.scheduleInputsButton(event);}
 
-    public void initialize(){
+    public void initialize() throws UnknownHostException {
         TTC.loadCalendar(Gridlock);
         usernameChangeLabel = TimetableUserName;
         TTC.setUsernameChangeLabel(userCollection.getUsername());
