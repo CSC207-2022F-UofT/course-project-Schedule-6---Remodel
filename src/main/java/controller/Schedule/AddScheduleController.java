@@ -21,18 +21,18 @@ public class AddScheduleController {
         this.presenter = presenter;
     }
 
-    public void create(Label message, String Title, LocalDate Date,
+    public void create(Label label, String Title, LocalDate Date,
                                             String startTime, String endTime,
                                             String startAMPM, String endAMPM) {
         if (Title.isBlank() || (Date == null) || startTime.isBlank() || endTime.isBlank()) {
-            presenter.prepareFailView(message, "Please Fill in All Fields");
+            presenter.prepareFailView(label, "Please Fill in All Fields");
         } else if (!this.inputTimeChecker(startTime, endTime)) {
-            presenter.prepareFailView(message, "Please Insert a Valid Time as HH:MM");
+            presenter.prepareFailView(label, "Please Insert a Valid Time as HH:MM");
         }
         ScheduleItemRequestModel newInputData = new ScheduleItemRequestModel(
                 Title, Date, timeConverter(startTime, startAMPM), timeConverter(endTime, endAMPM));
         addScheduleItemInputBoundary.create(newInputData);
-        presenter.prepareSuccessView(message, "Event Added!");
+        presenter.prepareSuccessView(label, "Event Added!");
     }
 
     // Checks if user inputs startTime and endTime is valid
