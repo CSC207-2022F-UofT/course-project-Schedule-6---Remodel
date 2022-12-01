@@ -2,7 +2,7 @@ package controller.Category;
 
 import boundary.Category.CategoryCreationInputBoundary;
 import presenter.AddCategoryPresenter;
-import requestModel.CategoryCreationRequestModel;
+import requestModel.CategoryRequestModel;
 import responseModel.Category.CategoryResponseModel;
 
 public class AddCategoryController {
@@ -21,7 +21,7 @@ public class AddCategoryController {
         } else if (!nameChecker(name)) {
             return presenter.prepareFailView("Category already exists");
         }
-        CategoryCreationRequestModel inputData = new CategoryCreationRequestModel(name, status);
+        CategoryRequestModel inputData = new CategoryRequestModel(name, status);
         return categoryCreationInputBoundary.create(inputData);
     }
 

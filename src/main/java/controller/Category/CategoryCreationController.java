@@ -2,7 +2,7 @@ package controller.Category;
 
 import boundary.Category.CategoryCreationInputBoundary;
 import presenter.AddCategoryPresenter;
-import requestModel.CategoryCreationRequestModel;
+import requestModel.CategoryRequestModel;
 import responseModel.Category.CategoryResponseModel;
 
 public class CategoryCreationController {
@@ -20,7 +20,7 @@ public class CategoryCreationController {
             return presenter.prepareFailView("Please Fill in ALl Fields");
         }
 
-        CategoryCreationRequestModel newInputData = new CategoryCreationRequestModel(title, status);
+        CategoryRequestModel newInputData = new CategoryRequestModel(title, status);
         return addCategoryInputBoundary.create(newInputData);
 
     }

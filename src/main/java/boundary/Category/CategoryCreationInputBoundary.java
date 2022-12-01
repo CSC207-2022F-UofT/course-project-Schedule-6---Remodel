@@ -1,8 +1,8 @@
 package boundary.Category;
 
-import requestModel.CategoryCreationRequestModel;
+import requestModel.CategoryRequestModel;
 import responseModel.Category.CategoryResponseModel;
 
 public interface CategoryCreationInputBoundary {
-    CategoryResponseModel create(CategoryCreationRequestModel requestModel);
+    CategoryResponseModel create(CategoryRequestModel requestModel);
 }

@@ -1,7 +1,7 @@
 package useCaseInteractor;
 
 import entity.Category.Category;
-import requestModel.CategoryCreationRequestModel;
+import requestModel.CategoryRequestModel;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 
@@ -53,5 +53,5 @@ public interface DataAccess {
     void addCategories(Category c);
 
     Object getCategories();
-    void setCategory(CategoryCreationRequestModel requestModel);
+    void setCategory(CategoryRequestModel requestModel);
 }

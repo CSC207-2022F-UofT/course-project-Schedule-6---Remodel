@@ -1,10 +1,10 @@
 package requestModel;
 
-public class CategoryCreationRequestModel {
+public class CategoryRequestModel {
     private String name;
     private Boolean status;
 
-    public CategoryCreationRequestModel(String name, Boolean status) {
+    public CategoryRequestModel(String name, Boolean status) {
         this.name = name;
         this.status = status;
     }
