@@ -1,6 +1,5 @@
 package useCaseInteractor;
 
-import requestModel.CategoryCreationRequestModel;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 
@@ -50,5 +49,4 @@ public interface DataAccess {
     void setRequests(ArrayList<String> usernames);
 
     Object getCategories();
-    void setCategory(CategoryCreationRequestModel requestModel);
 }
