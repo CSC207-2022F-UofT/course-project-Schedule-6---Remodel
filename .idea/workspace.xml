@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch.">
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="added the presenter for TimeTable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/TimetablePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/TimetablePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/CreateScheduleScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateScheduleScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/createCategoryForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/createCategoryScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/todo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +165,7 @@
       <workItem from="1669741252610" duration="5437000" />
       <workItem from="1669817334281" duration="7904000" />
       <workItem from="1669825733264" duration="7660000" />
-      <workItem from="1669836924977" duration="11194000" />
+      <workItem from="1669836924977" duration="16903000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -378,7 +384,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669847499632</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added the presenter for TimeTable">
+      <created>1669917804034</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1669917804034</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added the presenter for TimeTable">
+      <created>1669918033471</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1669918033471</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,7 +439,8 @@
     <MESSAGE value="workspace.xml update" />
     <MESSAGE value="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button." />
     <MESSAGE value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
+    <MESSAGE value="added the presenter for TimeTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the presenter for TimeTable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
