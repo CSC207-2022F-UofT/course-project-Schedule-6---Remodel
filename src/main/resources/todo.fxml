@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="482.0" style="-fx-background-color: #89ae6d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Task.TodoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700" prefWidth="400" style="-fx-background-color: #89ae6d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Task.TodoController">
    <children>
-      <AnchorPane layoutY="77.0" prefHeight="523.0" prefWidth="482.0" style="-fx-background-color: #dfe5e5;">
+      <AnchorPane layoutY="77.0" prefHeight="700" prefWidth="400" style="-fx-background-color: #dfe5e5;">
          <children>
             <TableView fx:id="todoTable" prefHeight="523.0" prefWidth="482.0">
               <columns>
