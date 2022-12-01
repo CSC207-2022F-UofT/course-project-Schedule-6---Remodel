@@ -10,7 +10,7 @@ public class EditTask {
     public static void newForm() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(TodoPage.class.getClassLoader().getResource("TaskEdit.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 400, 450);
+            Scene scene = new Scene(fxmlLoader.load(), 402, 356);
             Stage taskStage = new Stage();
             taskStage.initStyle(StageStyle.DECORATED);
             taskStage.setScene(scene);
