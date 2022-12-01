@@ -1,12 +1,9 @@
 package useCaseInteractor.Task;
-
-import boundary.Task.EditTaskBoundary;
+import boundary.Task.EditTaskInputBoundary;
 import requestModel.TaskRequestModel;
 import responseModel.Task.TaskResponseModel;
 import useCaseInteractor.DataAccess;
-
-
-public class EditTask_new implements EditTaskBoundary {
+public class EditTask_new implements EditTaskInputBoundary {
     final DataAccess dataAccess;
 
     public EditTask_new(DataAccess dataAccess) {

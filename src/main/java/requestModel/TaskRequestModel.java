@@ -33,4 +33,7 @@ public class TaskRequestModel {
 
     public String getCategory() { return this.category;}
 
+    public Boolean getPrivacySetting() {
+        return this.isPrivate;
+    }
 }

@@ -1,13 +1,12 @@
 package useCaseInteractor.Task;
-
-import boundary.Task.AddTaskBoundary;
+import boundary.Task.AddTaskItemInputBoundary;
 import entity.Task.Task;
 import entity.Task.TaskFactory;
 import requestModel.TaskRequestModel;
 import responseModel.Task.TaskResponseModel;
 import useCaseInteractor.DataAccess;
 
-public class AddTask implements AddTaskBoundary {
+public class AddTask implements AddTaskItemInputBoundary {
 
     final DataAccess dataAccess;
     final TaskFactory TaskFactory;
