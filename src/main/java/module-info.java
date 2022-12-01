@@ -19,6 +19,7 @@ module com.example.project6maven {
     opens entity.Task to javafx.fxml;
     exports entity.User;
     opens entity.User to javafx.fxml;
+    requires javafx.graphics;
     requires com.calendarfx.view;
     requires mongo.java.driver;
     requires org.mnode.ical4j.core;

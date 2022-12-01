@@ -40,7 +40,7 @@ public class TimetableController {
         }
     }
     public void scheduleInputsButton(ActionEvent event){}
-    
+
     public void loadCalendar(GridPane Gridlock) throws UnknownHostException {
         calendar = new CalendarView();
 

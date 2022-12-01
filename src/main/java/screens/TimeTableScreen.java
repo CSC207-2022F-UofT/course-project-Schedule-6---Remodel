@@ -49,4 +49,3 @@ public class TimeTableScreen {
         TODO.getChildren().add(fxmlLoader.load());
     }
 }
-

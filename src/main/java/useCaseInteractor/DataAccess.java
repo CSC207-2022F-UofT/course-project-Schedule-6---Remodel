@@ -49,5 +49,4 @@ public interface DataAccess {
     //sets a new request list when a request is accepted or declined
     void setRequests(ArrayList<String> usernames);
 
-    Object getCategories();
 }
