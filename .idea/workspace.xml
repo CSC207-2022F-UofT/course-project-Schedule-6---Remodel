@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="implemented AddTask useCaseInteractor">
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="TaskCreate.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/TaskRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/TaskRequestModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/Task/TaskResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/responseModel/Task/TaskResponseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/createTaskForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TaskCreate.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,10 +129,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LoginPage" />
         <item itemvalue="Application.TodoPage" />
         <item itemvalue="Application.ScheduleButton" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.LoginPage" />
         <item itemvalue="Application.TodoPage" />
       </list>
     </recent_temporary>
@@ -163,7 +159,8 @@
       <workItem from="1669825733264" duration="7660000" />
       <workItem from="1669836924977" duration="4222000" />
       <workItem from="1669917430658" duration="916000" />
-      <workItem from="1669918383105" duration="2882000" />
+      <workItem from="1669918383105" duration="3476000" />
+      <workItem from="1669921872089" duration="1570000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -431,7 +428,35 @@
       <option name="project" value="LOCAL" />
       <updated>1669921210624</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="deleted createTaskForm.java">
+      <created>1669921280209</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1669921280209</updated>
+    </task>
+    <task id="LOCAL-00040" summary="improvised DataAccess, TaskRequestModel and TaskResponseModel">
+      <created>1669921340371</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1669921340371</updated>
+    </task>
+    <task id="LOCAL-00041" summary="update workspace.xml">
+      <created>1669921352185</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1669921352185</updated>
+    </task>
+    <task id="LOCAL-00042" summary="TaskCreate.fxml">
+      <created>1669921448669</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1669921448669</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,9 +474,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
-    <MESSAGE value="removed creationTime and added status to CategoryCreationResponseModel" />
-    <MESSAGE value="implemented CCResponseModel in AddCategoryController, nameChecker WIP" />
     <MESSAGE value="added setCategory to DataAccess" />
     <MESSAGE value="made everything public" />
     <MESSAGE value="changed isStatus to getStatus" />
@@ -459,7 +481,6 @@
     <MESSAGE value="AddCategoryPresenter" />
     <MESSAGE value="AddCategoryController" />
     <MESSAGE value="implemented setCategory" />
-    <MESSAGE value="update workspace.xml" />
     <MESSAGE value="moved createCategoryForm from useCase to screen" />
     <MESSAGE value="renamed CategoryCreationResponseModel to CategoryResponseModel" />
     <MESSAGE value="Added EditCategory and EditCategoryInputBoundary" />
@@ -474,7 +495,11 @@
     <MESSAGE value="deleted export entity" />
     <MESSAGE value="update from workspace.xml" />
     <MESSAGE value="implemented AddTask useCaseInteractor" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented AddTask useCaseInteractor" />
+    <MESSAGE value="deleted createTaskForm.java" />
+    <MESSAGE value="improvised DataAccess, TaskRequestModel and TaskResponseModel" />
+    <MESSAGE value="update workspace.xml" />
+    <MESSAGE value="TaskCreate.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="TaskCreate.fxml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
