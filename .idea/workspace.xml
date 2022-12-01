@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Edited Task DB features" />
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="update from workspace">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -366,7 +369,42 @@
       <option name="project" value="LOCAL" />
       <updated>1669841110300</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="resolved errors related to the removal of category entity">
+      <created>1669911507063</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911507063</updated>
+    </task>
+    <task id="LOCAL-00032" summary="deleted unneeded file">
+      <created>1669911655041</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911655041</updated>
+    </task>
+    <task id="LOCAL-00033" summary="workspace update">
+      <created>1669911665904</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911665904</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fixed all errors related to data">
+      <created>1669911870053</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911870053</updated>
+    </task>
+    <task id="LOCAL-00035" summary="update from workspace">
+      <created>1669911899157</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911899157</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,9 +422,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="xml files" />
-    <MESSAGE value="MongoTesting" />
-    <MESSAGE value="update from main" />
     <MESSAGE value="pull issue from misc" />
     <MESSAGE value="reorganized packages" />
     <MESSAGE value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
@@ -407,7 +442,12 @@
     <MESSAGE value="workspace.xml update" />
     <MESSAGE value="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button." />
     <MESSAGE value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
+    <MESSAGE value="resolved errors related to the removal of category entity" />
+    <MESSAGE value="deleted unneeded file" />
+    <MESSAGE value="workspace update" />
+    <MESSAGE value="fixed all errors related to data" />
+    <MESSAGE value="update from workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="update from workspace" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
