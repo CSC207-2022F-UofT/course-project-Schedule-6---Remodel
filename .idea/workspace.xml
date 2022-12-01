@@ -4,11 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Reverted some of the changes to fix the errors. pt.4">
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="workspace.xml update">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Category/CategoryCreationInputBoundary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Category/CategoryCreationOutputBoundary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Category/EditCategoryInputBoundary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Category/AddCategoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Category/CategoryCreationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CategoryFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategoryFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/AddCategoryPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repo/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/Category/CategoryAddTaskResponseModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/Category/CategoryDeleteTaskResponseModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/Category/CategoryResponseModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Category/AddCommonCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Category/EditCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +41,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feature-7-category" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,7 +80,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/RAZER/IdeaProjects/Remodel&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/RAZER/Desktop&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -160,6 +175,10 @@
       <workItem from="1669817334281" duration="7904000" />
       <workItem from="1669825733264" duration="7660000" />
       <workItem from="1669836924977" duration="1308000" />
+      <workItem from="1669844130634" duration="177000" />
+      <workItem from="1669844344784" duration="93000" />
+      <workItem from="1669844599440" duration="455000" />
+      <workItem from="1669906583036" duration="1445000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
