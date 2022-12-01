@@ -5,8 +5,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableView;
-import screens.createCategoryForm;
+import screens.createCategoryScreen;
 import useCaseInteractor.Task.createTaskForm;
 
 public class TodoController {
@@ -28,6 +27,6 @@ public class TodoController {
     }
 
     public void todoAddCategory(ActionEvent actionEvent) {
-        createCategoryForm.newForm();
+        createCategoryScreen.newForm();
     }
 }

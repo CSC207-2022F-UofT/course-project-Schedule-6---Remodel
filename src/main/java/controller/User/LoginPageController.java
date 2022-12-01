@@ -11,10 +11,13 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import screens.CreateRegistrationScreen;
 import screens.CreateScheduleScreen;
 import java.net.UnknownHostException;
+
+import screens.CreateTODOScreen;
 import useCaseInteractor.User.setUsername;
 import useCaseInteractor.User.userCollection;
 import database.MongoDBAccess;
@@ -40,6 +43,7 @@ public class LoginPageController {
                 userCollection.setUser(loginAttempt);
                 //The schedule form opens
                 CreateScheduleScreen.newForm();
+                //CreateTODOScreen.newForm();
 
                 setUsername.setName();
             }
