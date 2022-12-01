@@ -5,11 +5,11 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.LoginPage;
 
-public class createAccountForm {
+public class CreateRegistrationScreen {
 
     public static void newForm() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("Register.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("RegistrationPage.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 468, 600);
             Stage loginStage = new Stage();
             loginStage.initStyle(StageStyle.DECORATED);

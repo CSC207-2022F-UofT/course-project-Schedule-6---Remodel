@@ -1,62 +1,49 @@
 package controller.User;
 
 
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import controller.Schedule.TimetableController;
 import entity.User.User;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import main.DataConnection;
-import screens.createAccountForm;
-import useCaseInteractor.Schedule.createScheduleForm;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import screens.CreateRegistrationScreen;
+import screens.CreateScheduleScreen;
+import java.net.UnknownHostException;
 import useCaseInteractor.User.setUsername;
 import useCaseInteractor.User.userCollection;
+import database.MongoDBAccess;
 
 public class LoginPageController {
-    @FXML
-    private Button cancelButton;
-    @FXML
-    private Label loginMessageLabel;
-    @FXML
-    private TextField usernameTextField;
-    @FXML
-    private TextField passwordTextField;
-    @FXML
-    private Button loginButton;
 
-
-    public void cancelButtonAction(ActionEvent event){
+    public void cancelButtonAction(ActionEvent event, Button cancelButton){
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
-    public void loginButtonAction(ActionEvent event){
+    public void loginButtonAction(ActionEvent event, TextField usernameTextField, TextField passwordTextField,
+                                  Button loginButton, Label loginMessageLabel) throws UnknownHostException {
 
         if (!usernameTextField.getText().isBlank() && !passwordTextField.getText().isBlank()) {
-            User loginAttempt = Login();
+            User loginAttempt = this.main(usernameTextField, passwordTextField);
             if (loginAttempt != null){
 
                 //If the Login is successful then the window closes
                 loginMessageLabel.setText("LOGIN SUCCESSFUL");
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 stage.close();
-
                 //Username of the person logged in is Stored in the user collector
                 userCollection.setUser(loginAttempt);
                 //The schedule form opens
-                createScheduleForm.newForm();
-                setUsername.setName();
-                System.out.println("Successful Authentication of: " + loginAttempt.username);
-                System.out.println("           First name: " + loginAttempt.firstname);
-                System.out.println("           Last name: " + loginAttempt.lastname);
+                CreateScheduleScreen.newForm();
 
+                setUsername.setName();
             }
-            else {
+            if (loginAttempt == null) {
                 loginMessageLabel.setText("USERNAME OR PASSWORD INCORRECT");
             }
         } else {
@@ -64,40 +51,31 @@ public class LoginPageController {
         }
 
     }
-    public void registerButtonAction(ActionEvent event){createAccountForm.newForm();}
+    public void registerButtonAction(ActionEvent event){
+        CreateRegistrationScreen.newForm();}
 
-
-    public  User Login() {
+    public User login(DBCollection collection, TextField usernameTextField, TextField passwordTextField){
         User user = null;
-        DataConnection connection = new DataConnection();
-        Connection connectionDataBase = connection.getConnection();
 
-        String verifyLogin = "SELECT * FROM useraccounts WHERE username=? AND password=?";
+        MongoDBAccess client = new MongoDBAccess(collection, usernameTextField.getText());
 
-        try {
-            Statement statement = connectionDataBase.createStatement();
-            PreparedStatement preparedStatement = connection.databaseuser.prepareStatement(verifyLogin);
-            preparedStatement.setString(1, usernameTextField.getText());
-            preparedStatement.setString(2, passwordTextField.getText());
 
-            ResultSet results = preparedStatement.executeQuery();
-
-            if (results.next()) {
-                user = new User();
-                user.firstname = results.getString("firstname");
-                user.lastname = results.getString("lastname");
-                user.username = results.getString("username");
-                user.password = results.getString("password");
-            }
-            statement.close();
-            connectionDataBase.close();
-
-        } catch (Exception e) {
-            System.out.println(connection);
-            e.printStackTrace();
-            e.getCause();
+        if(client.getUserExist(usernameTextField.getText()) && client.checkPassword(passwordTextField.getText())){
+            user = new User();
+            user.username = usernameTextField.getText();
+            user.password = passwordTextField.getText();
         }
-
+        System.out.println(user);
         return user;
     }
+    public User main(TextField usernameTextField, TextField passwordTextField) throws UnknownHostException {
+
+        MongoClient mongoClient = new MongoClient(new MongoClientURI
+                ("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
+        DB database = mongoClient.getDB("schedule6-testingdb");
+        DBCollection collection = database.getCollection("schedule6-testingcollection");
+        return this.login(collection, usernameTextField, passwordTextField);
+    }
+
+
 }

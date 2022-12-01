@@ -2,12 +2,8 @@ package presenter;
 
 import responseModel.Task.TaskResponseModel;
 
-public class AddTaskPresenter {
-    public TaskResponseModel prepareSuccessView(TaskResponseModel TaskResponseModel) {
-        return null;
-    }
+public interface AddTaskPresenter {
+    TaskResponseModel prepareSuccessView(TaskResponseModel taskItemResponseModel);
 
-    TaskResponseModel prepareFailView(String error) {
-        return null;
-    }
+    TaskResponseModel prepareFailView(String error);
 }

@@ -1,33 +1,35 @@
 package responseModel.Task;
 
-import entity.Category.Category;
-
 import java.time.LocalDate;
 
 public class TaskResponseModel {
-    public String title;
+    private String title;
 
-    public LocalDate date;
-    public String privacySetting;
+    private LocalDate date;
 
-    public Category category;
+    private String category;
 
-    public TaskResponseModel(String title, LocalDate date, String privacySetting, Category category){
+    private Boolean isPrivate;
+
+    public TaskResponseModel(String title, LocalDate date, Boolean isPrivate, String category){
         this.title = title;
         this.date = date;
-        this.privacySetting = privacySetting;
+        this.isPrivate = isPrivate;
         this.category = category;
     }
-    public String getTitle() {
-        return this.title;
+
+    public String getTitle(){ return this.title;}
+
+    public LocalDate getDate(){ return this.date;}
+
+    public String getPrivacy(){
+        if(isPrivate){
+            return "Private";
+        } else {
+            return "Public";
+        }
     }
-    public LocalDate getDate() {
-        return this.date;
-    }
-    public String getPrivacySetting() {
-        return this.privacySetting;
-    }
-    public Category getCategory() {
-        return this.category;
-    }
+
+    public String getCategory() { return this.category;}
+
 }

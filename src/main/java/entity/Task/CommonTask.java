@@ -1,27 +1,22 @@
 package entity.Task;
 
-import entity.Category.Category;
-
 import java.time.LocalDate;
 
 public class CommonTask implements Task {
 
-    public String title;
+    private String title;
 
-    public LocalDate date;
-    public String privacySetting;
+    private LocalDate date;
 
-    public Category category;
+    private Boolean privacySetting;
 
-    protected CommonTask(String title, LocalDate date, String privacySetting, Category category){
+    private String category;
+
+    public CommonTask(String title, LocalDate date, Boolean privacySetting, String category) {
         this.title = title;
         this.date = date;
         this.privacySetting = privacySetting;
         this.category = category;
-    }
-
-    public CommonTask() {
-
     }
 
     @Override
@@ -35,12 +30,12 @@ public class CommonTask implements Task {
     }
 
     @Override
-    public String getPrivacySetting() {
+    public Boolean getPrivacySetting() {
         return this.privacySetting;
     }
 
     @Override
-    public Category getCategory() {
+    public String getCategory() {
         return this.category;
     }
 }
