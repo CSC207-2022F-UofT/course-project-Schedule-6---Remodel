@@ -1,7 +1,5 @@
 package entity.Task;
 
-import entity.Category.Category;
-
 import java.time.LocalDate;
 
 public interface Task {
@@ -12,5 +10,5 @@ public interface Task {
 
     String getPrivacySetting();
 
-    Category getCategory();
+    String getCategory();
 }

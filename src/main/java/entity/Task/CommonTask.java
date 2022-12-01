@@ -1,7 +1,5 @@
 package entity.Task;
 
-import entity.Category.Category;
-
 import java.time.LocalDate;
 
 public class CommonTask implements Task {
@@ -12,9 +10,9 @@ public class CommonTask implements Task {
 
     private String privacySetting;
 
-    private Category category;
+    private String category;
 
-    public CommonTask(String title, LocalDate date, String privacySetting, Category category) {
+    public CommonTask(String title, LocalDate date, String privacySetting, String category) {
         this.title = title;
         this.date = date;
         this.privacySetting = privacySetting;
@@ -37,7 +35,7 @@ public class CommonTask implements Task {
     }
 
     @Override
-    public Category getCategory() {
+    public String getCategory() {
         return this.category;
     }
 }

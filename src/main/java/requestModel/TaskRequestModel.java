@@ -1,6 +1,5 @@
 package requestModel;
 
-import entity.Category.CommonCategory;
 
 import java.time.LocalDate;
 
@@ -10,11 +9,11 @@ public class TaskRequestModel {
 
     private LocalDate date;
 
-    private CommonCategory category;
+    private String category;
 
     private Boolean isPrivate;
 
-    public TaskRequestModel(String title, LocalDate date, Boolean isPrivate, CommonCategory category){
+    public TaskRequestModel(String title, LocalDate date, Boolean isPrivate, String category){
         this.title = title;
         this.date = date;
         this.isPrivate = isPrivate;
@@ -33,6 +32,6 @@ public class TaskRequestModel {
         }
     }
 
-    public CommonCategory getCategory() { return this.category;}
+    public String getCategory() { return this.category;}
 
 }
