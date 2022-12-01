@@ -1,8 +1,6 @@
 package controller.Task;
 
 import boundary.Task.AddTaskItemInputBoundary;
-import entity.Category.CommonCategory;
-import javafx.scene.control.ComboBox;
 import presenter.AddTaskPresenter;
 import requestModel.TaskRequestModel;
 import responseModel.Task.TaskResponseModel;
@@ -20,11 +18,11 @@ public class TaskCreationController<String> {
         this.presenter = presenter;
     }
 
-    public TaskResponseModel create(java.lang.String title, LocalDate date, Boolean isPrivate, CommonCategory category){
-        if (title.isBlank() || (date == null) || (isPrivate == null) || (category == null)){
+    public TaskResponseModel create(java.lang.String title, LocalDate date, String category){
+        if (title.isBlank() || (date == null) || (category == null)){
             return presenter.prepareFailView("Please Fill in All Fields");
         }
-        TaskRequestModel newInputData = new TaskRequestModel(title, date, isPrivate, category);
+        TaskRequestModel newInputData = new TaskRequestModel(title, date, (java.lang.String) category);
         return addTaskItemInputBoundary.create(newInputData);
     }
 
