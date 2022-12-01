@@ -6,7 +6,6 @@ module com.example.project6maven {
     opens screens to javafx.fxml;
     exports main;
     exports entity;
-    opens entity to javafx.fxml;
     exports controller.Schedule;
     opens controller.Schedule to javafx.fxml;
     exports controller.Task;

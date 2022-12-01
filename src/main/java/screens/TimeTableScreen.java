@@ -23,10 +23,12 @@ public class TimeTableScreen {
 
     public void printCalendarEntries(ActionEvent event) {TTC.printCalendarEntries(event);}
     public void scheduleInputsButton(ActionEvent event) {TTC.scheduleInputsButton(event);}
-
-    public void initialize(){
+    public void initialize() throws IOException {
         TTC.loadCalendar(Gridlock);
         usernameChangeLabel = TimetableUserName;
+        TTC.setUsernameChangeLabel(userCollection.getUsername());
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("todo.fxml"));
+        TODO.getChildren().add(fxmlLoader.load());
     }
 }
 
