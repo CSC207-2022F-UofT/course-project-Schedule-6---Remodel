@@ -1,6 +1,7 @@
 package useCaseInteractor;
 
 import requestModel.CategoryCreationRequestModel;
+import requestModel.ImportRequestModel;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 
@@ -11,6 +12,8 @@ public interface DataAccess {
     boolean createUser(String password, String fName, String lName);
 
     void setSchedule(ScheduleItemRequestModel requestModel);
+
+    void setSchedule(ImportRequestModel requestModel);
 
     ArrayList<Object> getSingleSchedule(ScheduleItemRequestModel requestModel);
 

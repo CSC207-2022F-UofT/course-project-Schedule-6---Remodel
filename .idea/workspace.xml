@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="workspace.xml update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Category/AddCommonCategory.java" afterDir="false" />
+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="fixed tests for IcsParser">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Category/AddCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Category/AddCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/AddCateogoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/AddCategoryPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/CategoryCreationRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/CategoryCreationRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Import/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Import/ImportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/ImportPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/ImportPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/Import/ImportResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/responseModel/Import/ImportResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Category/AddCommonCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Category/AddCommonCategory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/IcsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/IcsParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportInteractor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,70 +75,99 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.LoginPage">
-    <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
-      <module name="schedule-6---Remodel" />
+  <component name="RunManager" selected="JUnit.IcsParserTest.getFirstTitle">
+    <configuration name="IcsParserTest.getEndDates" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course-project-Schedule-6---Remodel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="useCaseInteractor.Import.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="useCaseInteractor.Import" />
+      <option name="MAIN_CLASS_NAME" value="useCaseInteractor.Import.IcsParserTest" />
+      <option name="METHOD_NAME" value="getEndDates" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <module name="schedule-6---Remodel" />
+    <configuration name="IcsParserTest.getFirstTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course-project-Schedule-6---Remodel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="useCaseInteractor.Import.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="useCaseInteractor.Import" />
+      <option name="MAIN_CLASS_NAME" value="useCaseInteractor.Import.IcsParserTest" />
+      <option name="METHOD_NAME" value="getFirstTitle" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScheduleButton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.ScheduleButton" />
-      <module name="schedule-6---Remodel" />
+    <configuration name="IcsParserTest.getMiddleTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course-project-Schedule-6---Remodel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="useCaseInteractor.Import.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="useCaseInteractor.Import" />
+      <option name="MAIN_CLASS_NAME" value="useCaseInteractor.Import.IcsParserTest" />
+      <option name="METHOD_NAME" value="getMiddleTitle" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.TodoPage" />
-      <module name="schedule-6---Remodel" />
+    <configuration name="IcsParserTest.getStartDates" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course-project-Schedule-6---Remodel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="useCaseInteractor.Import.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="useCaseInteractor.Import" />
+      <option name="MAIN_CLASS_NAME" value="useCaseInteractor.Import.IcsParserTest" />
+      <option name="METHOD_NAME" value="getStartDates" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IcsParserTest.getTitles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course-project-Schedule-6---Remodel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="useCaseInteractor.Import.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="useCaseInteractor.Import" />
+      <option name="MAIN_CLASS_NAME" value="useCaseInteractor.Import.IcsParserTest" />
+      <option name="METHOD_NAME" value="getTitles" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LoginPage" />
-        <item itemvalue="Application.TodoPage" />
-        <item itemvalue="Application.ScheduleButton" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.IcsParserTest.getFirstTitle" />
+        <item itemvalue="JUnit.IcsParserTest.getMiddleTitle" />
+        <item itemvalue="JUnit.IcsParserTest.getEndDates" />
+        <item itemvalue="JUnit.IcsParserTest.getStartDates" />
+        <item itemvalue="JUnit.IcsParserTest.getTitles" />
       </list>
     </recent_temporary>
   </component>
@@ -158,6 +190,11 @@
       <workItem from="1669688229778" duration="10150000" />
       <workItem from="1669741252610" duration="5437000" />
       <workItem from="1669817334281" duration="1352000" />
+      <workItem from="1669820572635" duration="3159000" />
+      <workItem from="1669916767481" duration="9448000" />
+      <workItem from="1669946093194" duration="5912000" />
+      <workItem from="1669999520830" duration="1197000" />
+      <workItem from="1670009286207" duration="4015000" />
     </task>
     <task id="LOCAL-00001" summary="xml files">
       <created>1668808131245</created>
@@ -285,7 +322,8 @@
     <MESSAGE value="removed creationTime and added status to CategoryCreationResponseModel" />
     <MESSAGE value="implemented CCResponseModel in AddCategoryController, nameChecker WIP" />
     <MESSAGE value="workspace.xml update" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml update" />
+    <MESSAGE value="fixed tests for IcsParser" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed tests for IcsParser" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
