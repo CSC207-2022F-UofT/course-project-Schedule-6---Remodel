@@ -32,13 +32,13 @@
                   <Font name="Gill Sans MT Condensed" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="17.0" layoutY="14.0" prefHeight="28.0" prefWidth="87.0" text="TITLE">
+            <Label layoutX="17.0" layoutY="14.0" prefHeight="28.0" prefWidth="87.0" text="DESCRIPTION">
                <font>
                   <Font name="Gill Sans MT Condensed" size="23.0" />
                </font>
             </Label>
             <ComboBox fx:id="newCategoryComboBox" editable="true" layoutX="15.0" layoutY="176.0" prefHeight="26.0" prefWidth="226.0" promptText="SELECT CATEGORY" />
-            <TextField fx:id="newTitle" layoutX="15.0" layoutY="42.0" prefHeight="26.0" prefWidth="226.0" promptText="Title" />
+            <TextField fx:id="newDesciption" layoutX="15.0" layoutY="42.0" prefHeight="26.0" prefWidth="226.0" promptText="Description" />
             <DatePicker fx:id="newDate" layoutX="14.0" layoutY="107.0" prefHeight="26.0" prefWidth="226.0" promptText="Date" />
          </children>
       </AnchorPane>
