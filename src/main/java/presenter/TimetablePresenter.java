@@ -1,6 +1,8 @@
 package presenter;
 
 import com.calendarfx.model.Calendar;
+import com.calendarfx.model.Entry;
+import com.calendarfx.model.Interval;
 import com.calendarfx.view.CalendarView;
 import controller.Schedule.TimetableController;
 import javafx.animation.FadeTransition;
@@ -8,6 +10,8 @@ import javafx.scene.control.Label;
 import javafx.util.Duration;
 import entity.Schedule.TimeManagement;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 
 public class TimetablePresenter {
@@ -25,6 +29,7 @@ public class TimetablePresenter {
             ft.setToValue(0.0);
             ft.setAutoReverse(true);
             ft.play();
+
         }
     }
 }
