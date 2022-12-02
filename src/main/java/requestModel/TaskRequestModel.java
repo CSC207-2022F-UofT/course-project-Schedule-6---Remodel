@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 public class TaskRequestModel {
 
-    private String description;
+    private String descripiton;
 
     private LocalDate date;
 
@@ -13,14 +13,14 @@ public class TaskRequestModel {
 
     private Boolean isPrivate;
 
-    public TaskRequestModel(String description, LocalDate date, Boolean isPrivate, String category){
-        this.description = description;
+    public TaskRequestModel(String descripiton, LocalDate date, Boolean isPrivate, String category){
+        this.descripiton = descripiton;
         this.date = date;
         this.isPrivate = isPrivate;
         this.category = category;
     }
 
-    public String getDescription(){ return this.description;}
+    public String getDescription(){ return this.descripiton;}
 
     public LocalDate getDate(){ return this.date;}
 

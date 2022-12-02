@@ -24,10 +24,11 @@ public class AddTask implements boundary.Task.AddTaskItemInputBoundary{
     public TaskResponseModel create(TaskRequestModel inputData) {
         Task task = taskFactory.create(inputData.getDescription(), inputData.getDate(),
                 inputData.getPrivacy(), inputData.getCategory());
-        dataAccess.setTask(inputData);
 
         TaskResponseModel taskResponseModel = new TaskResponseModel(task.getDescription(),
                 task.getDate(), task.getPrivacySetting(), task.getCategory());
+
+        dataAccess.setTask(taskResponseModel);
 
         return taskPresenter.prepareSuccessView(taskResponseModel);
     }

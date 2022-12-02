@@ -3,7 +3,7 @@ package useCaseInteractor.Schedule;
 import boundary.Schedule.AddScheduleItemInputBoundary;
 import entity.Schedule.ScheduleItem;
 import entity.Schedule.ScheduleItemFactory;
-import presenter.AddSchedulePresenter;
+import boundary.Schedule.AddScheduleOutputBoundary;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.Schedule.ScheduleItemResponseModel;
 import useCaseInteractor.DataAccess;
@@ -13,25 +13,24 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
     final DataAccess dataAccess;
     final ScheduleItemFactory scheduleItemFactory;
 
-    final AddSchedulePresenter schedulePresenter;
+    final AddScheduleOutputBoundary outputBoundary;
 
     public AddScheduleItem(DataAccess dataAccess, ScheduleItemFactory scheduleItemFactory,
-                           AddSchedulePresenter presenter) {
+                           AddScheduleOutputBoundary outputBoundary) {
         this.dataAccess = dataAccess;
         this.scheduleItemFactory = scheduleItemFactory;
-        this.schedulePresenter = presenter;
+        this.outputBoundary = outputBoundary;
     }
 
     @Override
-    public ScheduleItemResponseModel create(ScheduleItemRequestModel inputData) {
+    public void create(ScheduleItemRequestModel inputData) {
         ScheduleItem scheduleItem = scheduleItemFactory.create(inputData.getTitle(),
-                inputData.getDate(), inputData.getStartTime(), inputData.getEndTime());
+                inputData.getStartDate(), inputData.getEndDate(), inputData.getStartTime(), inputData.getEndTime());
 
-        dataAccess.setSchedule(inputData);
-
-        // presents the week view
         ScheduleItemResponseModel responseModel = new ScheduleItemResponseModel(scheduleItem.getTitle(),
-                scheduleItem.getDate(), scheduleItem.getStartTime(), scheduleItem.getEndTime());
-        return schedulePresenter.prepareSuccessView(responseModel);
+                scheduleItem.getStartDate(), scheduleItem.getEndDate(),
+                scheduleItem.getStartTime(), scheduleItem.getEndTime());
+
+        dataAccess.setSchedule(responseModel);
     }
 }

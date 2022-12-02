@@ -1,8 +1,6 @@
 package controller.Schedule;
 
-import boundary.Schedule.AddScheduleItemInputBoundary;
 import boundary.Schedule.DeleteScheduleItemInputBoundary;
-import presenter.AddSchedulePresenter;
 import presenter.WeekViewPresenter;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.Schedule.ScheduleItemResponseModel;
@@ -21,10 +19,11 @@ public class DeleteScheduleController {
         this.presenter = presenter;
     }
 
-    public ScheduleItemResponseModel delete(String title, LocalDate date, String startTime, String endTime,
+    public ScheduleItemResponseModel delete(String title, LocalDate starDate, LocalDate endDate,
+                                            String startTime, String endTime,
                                             String startAMPM, String endAMPM) {
         ScheduleItemRequestModel inputData = new ScheduleItemRequestModel(
-                title, date, timeConverter(startTime, startAMPM), timeConverter(endTime, endAMPM));
+                title, starDate, endDate, timeConverter(startTime, startAMPM), timeConverter(endTime, endAMPM));
         return deleteScheduleItemInputBoundary.delete(inputData);
     }
 

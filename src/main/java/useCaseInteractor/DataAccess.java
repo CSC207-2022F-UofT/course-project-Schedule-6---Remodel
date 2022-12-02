@@ -3,6 +3,7 @@ package useCaseInteractor;
 import requestModel.ImportRequestModel;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
+import responseModel.Schedule.ScheduleItemResponseModel;
 import responseModel.Task.TaskResponseModel;
 
 import java.util.ArrayList;
@@ -11,23 +12,23 @@ public interface DataAccess {
 
     boolean createUser(String password, String fName, String lName);
 
-    void setSchedule(ScheduleItemRequestModel requestModel);
+    void setSchedule(ScheduleItemResponseModel responseModel);
+
+    ArrayList<Object> getSingleSchedule(ScheduleItemResponseModel responseModel);
 
     void setSchedule(ImportRequestModel requestModel);
 
-    ArrayList<Object> getSingleSchedule(ScheduleItemRequestModel requestModel);
-
     ArrayList<ArrayList<Object>> getUserEntireSchedule();
 
-    void deleteScheduleItem(ScheduleItemRequestModel requestModel);
+    void deleteScheduleItem(ScheduleItemResponseModel responseModel);
 
-    void setTask(TaskRequestModel requestModel);
+    void setTask(TaskResponseModel responseModel);
 
-    ArrayList<Object> getSingleTask(TaskRequestModel requestModel);
+    ArrayList<Object> getSingleTask(TaskResponseModel responseModel);
 
     ArrayList<ArrayList<Object>> getUserEntireTask();
 
-    void deleteTask(TaskRequestModel requestModel);
+    void deleteTask(TaskResponseModel responseModel);
 
     boolean getUserExist(String username);
 
@@ -51,5 +52,4 @@ public interface DataAccess {
 
     //sets a new request list when a request is accepted or declined
     void setRequests(ArrayList<String> usernames);
-
 }
