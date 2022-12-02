@@ -18,10 +18,13 @@ public class AddScheduleScreen {
 
     @FXML
     private DatePicker endDate;
+
     @FXML
     private TextField startTime;
+
     @FXML
     private TextField endTime;
+
     @FXML
     private ChoiceBox<String> startAMPM;
 
@@ -31,19 +34,17 @@ public class AddScheduleScreen {
     @FXML
     private Label errorMessage;
 
-    public void addScheduleAction(ActionEvent event){};
-    public void cancelScheduleAction(ActionEvent event){};
+    private final AddScheduleController addScheduleController;
 
+    public AddScheduleScreen(AddScheduleController controller) {
+        this.addScheduleController = controller;
+    }
 
-//    public AddScheduleScreen(AddScheduleController controller) {
-//        this.addScheduleController = controller;
-//    }
-//
-//    public void addScheduleAction(ActionEvent event) {
-//        System.out.println("Click" + event.getEventType());
-//
-//        // add try and catch to catch errorMessage from controller
-//        addScheduleController.create(this.scheduleTitle.getText(), this.scheduleDate.getValue(),
-//                this.startTime.getText(), this.endTime.getText(), this.startAMPM.getValue(), this.endAMPM.getValue());
-//    }
+    public void addScheduleAction(ActionEvent event) {
+        System.out.println("Click" + event.getEventType());
+
+        addScheduleController.create(errorMessage, this.scheduleTitle.getText(),
+                this.startDate.getValue(), this.endDate.getValue(),
+                this.startTime.getText(), this.endTime.getText(), this.startAMPM.getValue(), this.endAMPM.getValue());
+    }
 }

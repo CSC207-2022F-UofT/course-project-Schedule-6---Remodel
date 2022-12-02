@@ -1,9 +1,6 @@
 package useCaseInteractor.Schedule;
 
 import boundary.Schedule.EditScheduleItemInputBoundary;
-import entity.Schedule.ScheduleItem;
-import entity.Schedule.ScheduleItemFactory;
-import presenter.AddSchedulePresenter;
 import presenter.WeekViewPresenter;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.Schedule.ScheduleItemResponseModel;
@@ -22,12 +19,18 @@ public class EditScheduleItem implements EditScheduleItemInputBoundary {
     public ScheduleItemResponseModel edit(ScheduleItemRequestModel newInputData,
                                           ScheduleItemRequestModel oldInputData) {
 
-        dataAccess.deleteScheduleItem(oldInputData);
-        dataAccess.setSchedule(oldInputData);
-
         // not sure about response model yet depends on UI
-        ScheduleItemResponseModel responseModel = new ScheduleItemResponseModel(newInputData.getTitle(),
-                newInputData.getDate(), newInputData.getStartTime(), newInputData.getEndTime());
-        return schedulePresenter.prepareSuccessView(responseModel);
+        ScheduleItemResponseModel newresponseModel = new ScheduleItemResponseModel(newInputData.getTitle(),
+                newInputData.getStartDate(), newInputData.getEndDate(),
+                newInputData.getStartTime(), newInputData.getEndTime());
+
+        ScheduleItemResponseModel oldresponseModel = new ScheduleItemResponseModel(oldInputData.getTitle(),
+                oldInputData.getStartDate(), oldInputData.getEndDate(),
+                oldInputData.getStartTime(), oldInputData.getEndTime());
+
+        dataAccess.deleteScheduleItem(oldresponseModel);
+        dataAccess.setSchedule(newresponseModel);
+
+        return schedulePresenter.prepareSuccessView(newresponseModel);
     }
 }
