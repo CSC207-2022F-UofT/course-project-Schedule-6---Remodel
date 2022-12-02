@@ -7,7 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import useCaseInteractor.Task.createTaskForm;
 
 import java.net.URL;
 
@@ -41,13 +40,13 @@ public class ToDoScreen {
         selectionModel.setSelectionMode(SelectionMode.SINGLE);
     }
 
-    public void todoAddButtonAction(ActionEvent actionEvent) {
+    public void todoAddButton(ActionEvent actionEvent) {
         createTaskForm.newForm();
     }
 
     public void todoEditButton(ActionEvent actionEvent) {
         CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();
-        EditTask.newForm();
+        CreateEditTaskScreen.newForm();
 
     }
 

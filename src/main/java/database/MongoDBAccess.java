@@ -1,6 +1,7 @@
 package database;
 
 import com.mongodb.*;
+import requestModel.ImportRequestModel;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 import useCaseInteractor.DataAccess;
@@ -46,6 +47,24 @@ public class MongoDBAccess implements DataAccess {
         lst.add(requestModel.getEndTime());
         DBObject updateObj = new BasicDBObject("schedules", lst);
         this.collection.update(query, new BasicDBObject("$push", updateObj));
+    }
+
+    @Override
+    public void setSchedule(ImportRequestModel requestModel) {
+        DBObject query = new BasicDBObject("_id", this.username);
+        ArrayList<Object> lst = new ArrayList<>();
+        for(int i = 0; i < requestModel.getTitles().size(); i++) {
+            lst.add(requestModel.getTitles().get(i));
+            lst.add(requestModel.getDates().get(i));
+            lst.add(requestModel.getStartTime().get(i));
+            lst.add(requestModel.getEndTime().get(i));
+            DBObject updateObj = new BasicDBObject("schedules", lst);
+            this.collection.update(query, new BasicDBObject("$push", updateObj));
+            lst.remove(requestModel.getTitles().get(i));
+            lst.remove(requestModel.getDates().get(i));
+            lst.remove(requestModel.getStartTime().get(i));
+            lst.remove(requestModel.getEndTime().get(i));
+        }
     }
 
     @Override
@@ -102,7 +121,7 @@ public class MongoDBAccess implements DataAccess {
     public void setTask(TaskRequestModel requestModel) {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(requestModel.getTitle());
+        lst.add(requestModel.getDescripiton());
         lst.add(requestModel.getDate());
         lst.add(requestModel.getCategory());
         DBObject updateObj = new BasicDBObject("categories", lst);
@@ -112,7 +131,7 @@ public class MongoDBAccess implements DataAccess {
     @Override
     public ArrayList<Object> getSingleTask(TaskRequestModel requestModel) {
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(requestModel.getTitle());
+        lst.add(requestModel.getDescripiton());
         lst.add(requestModel.getDate());
         lst.add(requestModel.getCategory());
 
@@ -142,7 +161,7 @@ public class MongoDBAccess implements DataAccess {
         DBObject query = new BasicDBObject("_id", this.username);
 
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(requestModel.getTitle());
+        lst.add(requestModel.getDescripiton());
         lst.add(requestModel.getDate());
         lst.add(requestModel.getCategory());
 
@@ -236,9 +255,5 @@ public class MongoDBAccess implements DataAccess {
 
         this.collection.update(query, updateObj);
     }
-
-
-
-
-
 }
+

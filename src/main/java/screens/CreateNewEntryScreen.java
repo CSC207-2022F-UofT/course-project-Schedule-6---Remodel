@@ -8,16 +8,12 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.ScheduleButton;
 
-public class CreateScheduleScreen {
-
+public class CreateNewEntryScreen {
     public static void newForm() {
         try {
-            Label label = new Label("My Label");
-            Group root = new Group();
-            root.getChildren().add(label);
             FXMLLoader fxmlLoader = new FXMLLoader(ScheduleButton.class.getClassLoader().getResource
-                    ("userTimeTable.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1500, 700);
+                    ("ScheduleInputs.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 400 , 465);
             Stage loginStage = new Stage();
             loginStage.initStyle(StageStyle.DECORATED);
             loginStage.setScene(scene);
