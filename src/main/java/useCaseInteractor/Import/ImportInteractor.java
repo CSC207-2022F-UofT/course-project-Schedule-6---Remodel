@@ -28,11 +28,12 @@ public class ImportInteractor implements ImportInputBoundary {
         int itemNum = requestModel.getTitles().size(); // the number of events imported from the file
         for(int i = 0; i < itemNum; i++){
             ScheduleItem item = factory.create(requestModel.getTitles().get(i),
-                    requestModel.getDates().get(i),
+                    requestModel.getStartDates().get(i),
+                    requestModel.getEndDates().get(i),
                     requestModel.getStartTime().get(i),
                     requestModel.getEndTime().get(i));
         }
-        dataAccess.setSchedule(requestModel);
+        dataAccess.setImportSchedule(requestModel);
 
         LocalDateTime creation = LocalDateTime.now();
         ImportResponseModel responseModel = new ImportResponseModel(creation.toString(), itemNum);
