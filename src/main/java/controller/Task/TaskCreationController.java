@@ -1,8 +1,7 @@
 package controller.Task;
 
 import boundary.Task.AddTaskItemInputBoundary;
-import javafx.scene.control.ComboBox;
-import presenter.AddTaskPresenter;
+import presenter.TaskPresenter;
 import requestModel.TaskRequestModel;
 import responseModel.Task.TaskResponseModel;
 
@@ -12,9 +11,9 @@ public class TaskCreationController<String> {
 
     final AddTaskItemInputBoundary addTaskItemInputBoundary;
 
-    final AddTaskPresenter presenter;
+    final TaskPresenter presenter;
 
-    public TaskCreationController(AddTaskItemInputBoundary inputBoundary, AddTaskPresenter presenter){
+    public TaskCreationController(AddTaskItemInputBoundary inputBoundary, TaskPresenter presenter){
         this.addTaskItemInputBoundary = inputBoundary;
         this.presenter = presenter;
     }

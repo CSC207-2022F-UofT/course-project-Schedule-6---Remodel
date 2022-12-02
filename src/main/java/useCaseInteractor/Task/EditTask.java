@@ -1,6 +1,6 @@
 package useCaseInteractor.Task;
 
-import presenter.AddTaskPresenter;
+import presenter.TaskPresenter;
 import requestModel.TaskRequestModel;
 import responseModel.Task.TaskResponseModel;
 import useCaseInteractor.DataAccess;
@@ -8,10 +8,10 @@ import useCaseInteractor.DataAccess;
 public class EditTask {
     final DataAccess dataAccess;
 
-    final AddTaskPresenter taskPresenter;
+    final TaskPresenter taskPresenter;
 
 
-    public EditTask(DataAccess dataAccess, AddTaskPresenter taskPresenter) {
+    public EditTask(DataAccess dataAccess, TaskPresenter taskPresenter) {
         this.dataAccess = dataAccess;
         this.taskPresenter = taskPresenter;
     }
