@@ -20,7 +20,7 @@ public class EditTask implements  boundary.Task.EditTaskInputBoundary{
         dataAccess.deleteTask(oldInputData);
         dataAccess.setTask(newInputdata);
 
-        TaskResponseModel responseModel = new TaskResponseModel(newInputdata.getDescripiton(), newInputdata.getDate(),
+        TaskResponseModel responseModel = new TaskResponseModel(newInputdata.getDescription(), newInputdata.getDate(),
                 newInputdata.getPrivacy(), newInputdata.getCategory());
         return taskPresenter.prepareSuccessView(responseModel);
     }

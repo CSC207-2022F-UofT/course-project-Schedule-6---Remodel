@@ -19,7 +19,7 @@ public class DeleteTask implements DeleteTaskInputBoundary {
     public TaskResponseModel delete(TaskRequestModel inputData){
         dataAccess.deleteTask(inputData);
 
-        TaskResponseModel responseModel = new TaskResponseModel(inputData.getDescripiton(), inputData.getDate(),
+        TaskResponseModel responseModel = new TaskResponseModel(inputData.getDescription(), inputData.getDate(),
                 inputData.getPrivacy(), inputData.getCategory());
         return presenter.prepareSuccessView(responseModel);
     }
