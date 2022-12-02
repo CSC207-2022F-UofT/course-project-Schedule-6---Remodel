@@ -24,7 +24,7 @@
                   <Font name="Gill Sans MT Condensed" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="newEvent" layoutX="908.0" layoutY="23.0" mnemonicParsing="false" onAction="#scheduleInputsButton" prefHeight="31.0" prefWidth="99.0" style="-fx-background-color: white;" text="NEW EVENT">
+            <Button fx:id="futureEventButton" layoutX="887.0" layoutY="23.0" mnemonicParsing="false" onAction="#addFutureEntries" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: white;" text="ADD FUTURE EVENT">
                <font>
                   <Font name="Gill Sans MT Condensed" size="16.0" />
                </font>
