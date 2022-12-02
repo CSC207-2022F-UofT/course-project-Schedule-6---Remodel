@@ -53,17 +53,17 @@ public class LoginPageController {
         CreateRegistrationScreen.newForm();}
 
     public User login(DBCollection collection, TextField usernameTextField, TextField passwordTextField){
-        User user = null;
+        User user;
 
         MongoDBAccess client = new MongoDBAccess(collection, usernameTextField.getText());
-
 
         if(client.getUserExist(usernameTextField.getText()) && client.checkPassword(passwordTextField.getText())){
             user = new User();
             user.username = usernameTextField.getText();
             user.password = passwordTextField.getText();
+            return user;
         }
-        return user;
+        return null;
     }
     public User main(TextField usernameTextField, TextField passwordTextField) throws UnknownHostException {
 
