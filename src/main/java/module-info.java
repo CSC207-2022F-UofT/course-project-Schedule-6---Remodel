@@ -5,7 +5,6 @@ module com.example.project6maven {
     opens main to javafx.fxml;
     opens screens to javafx.fxml;
     exports main;
-    opens entity to javafx.fxml;
     exports controller.Schedule;
     opens controller.Schedule to javafx.fxml;
     exports controller.Task;
@@ -20,6 +19,7 @@ module com.example.project6maven {
     opens entity.Task to javafx.fxml;
     exports entity.User;
     opens entity.User to javafx.fxml;
+    requires javafx.graphics;
     requires com.calendarfx.view;
     requires mongo.java.driver;
     requires org.mnode.ical4j.core;
