@@ -6,11 +6,14 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.TodoPage;
 
-public class EditTask {
+import java.io.IOException;
+import java.net.URL;
+
+public class createTaskForm{
     public static void newForm() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(TodoPage.class.getClassLoader().getResource("TaskEdit.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 402, 356);
+            FXMLLoader fxmlLoader = new FXMLLoader(TodoPage.class.getClassLoader().getResource("TaskCreate.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 402, 387);
             Stage taskStage = new Stage();
             taskStage.initStyle(StageStyle.DECORATED);
             taskStage.setScene(scene);
@@ -21,4 +24,5 @@ public class EditTask {
             e.getCause();
         }
     }
+
 }
