@@ -10,6 +10,7 @@ public class ImportPresenter implements ImportOutputBoundary {
     }
 
     public ImportResponseModel failedImport(String error){
+        return null;
     }
-    //td: add return statement and reflect the error on the view
+    //td: reflect the error on the view
 }
