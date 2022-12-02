@@ -29,7 +29,7 @@
             </Label>
             <ComboBox fx:id="categoryComboBox" editable="true" layoutX="14.0" layoutY="176.0" prefHeight="26.0" prefWidth="226.0" promptText="SELECT CATEGORY" />
             <Label fx:id="taskError" layoutX="13.0" layoutY="213.0" prefHeight="26.0" prefWidth="358.0" textFill="RED" />
-            <TextField fx:id="taskTitle" layoutX="14.0" layoutY="42.0" prefHeight="26.0" prefWidth="226.0" promptText="Title" />
+            <TextField fx:id="taskDescription" layoutX="14.0" layoutY="42.0" prefHeight="26.0" prefWidth="226.0" promptText="Description" />
             <DatePicker fx:id="taskDate" layoutX="13.0" layoutY="107.0" prefHeight="26.0" prefWidth="226.0" promptText="Date" />
             <Button fx:id="taskCreateAddButton" layoutX="310.0" layoutY="250.0" mnemonicParsing="false" onAction="#addTask" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #82AA68;" text="ADD" textFill="WHITE">
                <font>
