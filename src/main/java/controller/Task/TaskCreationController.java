@@ -18,11 +18,11 @@ public class TaskCreationController<String> {
         this.presenter = presenter;
     }
 
-    public TaskResponseModel create(java.lang.String descripiton, LocalDate date, Boolean isPrivate, java.lang.String category){
-        if (descripiton.isBlank() || (date == null) || (isPrivate == null) || (category == null)){
+    public TaskResponseModel create(java.lang.String description, LocalDate date, Boolean isPrivate, java.lang.String category){
+        if (description.isBlank() || (date == null) || (isPrivate == null) || (category == null)){
             return presenter.prepareFailView("Please Fill in All Fields");
         }
-        TaskRequestModel newInputData = new TaskRequestModel(descripiton, date, isPrivate, category);
+        TaskRequestModel newInputData = new TaskRequestModel(description, date, isPrivate, category);
         return addTaskItemInputBoundary.create(newInputData);
     }
 

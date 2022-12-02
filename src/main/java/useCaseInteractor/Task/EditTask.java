@@ -5,7 +5,7 @@ import requestModel.TaskRequestModel;
 import responseModel.Task.TaskResponseModel;
 import useCaseInteractor.DataAccess;
 
-public class EditTask {
+public class EditTask implements  boundary.Task.EditTaskInputBoundary{
     final DataAccess dataAccess;
 
     final TaskPresenter taskPresenter;
@@ -17,11 +17,17 @@ public class EditTask {
     }
 
     public TaskResponseModel edit(TaskRequestModel newInputdata, TaskRequestModel oldInputData) {
-        dataAccess.deleteTask(oldInputData);
-        dataAccess.setTask(newInputdata);
 
-        TaskResponseModel responseModel = new TaskResponseModel(newInputdata.getDescripiton(), newInputdata.getDate(),
+
+        TaskResponseModel newresponseModel = new TaskResponseModel(newInputdata.getDescription(), newInputdata.getDate(),
                 newInputdata.getPrivacy(), newInputdata.getCategory());
-        return taskPresenter.prepareSuccessView(responseModel);
+
+        TaskResponseModel oldresponseModel = new TaskResponseModel(oldInputData.getDescription(), oldInputData.getDate(),
+                oldInputData.getPrivacy(), oldInputData.getCategory());
+
+        dataAccess.deleteTask(oldresponseModel);
+        dataAccess.setTask(newresponseModel);
+
+        return taskPresenter.prepareSuccessView(newresponseModel);
     }
 }

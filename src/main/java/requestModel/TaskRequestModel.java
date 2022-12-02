@@ -20,7 +20,7 @@ public class TaskRequestModel {
         this.category = category;
     }
 
-    public String getDescripiton(){ return this.descripiton;}
+    public String getDescription(){ return this.descripiton;}
 
     public LocalDate getDate(){ return this.date;}
 

@@ -7,15 +7,19 @@ public class CommonScheduleItem implements ScheduleItem {
 
     private String title;
 
-    private LocalDate date;
+    private LocalDate startDate;
+
+    private LocalDate endDate;
 
     private LocalTime startTime;
 
     private LocalTime endTime;
 
-    public CommonScheduleItem(String title, LocalDate date, LocalTime startTime, LocalTime endTime) {
+    public CommonScheduleItem(String title, LocalDate startDate, LocalDate endDate,
+                              LocalTime startTime, LocalTime endTime) {
         this.title = title;
-        this.date = date;
+        this.startDate = startDate;
+        this.endDate = endDate;
         this.startTime = startTime;
         this.endTime = endTime;
     }
@@ -26,8 +30,13 @@ public class CommonScheduleItem implements ScheduleItem {
     }
 
     @Override
-    public LocalDate getDate() {
-        return this.date;
+    public LocalDate getStartDate() {
+        return this.startDate;
+    }
+
+    @Override
+    public LocalDate getEndDate() {
+        return this.startDate;
     }
 
     @Override

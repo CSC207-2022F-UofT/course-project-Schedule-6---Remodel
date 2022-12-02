@@ -7,15 +7,19 @@ public class ScheduleItemRequestModel {
 
     private String title;
 
-    private LocalDate date;
+    private LocalDate startDate;
+
+    private LocalDate endDate;
 
     private LocalTime startTime;
 
     private LocalTime endTime;
 
-    public ScheduleItemRequestModel(String title, LocalDate date, LocalTime startTime, LocalTime endTime) {
+    public ScheduleItemRequestModel(String title, LocalDate startDate, LocalDate endDate,
+                                    LocalTime startTime, LocalTime endTime) {
         this.title = title;
-        this.date = date;
+        this.startDate = startDate;
+        this.endDate = endDate;
         this.startTime = startTime;
         this.endTime = endTime;
     }
@@ -24,9 +28,11 @@ public class ScheduleItemRequestModel {
         return this.title;
     }
 
-    public LocalDate getDate() {
-        return this.date;
+    public LocalDate getStartDate() {
+        return this.startDate;
     }
+
+    public LocalDate getEndDate() {return this.endDate;}
 
     public LocalTime getStartTime() {
         return this.startTime;
