@@ -27,7 +27,7 @@ public class TimeTableScreen {
     @FXML
     private Button saveButton;
     @FXML
-    private Button newEvent;
+    private Button futureEventButton;
     @FXML
     private Label allEntriesSavedLabel;
     @FXML
@@ -38,9 +38,7 @@ public class TimeTableScreen {
 
     public void printCalendarEntries(ActionEvent event) throws InterruptedException
     {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
-    public void scheduleInputsButton(ActionEvent event) {TTC.scheduleInputsButton(event);}
-
-
+    public void addFutureEntries(ActionEvent event) {TTC.futureEventButton(event);}
     public void initialize() throws IOException {
         TTC.loadCalendar(Gridlock);
         usernameChangeLabel = TimetableUserName;

@@ -21,14 +21,15 @@ import java.util.ArrayList;
 import database.MongoDBAccess;
 import javafx.util.Duration;
 import presenter.TimetablePresenter;
+import screens.CreateNewEntryScreen;
+import screens.CreateRegistrationScreen;
+import screens.CreateScheduleScreen;
 import useCaseInteractor.User.userCollection;
 
 public class TimetableController {
-    public static Label usernameChangeLabel;
     private CalendarView calendar;
     private TimeManagement TM = new TimeManagement();
     private TimetablePresenter TTP = new TimetablePresenter();
-
 
     public void printCalendarEntries(ActionEvent event, Label entriesSaved) throws InterruptedException {
         TTP.printCalendarEntries(entriesSaved, calendar);
@@ -39,7 +40,8 @@ public class TimetableController {
             temp.setName(name);
         }
     }
-    public void scheduleInputsButton(ActionEvent event){}
+    public void futureEventButton(ActionEvent event){
+        CreateNewEntryScreen.newForm();}
 
     public void loadCalendar(GridPane Gridlock) throws UnknownHostException {
         calendar = new CalendarView();
