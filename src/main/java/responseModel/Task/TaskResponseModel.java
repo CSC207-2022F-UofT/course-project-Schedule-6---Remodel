@@ -3,7 +3,7 @@ package responseModel.Task;
 import java.time.LocalDate;
 
 public class TaskResponseModel {
-    private String title;
+    private String description;
 
     private LocalDate date;
 
@@ -11,14 +11,14 @@ public class TaskResponseModel {
 
     private Boolean isPrivate;
 
-    public TaskResponseModel(String title, LocalDate date, Boolean isPrivate, String category){
-        this.title = title;
+    public TaskResponseModel(String description, LocalDate date, Boolean isPrivate, String category){
+        this.description = description;
         this.date = date;
         this.isPrivate = isPrivate;
         this.category = category;
     }
 
-    public String getTitle(){ return this.title;}
+    public String getDescription(){ return this.description;}
 
     public LocalDate getDate(){ return this.date;}
 
