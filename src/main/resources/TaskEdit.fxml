@@ -37,7 +37,7 @@
                   <Font name="Gill Sans MT Condensed" size="23.0" />
                </font>
             </Label>
-            <ComboBox fx:id="newCategoryComboBox" layoutX="15.0" layoutY="176.0" prefHeight="26.0" prefWidth="226.0" promptText="SELECT CATEGORY" />
+            <ComboBox fx:id="newCategoryComboBox" editable="true" layoutX="15.0" layoutY="176.0" prefHeight="26.0" prefWidth="226.0" promptText="SELECT CATEGORY" />
             <TextField fx:id="newTitle" layoutX="15.0" layoutY="42.0" prefHeight="26.0" prefWidth="226.0" promptText="Title" />
             <DatePicker fx:id="newDate" layoutX="14.0" layoutY="107.0" prefHeight="26.0" prefWidth="226.0" promptText="Date" />
          </children>
