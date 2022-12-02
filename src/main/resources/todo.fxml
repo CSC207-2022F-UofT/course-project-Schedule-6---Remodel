@@ -2,33 +2,42 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #89ae6d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TodoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: #82AA68;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.ToDoScreen">
    <children>
-      <AnchorPane layoutY="67.0" prefHeight="533.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
-         <children>
-            <Label fx:id="noTasksLabel" layoutX="161.0" layoutY="255.0" text="NO TASKS YET">
-               <font>
-                  <Font name="Gill Sans MT Condensed" size="19.0" />
-               </font>
-            </Label>
-            <Button fx:id="todoAddButton" layoutX="264.0" layoutY="478.0" mnemonicParsing="false" onAction="#todoAddButtonAction" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #87ae69;" text="ADD TASK">
-               <font>
-                  <Font name="Gill Sans MT Condensed" size="20.0" />
-               </font></Button>
-            <Button fx:id="addCategoryButton" layoutX="264.0" layoutY="429.0" mnemonicParsing="false" onAction="#todoAddCategory" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #87ae69;" text="ADD CATEGORY">
-               <font>
-                  <Font name="Gill Sans MT Condensed" size="20.0" />
-               </font>
-            </Button>
-         </children>
-      </AnchorPane>
-      <Label layoutX="161.0" layoutY="7.0" text="TODO">
+      <Label layoutX="14.0" layoutY="10.0" prefHeight="54.0" prefWidth="78.0" text="TODO" textFill="WHITE">
          <font>
-            <Font name="Gill Sans MT Condensed" size="49.0" />
+            <Font name="Gill Sans MT Condensed" size="40.0" />
          </font>
       </Label>
+      <Button fx:id="todoAddButton" layoutX="189.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoAddButtonAction" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="ADD">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Button>
+      <TableView fx:id="todoTable" layoutY="78.0" prefHeight="627.0" prefWidth="400.0">
+         <placeholder>
+            <Label text="No tasks yet" />
+         </placeholder>
+        <columns>
+          <TableColumn fx:id="taskTitle" prefWidth="200.0" text="TASK" />
+            <TableColumn fx:id="taskCategory" minWidth="0.0" prefWidth="119.0" text="CATEGORY" />
+          <TableColumn fx:id="taskDate" minWidth="0.0" prefWidth="85.0" text="DATE" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteTaskButton" layoutX="316.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoDeleteButton" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: white;" text="DELETE">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="editTaskButton" layoutX="253.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoEditButton" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="EDIT">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -123,7 +123,7 @@ public class MongoDBAccess implements DataAccess {
     public void setTask(TaskRequestModel requestModel) {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(requestModel.getTitle());
+        lst.add(requestModel.getDescripiton());
         lst.add(requestModel.getDate());
         lst.add(requestModel.getCategory());
         DBObject updateObj = new BasicDBObject("categories", lst);
@@ -133,7 +133,7 @@ public class MongoDBAccess implements DataAccess {
     @Override
     public ArrayList<Object> getSingleTask(TaskRequestModel requestModel) {
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(requestModel.getTitle());
+        lst.add(requestModel.getDescripiton());
         lst.add(requestModel.getDate());
         lst.add(requestModel.getCategory());
 
@@ -163,7 +163,7 @@ public class MongoDBAccess implements DataAccess {
         DBObject query = new BasicDBObject("_id", this.username);
 
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(requestModel.getTitle());
+        lst.add(requestModel.getDescripiton());
         lst.add(requestModel.getDate());
         lst.add(requestModel.getCategory());
 

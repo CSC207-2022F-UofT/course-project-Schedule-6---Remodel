@@ -1,4 +1,5 @@
-package controller.Category;
+package screens;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -7,18 +8,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import java.lang.String;
+
 import java.util.Objects;
 
-public class CategoryCreationController {
-
+public class AddCategoryScreen {
     public Label categoryError;
     public Button categoryCancelButton;
     @FXML
     private Button categoryCreateAddButton;
-
-    //@FXML
-    //private TextField categoryHex;
 
     @FXML
     private TextField categoryTitle;
@@ -32,7 +29,7 @@ public class CategoryCreationController {
     @FXML
     public void addCategory(ActionEvent event) {
         String name_ = categoryTitle.getText();
-        boolean isPrivate_ = Objects.equals((java.lang.String) privacyComboBox.getValue(), "Private");
+        Boolean isPrivate_ = Objects.equals((java.lang.String) privacyComboBox.getValue(), "Private");
 
     }
 

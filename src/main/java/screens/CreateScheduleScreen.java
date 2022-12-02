@@ -17,7 +17,7 @@ public class CreateScheduleScreen {
             root.getChildren().add(label);
             FXMLLoader fxmlLoader = new FXMLLoader(ScheduleButton.class.getClassLoader().getResource
                     ("userTimeTable.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1099, 700);
+            Scene scene = new Scene(fxmlLoader.load(), 1500, 700);
             Stage loginStage = new Stage();
             loginStage.initStyle(StageStyle.DECORATED);
             loginStage.setScene(scene);

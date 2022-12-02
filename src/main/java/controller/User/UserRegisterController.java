@@ -12,6 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import java.net.UnknownHostException;
+import main.collectCollection;
 
 public class UserRegisterController {
 
@@ -43,7 +44,7 @@ public class UserRegisterController {
                               TextField RGfirstname, TextField RGlastname, TextField RGusername,
                               TextField RGpassword, Button RGclosebutton, Label inuselabel) throws UnknownHostException {
 
-        DBCollection collection = this.main();
+        DBCollection collection = collectCollection.main();
         MongoDBAccess client = new MongoDBAccess(collection, RGusername.getText());
         String firstName_ = RGfirstname.getText();
         String lastName_ = RGlastname.getText();
@@ -62,14 +63,6 @@ public class UserRegisterController {
             inuselabel.setText("USERNAME IN USE");
         }
 
-    }
-    public DBCollection main() throws UnknownHostException {
-        MongoClient mongoClient = new MongoClient(new MongoClientURI
-                ("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
-        DB database = mongoClient.getDB("schedule6-testingdb");
-        DBCollection collection = database.getCollection("schedule6-testingcollection");
-        System.out.println(1);
-        return collection;
     }
 
 }

@@ -1,45 +1,29 @@
 package controller.Task;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.stage.Stage;
-import java.lang.String;
-import java.time.LocalDate;
-import java.util.Objects;
+import boundary.Task.AddTaskItemInputBoundary;
+import presenter.TaskPresenter;
+import requestModel.TaskRequestModel;
+import responseModel.Task.TaskResponseModel;
 
+import java.time.LocalDate;
 
 public class TaskCreationController<String> {
 
-    public Button taskCancelButton;
-    public Label taskError;
-    @FXML
-    private ComboBox<?> categoryComboBox;
+    final AddTaskItemInputBoundary addTaskItemInputBoundary;
 
-    @FXML
-    private ComboBox<?> privacyComboBox;
+    final TaskPresenter presenter;
 
-    @FXML
-    private Button taskCreateAddButton;
-
-    @FXML
-    private DatePicker taskDate;
-
-    @FXML
-    private TextField taskTitle;
-
-    @FXML
-    public void addTask(ActionEvent event) {
-        String title_ = (String) taskTitle.getText();
-        LocalDate date_ = taskDate.getValue();
-        boolean isPrivate_ = Objects.equals((java.lang.String) privacyComboBox.getValue(), "Private");
-
-        //Category category_ = categoryComboBox.
+    public TaskCreationController(AddTaskItemInputBoundary inputBoundary, TaskPresenter presenter){
+        this.addTaskItemInputBoundary = inputBoundary;
+        this.presenter = presenter;
     }
 
-
-    public void taskCancelAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) taskCancelButton.getScene().getWindow();
-        stage.close();
+    public TaskResponseModel create(java.lang.String descripiton, LocalDate date, Boolean isPrivate, java.lang.String category){
+        if (descripiton.isBlank() || (date == null) || (isPrivate == null) || (category == null)){
+            return presenter.prepareFailView("Please Fill in All Fields");
+        }
+        TaskRequestModel newInputData = new TaskRequestModel(descripiton, date, isPrivate, category);
+        return addTaskItemInputBoundary.create(newInputData);
     }
+
 }

@@ -1,38 +1,37 @@
 package requestModel;
 
-import entity.Category.CommonCategory;
 
 import java.time.LocalDate;
 
 public class TaskRequestModel {
 
-    private String title;
+    private String descripiton;
 
     private LocalDate date;
 
-    private CommonCategory category;
+    private String category;
 
-    private boolean isPrivate;
+    private Boolean isPrivate;
 
-    public TaskRequestModel(String title, LocalDate date, boolean isPrivate, CommonCategory category){
-        this.title = title;
+    public TaskRequestModel(String descripiton, LocalDate date, Boolean isPrivate, String category){
+        this.descripiton = descripiton;
         this.date = date;
         this.isPrivate = isPrivate;
         this.category = category;
     }
 
-    public String getTitle(){ return this.title;}
+    public String getDescripiton(){ return this.descripiton;}
 
     public LocalDate getDate(){ return this.date;}
 
-    public String getPrivacy(){
+    public Boolean getPrivacy(){
         if(isPrivate){
-            return "Private";
+            return true;
         } else {
-            return "Public";
+            return false;
         }
     }
 
-    public CommonCategory getCategory() { return this.category;}
+    public String getCategory() { return this.category;}
 
 }

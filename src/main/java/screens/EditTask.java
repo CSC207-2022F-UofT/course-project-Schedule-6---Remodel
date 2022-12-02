@@ -1,19 +1,16 @@
-package useCaseInteractor.Task;
+package screens;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import main.LoginPage;
+import main.TodoPage;
 
-import java.io.IOException;
-import java.net.URL;
-
-public class createTaskForm{
+public class EditTask {
     public static void newForm() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("TaskCreate.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 468, 600);
+            FXMLLoader fxmlLoader = new FXMLLoader(TodoPage.class.getClassLoader().getResource("TaskEdit.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 402, 356);
             Stage taskStage = new Stage();
             taskStage.initStyle(StageStyle.DECORATED);
             taskStage.setScene(scene);
@@ -24,5 +21,4 @@ public class createTaskForm{
             e.getCause();
         }
     }
-
 }

@@ -1,16 +1,14 @@
 package entity.Task;
 
-import entity.Category.Category;
-
 import java.time.LocalDate;
 
 public interface Task {
 
-    String getTitle();
+    String getDescription();
 
     LocalDate getDate();
 
-    String getPrivacySetting();
+    boolean getPrivacySetting();
 
-    Category getCategory();
+    String getCategory();
 }
