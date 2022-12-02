@@ -40,13 +40,13 @@ public class ToDoScreen {
         selectionModel.setSelectionMode(SelectionMode.SINGLE);
     }
 
-    public void todoAddButtonAction(ActionEvent actionEvent) {
+    public void todoAddButton(ActionEvent actionEvent) {
         createTaskForm.newForm();
     }
 
     public void todoEditButton(ActionEvent actionEvent) {
         CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();
-        EditTask.newForm();
+        CreateEditTaskScreen.newForm();
 
     }
 
