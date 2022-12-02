@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class CommonTask implements Task {
 
-    private String title;
+    private String description;
 
     private LocalDate date;
 
@@ -12,16 +12,16 @@ public class CommonTask implements Task {
 
     private String category;
 
-    public CommonTask(String title, LocalDate date, boolean privacySetting, String category) {
-        this.title = title;
+    public CommonTask(String description, LocalDate date, boolean privacySetting, String category) {
+        this.description = description;
         this.date = date;
         this.privacySetting = privacySetting;
         this.category = category;
     }
 
     @Override
-    public String getTitle() {
-        return this.title;
+    public String getDescription() {
+        return this.description;
     }
 
     @Override

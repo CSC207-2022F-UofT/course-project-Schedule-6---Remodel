@@ -17,8 +17,8 @@ public class DeleteTaskController {
         this.taskPresenter = taskPresenter;
     }
 
-    public TaskResponseModel delete(String title, LocalDate date, boolean privacySetting, String category) {
-        TaskRequestModel inputData = new TaskRequestModel(title, date, privacySetting, category);
+    public TaskResponseModel delete(String description, LocalDate date, boolean privacySetting, String category) {
+        TaskRequestModel inputData = new TaskRequestModel(description, date, privacySetting, category);
         return deleteTaskInputBoundary.delete(inputData);
     }
 }
