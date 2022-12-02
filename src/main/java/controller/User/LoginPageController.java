@@ -17,6 +17,7 @@ import java.net.UnknownHostException;
 import useCaseInteractor.User.setUsername;
 import useCaseInteractor.User.userCollection;
 import database.MongoDBAccess;
+import main.collectCollection;
 
 public class LoginPageController {
 
@@ -28,7 +29,7 @@ public class LoginPageController {
                                   Button loginButton, Label loginMessageLabel) throws UnknownHostException {
 
         if (!usernameTextField.getText().isBlank() && !passwordTextField.getText().isBlank()) {
-            User loginAttempt = this.main(usernameTextField, passwordTextField);
+            User loginAttempt = this.login(usernameTextField, passwordTextField);
             if (loginAttempt != null){
 
                 //If the Login is successful then the window closes
@@ -52,10 +53,10 @@ public class LoginPageController {
     public void registerButtonAction(ActionEvent event){
         CreateRegistrationScreen.newForm();}
 
-    public User login(DBCollection collection, TextField usernameTextField, TextField passwordTextField){
+    public User login(TextField usernameTextField, TextField passwordTextField) throws UnknownHostException {
         User user;
 
-        MongoDBAccess client = new MongoDBAccess(collection, usernameTextField.getText());
+        MongoDBAccess client = new MongoDBAccess(collectCollection.main(), usernameTextField.getText());
 
         if(client.getUserExist(usernameTextField.getText()) && client.checkPassword(passwordTextField.getText())){
             user = new User();
@@ -64,13 +65,5 @@ public class LoginPageController {
             return user;
         }
         return null;
-    }
-    public User main(TextField usernameTextField, TextField passwordTextField) throws UnknownHostException {
-
-        MongoClient mongoClient = new MongoClient(new MongoClientURI
-                ("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
-        DB database = mongoClient.getDB("schedule6-testingdb");
-        DBCollection collection = database.getCollection("schedule6-testingcollection");
-        return this.login(collection, usernameTextField, passwordTextField);
     }
 }
