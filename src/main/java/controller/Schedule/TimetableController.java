@@ -22,6 +22,7 @@ import database.MongoDBAccess;
 import javafx.util.Duration;
 import presenter.TimetablePresenter;
 import useCaseInteractor.User.userCollection;
+import main.collectCollection;
 
 public class TimetableController {
     public static Label usernameChangeLabel;
@@ -44,7 +45,7 @@ public class TimetableController {
     public void loadCalendar(GridPane Gridlock) throws UnknownHostException {
         calendar = new CalendarView();
 
-        MongoDBAccess client = new MongoDBAccess(this.main(), userCollection.getUsername());
+        MongoDBAccess client = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
 
         ArrayList<String> followers = (ArrayList<String>) client.getFollowing();
 
@@ -98,21 +99,5 @@ public class TimetableController {
         calendar.setShowDeveloperConsole(false);
         calendar.setShowAddCalendarButton(false);
         Gridlock.getChildren().add(calendar);
-    }
-
-
-
-    public DBCollection main() throws UnknownHostException {
-        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
-
-        //Brians remote database
-//        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://123:123@cluster1.d3e1rhp.mongodb.net/?retryWrites=true&w=majority"));
-
-
-        DB database = mongoClient.getDB("schedule6-testingdb");
-        DBCollection collection = database.getCollection("schedule6-testingcollection");
-
-        //this.loadCalendar(collection);
-        return collection;
     }
 }
