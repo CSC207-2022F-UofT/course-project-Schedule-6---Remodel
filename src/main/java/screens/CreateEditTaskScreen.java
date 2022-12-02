@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.TodoPage;
 
-public class EditTask {
+public class CreateEditTaskScreen {
     public static void newForm() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(TodoPage.class.getClassLoader().getResource("TaskEdit.fxml"));

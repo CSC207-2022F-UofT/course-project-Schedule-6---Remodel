@@ -20,7 +20,7 @@ public class EditTaskScreen {
     private DatePicker newDate;
 
     @FXML
-    private TextField newTitle;
+    private TextField newDescription;
 
     @FXML
     private Button taskEditButton;
