@@ -16,23 +16,24 @@ import java.util.List;
 public class IcsParser {
     private List<CalendarComponent> components;
 
-    public IcsParser(FileInputStream in){
+    public IcsParser(FileInputStream in) throws ParserException, IOException {
         CalendarBuilder builder = new CalendarBuilder();
-        try{
+        //try{
             Calendar calendar = builder.build(in);
             this.components = calendar.getComponents();
-        }
-        catch(IOException | ParserException e){
-            e.printStackTrace();
-        }
+        //}
+        //catch(IOException | ParserException e){
+            //e.printStackTrace();
+        //}
     }
 
     public ArrayList<String> getTitles(){
         ArrayList<String> titles = new ArrayList<>();
         for (CalendarComponent component:this.components) {
             if (component instanceof VEvent) {
-                String eventTitle = String.valueOf(component.getProperty(Property.SUMMARY));
-                titles.add(eventTitle);
+                String eventSummary = String.valueOf(component.getProperty(Property.SUMMARY));
+                String title = eventSummary.substring(eventSummary.indexOf(":") + 1, eventSummary.indexOf("]"));
+                titles.add(title.strip());
             }
         }
         return titles;
@@ -42,8 +43,9 @@ public class IcsParser {
         ArrayList<String> stDates = new ArrayList<>();
         for (CalendarComponent component:this.components) {
             if (component instanceof VEvent) {
-                String eventSt = String.valueOf(component.getProperty(Property.DTSTART));
-                stDates.add(eventSt);
+                String eventStDate = String.valueOf(component.getProperty(Property.DTSTART));
+                String stDate = eventStDate.substring(eventStDate.indexOf(":") + 1, eventStDate.indexOf("]"));
+                stDates.add(stDate.strip());
             }
         }
         return stDates;
@@ -53,8 +55,9 @@ public class IcsParser {
         ArrayList<String> endDates = new ArrayList<>();
         for (CalendarComponent component:this.components) {
             if (component instanceof VEvent) {
-                String eventEnd = String.valueOf(component.getProperty(Property.DTEND));
-                endDates.add(eventEnd);
+                String eventEndDate = String.valueOf(component.getProperty(Property.DTEND));
+                String endDate = eventEndDate.substring(eventEndDate.indexOf(":") + 1, eventEndDate.indexOf("]"));
+                endDates.add(endDate.strip());
             }
         }
         return endDates;

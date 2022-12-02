@@ -1,5 +1,6 @@
 package screens;
 
+import controller.Task.TaskCreationController;
 import database.MongoDBAccess;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,28 +28,22 @@ public class AddTaskScreen {
     private DatePicker taskDate;
 
     @FXML
-    private TextField taskTitle;
+    private TextField taskDescription;
 
     @FXML
     public TableView todoTable;
 
-    /*
-    private void initialize(){
+    private final TaskCreationController taskCreationController;
 
-        ArrayList<ArrayList<Object>> userTasks = db.getUserEntireTask();
-        ArrayList<String> categories = new ArrayList<String>();
-        for(int i = 0; i < userTasks.size(); i++){
-            //categories.add(userTasks.get(i,2));
-        }
-        //categoryComboBox.getItems().addAll(categories);
+    public AddTaskScreen(TaskCreationController controller){
+        this.taskCreationController = controller;
     }
-    */
+
 
     @FXML
     public void addTask(ActionEvent event) {
-        String title_ = (String) taskTitle.getText();
-        LocalDate date_ = taskDate.getValue();
-        String category_ = (String) categoryComboBox.getValue();
+        taskCreationController.create(taskDescription.getText(), taskDate.getValue(), true, (String) categoryComboBox.getValue());
+
     }
 
 
