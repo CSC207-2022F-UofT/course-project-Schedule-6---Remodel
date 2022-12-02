@@ -5,7 +5,7 @@ import requestModel.TaskRequestModel;
 import responseModel.Task.TaskResponseModel;
 import useCaseInteractor.DataAccess;
 
-public class EditTask {
+public class EditTask implements  boundary.Task.EditTaskInputBoundary{
     final DataAccess dataAccess;
 
     final TaskPresenter taskPresenter;
