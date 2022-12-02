@@ -1,13 +1,11 @@
 package database;
 
 import com.mongodb.*;
-import requestModel.CategoryCreationRequestModel;
 import requestModel.ImportRequestModel;
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
 import useCaseInteractor.DataAccess;
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class MongoDBAccess implements DataAccess {
 
@@ -257,12 +255,5 @@ public class MongoDBAccess implements DataAccess {
 
         this.collection.update(query, updateObj);
     }
-
-    @Override
-    public void setCategory(CategoryCreationRequestModel requestModel) {
-
-    }
-
-
 }
 
