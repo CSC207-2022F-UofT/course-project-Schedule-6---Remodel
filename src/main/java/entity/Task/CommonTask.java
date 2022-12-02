@@ -8,11 +8,11 @@ public class CommonTask implements Task {
 
     private LocalDate date;
 
-    private String privacySetting;
+    private Boolean privacySetting;
 
     private String category;
 
-    public CommonTask(String title, LocalDate date, String privacySetting, String category) {
+    public CommonTask(String title, LocalDate date, boolean privacySetting, String category) {
         this.title = title;
         this.date = date;
         this.privacySetting = privacySetting;
@@ -30,7 +30,7 @@ public class CommonTask implements Task {
     }
 
     @Override
-    public String getPrivacySetting() {
+    public boolean getPrivacySetting() {
         return this.privacySetting;
     }
 

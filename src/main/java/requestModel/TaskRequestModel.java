@@ -24,11 +24,11 @@ public class TaskRequestModel {
 
     public LocalDate getDate(){ return this.date;}
 
-    public String getPrivacy(){
+    public Boolean getPrivacy(){
         if(isPrivate){
-            return "Private";
+            return true;
         } else {
-            return "Public";
+            return false;
         }
     }
 

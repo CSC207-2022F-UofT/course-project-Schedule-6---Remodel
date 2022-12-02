@@ -31,5 +31,4 @@ public class TaskResponseModel {
     }
 
     public String getCategory() { return this.category;}
-
 }

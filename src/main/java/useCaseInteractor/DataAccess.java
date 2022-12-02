@@ -2,6 +2,7 @@ package useCaseInteractor;
 
 import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
+import responseModel.Task.TaskResponseModel;
 
 import java.util.ArrayList;
 
