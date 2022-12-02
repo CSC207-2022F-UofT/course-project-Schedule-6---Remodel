@@ -1,2 +1,4 @@
-package boundary.Schedule;public interface TimetableOutputBoundary {
+package boundary.Schedule;
+
+public interface TimetableOutputBoundary {
 }

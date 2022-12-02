@@ -10,6 +10,7 @@ public class AddSchedulePresenter implements AddScheduleOutputBoundary {
         text.setText(message);
     }
 
+    @Override
     public void prepareFailView(Label text, String message) {
         text.setText(message);
     }

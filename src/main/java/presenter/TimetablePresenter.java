@@ -1,5 +1,6 @@
 package presenter;
 
+import boundary.Schedule.TimetableOutputBoundary;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.view.CalendarView;
 import controller.Schedule.TimetableController;
@@ -8,9 +9,7 @@ import javafx.scene.control.Label;
 import javafx.util.Duration;
 import entity.Schedule.TimeManagement;
 
-
-
-public class TimetablePresenter {
+public class TimetablePresenter implements TimetableOutputBoundary {
 
     private final TimeManagement TM  = new TimeManagement();
 

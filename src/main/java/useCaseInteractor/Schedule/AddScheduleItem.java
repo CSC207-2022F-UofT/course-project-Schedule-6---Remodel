@@ -25,11 +25,12 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
     @Override
     public void create(ScheduleItemRequestModel inputData) {
         ScheduleItem scheduleItem = scheduleItemFactory.create(inputData.getTitle(),
-                inputData.getDate(), inputData.getStartTime(), inputData.getEndTime());
-
-        dataAccess.setSchedule(inputData);
+                inputData.getStartDate(), inputData.getEndDate(), inputData.getStartTime(), inputData.getEndTime());
 
         ScheduleItemResponseModel responseModel = new ScheduleItemResponseModel(scheduleItem.getTitle(),
-                scheduleItem.getDate(), scheduleItem.getStartTime(), scheduleItem.getEndTime());
+                scheduleItem.getStartDate(), scheduleItem.getEndDate(),
+                scheduleItem.getStartTime(), scheduleItem.getEndTime());
+
+        dataAccess.setSchedule(responseModel);
     }
 }

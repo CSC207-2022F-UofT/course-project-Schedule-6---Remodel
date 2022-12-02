@@ -14,7 +14,10 @@ public class AddScheduleScreen {
     private TextField scheduleTitle;
 
     @FXML
-    private DatePicker scheduleDate;
+    private DatePicker startDate;
+
+    @FXML
+    private DatePicker endDate;
 
     @FXML
     private TextField startTime;
@@ -40,7 +43,8 @@ public class AddScheduleScreen {
     public void addScheduleAction(ActionEvent event) {
         System.out.println("Click" + event.getEventType());
 
-        addScheduleController.create(errorMessage, this.scheduleTitle.getText(), this.scheduleDate.getValue(),
+        addScheduleController.create(errorMessage, this.scheduleTitle.getText(),
+                this.startDate.getValue(), this.endDate.getValue(),
                 this.startTime.getText(), this.endTime.getText(), this.startAMPM.getValue(), this.endAMPM.getValue());
     }
 }

@@ -12,7 +12,7 @@ import java.net.URL;
 public class ScheduleButton extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        URL location = LoginPage.class.getClassLoader().getResource("schedulebutton.fxml");
+        URL location = LoginPage.class.getClassLoader().getResource("ScheduleInputs.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
         Scene scene = new Scene(fxmlLoader.load());
         stage.initStyle(StageStyle.DECORATED);

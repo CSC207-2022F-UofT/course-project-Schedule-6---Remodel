@@ -1,8 +1,8 @@
 package database;
 
 import com.mongodb.*;
-import requestModel.ScheduleItemRequestModel;
-import requestModel.TaskRequestModel;
+import responseModel.Schedule.ScheduleItemResponseModel;
+import responseModel.Task.TaskResponseModel;
 import useCaseInteractor.DataAccess;
 import java.util.ArrayList;
 
@@ -35,25 +35,28 @@ public class MongoDBAccess implements DataAccess {
         collection.insert(person);
         return true;
     }
+
     @Override
-    public void setSchedule(ScheduleItemRequestModel requestModel) {
+    public void setSchedule(ScheduleItemResponseModel responseModel) {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(requestModel.getTitle());
-        lst.add(requestModel.getDate());
-        lst.add(requestModel.getStartTime());
-        lst.add(requestModel.getEndTime());
+        lst.add(responseModel.getTitle());
+        lst.add(responseModel.getStartDate());
+        lst.add(responseModel.getEndDate());
+        lst.add(responseModel.getStartTime());
+        lst.add(responseModel.getEndTime());
         DBObject updateObj = new BasicDBObject("schedules", lst);
         this.collection.update(query, new BasicDBObject("$push", updateObj));
     }
 
     @Override
-    public ArrayList<Object> getSingleSchedule(ScheduleItemRequestModel requestModel) {
+    public ArrayList<Object> getSingleSchedule(ScheduleItemResponseModel responseModel) {
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(requestModel.getTitle());
-        lst.add(requestModel.getDate());
-        lst.add(requestModel.getStartTime());
-        lst.add(requestModel.getEndTime());
+        lst.add(responseModel.getTitle());
+        lst.add(responseModel.getStartDate());
+        lst.add(responseModel.getEndDate());
+        lst.add(responseModel.getStartTime());
+        lst.add(responseModel.getEndTime());
 
         ArrayList<ArrayList<Object>> entireSchedule = this.getUserEntireSchedule();
 
@@ -77,14 +80,15 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public void deleteScheduleItem(ScheduleItemRequestModel requestModel) {
+    public void deleteScheduleItem(ScheduleItemResponseModel responseModel) {
         DBObject query = new BasicDBObject("_id", this.username);
 
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(requestModel.getTitle());
-        lst.add(requestModel.getDate());
-        lst.add(requestModel.getStartTime());
-        lst.add(requestModel.getEndTime());
+        lst.add(responseModel.getTitle());
+        lst.add(responseModel.getStartDate());
+        lst.add(responseModel.getEndDate());
+        lst.add(responseModel.getStartTime());
+        lst.add(responseModel.getEndTime());
 
         ArrayList<ArrayList<Object>> entireSchedule = this.getUserEntireSchedule();
 
@@ -98,22 +102,22 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public void setTask(TaskRequestModel requestModel) {
+    public void setTask(TaskResponseModel responseModel) {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(requestModel.getTitle());
-        lst.add(requestModel.getDate());
-        lst.add(requestModel.getCategory());
+        lst.add(responseModel.getTitle());
+        lst.add(responseModel.getDate());
+        lst.add(responseModel.getCategory());
         DBObject updateObj = new BasicDBObject("tasks", lst);
         this.collection.update(query, new BasicDBObject("$push", updateObj));
     }
 
     @Override
-    public ArrayList<Object> getSingleTask(TaskRequestModel requestModel) {
+    public ArrayList<Object> getSingleTask(TaskResponseModel responseModel) {
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(requestModel.getTitle());
-        lst.add(requestModel.getDate());
-        lst.add(requestModel.getCategory());
+        lst.add(responseModel.getTitle());
+        lst.add(responseModel.getDate());
+        lst.add(responseModel.getCategory());
 
         ArrayList<ArrayList<Object>> entireTask = this.getUserEntireTask();
 
@@ -137,13 +141,13 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public void deleteTask(TaskRequestModel requestModel) {
+    public void deleteTask(TaskResponseModel responseModel) {
         DBObject query = new BasicDBObject("_id", this.username);
 
         ArrayList<Object> lst = new ArrayList<>();
-        lst.add(requestModel.getTitle());
-        lst.add(requestModel.getDate());
-        lst.add(requestModel.getCategory());
+        lst.add(responseModel.getTitle());
+        lst.add(responseModel.getDate());
+        lst.add(responseModel.getCategory());
 
         ArrayList<ArrayList<Object>> entireTask = this.getUserEntireTask();
 

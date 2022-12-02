@@ -19,19 +19,24 @@ public class EditScheduleController {
         this.presenter = presenter;
     }
 
-    public ScheduleItemResponseModel edit(String newTitle, LocalDate newDate, String newStartTime, String newEndTime,
+    public ScheduleItemResponseModel edit(String newTitle, LocalDate newStartDate, LocalDate newEndDate,
+                                          String newStartTime, String newEndTime,
                                             String newStartAMPM, String newEndAMPM,
-                                          String oldTitle, LocalDate oldDate, String oldStartTime, String oldEndTime,
+                                          String oldTitle, LocalDate oldStartDate, LocalDate oldEndDate,
+                                          String oldStartTime, String oldEndTime,
                                           String oldStartAMPM, String oldEndAMPM) {
-        if (newTitle.isBlank() || (newDate == null) || newStartTime.isBlank() || newEndTime.isBlank()) {
+        if (newTitle.isBlank() || (newStartDate == null) || (newEndDate == null) ||
+                newStartTime.isBlank() || newEndTime.isBlank()) {
             return presenter.prepareFailView("Please Fill in All Fields");
         } else if (!this.inputTimeChecker(newStartTime, newEndTime)) {
             return presenter.prepareFailView("Please Insert a Valid Time as HH:MM");
         }
         ScheduleItemRequestModel newInputData = new ScheduleItemRequestModel(
-                newTitle, newDate, timeConverter(newStartTime, newStartAMPM), timeConverter(newEndTime, newEndAMPM));
+                newTitle, newStartDate, newEndDate, timeConverter(newStartTime, newStartAMPM),
+                timeConverter(newEndTime, newEndAMPM));
         ScheduleItemRequestModel oldInputData = new ScheduleItemRequestModel(
-                oldTitle, oldDate, timeConverter(oldStartTime, oldStartAMPM), timeConverter(oldEndTime, oldEndAMPM));
+                oldTitle, oldStartDate, oldEndDate, timeConverter(oldStartTime, oldStartAMPM),
+                timeConverter(oldEndTime, oldEndAMPM));
         return editScheduleItemInputBoundary.edit(newInputData, oldInputData);
     }
 
