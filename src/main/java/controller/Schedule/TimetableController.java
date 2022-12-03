@@ -12,20 +12,32 @@ import javafx.animation.FadeTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+
+import java.io.File;
+import java.io.IOException;
 import java.net.UnknownHostException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import database.MongoDBAccess;
+import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
+import javafx.stage.Window;
 import javafx.util.Duration;
+import main.LoginPage;
 import presenter.TimetablePresenter;
 import screens.CreateNewEntryScreen;
 import screens.CreateRegistrationScreen;
 import screens.CreateScheduleScreen;
 import useCaseInteractor.User.userCollection;
 import main.collectCollection;
+import javafx.stage.Stage;
 
 public class TimetableController {
     private CalendarView calendar;
@@ -46,28 +58,7 @@ public class TimetableController {
 
     public void loadCalendar(GridPane Gridlock) throws UnknownHostException {
         calendar = new CalendarView();
-
-        MongoDBAccess client = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
-
-        ArrayList<String> followers = (ArrayList<String>) client.getFollowing();
-
-        ArrayList<Calendar> calendars = new ArrayList<>();
-
-//        for(String e : followers){
-//            Calendar friends = new Calendar(e);
-//            friends.setStyle(Calendar.Style.STYLE7);
-//            calendars.add(friends);
-//        }
-
-        //EVERYTHING BELOW IS STABLE
-        //Calendar classes = new Calendar("null");
-        //Calendar meetings = new Calendar("Meetings");
-
-        //classes.setStyle(Calendar.Style.STYLE7);
-        //meetings.setStyle(Calendar.Style.STYLE2);
-
         CalendarSource myCalendarSource = new CalendarSource("");
-        myCalendarSource.getCalendars().addAll(calendars);
         calendar.getCalendarSources().addAll(myCalendarSource);
         calendar.getCalendarSources().remove(1);
         calendar.setRequestedTime(LocalTime.now());
@@ -101,5 +92,20 @@ public class TimetableController {
         calendar.setShowDeveloperConsole(false);
         calendar.setShowAddCalendarButton(false);
         Gridlock.getChildren().add(calendar);
+    }
+
+    public void loadTODO(GridPane TODO) throws IOException {
+        TTP.loadTODO(TODO);
+}
+    public void addNewFile(ActionEvent event, Button fileImportButton, Stage stage){
+
+        FileChooser file_chooser = new FileChooser();
+        file_chooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text Files", "*.ics"));
+        EventHandler<ActionEvent> e = new EventHandler<ActionEvent>() {public void handle(ActionEvent e){
+            // get the file selected
+            File file = file_chooser.showOpenDialog(stage);
+            }
+        };
+        fileImportButton.setOnAction(e);
     }
 }

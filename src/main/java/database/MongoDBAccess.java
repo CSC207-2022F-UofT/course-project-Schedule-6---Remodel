@@ -56,13 +56,15 @@ public class MongoDBAccess implements DataAccess {
         ArrayList<Object> lst = new ArrayList<>();
         for(int i = 0; i < requestModel.getTitles().size(); i++) {
             lst.add(requestModel.getTitles().get(i));
-            lst.add(requestModel.getDates().get(i));
+            lst.add(requestModel.getStartDates().get(i));
+            lst.add(requestModel.getEndDates().get(i));
             lst.add(requestModel.getStartTime().get(i));
             lst.add(requestModel.getEndTime().get(i));
             DBObject updateObj = new BasicDBObject("schedules", lst);
             this.collection.update(query, new BasicDBObject("$push", updateObj));
             lst.remove(requestModel.getTitles().get(i));
-            lst.remove(requestModel.getDates().get(i));
+            lst.remove(requestModel.getStartDates().get(i));
+            lst.remove(requestModel.getEndDates().get(i));
             lst.remove(requestModel.getStartTime().get(i));
             lst.remove(requestModel.getEndTime().get(i));
         }
