@@ -19,6 +19,7 @@ public class DeleteTaskController {
 
     public TaskResponseModel delete(String description, LocalDate date, boolean privacySetting, String category) {
         TaskRequestModel inputData = new TaskRequestModel(description, date, privacySetting, category);
+        //[Todo] case where task with description, date, privacySetting, category does not exist
         return deleteTaskInputBoundary.delete(inputData);
     }
 }

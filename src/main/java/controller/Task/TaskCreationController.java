@@ -22,6 +22,7 @@ public class TaskCreationController<String> {
         if (description.isBlank() || (date == null) || (isPrivate == null) || (category == null)){
             return presenter.prepareFailView("Please Fill in All Fields");
         }
+        //[Todo] case where Task with the same description, date already exists
         TaskRequestModel newInputData = new TaskRequestModel(description, date, isPrivate, category);
         return addTaskItemInputBoundary.create(newInputData);
     }
