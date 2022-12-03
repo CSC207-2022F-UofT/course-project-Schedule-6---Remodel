@@ -2,5 +2,5 @@ package entity.User;
 
 public interface UserFactory {
 
-    User create(String firstName, String lastName, String Password);
+    User create(String username, String firstName, String lastName);
 }

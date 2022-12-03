@@ -2,10 +2,9 @@ package entity.User;
 
 public interface User {
     /* User class */
-     String getFirsNname();
+     String getFirstName();
      String getLastName();
      String getUsername();
-     String getPassword();
 
     }
 
