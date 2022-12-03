@@ -1,9 +1,8 @@
 package presenter;
 
-import boundary.Schedule.AddScheduleItemInputBoundary;
+import boundary.Schedule.UpdateScheduleInputBoundary;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.view.CalendarView;
-import controller.Schedule.TimetableController;
 import database.MongoDBAccess;
 import entity.Schedule.CommonScheduleItemFactory;
 import entity.Schedule.ScheduleItemFactory;
@@ -16,14 +15,13 @@ import entity.Schedule.TimeManagement;
 import main.LoginPage;
 import main.collectCollection;
 import requestModel.ScheduleItemRequestModel;
-import useCaseInteractor.Schedule.AddScheduleItem;
+import useCaseInteractor.Schedule.UpdateScheduleItem;
 import useCaseInteractor.User.userCollection;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.*;
 import java.util.Map;
 
 
@@ -76,7 +74,7 @@ public class TimetablePresenter {
             System.out.println(newStartDate[0] + ", "+newEndDate.toString()+", "+newStartTime[0]+", "+newEndDate.toString());
             ScheduleItemFactory item = new CommonScheduleItemFactory();
             MongoDBAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
-            AddScheduleItemInputBoundary addSchedule = new AddScheduleItem(dataAccess, item);
+            UpdateScheduleInputBoundary addSchedule = new UpdateScheduleItem(dataAccess, item);
             ScheduleItemRequestModel request = new ScheduleItemRequestModel(title, LocalDate.of(Integer.parseInt(newStartDate[0]),
                     Integer.parseInt(newStartDate[1]),Integer.parseInt(newStartDate[2])), LocalDate.of(Integer.parseInt(newEndDate[0]),
                     Integer.parseInt(newEndDate[1]),Integer.parseInt(newEndDate[2])),
