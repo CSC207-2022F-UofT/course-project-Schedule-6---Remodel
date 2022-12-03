@@ -41,7 +41,7 @@ public class ToDoScreen {
     }
 
     public void todoAddButton(ActionEvent actionEvent) {
-        createTaskForm.newForm();
+        CreateAddTaskScreen.newForm();
     }
 
     public void todoEditButton(ActionEvent actionEvent) {
