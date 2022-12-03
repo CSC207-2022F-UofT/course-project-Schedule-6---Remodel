@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="add schedule to DB from calendar works">
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="added User entity classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Schedule/AddScheduleItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Schedule/AddScheduleItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +179,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670076598325</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="removed unused variables">
+      <created>1670076698230</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670076698230</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added User entity interface">
+      <created>1670077214414</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670077214414</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added User entity classes">
+      <created>1670077646281</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1670077646281</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +236,9 @@
     <MESSAGE value="update xml files" />
     <MESSAGE value="Working on breaking down map for schedule" />
     <MESSAGE value="add schedule to DB from calendar works" />
-    <option name="LAST_COMMIT_MESSAGE" value="add schedule to DB from calendar works" />
+    <MESSAGE value="removed unused variables" />
+    <MESSAGE value="added User entity interface" />
+    <MESSAGE value="added User entity classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added User entity classes" />
   </component>
 </project>
