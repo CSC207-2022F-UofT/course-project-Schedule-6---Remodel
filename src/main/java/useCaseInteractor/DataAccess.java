@@ -16,7 +16,7 @@ public interface DataAccess {
 
     ArrayList<Object> getSingleSchedule(ScheduleItemResponseModel responseModel);
 
-    void setSchedule(ImportRequestModel requestModel);
+    void setImportSchedule(ImportRequestModel requestModel);
 
     ArrayList<ArrayList<Object>> getUserEntireSchedule();
 
