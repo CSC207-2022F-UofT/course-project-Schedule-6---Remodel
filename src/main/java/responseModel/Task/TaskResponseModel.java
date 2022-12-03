@@ -9,26 +9,15 @@ public class TaskResponseModel {
 
     private String category;
 
-    private Boolean isPrivate;
-
-    public TaskResponseModel(String description, LocalDate date, Boolean isPrivate, String category){
+    public TaskResponseModel(String description, LocalDate date, String category){
         this.description = description;
         this.date = date;
-        this.isPrivate = isPrivate;
         this.category = category;
     }
 
     public String getDescription(){ return this.description;}
 
     public LocalDate getDate(){ return this.date;}
-
-    public String getPrivacy(){
-        if(isPrivate){
-            return "Private";
-        } else {
-            return "Public";
-        }
-    }
 
     public String getCategory() { return this.category;}
 }
