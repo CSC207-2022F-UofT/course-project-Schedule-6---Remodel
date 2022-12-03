@@ -1,8 +1,12 @@
 package presenter;
 
+import boundary.Schedule.AddScheduleItemInputBoundary;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.view.CalendarView;
 import controller.Schedule.TimetableController;
+import database.MongoDBAccess;
+import entity.Schedule.CommonScheduleItemFactory;
+import entity.Schedule.ScheduleItemFactory;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -10,8 +14,13 @@ import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
 import entity.Schedule.TimeManagement;
 import main.LoginPage;
+import main.collectCollection;
+import requestModel.ScheduleItemRequestModel;
+import useCaseInteractor.Schedule.AddScheduleItem;
+import useCaseInteractor.User.userCollection;
 
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.*;
@@ -23,7 +32,7 @@ public class TimetablePresenter {
     private final TimeManagement TM  = new TimeManagement();
 
 
-    public void printCalendarEntries(Label entriesSaved, CalendarView calendar) {
+    public void printCalendarEntries(Label entriesSaved, CalendarView calendar) throws UnknownHostException {
         for (Calendar temp : calendar.getCalendars()) {
             System.out.println(temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone()));
             Map map = temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone());
@@ -59,6 +68,21 @@ public class TimetablePresenter {
             System.out.println("Event " + count + ": " + title + ", " + startDate + ", " + endDate +
                     ", " + startTime + ", " + endTime);
             count+=1;
+            String[] newStartDate = startDate.split("-");
+            String[] newEndDate = endDate.split("-");
+
+            String[] newStartTime = startTime.split(":");
+            String[] newEndTime = endTime.split(":");
+            System.out.println(newStartDate[0] + ", "+newEndDate.toString()+", "+newStartTime[0]+", "+newEndDate.toString());
+            ScheduleItemFactory item = new CommonScheduleItemFactory();
+            MongoDBAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
+            AddScheduleItemInputBoundary addSchedule = new AddScheduleItem(dataAccess, item);
+            ScheduleItemRequestModel request = new ScheduleItemRequestModel(title, LocalDate.of(Integer.parseInt(newStartDate[0]),
+                    Integer.parseInt(newStartDate[1]),Integer.parseInt(newStartDate[2])), LocalDate.of(Integer.parseInt(newEndDate[0]),
+                    Integer.parseInt(newEndDate[1]),Integer.parseInt(newEndDate[2])),
+                    LocalTime.of(Integer.parseInt(newStartTime[0]),Integer.parseInt(newStartTime[1])), LocalTime.of(Integer.parseInt(newEndTime[0]),Integer.parseInt(newEndTime[1])));
+
+            addSchedule.create(request);
             }
         }
 
