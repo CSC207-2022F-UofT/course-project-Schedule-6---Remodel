@@ -1,0 +1,112 @@
+Index: src/main/java/database/MongoTesting.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package database;//package database;\n\nimport com.mongodb.*;\n\nimport java.net.UnknownHostException;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\n\npublic class MongoTesting {\n    public static void main(String[] args) throws UnknownHostException {\n\n        //My local database\n//      MongoClient mongoClient = new MongoClient(new MongoClientURI(\"mongodb://localhost:27017\"));\n\n        //My remote database\n        MongoClient mongoClient = new MongoClient(new MongoClientURI(\"mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority\"));\n\n        //Brians remote database\n//        MongoClient mongoClient = new MongoClient(new MongoClientURI(\"mongodb+srv://123:123@cluster1.d3e1rhp.mongodb.net/?retryWrites=true&w=majority\"));\n\n\n        DB database = mongoClient.getDB(\"schedule6-testingdb\");\n\n        DBCollection collection = database.getCollection(\"schedule6-testingcollection\");\n\n        /**\n        ArrayList<String> list = new ArrayList<>();\n        list.add(\"Apple\");\n        list.add(\"Orange\");\n        list.add(\"Banana\");\n        DBObject person = new BasicDBObject(\"_id\", \"nizar123456\")\n                .append(\"name\", list);\n\n        collection.insert(person);\n         **/\n\n\n        //collection.findOne(_id: <username>);\n        System.out.println(collection.findOne(\"nizar1234\").get(\"name\"));\n    }\n}\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/database/MongoTesting.java b/src/main/java/database/MongoTesting.java
+--- a/src/main/java/database/MongoTesting.java	(revision f47fc2df805122597b1736c7986653988f6066cf)
++++ b/src/main/java/database/MongoTesting.java	(date 1669417236073)
+@@ -37,7 +37,12 @@
+ 
+ 
+         //collection.findOne(_id: <username>);
+-        System.out.println(collection.findOne("nizar1234").get("name"));
++
++        DBObject query = new BasicDBObject("_id", "nizar123456");
++
++        DBObject updateObj = new BasicDBObject("name", "waffles");
++        collection.update(query, new BasicDBObject("$push", updateObj));
++//        System.out.println(collection.findOne("nizar1234").get("name"));
+     }
+ }
+ 
+Index: src/main/java/useCaseInteractor/DataAccess.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package useCaseInteractor;\n\nimport boundary.AddScheduleItemInputBoundary;\nimport com.mongodb.client.MongoCollection;\nimport entity.CommonScheduleItem;\nimport entity.CommonTask;\nimport entity.User;\nimport requestModel.ScheduleItemRequestModel;\nimport requestModel.TaskRequestModel;\nimport responseModel.ScheduleItemResponseModel;\n\nimport java.util.ArrayList;\n\npublic interface DataAccess {\n    void savetoDB(ScheduleItemRequestModel requestModel);\n\n    ArrayList<CommonScheduleItem> getUserSchedule(ScheduleItemRequestModel requestModel);\n\n    // should return some type of mongoDB, probably a collection\n    ArrayList<CommonTask> getUserTask(TaskRequestModel requestModel);\n\n    void deleteFromDB(ScheduleItemRequestModel requestModel);\n\n\n    boolean getUserExist(String username);\n\n    ArrayList<User> getUserData();\n\n    void setUsername(String username);\n\n    ArrayList<User> getFollowing();\n\n    void appendFollowing(String username);\n\n    String getRequests();\n\n    void appendRequests(String username);\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/DataAccess.java b/src/main/java/useCaseInteractor/DataAccess.java
+--- a/src/main/java/useCaseInteractor/DataAccess.java	(revision f47fc2df805122597b1736c7986653988f6066cf)
++++ b/src/main/java/useCaseInteractor/DataAccess.java	(date 1669417701601)
+@@ -24,15 +24,15 @@
+ 
+     boolean getUserExist(String username);
+ 
+-    ArrayList<User> getUserData();
++    Object getUserData();
+ 
+     void setUsername(String username);
+ 
+-    ArrayList<User> getFollowing();
++    Object getFollowing();
+ 
+     void appendFollowing(String username);
+ 
+-    String getRequests();
++    Object getRequests();
+ 
+     void appendRequests(String username);
+ }
+Index: src/main/java/database/MongoDBAccess.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package database;\n\nimport com.mongodb.DBCollection;\nimport com.mongodb.client.MongoClient;\nimport entity.CommonScheduleItem;\nimport entity.CommonTask;\nimport requestModel.ScheduleItemRequestModel;\nimport requestModel.TaskRequestModel;\nimport useCaseInteractor.DataAccess;\nimport java.util.ArrayList;\nimport entity.User;\n\npublic class MongoDBAccess implements DataAccess {\n\n    private final String username;\n\n    private final DBCollection collection;\n\n    public MongoDBAccess(DBCollection collection, String username) {\n\n        this.username = username;\n        this.collection = collection;\n    }\n\n\n    @Override\n    public void savetoDB(ScheduleItemRequestModel requestModel) {\n        // needs to find the user to save to\n        //Will give each user an id, we'll use the id to run through DB\n\n    }\n\n\n\n    @Override\n    public ArrayList<CommonScheduleItem> getUserSchedule(ScheduleItemRequestModel requestModel) {\n        return null;\n    }\n\n    @Override\n    public ArrayList<CommonTask> getUserTask(TaskRequestModel requestModel) {\n        return null;\n    }\n\n    @Override\n    public void deleteFromDB(ScheduleItemRequestModel requestModel) {\n\n    }\n\n    @Override\n    public boolean getUserExist(String username){\n        return false;\n    }\n\n    @Override\n    public ArrayList<User> getUserData(){\n        return null;\n    }\n\n    //public\n\n    @Override\n    public void setUsername(String username){\n\n    }\n\n    @Override\n    public ArrayList<User> getFollowing(){\n        return null;\n    }\n\n    @Override\n    public void appendFollowing(String username){\n\n    }\n\n    @Override\n    public String getRequests(){\n        return null;\n    }\n\n    @Override\n    public void appendRequests(String username){\n\n    }\n\n\n\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/database/MongoDBAccess.java b/src/main/java/database/MongoDBAccess.java
+--- a/src/main/java/database/MongoDBAccess.java	(revision f47fc2df805122597b1736c7986653988f6066cf)
++++ b/src/main/java/database/MongoDBAccess.java	(date 1669417542870)
+@@ -1,7 +1,6 @@
+ package database;
+ 
+ import com.mongodb.DBCollection;
+-import com.mongodb.client.MongoClient;
+ import entity.CommonScheduleItem;
+ import entity.CommonTask;
+ import requestModel.ScheduleItemRequestModel;
+@@ -49,12 +48,14 @@
+ 
+     @Override
+     public boolean getUserExist(String username){
++
+         return false;
+     }
+ 
+     @Override
+-    public ArrayList<User> getUserData(){
+-        return null;
++    public Object getUserData(){
++
++        return this.collection.findOne(this.username).get("name");
+     }
+ 
+     //public
+@@ -65,8 +66,9 @@
+     }
+ 
+     @Override
+-    public ArrayList<User> getFollowing(){
+-        return null;
++    public Object getFollowing(){
++
++        return this.collection.findOne(this.username).get("followers");
+     }
+ 
+     @Override
+@@ -75,8 +77,9 @@
+     }
+ 
+     @Override
+-    public String getRequests(){
+-        return null;
++    public Object getRequests(){
++
++        return this.collection.findOne(this.username).get("requests");
+     }
+ 
+     @Override

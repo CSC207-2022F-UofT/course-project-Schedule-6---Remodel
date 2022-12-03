@@ -29,8 +29,12 @@ public class UserRegisterController {
         if (RGfirstname.getText().isBlank() || RGlastname.getText().isBlank() || RGusername.getText().isBlank() ||
                 RGpassword.getText().isBlank() || RGconfirmpassword.getText().isBlank()) {
             registrationMessage.setText("PLEASE FILL IN ALL FIELDS");
+
         } else {
-            if (RGpassword.getText().equals(RGconfirmpassword.getText())) {
+            if(RGpassword.getText().length() <= 6){
+                registrationMessage.setText("PLEASE ENTER A PASSWORD LONGER THAN 6 CHARACTERS");
+            }
+            else if (RGpassword.getText().equals(RGconfirmpassword.getText())) {
                 passwordMisMatch.setText("");
                 registerUser(registrationMessage, passwordMisMatch,
                         RGfirstname, RGlastname, RGusername,

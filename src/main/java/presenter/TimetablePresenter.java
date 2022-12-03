@@ -1,8 +1,6 @@
 package presenter;
 
 import com.calendarfx.model.Calendar;
-import com.calendarfx.model.Entry;
-import com.calendarfx.model.Interval;
 import com.calendarfx.view.CalendarView;
 import controller.Schedule.TimetableController;
 import javafx.animation.FadeTransition;
@@ -14,8 +12,7 @@ import entity.Schedule.TimeManagement;
 import main.LoginPage;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.util.Map;
 
 
 public class TimetablePresenter {
@@ -24,8 +21,10 @@ public class TimetablePresenter {
 
 
     public void printCalendarEntries(Label entriesSaved, CalendarView calendar) {
-        for (Calendar temp : calendar.getCalendars()) {
-            System.out.println(temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone()));
+        Calendar temp = calendar.getCalendars().get(0);
+        Map map = temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone());
+        this.cleanMap(map);
+
 
         entriesSaved.setText("ALL ENTIRES SAVED");
         FadeTransition ft = new FadeTransition(Duration.millis(1850), entriesSaved);
@@ -33,7 +32,13 @@ public class TimetablePresenter {
         ft.setToValue(0.0);
         ft.setAutoReverse(true);
         ft.play();
-        }
+    }
+
+    private void cleanMap(Map map){
+        Map newMap;
+        System.out.println(map);
+        System.out.println(map.keySet());
+        System.out.println(map.keySet().toArray());
     }
     public void loadTODO(GridPane TODO) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("todo.fxml"));
