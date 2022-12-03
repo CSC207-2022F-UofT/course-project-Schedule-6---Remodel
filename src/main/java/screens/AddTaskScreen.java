@@ -1,7 +1,5 @@
 package screens;
 
-import controller.Task.TaskCreationController;
-import database.MongoDBAccess;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -18,9 +16,6 @@ public class AddTaskScreen {
     private TextField taskCategory;
 
     @FXML
-    private ComboBox<String> privacyComboBox;
-
-    @FXML
     private Button taskAdd;
 
     @FXML
@@ -32,16 +27,7 @@ public class AddTaskScreen {
     @FXML
     private Label errorMessage;
 
-    private final TaskCreationController taskCreationController;
-
-    public AddTaskScreen(TaskCreationController controller){
-        this.taskCreationController = controller;
-    }
-
-
-    @FXML
-    public void addTask(ActionEvent event) {
-        taskCreationController.create(taskDescription.getText(), taskDate.getValue(), true, taskCategory.getText());
+    public void addTask(ActionEvent event){
 
     }
 

@@ -64,8 +64,5 @@ public class ToDoScreen {
         todoTable.getItems().remove(selectedItem);
     }
 
-    public void todoAddTask(ActionEvent actionEvent) {
-        CreateAddTaskScreen.newForm();
-    }
 }
 
