@@ -11,5 +11,5 @@ public class userCollection {
 
 
     }
-    public static String getUsername(){return labelUser.username;}
+    public static String getUsername(){return labelUser.getUsername();}
 }

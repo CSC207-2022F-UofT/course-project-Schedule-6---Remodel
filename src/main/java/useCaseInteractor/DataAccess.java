@@ -12,6 +12,8 @@ public interface DataAccess {
 
     boolean createUser(String password, String fName, String lName);
 
+    void resetSchedule();
+
     void setSchedule(ScheduleItemResponseModel responseModel);
 
     ArrayList<Object> getSingleSchedule(ScheduleItemResponseModel responseModel);
@@ -29,6 +31,8 @@ public interface DataAccess {
     ArrayList<ArrayList<Object>> getUserEntireTask();
 
     void deleteTask(TaskResponseModel responseModel);
+
+    boolean getTaskExist(TaskResponseModel responseModel);
 
     boolean getUserExist(String username);
 

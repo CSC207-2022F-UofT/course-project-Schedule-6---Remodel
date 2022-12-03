@@ -37,11 +37,13 @@ public class TimeTableScreen {
     private Button fileImportButton;
     public static Label usernameChangeLabel;
     private Stage filePicker = new Stage();
-
     private TimetableController TTC = new TimetableController();
 
-    public void printCalendarEntries(ActionEvent event) throws InterruptedException
-    {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
+    public void showSchedule(ActionEvent event) {
+        TTC.showSchedule(event);
+    }
+    public void printCalendarEntries(ActionEvent event) throws InterruptedException, UnknownHostException {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
+
     public void addFutureEntries(ActionEvent event) {TTC.futureEventButton(event);}
     public void addNewFile(ActionEvent event) {TTC.addNewFile(event, fileImportButton, filePicker);}
     public void initialize() throws IOException {

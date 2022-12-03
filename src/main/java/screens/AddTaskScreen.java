@@ -42,7 +42,7 @@ public class AddTaskScreen {
 
     @FXML
     public void addTask(ActionEvent event) {
-        taskCreationController.create(taskDescription.getText(), taskDate.getValue(), true, (String) categoryComboBox.getValue());
+        taskCreationController.create(taskError, taskDescription.getText(), taskDate.getValue(), (String) categoryComboBox.getValue());
 
     }
 

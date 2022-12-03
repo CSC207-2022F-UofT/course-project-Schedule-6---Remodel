@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -8,23 +10,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
-<AnchorPane prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #87ae69;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.AddScheduleScreen">
+<AnchorPane prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #82AA68;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.AddScheduleScreen">
     <children>
         <AnchorPane layoutX="1.0" layoutY="78.0" prefHeight="378.0" prefWidth="400.0" style="-fx-background-color: #dfe5e5;">
             <children>
-                <Label layoutX="19.0" layoutY="205.0" prefHeight="28.0" prefWidth="87.0" text="END">
+                <Label layoutX="16.0" layoutY="231.0" prefHeight="28.0" prefWidth="87.0" text="END TIME">
                     <font>
                         <Font name="Gill Sans MT Condensed" size="23.0" />
                     </font>
                 </Label>
-                <Label layoutX="16.0" layoutY="142.0" prefHeight="28.0" prefWidth="87.0" text="START">
+                <Label layoutX="16.0" layoutY="177.0" prefHeight="28.0" prefWidth="87.0" text="START TIME">
                     <font>
                         <Font name="Gill Sans MT Condensed" size="23.0" />
                     </font>
                 </Label>
-                <Label layoutX="16.0" layoutY="79.0" prefHeight="28.0" prefWidth="87.0" text="DATE">
+                <Label layoutX="16.0" layoutY="68.0" prefHeight="28.0" prefWidth="87.0" text="START DATE">
                     <font>
                         <Font name="Gill Sans MT Condensed" size="23.0" />
                     </font>
@@ -35,43 +35,49 @@
                     </font>
                 </Label>
                 <TextField fx:id="scheduleTitle" layoutX="16.0" layoutY="42.0" prefHeight="26.0" prefWidth="212.0" promptText="Event title" />
-                <Button fx:id="addScheduleButton" layoutX="311.0" layoutY="320.0" mnemonicParsing="false" onAction="#addScheduleAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #87ae69;" text="ADD">
+                <Button fx:id="addScheduleButton" layoutX="311.0" layoutY="320.0" mnemonicParsing="false" onAction="#addScheduleAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #82AA68;" text="ADD" textFill="WHITE">
                     <font>
                         <Font name="Gill Sans MT Condensed" size="20.0" />
                     </font>
                 </Button>
-                <TextField fx:id="startTime" layoutX="16.0" layoutY="170.0" prefHeight="26.0" prefWidth="156.0" promptText="HH:MM" />
-                <TextField fx:id="endTime" layoutX="16.0" layoutY="233.0" prefHeight="26.0" prefWidth="156.0" promptText="HH:MM" />
-                <ChoiceBox fx:id="startAMPM" layoutX="173.0" layoutY="170.0" prefHeight="26.0" prefWidth="55.0" >
+                <TextField fx:id="startTime" layoutX="16.0" layoutY="205.0" prefHeight="26.0" prefWidth="156.0" promptText="HH:MM" />
+                <TextField fx:id="endTime" layoutX="16.0" layoutY="259.0" prefHeight="26.0" prefWidth="156.0" promptText="HH:MM" />
+                <ChoiceBox fx:id="startAMPM" layoutX="172.0" layoutY="205.0" prefHeight="26.0" prefWidth="55.0">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="AM"/>
-                            <String fx:value="PM"/>
+                            <String fx:value="AM" />
+                            <String fx:value="PM" />
                         </FXCollections>
                     </items>
                 </ChoiceBox>
-                <ChoiceBox fx:id="endAMPM" layoutX="173.0" layoutY="233.0" prefHeight="26.0" prefWidth="55.0" >
+                <ChoiceBox fx:id="endAMPM" layoutX="173.0" layoutY="259.0" prefHeight="26.0" prefWidth="55.0">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="AM"/>
-                            <String fx:value="PM"/>
+                            <String fx:value="AM" />
+                            <String fx:value="PM" />
                         </FXCollections>
                     </items>
                 </ChoiceBox>
-                <DatePicker fx:id="scheduleDate" layoutX="16.0" layoutY="107.0" prefHeight="26.0" prefWidth="212.0" promptText="Date" />
-            <Label fx:id="errorMessage" layoutX="20.0" layoutY="280.0" prefHeight="28.0" prefWidth="219.0" style="-fx-background-color: #dfe5e5;" textFill="RED">
+                <DatePicker fx:id="startDate" layoutX="16.0" layoutY="96.0" prefHeight="26.0" prefWidth="212.0" promptText="Date" />
+            <Label fx:id="errorMessage" layoutX="91.0" layoutY="302.0" prefHeight="28.0" prefWidth="219.0" style="-fx-background-color: #dfe5e5;" textFill="RED">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button fx:id="cancelScheduleButton" layoutX="16.0" layoutY="320.0" mnemonicParsing="false" onAction="#cancelScheduleAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #87ae69;" text="CANCEL">
+            <Button fx:id="cancelScheduleButton" layoutX="16.0" layoutY="320.0" mnemonicParsing="false" onAction="#cancelScheduleAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #82AA68;" text="CANCEL" textFill="WHITE">
                <font>
                   <Font name="Gill Sans MT Condensed" size="20.0" />
                </font>
             </Button>
+            <Label layoutX="19.0" layoutY="123.0" prefHeight="28.0" prefWidth="87.0" text="END DATE">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="23.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="endDate" layoutX="16.0" layoutY="151.0" prefHeight="26.0" prefWidth="212.0" promptText="Date" />
             </children>
         </AnchorPane>
-        <Label layoutX="128.0" layoutY="14.0" text="ADD EVENT">
+        <Label layoutX="128.0" layoutY="14.0" text="ADD EVENT" textFill="WHITE">
             <font>
                 <Font name="Gill Sans MT Condensed" size="49.0" />
             </font>

@@ -1,0 +1,187 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,7 +4,12 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Deleting ToDoList.java" />
++    <list default="true" id="dcf613bb-ea36-4ee1-8aab-9cab89d0b69c" name="Changes" comment="Cleaned up login controller">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoTesting.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ToDoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ToDoList.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -34,25 +39,28 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/RAZER/IdeaProjects/Remodel&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Downloaded.Files.Path.Enabled": "false",
++    "Repository.Attach.Annotations": "false",
++    "Repository.Attach.JavaDocs": "false",
++    "Repository.Attach.Sources": "false",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "last_opened_file_path": "C:/Users/RAZER/IdeaProjects/Remodel",
++    "node.js.detected.package.eslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "project.structure.last.edited": "Libraries",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.508046"
+   }
+-}</component>
++}]]></component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="58ef2c0d-dda3-46fe-b813-6c5d6882ba56" name="Changes" comment="" />
++      <changelist id="dcf613bb-ea36-4ee1-8aab-9cab89d0b69c" name="Changes" comment="Cleaned up login controller" />
+       <created>1668802068292</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+@@ -65,6 +73,7 @@
+       <workItem from="1669584312630" duration="260000" />
+       <workItem from="1669584585127" duration="4428000" />
+       <workItem from="1669615677647" duration="1066000" />
++      <workItem from="1669907111119" duration="546000" />
+     </task>
+     <task id="LOCAL-00001" summary="xml files">
+       <created>1668808131245</created>
+@@ -122,7 +131,35 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669615912380</updated>
+     </task>
+-    <option name="localTasksCounter" value="9" />
++    <task id="LOCAL-00009" summary="Started working on viewing friends">
++      <created>1669760545894</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1669760545894</updated>
++    </task>
++    <task id="LOCAL-00010" summary="added category setters and getters for DB">
++      <created>1669761438357</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1669761438357</updated>
++    </task>
++    <task id="LOCAL-00011" summary="added category variabe when creating user">
++      <created>1669761583038</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1669761583038</updated>
++    </task>
++    <task id="LOCAL-00012" summary="Cleaned up login controller">
++      <created>1669761761994</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1669761761994</updated>
++    </task>
++    <option name="localTasksCounter" value="13" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -145,6 +182,10 @@
+     <MESSAGE value="update from main" />
+     <MESSAGE value="pull issue from misc" />
+     <MESSAGE value="reorganized packages" />
+-    <option name="LAST_COMMIT_MESSAGE" value="reorganized packages" />
++    <MESSAGE value="Started working on viewing friends" />
++    <MESSAGE value="added category setters and getters for DB" />
++    <MESSAGE value="added category variabe when creating user" />
++    <MESSAGE value="Cleaned up login controller" />
++    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up login controller" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/database/MongoTesting.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/database/MongoTesting.java b/src/main/java/database/MongoTesting.java
+--- a/src/main/java/database/MongoTesting.java	
++++ b/src/main/java/database/MongoTesting.java	
+@@ -27,6 +27,7 @@
+         DB database = mongoClient.getDB("schedule6-testingdb");
+         DBCollection collection = database.getCollection("schedule6-testingcollection");
+ 
++        String password = "123";
+         ArrayList<Object> list = new ArrayList<>();
+         ArrayList<Object> sublist_1 = new ArrayList<>();
+         sublist_1.add("Meeting");
+@@ -40,17 +41,24 @@
+         sublist_2.add(LocalTime.of(3, 30));
+         list.add(sublist_2);
+         list.add(sublist_1);
+-        DBObject person = new BasicDBObject("_id", "nizar")
+-                .append("schedule", list);
+-        collection.insert(person);
++        //DBObject person = new BasicDBObject("_id", "selena")
++        //        .append("schedule", list).append("password", password);
++        //collection.insert(person);
+ 
+-        DBObject query = new BasicDBObject("_id", "test_user123");
++        DBObject query = new BasicDBObject("_id", "n21");
+ 
+         // Adding to DB
++        /**
+         list.remove(sublist_1);
+-        DBObject updateObj = new BasicDBObject("schedule", list);
++         **/
++        ArrayList<String> list3 = new ArrayList<>();
++        list3.add("friend1");
++        list3.add("friend2");
++        list3.add("friend3");
++        DBObject updateObj = new BasicDBObject("followers", list3);
+         collection.update(query, new BasicDBObject("$set", updateObj));
+ 
++
+         // Getting from DB
+ //        DBObject document = collection.findOne(query);
+ //        BasicDBList list = (BasicDBList) document.get("schedule");
+Index: src/main/java/entity/ToDoList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/entity/ToDoList.java b/src/main/java/entity/ToDoList.java
+--- a/src/main/java/entity/ToDoList.java	
++++ b/src/main/java/entity/ToDoList.java	
+@@ -23,7 +23,7 @@
+     }
+ 
+     public void addCategory(String name, boolean status, String hex){
+-        this.categories.add(new CommonCategory(name, status, hex));
++        //this.categories.add(new CommonCategory(name, status, hex));
+     }
+ 
+     public void deleteCategory(Category category){
