@@ -4,6 +4,7 @@ import controller.Schedule.AddScheduleController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import org.controlsfx.control.action.Action;
 
 public class AddScheduleScreen {
 
@@ -34,17 +35,24 @@ public class AddScheduleScreen {
     @FXML
     private Label errorMessage;
 
-    private final AddScheduleController addScheduleController;
+    public void addScheduleAction(ActionEvent event){}
+    public void cancelScheduleAction(ActionEvent event){}
 
-    public AddScheduleScreen(AddScheduleController controller) {
-        this.addScheduleController = controller;
-    }
 
-    public void addScheduleAction(ActionEvent event) {
-        System.out.println("Click" + event.getEventType());
 
-        addScheduleController.create(errorMessage, this.scheduleTitle.getText(),
-                this.startDate.getValue(), this.endDate.getValue(),
-                this.startTime.getText(), this.endTime.getText(), this.startAMPM.getValue(), this.endAMPM.getValue());
-    }
+
+
+//    private final AddScheduleController addScheduleController;
+
+//    public AddScheduleScreen(AddScheduleController controller) {
+//        this.addScheduleController = controller;
+//    }
+//
+//    public void addScheduleAction(ActionEvent event) {
+//        System.out.println("Click" + event.getEventType());
+//
+//        addScheduleController.create(errorMessage, this.scheduleTitle.getText(),
+//                this.startDate.getValue(), this.endDate.getValue(),
+//                this.startTime.getText(), this.endTime.getText(), this.startAMPM.getValue(), this.endAMPM.getValue());
+//    }
 }
