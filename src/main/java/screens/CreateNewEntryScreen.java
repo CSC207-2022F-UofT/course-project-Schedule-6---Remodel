@@ -13,7 +13,7 @@ public class CreateNewEntryScreen {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(ScheduleButton.class.getClassLoader().getResource
                     ("ScheduleInputs.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 400 , 465);
+            Scene scene = new Scene(fxmlLoader.load(), 400 , 455);
             Stage loginStage = new Stage();
             loginStage.initStyle(StageStyle.DECORATED);
             loginStage.setScene(scene);
