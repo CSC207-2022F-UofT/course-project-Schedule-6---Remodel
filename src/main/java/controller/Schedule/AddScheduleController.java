@@ -1,9 +1,9 @@
 package controller.Schedule;
 
 import boundary.Schedule.AddScheduleItemInputBoundary;
+import javafx.scene.control.Label;
 import presenter.AddSchedulePresenter;
 import requestModel.ScheduleItemRequestModel;
-import responseModel.Schedule.ScheduleItemResponseModel;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -19,16 +19,19 @@ public class AddScheduleController {
         this.presenter = presenter;
     }
 
-    public ScheduleItemResponseModel create(String Title, LocalDate Date, String startTime, String endTime,
-                                          String startAMPM, String endAMPM) {
-        if (Title.isBlank() || (Date == null) || startTime.isBlank() || endTime.isBlank()) {
-            return presenter.prepareFailView("Please Fill in All Fields");
+    public void create(Label label, String title, LocalDate startDate, LocalDate endDate,
+                       String startTime, String endTime,
+                       String startAMPM, String endAMPM) {
+        if (title.isBlank() || (startDate == null) || (endDate == null) || startTime.isBlank() || endTime.isBlank()) {
+            presenter.prepareFailView(label, "Please Fill in All Fields");
         } else if (!this.inputTimeChecker(startTime, endTime)) {
-            return presenter.prepareFailView("Please Insert a Valid Time as HH:MM");
+            presenter.prepareFailView(label, "Please Fill a Valid Time as HH:MM");
+        } else {
+            ScheduleItemRequestModel inputData = new ScheduleItemRequestModel(
+                    title, startDate, endDate, timeConverter(startTime, startAMPM), timeConverter(endTime, endAMPM));
+            addScheduleItemInputBoundary.create(inputData);
+            presenter.prepareSuccessView(label, "Event Added!");
         }
-        ScheduleItemRequestModel newInputData = new ScheduleItemRequestModel(
-                Title, Date, timeConverter(startTime, startAMPM), timeConverter(endTime, endAMPM));
-        return addScheduleItemInputBoundary.create(newInputData);
     }
 
     // Checks if user inputs startTime and endTime is valid

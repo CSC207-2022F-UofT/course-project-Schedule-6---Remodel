@@ -8,4 +8,9 @@ public class ImportPresenter implements ImportOutputBoundary {
     public ImportResponseModel successfulImport(ImportResponseModel calendar){
         return calendar;
     }
+
+    public ImportResponseModel failedImport(String error){
+        return null;
+    }
+    //td: reflect the error on the view
 }

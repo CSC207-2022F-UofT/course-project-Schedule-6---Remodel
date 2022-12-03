@@ -1,8 +1,7 @@
 package controller.Task;
 
 import boundary.Task.AddTaskItemInputBoundary;
-import javafx.scene.control.ComboBox;
-import presenter.AddTaskPresenter;
+import presenter.TaskPresenter;
 import requestModel.TaskRequestModel;
 import responseModel.Task.TaskResponseModel;
 
@@ -12,18 +11,18 @@ public class TaskCreationController<String> {
 
     final AddTaskItemInputBoundary addTaskItemInputBoundary;
 
-    final AddTaskPresenter presenter;
+    final TaskPresenter presenter;
 
-    public TaskCreationController(AddTaskItemInputBoundary inputBoundary, AddTaskPresenter presenter){
+    public TaskCreationController(AddTaskItemInputBoundary inputBoundary, TaskPresenter presenter){
         this.addTaskItemInputBoundary = inputBoundary;
         this.presenter = presenter;
     }
 
-    public TaskResponseModel create(java.lang.String title, LocalDate date, Boolean isPrivate, java.lang.String category){
-        if (title.isBlank() || (date == null) || (isPrivate == null) || (category == null)){
+    public TaskResponseModel create(java.lang.String description, LocalDate date, Boolean isPrivate, java.lang.String category){
+        if (description.isBlank() || (date == null) || (isPrivate == null) || (category == null)){
             return presenter.prepareFailView("Please Fill in All Fields");
         }
-        TaskRequestModel newInputData = new TaskRequestModel(title, date, isPrivate, category);
+        TaskRequestModel newInputData = new TaskRequestModel(description, date, isPrivate, category);
         return addTaskItemInputBoundary.create(newInputData);
     }
 

@@ -1,9 +1,6 @@
 package useCaseInteractor.Schedule;
 
 import boundary.Schedule.DeleteScheduleItemInputBoundary;
-import entity.Schedule.ScheduleItem;
-import entity.Schedule.ScheduleItemFactory;
-import presenter.AddSchedulePresenter;
 import presenter.WeekViewPresenter;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.Schedule.ScheduleItemResponseModel;
@@ -25,11 +22,12 @@ public class DeleteScheduleItem implements DeleteScheduleItemInputBoundary {
     @Override
     public ScheduleItemResponseModel delete(ScheduleItemRequestModel inputData) {
 
-        dataAccess.deleteScheduleItem(inputData);
-
         // not sure about response model yet depends on UI
         ScheduleItemResponseModel responseModel = new ScheduleItemResponseModel(inputData.getTitle(),
-                inputData.getDate(), inputData.getStartTime(), inputData.getEndTime());
+                inputData.getStartDate(), inputData.getEndDate(), inputData.getStartTime(), inputData.getEndTime());
+
+        dataAccess.deleteScheduleItem(responseModel);
+
         return schedulePresenter.prepareSuccessView(responseModel);
     }
 }
