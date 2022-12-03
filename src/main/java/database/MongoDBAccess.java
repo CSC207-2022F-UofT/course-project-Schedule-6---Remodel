@@ -180,7 +180,23 @@ public class MongoDBAccess implements DataAccess {
             }
         }
     }
+    @Override
+    public boolean getTaskExist(TaskResponseModel responseModel) {
+        ArrayList<ArrayList<Object>> entireTask = this.getUserEntireTask();
 
+        ArrayList<Object> lst = new ArrayList<>();
+        lst.add(responseModel.getDescription());
+        lst.add(responseModel.getDate());
+        lst.add(responseModel.getCategory());
+        for (ArrayList<Object> objects : entireTask) {
+            if (objects.equals(lst)){
+                //return true if task exists
+                return true;
+            }
+        }
+        //return false if task does not exist
+        return false;
+    }
     @Override
     public boolean getUserExist(String username){
         return this.collection.findOne(username) != null;

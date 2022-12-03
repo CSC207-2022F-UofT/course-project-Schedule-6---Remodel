@@ -30,6 +30,8 @@ public interface DataAccess {
 
     void deleteTask(TaskResponseModel responseModel);
 
+    boolean getTaskExist(TaskResponseModel responseModel);
+
     boolean getUserExist(String username);
 
     boolean getUserExist();

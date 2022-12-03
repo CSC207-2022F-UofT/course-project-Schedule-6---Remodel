@@ -23,7 +23,10 @@ public class EditTaskController {
                                   String oldCategory) {
         if ((newDescription.isBlank()) || (newDate == null) || (newCategory.isBlank())) {
             return taskPresenter.prepareFailView("Please fill in all fields");
-        } else {
+        }
+        //[Todo] case where task with oldDescription, oldDate does not exist
+        //[Todo] case where task with newDescription, newDate already exists
+        else {
             TaskRequestModel newInputData = new TaskRequestModel(newDescription, newDate,
                     newPrivacySetting, newCategory);
             TaskRequestModel oldInputData = new TaskRequestModel(oldDescription, oldDate,
