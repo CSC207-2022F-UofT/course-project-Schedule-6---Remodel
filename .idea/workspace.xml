@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="added TaskCreationOutputBoundary and TaskCreationPresenter">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__6_16_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__6_16_p_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_9_37_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_9_37_p_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_9_40_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_9_40_p_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-25,_6_08_p_m__[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-25__6_08_p_m___Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28__7_52_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28__7_52_p_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__3_01_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__3_01_p_m___Changes_.xml" afterDir="false" />
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="add schedule to DB from calendar works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Schedule/AddScheduleItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Schedule/AddScheduleItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature-13-todo-v2" />
+        <entry key="$PROJECT_DIR$" value="feature-8-user" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,18 +53,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="changed parameter privacySetting to boolean">
@@ -106,8 +95,6 @@
       <updated>1670011459433</updated>
       <workItem from="1670011461468" duration="720000" />
       <workItem from="1670012198091" duration="13241000" />
-      <workItem from="1670047740303" duration="8637000" />
-      <workItem from="1670061209583" duration="5900000" />
     </task>
     <task id="LOCAL-00004" summary="Added DeleteTaskInputBoundary and EditTaskInputBoundary">
       <created>1670012955360</created>
@@ -186,28 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670023400018</updated>
     </task>
-    <task id="LOCAL-00015" summary="removed privacySetting">
-      <created>1670077698586</created>
+    <task id="LOCAL-00015" summary="add schedule to DB from calendar works">
+      <created>1670076598325</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1670077698586</updated>
+      <updated>1670076598325</updated>
     </task>
-    <task id="LOCAL-00016" summary="added comment about possible clean architecture breach">
-      <created>1670077762758</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1670077762758</updated>
-    </task>
-    <task id="LOCAL-00017" summary="added TaskCreationOutputBoundary and TaskCreationPresenter">
-      <created>1670077803299</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1670077803299</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,9 +214,8 @@
     <MESSAGE value="added getTaskExist" />
     <MESSAGE value="added [Todo] (possible bug we might run into)" />
     <MESSAGE value="update xml files" />
-    <MESSAGE value="removed privacySetting" />
-    <MESSAGE value="added comment about possible clean architecture breach" />
-    <MESSAGE value="added TaskCreationOutputBoundary and TaskCreationPresenter" />
-    <option name="LAST_COMMIT_MESSAGE" value="added TaskCreationOutputBoundary and TaskCreationPresenter" />
+    <MESSAGE value="Working on breaking down map for schedule" />
+    <MESSAGE value="add schedule to DB from calendar works" />
+    <option name="LAST_COMMIT_MESSAGE" value="add schedule to DB from calendar works" />
   </component>
 </project>

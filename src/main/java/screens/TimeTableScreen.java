@@ -40,8 +40,7 @@ public class TimeTableScreen {
 
     private TimetableController TTC = new TimetableController();
 
-    public void printCalendarEntries(ActionEvent event) throws InterruptedException
-    {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
+    public void printCalendarEntries(ActionEvent event) throws InterruptedException, UnknownHostException {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
     public void addFutureEntries(ActionEvent event) {TTC.futureEventButton(event);}
     public void addNewFile(ActionEvent event) {TTC.addNewFile(event, fileImportButton, filePicker);}
     public void initialize() throws IOException {
