@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="workspace.xml" />
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/TaskCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/TaskCreationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/TaskRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/TaskRequestModel.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +96,7 @@
       <updated>1670011459433</updated>
       <workItem from="1670011461468" duration="720000" />
       <workItem from="1670012198091" duration="13241000" />
+      <workItem from="1670099163793" duration="1684000" />
     </task>
     <task id="LOCAL-00004" summary="Added DeleteTaskInputBoundary and EditTaskInputBoundary">
       <created>1670012955360</created>
@@ -198,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670077646281</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="workspace.xml">
+      <created>1670079357047</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1670079357047</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +249,7 @@
     <MESSAGE value="removed unused variables" />
     <MESSAGE value="added User entity interface" />
     <MESSAGE value="added User entity classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added User entity classes" />
+    <MESSAGE value="workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
   </component>
 </project>
