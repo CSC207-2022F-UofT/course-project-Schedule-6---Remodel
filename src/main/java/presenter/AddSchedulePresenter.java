@@ -1,10 +1,9 @@
 package presenter;
 
-import boundary.Schedule.AddScheduleOutputBoundary;
+import boundary.Schedule.UpdateScheduleOutputBoundary;
 import javafx.scene.control.Label;
-import responseModel.Schedule.ScheduleItemResponseModel;
 
-public class AddSchedulePresenter implements AddScheduleOutputBoundary {
+public class AddSchedulePresenter implements UpdateScheduleOutputBoundary {
     @Override
     public void prepareSuccessView(Label text, String message) {
         text.setText(message);

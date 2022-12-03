@@ -1,10 +1,9 @@
 package presenter;
 
-import boundary.Schedule.AddScheduleItemInputBoundary;
+import boundary.Schedule.UpdateScheduleInputBoundary;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
-import controller.Schedule.TimetableController;
 import database.MongoDBAccess;
 import entity.Schedule.CommonScheduleItemFactory;
 import entity.Schedule.ScheduleItemFactory;
@@ -17,14 +16,14 @@ import entity.Schedule.TimeManagement;
 import main.LoginPage;
 import main.collectCollection;
 import requestModel.ScheduleItemRequestModel;
-import useCaseInteractor.Schedule.AddScheduleItem;
+import useCaseInteractor.Schedule.UpdateScheduleItem;
 import useCaseInteractor.User.userCollection;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.Map;
 
 
@@ -90,6 +89,8 @@ public class TimetablePresenter {
                 } else {
                     findEntryData(entry);
                 }
+
+       
             }
 
             entriesSaved.setText("ALL ENTIRES SAVED");

@@ -1,13 +1,6 @@
 package main;
 
-import boundary.Schedule.AddScheduleItemInputBoundary;
 import com.mongodb.*;
-import controller.Schedule.AddScheduleController;
-import entity.Schedule.CommonScheduleItemFactory;
-import entity.Schedule.ScheduleItemFactory;
-import boundary.Schedule.AddScheduleOutputBoundary;
-import useCaseInteractor.DataAccess;
-import useCaseInteractor.Schedule.AddScheduleItem;
 
 import java.net.UnknownHostException;
 
