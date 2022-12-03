@@ -38,14 +38,22 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
+    public void resetSchedule(){
+        DBObject query = new BasicDBObject("_id", this.username);
+        ArrayList<Object> lst = new ArrayList<>();
+        DBObject updateObj = new BasicDBObject("schedules", lst);
+        this.collection.update(query, new BasicDBObject("$set", updateObj));
+    }
+
+    @Override
     public void setSchedule(ScheduleItemResponseModel responseModel) {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
         lst.add(responseModel.getTitle());
-        lst.add(responseModel.getStartDate());
-        lst.add(responseModel.getEndDate());
-        lst.add(responseModel.getStartTime());
-        lst.add(responseModel.getEndTime());
+        lst.add(responseModel.getStartDate().toString());
+        lst.add(responseModel.getEndDate().toString());
+        lst.add(responseModel.getStartTime().toString());
+        lst.add(responseModel.getEndTime().toString());
         DBObject updateObj = new BasicDBObject("schedules", lst);
         this.collection.update(query, new BasicDBObject("$push", updateObj));
     }

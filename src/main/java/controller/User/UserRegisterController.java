@@ -31,10 +31,11 @@ public class UserRegisterController {
             registrationMessage.setText("PLEASE FILL IN ALL FIELDS");
 
         } else {
-            if(RGpassword.getText().length() <= 6){
-                registrationMessage.setText("PLEASE ENTER A PASSWORD LONGER THAN 6 CHARACTERS");
-            }
-            else if (RGpassword.getText().equals(RGconfirmpassword.getText())) {
+            //if(RGpassword.getText().length() <= 6){
+            //    registrationMessage.setText("PLEASE ENTER A PASSWORD LONGER THAN 6 CHARACTERS");
+            //}
+            //else
+            if (RGpassword.getText().equals(RGconfirmpassword.getText())) {
                 passwordMisMatch.setText("");
                 registerUser(registrationMessage, passwordMisMatch,
                         RGfirstname, RGlastname, RGusername,
