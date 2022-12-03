@@ -12,17 +12,16 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class AddTaskScreen {
-    public Button taskCancelButton;
+    public Button taskCancel;
 
-    public Label taskError;
     @FXML
-    private ComboBox<?> categoryComboBox;
+    private TextField taskCategory;
 
     @FXML
     private ComboBox<String> privacyComboBox;
 
     @FXML
-    private Button taskCreateAddButton;
+    private Button taskAdd;
 
     @FXML
     private DatePicker taskDate;
@@ -31,7 +30,7 @@ public class AddTaskScreen {
     private TextField taskDescription;
 
     @FXML
-    public TableView todoTable;
+    private Label errorMessage;
 
     private final TaskCreationController taskCreationController;
 
@@ -42,16 +41,12 @@ public class AddTaskScreen {
 
     @FXML
     public void addTask(ActionEvent event) {
-        taskCreationController.create(taskDescription.getText(), taskDate.getValue(), true, (String) categoryComboBox.getValue());
-        Stage stage = (Stage) taskCreateAddButton.getScene().getWindow();
-        stage.close();
+        taskCreationController.create(taskDescription.getText(), taskDate.getValue(), true, taskCategory.getText());
 
     }
 
-
-
-    public void taskCancelAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) taskCancelButton.getScene().getWindow();
+    public void cancelTask(ActionEvent actionEvent) {
+        Stage stage = (Stage) taskCancel.getScene().getWindow();
         stage.close();
     }
 }

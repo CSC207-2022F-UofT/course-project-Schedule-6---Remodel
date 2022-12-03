@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -12,14 +11,14 @@
    <children>
       <AnchorPane layoutX="1.0" layoutY="78.0" prefHeight="290.0" prefWidth="401.0" style="-fx-background-color: white;">
          <children>
-            <Button fx:id="taskEditButton" layoutX="312.0" layoutY="233.0" mnemonicParsing="false" onAction="#editButtonAction" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: #82AA68;" text="EDIT" textFill="WHITE">
+            <Button fx:id="taskEditButton" layoutX="312.0" layoutY="233.0" mnemonicParsing="false" onAction="#editButtonAction" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: #82AA68;" text="EDIT" textFill="WHITE">
                <font>
-                  <Font name="Gill Sans MT Condensed" size="20.0" />
+                  <Font name="Gill Sans MT Condensed" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="editCancelButton" layoutX="15.0" layoutY="233.0" mnemonicParsing="false" onAction="#editCancelAction" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: #82AA68;" text="CANCEL" textFill="WHITE">
+            <Button fx:id="editCancelButton" layoutX="15.0" layoutY="233.0" mnemonicParsing="false" onAction="#editCancelAction" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: #82AA68;" text="CANCEL">
                <font>
-                  <Font name="Gill Sans MT Condensed" size="20.0" />
+                  <Font name="Gill Sans MT Condensed" size="16.0" />
                </font>
             </Button>
             <Label layoutX="15.0" layoutY="148.0" prefHeight="28.0" prefWidth="87.0" text="CATEGORY">
@@ -37,9 +36,9 @@
                   <Font name="Gill Sans MT Condensed" size="23.0" />
                </font>
             </Label>
-            <ComboBox fx:id="newCategoryComboBox" editable="true" layoutX="15.0" layoutY="176.0" prefHeight="26.0" prefWidth="226.0" promptText="SELECT CATEGORY" />
-            <TextField fx:id="newDesciption" layoutX="15.0" layoutY="42.0" prefHeight="26.0" prefWidth="226.0" promptText="Description" />
+            <TextField fx:id="newDescription" layoutX="15.0" layoutY="42.0" prefHeight="26.0" prefWidth="226.0" promptText="Description" />
             <DatePicker fx:id="newDate" layoutX="14.0" layoutY="107.0" prefHeight="26.0" prefWidth="226.0" promptText="Date" />
+            <TextField fx:id="newCategory" layoutX="14.0" layoutY="176.0" prefHeight="26.0" prefWidth="226.0" promptText="Category" />
          </children>
       </AnchorPane>
       <Label layoutX="129.0" layoutY="14.0" text="EDIT TASK" textFill="WHITE">
