@@ -5,6 +5,8 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import entity.User.CommonUser;
+import entity.User.CommonUserFactory;
 import entity.User.User;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
@@ -54,14 +56,11 @@ public class LoginPageController {
         CreateRegistrationScreen.newForm();}
 
     public User login(TextField usernameTextField, TextField passwordTextField) throws UnknownHostException {
-        User user;
 
         MongoDBAccess client = new MongoDBAccess(collectCollection.main(), usernameTextField.getText());
 
         if(client.getUserExist(usernameTextField.getText()) && client.checkPassword(passwordTextField.getText())){
-            user = new User();
-            user.username = usernameTextField.getText();
-            user.password = passwordTextField.getText();
+            User user = new CommonUser(usernameTextField.getText(), passwordTextField.getText());
             return user;
         }
         return null;

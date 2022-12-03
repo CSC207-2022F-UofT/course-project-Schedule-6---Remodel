@@ -2,34 +2,24 @@ package entity.User;
 
 // Entity layer
 
-class CommonUser implements User {
-
-    private final String firstName;
-
-    private final String lastName;
+public class CommonUser implements User {
 
     private final String username;
+    private final String password;
 
-    CommonUser(String username, String firstName,String lastName) {
+    public CommonUser(String username, String password) {
         this.username = username;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.password = password;
 
-    }
-
-    @Override
-    public String getFirstName(){
-        return this.firstName;
-    }
-
-    @Override
-    public String getLastName() {
-        return this.lastName;
     }
 
     @Override
     public String getUsername(){
         return this.username;
+    }
+
+    public String getPassword(){
+        return this.password;
     }
 
 }
