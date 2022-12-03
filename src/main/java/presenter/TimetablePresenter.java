@@ -65,6 +65,8 @@ public class TimetablePresenter {
             System.out.println(temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone()));
             Map map = temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone());
         int count = 1;
+        MongoDBAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
+        dataAccess.resetSchedule();
         for (Object entry : map.values()) {
 
             //Finds the title in the values of the map
@@ -103,7 +105,6 @@ public class TimetablePresenter {
             String[] newEndTime = endTime.split(":");
             System.out.println(newStartDate[0] + ", "+newEndDate.toString()+", "+newStartTime[0]+", "+newEndDate.toString());
             ScheduleItemFactory item = new CommonScheduleItemFactory();
-            MongoDBAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
             AddScheduleItemInputBoundary addSchedule = new AddScheduleItem(dataAccess, item);
             ScheduleItemRequestModel request = new ScheduleItemRequestModel(title, LocalDate.of(Integer.parseInt(newStartDate[0]),
                     Integer.parseInt(newStartDate[1]),Integer.parseInt(newStartDate[2])), LocalDate.of(Integer.parseInt(newEndDate[0]),
