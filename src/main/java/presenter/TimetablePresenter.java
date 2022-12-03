@@ -1,7 +1,12 @@
 package presenter;
 
+import boundary.Schedule.AddScheduleItemInputBoundary;
+import boundary.Schedule.AddScheduleOutputBoundary;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.view.CalendarView;
+import database.MongoDBAccess;
+import entity.Schedule.CommonScheduleItemFactory;
+import entity.Schedule.ScheduleItem;
 import entity.Schedule.TimeManagement;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXMLLoader;
@@ -9,12 +14,19 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
 import main.LoginPage;
-
+import useCaseInteractor.Schedule.AddScheduleItem;
+import useCaseInteractor.User.userCollection;
+import main.collectCollection;
+import entity.Schedule.ScheduleItemFactory;
+import requestModel.ScheduleItemRequestModel;
 import java.io.IOException;
+import java.net.UnknownHostException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import useCaseInteractor.Schedule.AddScheduleItem;
+
 
 
 public class TimetablePresenter {
@@ -22,7 +34,7 @@ public class TimetablePresenter {
     private final TimeManagement TM  = new TimeManagement();
 
 
-    public void printCalendarEntries(Label entriesSaved, CalendarView calendar) {
+    public void printCalendarEntries(Label entriesSaved, CalendarView calendar) throws UnknownHostException {
         ArrayList<ArrayList> allEntries = new ArrayList<>();
         Map map = new HashMap();
         for (Calendar temp : calendar.getCalendars()) {
@@ -59,7 +71,7 @@ public class TimetablePresenter {
             String endTime = entry.toString().substring(endTime_start, endTime_end);
 
 
-            System.out.println("Event " + count + ": " + title + ", " + startDate + ", " + endDate +
+            System.out.println("Event " + count + ": " + title + ", " +  startDate + ", " + endDate +
                     ", " + startTime + ", " + endTime);
             count+=1;
             entries.add(title);
@@ -71,8 +83,25 @@ public class TimetablePresenter {
             allEntries.add(entries);
             }
         System.out.println(allEntries);
+        MongoDBAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
         for(ArrayList entry : allEntries){
             System.out.println(entry);
+            System.out.println(0);
+
+            ScheduleItemFactory item = new CommonScheduleItemFactory();
+            System.out.println(1);
+            AddScheduleItemInputBoundary addSchedule = new AddScheduleItem(dataAccess, item);
+            System.out.println(2);
+
+            ScheduleItemRequestModel request = new ScheduleItemRequestModel((String) entry.get(0),(String) entry.get(1),
+                    (String) entry.get(2), (String) entry.get(3),(String) entry.get(4));
+            System.out.println(3);
+
+            addSchedule.create(request);
+
+            System.out.println(4);
+
+
         }
 
 

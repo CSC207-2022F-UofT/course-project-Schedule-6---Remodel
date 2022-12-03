@@ -19,7 +19,7 @@ public class DeleteScheduleController {
         this.presenter = presenter;
     }
 
-    public ScheduleItemResponseModel delete(String title, LocalDate starDate, LocalDate endDate,
+    public ScheduleItemResponseModel delete(String title, String starDate, String endDate,
                                             String startTime, String endTime,
                                             String startAMPM, String endAMPM) {
         ScheduleItemRequestModel inputData = new ScheduleItemRequestModel(
@@ -29,11 +29,12 @@ public class DeleteScheduleController {
 
     // might not need this for deleting schedule item
     // changes time from String to LocalTime, and checks if its AM or PM time
-    public LocalTime timeConverter(String time, String AMPM) {
+    public String timeConverter(String time, String AMPM) {
         String[] parsedTime = time.split(":");
         if (AMPM.equals("PM")) {
             parsedTime[0] = Integer.toString(Integer.parseInt(parsedTime[0]) + 12);
         }
-        return LocalTime.of(Integer.parseInt(parsedTime[0]), Integer.parseInt(parsedTime[1]));
+        return parsedTime[0] + ":"+parsedTime[1];
+        //return LocalTime.of(Integer.parseInt(parsedTime[0]), Integer.parseInt(parsedTime[1]));
     }
 }

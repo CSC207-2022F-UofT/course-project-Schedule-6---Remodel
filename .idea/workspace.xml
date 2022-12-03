@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Working on breaking down map for schedule">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="added entry collection">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-25,_6_08_p_m__[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-25__6_08_p_m___Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/AddScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/AddScheduleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/DeleteScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/DeleteScheduleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/EditScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/EditScheduleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Schedule/CommonScheduleItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Schedule/CommonScheduleItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Schedule/CommonScheduleItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Schedule/CommonScheduleItemFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Schedule/ScheduleItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Schedule/ScheduleItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Schedule/ScheduleItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Schedule/ScheduleItemFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/presenter/TimetablePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/TimetablePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/ImportRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/ImportRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/ScheduleItemRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/ScheduleItemRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/Schedule/ScheduleItemResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/responseModel/Schedule/ScheduleItemResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Schedule/AddScheduleItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Schedule/AddScheduleItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +62,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
@@ -82,6 +98,7 @@
       <updated>1670011459433</updated>
       <workItem from="1670011461468" duration="720000" />
       <workItem from="1670012198091" duration="13241000" />
+      <workItem from="1670046033852" duration="8816000" />
     </task>
     <task id="LOCAL-00004" summary="Added DeleteTaskInputBoundary and EditTaskInputBoundary">
       <created>1670012955360</created>
@@ -160,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670023400018</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added entry collection">
+      <created>1670045033370</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670045033370</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +215,7 @@
     <MESSAGE value="misc.xml" />
     <MESSAGE value="typos" />
     <MESSAGE value="update from main" />
-    <option name="LAST_COMMIT_MESSAGE" value="update from main" />
+    <MESSAGE value="added entry collection" />
+    <option name="LAST_COMMIT_MESSAGE" value="added entry collection" />
   </component>
 </project>

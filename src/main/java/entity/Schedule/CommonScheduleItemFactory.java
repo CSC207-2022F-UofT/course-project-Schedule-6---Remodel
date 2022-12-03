@@ -5,8 +5,8 @@ import java.time.LocalTime;
 
 public class CommonScheduleItemFactory implements ScheduleItemFactory {
     @Override
-    public ScheduleItem create(String title, LocalDate startDate, LocalDate endDate,
-                               LocalTime startTime, LocalTime endTime) {
+    public ScheduleItem create(String title, String startDate, String endDate,
+                               String startTime, String endTime) {
         return new CommonScheduleItem(title, startDate, endDate, startTime, endTime);
     }
 }

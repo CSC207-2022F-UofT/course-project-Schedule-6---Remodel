@@ -7,16 +7,16 @@ public class ScheduleItemResponseModel {
 
     private String title;
 
-    private LocalDate startDate;
+    private String startDate;
 
-    private LocalDate endDate;
+    private String endDate;
 
-    private LocalTime startTime;
+    private String startTime;
 
-    private LocalTime endTime;
+    private String endTime;
 
-    public ScheduleItemResponseModel(String title, LocalDate startDate, LocalDate endDate,
-                                     LocalTime startTime, LocalTime endTime) {
+    public ScheduleItemResponseModel(String title, String startDate, String endDate,
+                                     String startTime, String endTime) {
         this.title = title;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -28,19 +28,19 @@ public class ScheduleItemResponseModel {
         return this.title;
     }
 
-    public LocalDate getStartDate() {
+    public String getStartDate() {
         return this.startDate;
     }
 
-    public LocalDate getEndDate() {
+    public String getEndDate() {
         return this.endDate;
     }
 
-    public LocalTime getStartTime() {
+    public String getStartTime() {
         return this.startTime;
     }
 
-    public LocalTime getEndTime() {
+    public String getEndTime() {
         return this.endTime;
     }
 }

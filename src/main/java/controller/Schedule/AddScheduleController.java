@@ -19,7 +19,7 @@ public class AddScheduleController {
         this.presenter = presenter;
     }
 
-    public void create(Label label, String title, LocalDate startDate, LocalDate endDate,
+    public void create(Label label, String title, String startDate, String endDate,
                        String startTime, String endTime,
                        String startAMPM, String endAMPM) {
         if (title.isBlank() || (startDate == null) || (endDate == null) || startTime.isBlank() || endTime.isBlank()) {
@@ -46,11 +46,12 @@ public class AddScheduleController {
     }
 
     // changes time from String to LocalTime, and checks if its AM or PM time
-    public LocalTime timeConverter(String time, String AMPM) {
+    public String timeConverter(String time, String AMPM) {
         String[] parsedTime = time.split(":");
         if (AMPM.equals("PM")) {
             parsedTime[0] = Integer.toString(Integer.parseInt(parsedTime[0]) + 12);
         }
-        return LocalTime.of(Integer.parseInt(parsedTime[0]), Integer.parseInt(parsedTime[1]));
+        return parsedTime[0] + ":"+parsedTime[1];
+        //return (String) LocalTime.of(Integer.parseInt(parsedTime[0]), Integer.parseInt(parsedTime[1]));
     }
 }

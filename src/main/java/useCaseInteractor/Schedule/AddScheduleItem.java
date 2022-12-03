@@ -13,13 +13,10 @@ public class AddScheduleItem implements AddScheduleItemInputBoundary {
     final DataAccess dataAccess;
     final ScheduleItemFactory scheduleItemFactory;
 
-    final AddScheduleOutputBoundary outputBoundary;
 
-    public AddScheduleItem(DataAccess dataAccess, ScheduleItemFactory scheduleItemFactory,
-                           AddScheduleOutputBoundary outputBoundary) {
+    public AddScheduleItem(DataAccess dataAccess, ScheduleItemFactory scheduleItemFactory) {
         this.dataAccess = dataAccess;
         this.scheduleItemFactory = scheduleItemFactory;
-        this.outputBoundary = outputBoundary;
     }
 
     @Override

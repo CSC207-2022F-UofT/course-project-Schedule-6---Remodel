@@ -19,10 +19,10 @@ public class EditScheduleController {
         this.presenter = presenter;
     }
 
-    public ScheduleItemResponseModel edit(String newTitle, LocalDate newStartDate, LocalDate newEndDate,
+    public ScheduleItemResponseModel edit(String newTitle, String newStartDate, String newEndDate,
                                           String newStartTime, String newEndTime,
                                             String newStartAMPM, String newEndAMPM,
-                                          String oldTitle, LocalDate oldStartDate, LocalDate oldEndDate,
+                                          String oldTitle, String oldStartDate, String oldEndDate,
                                           String oldStartTime, String oldEndTime,
                                           String oldStartAMPM, String oldEndAMPM) {
         if (newTitle.isBlank() || (newStartDate == null) || (newEndDate == null) ||
@@ -52,11 +52,12 @@ public class EditScheduleController {
     }
 
     // changes time from String to LocalTime, and checks if its AM or PM time
-    public LocalTime timeConverter(String time, String AMPM) {
+    public String timeConverter(String time, String AMPM) {
         String[] parsedTime = time.split(":");
         if (AMPM.equals("PM")) {
             parsedTime[0] = Integer.toString(Integer.parseInt(parsedTime[0]) + 12);
         }
-        return LocalTime.of(Integer.parseInt(parsedTime[0]), Integer.parseInt(parsedTime[1]));
+        return parsedTime[0] + ":"+parsedTime[1];
+        //return LocalTime.of(Integer.parseInt(parsedTime[0]), Integer.parseInt(parsedTime[1]));
     }
 }
