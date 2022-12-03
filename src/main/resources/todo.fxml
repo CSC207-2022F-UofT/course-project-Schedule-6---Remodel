@@ -19,7 +19,7 @@
             <Label text="No tasks yet" />
          </placeholder>
         <columns>
-          <TableColumn fx:id="taskTitle" prefWidth="200.0" text="TASK" />
+          <TableColumn fx:id="taskDescription" prefWidth="200.0" text="TASK" />
             <TableColumn fx:id="taskCategory" minWidth="0.0" prefWidth="119.0" text="CATEGORY" />
           <TableColumn fx:id="taskDate" minWidth="0.0" prefWidth="85.0" text="DATE" />
         </columns>

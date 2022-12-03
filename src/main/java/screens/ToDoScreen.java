@@ -7,21 +7,23 @@ import javafx.scene.control.Button;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 public class ToDoScreen {
 
     @FXML
-    private TableColumn taskTitle;
+    private TableColumn<CommonTask, String> taskDescription;
 
     @FXML
-    private TableColumn taskDate;
+    private TableColumn<CommonTask, LocalDate> taskDate;
 
     @FXML
-    private TableColumn taskCategory;
+    private TableColumn<CommonTask, String> taskCategory;
 
     @FXML
     private ResourceBundle resources;
@@ -33,7 +35,7 @@ public class ToDoScreen {
     private Button todoAddButton;
 
     @FXML
-    private TableView todoTable;
+    private TableView<CommonTask> todoTable;
 
     @FXML
     private Button deleteTaskButton;
@@ -45,8 +47,17 @@ public class ToDoScreen {
     private Button taskAdd;
 
     public void initialize(){
-        TableView.TableViewSelectionModel selectionModel = todoTable.getSelectionModel();
+        TableView.TableViewSelectionModel<CommonTask> selectionModel = todoTable.getSelectionModel();
         selectionModel.setSelectionMode(SelectionMode.SINGLE);
+
+        taskDescription.setCellValueFactory(new PropertyValueFactory<CommonTask, String>("description"));
+        taskDate.setCellValueFactory(new PropertyValueFactory<CommonTask, LocalDate>("date"));
+        taskCategory.setCellValueFactory(new PropertyValueFactory<CommonTask, String>("category"));
+        //LocalDate date = LocalDate.of(2020, 1, 8);
+        //todoTable.getItems().add(new CommonTask("a", date, false, "a"));
+        //todoTable.getItems().add(new CommonTask("a", date, false, "a"));
+        //todoTable.getItems().add(new CommonTask("a", date, false, "a"));
+
     }
 
     public void todoAddAction(ActionEvent actionEvent) {
@@ -56,6 +67,7 @@ public class ToDoScreen {
     public void todoEditButton(ActionEvent actionEvent) {
         CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();
         CreateEditTaskScreen.newForm();
+
 
     }
 
