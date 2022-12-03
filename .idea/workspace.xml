@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ec8528d-ec92-4240-bedb-721845143e76" name="Changes" comment="update xml files">
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="added User entity classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Schedule/TimetableOutputBoundary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/TimetablePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/TimetablePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +27,13 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -190,7 +193,35 @@
       <option name="project" value="LOCAL" />
       <updated>1670023400018</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add schedule to DB from calendar works">
+      <created>1670076598325</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670076598325</updated>
+    </task>
+    <task id="LOCAL-00016" summary="removed unused variables">
+      <created>1670076698230</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670076698230</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added User entity interface">
+      <created>1670077214414</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670077214414</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added User entity classes">
+      <created>1670077646281</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1670077646281</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +255,12 @@
     <MESSAGE value="added getTaskExist" />
     <MESSAGE value="added [Todo] (possible bug we might run into)" />
     <MESSAGE value="update xml files" />
-    <option name="LAST_COMMIT_MESSAGE" value="update xml files" />
+    <MESSAGE value="Working on breaking down map for schedule" />
+    <MESSAGE value="add schedule to DB from calendar works" />
+    <MESSAGE value="removed unused variables" />
+    <MESSAGE value="added User entity interface" />
+    <MESSAGE value="added User entity classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added User entity classes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

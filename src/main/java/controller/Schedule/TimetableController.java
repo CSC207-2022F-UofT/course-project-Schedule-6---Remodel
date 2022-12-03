@@ -48,7 +48,7 @@ public class TimetableController {
         TTP.showSchedule(calendar);
     }
 
-    public void printCalendarEntries(ActionEvent event, Label entriesSaved) throws InterruptedException {
+    public void printCalendarEntries(ActionEvent event, Label entriesSaved) throws InterruptedException, UnknownHostException {
         TTP.printCalendarEntries(entriesSaved, calendar);
     }
 
