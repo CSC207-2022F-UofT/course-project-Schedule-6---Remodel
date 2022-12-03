@@ -1,11 +1,10 @@
 package entity.User;
 
-public class User {
+public interface User {
     /* User class */
-    public String firstname;
-    public String lastname;
-    public String username;
-    public String password;
+     String getFirstName();
+     String getLastName();
+     String getUsername();
 
     }
 

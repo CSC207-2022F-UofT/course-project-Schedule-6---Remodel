@@ -8,7 +8,5 @@ public interface Task {
 
     LocalDate getDate();
 
-    boolean getPrivacySetting();
-
     String getCategory();
 }
