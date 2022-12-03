@@ -1,8 +1,6 @@
 package presenter;
 
 import com.calendarfx.model.Calendar;
-import com.calendarfx.model.Entry;
-import com.calendarfx.model.Interval;
 import com.calendarfx.view.CalendarView;
 import controller.Schedule.TimetableController;
 import javafx.animation.FadeTransition;
@@ -17,6 +15,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.*;
+import java.util.Map;
 
 
 public class TimetablePresenter {
@@ -60,18 +59,8 @@ public class TimetablePresenter {
             System.out.println("Event " + count + ": " + title + ", " + startDate + ", " + endDate +
                     ", " + startTime + ", " + endTime);
             count+=1;
-        }
-
-
-
-
-
-//                System.out.println(value);
-//                System.out.println(value.toString().toUpperCase().contains("TITLE="));
-//                System.out.println(value.toString().toUpperCase().contains("ENDDATE="));
-//                i.next();
             }
-
+        }
 
 
         entriesSaved.setText("ALL ENTIRES SAVED");
@@ -81,7 +70,6 @@ public class TimetablePresenter {
         ft.setAutoReverse(true);
         ft.play();
         }
-
     public void loadTODO(GridPane TODO) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("todo.fxml"));
         TODO.getChildren().add(fxmlLoader.load());
