@@ -1,6 +1,7 @@
 package presenter;
 
 import com.calendarfx.model.Calendar;
+import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
 import controller.Schedule.TimetableController;
 import javafx.animation.FadeTransition;
@@ -22,6 +23,33 @@ public class TimetablePresenter {
 
     private final TimeManagement TM  = new TimeManagement();
 
+    public void showSchedule(CalendarView calendar) {
+        ArrayList<ArrayList<Object>> entireSchedule = null;
+        for (Calendar temp : calendar.getCalendars()) {
+            temp.clear();
+            for (ArrayList<Object> schedule : entireSchedule) {
+                temp.addEntry(createEntry(schedule));
+            }
+        }
+    }
+
+    public Entry<String> createEntry(ArrayList<Object> schedule) {
+        Entry<String> entry = new Entry<>((String) schedule.get(0));
+
+        String[] startDate = ((String )schedule.get(1)).split("-");
+        String[] endDate = ((String )schedule.get(2)).split("-");
+        String[] startTime = ((String )schedule.get(3)).split(":");
+        String[] endTime = ((String )schedule.get(4)).split(":");
+
+        entry.setInterval(LocalDate.now());
+        entry.changeStartDate(LocalDate.of(
+                Integer.parseInt(startDate[0]), Integer.parseInt(startDate[1]), Integer.parseInt(startDate[2])));
+        entry.changeEndDate(LocalDate.of(
+                Integer.parseInt(endDate[0]), Integer.parseInt(endDate[1]), Integer.parseInt(endDate[2])));
+        entry.changeStartTime(LocalTime.of(Integer.parseInt(startTime[0]),Integer.parseInt(startTime[1])));
+        entry.changeEndTime(LocalTime.of(Integer.parseInt(endTime[0]),Integer.parseInt(endTime[1])));
+        return entry;
+    }
 
     public void printCalendarEntries(Label entriesSaved, CalendarView calendar) {
         for (Calendar temp : calendar.getCalendars()) {
@@ -61,7 +89,6 @@ public class TimetablePresenter {
             count+=1;
             }
         }
-
 
         entriesSaved.setText("ALL ENTIRES SAVED");
         FadeTransition ft = new FadeTransition(Duration.millis(1850), entriesSaved);
