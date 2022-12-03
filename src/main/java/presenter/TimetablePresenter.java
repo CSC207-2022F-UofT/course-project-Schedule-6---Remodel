@@ -23,6 +23,7 @@ import java.io.IOException;
 import java.net.UnknownHostException;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Map;
 
 
@@ -103,7 +104,6 @@ public class TimetablePresenter {
             String[] newEndTime = endTime.split(":");
             System.out.println(newStartDate[0] + ", "+newEndDate.toString()+", "+newStartTime[0]+", "+newEndDate.toString());
             ScheduleItemFactory item = new CommonScheduleItemFactory();
-            MongoDBAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
             UpdateScheduleInputBoundary addSchedule = new UpdateScheduleItem(dataAccess, item);
             ScheduleItemRequestModel request = new ScheduleItemRequestModel(title, LocalDate.of(Integer.parseInt(newStartDate[0]),
                     Integer.parseInt(newStartDate[1]),Integer.parseInt(newStartDate[2])), LocalDate.of(Integer.parseInt(newEndDate[0]),
