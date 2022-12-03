@@ -1,0 +1,260 @@
+Index: src/main/java/boundary/Category/CategoryCreationInputBoundary.java
+===================================================================
+diff --git a/src/main/java/boundary/Category/CategoryCreationInputBoundary.java b/src/main/java/boundary/Category/CategoryCreationInputBoundary.java
+deleted file mode 100644
+--- a/src/main/java/boundary/Category/CategoryCreationInputBoundary.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
++++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+@@ -1,15 +0,0 @@
+-package boundary.Category;
+-
+-import requestModel.CategoryCreationRequestModel;
+-<<<<<<< HEAD
+-import responseModel.Category.CategoryCreationResponseModel;
+-
+-public interface CategoryCreationInputBoundary {
+-    CategoryCreationResponseModel create(CategoryCreationRequestModel requestModel);
+-=======
+-import responseModel.Category.CategoryResponseModel;
+-
+-public interface CategoryCreationInputBoundary {
+-    CategoryResponseModel create(CategoryCreationRequestModel requestModel);
+->>>>>>> origin/feature-8-user
+-}
+Index: src/main/java/controller/Category/AddCategoryController.java
+===================================================================
+diff --git a/src/main/java/controller/Category/AddCategoryController.java b/src/main/java/controller/Category/AddCategoryController.java
+deleted file mode 100644
+--- a/src/main/java/controller/Category/AddCategoryController.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
++++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+@@ -1,42 +0,0 @@
+-package controller.Category;
+-
+-import boundary.Category.CategoryCreationInputBoundary;
+-import presenter.AddCategoryPresenter;
+-import requestModel.CategoryCreationRequestModel;
+-<<<<<<< HEAD
+-import responseModel.Category.CategoryCreationResponseModel;
+-=======
+-import responseModel.Category.CategoryResponseModel;
+->>>>>>> origin/feature-8-user
+-
+-public class AddCategoryController {
+-    final  CategoryCreationInputBoundary categoryCreationInputBoundary;
+-
+-    final AddCategoryPresenter presenter;
+-
+-    public AddCategoryController(CategoryCreationInputBoundary categoryCreationInputBoundary, AddCategoryPresenter presenter) {
+-        this.categoryCreationInputBoundary = categoryCreationInputBoundary;
+-        this.presenter = presenter;
+-    }
+-
+-<<<<<<< HEAD
+-    public CategoryCreationResponseModel create(String name, boolean status) {
+-=======
+-    public CategoryResponseModel create(String name, boolean status) {
+->>>>>>> origin/feature-8-user
+-        if (name.isBlank()) {
+-            return presenter.prepareFailView("Please fill in category name");
+-        } else if (!nameChecker(name)) {
+-            return presenter.prepareFailView("Category already exists");
+-        }
+-        CategoryCreationRequestModel inputData = new CategoryCreationRequestModel(name, status);
+-        return categoryCreationInputBoundary.create(inputData);
+-    }
+-
+-    //need to implement nameChecker
+-    public boolean nameChecker(String name) {
+-
+-        return true;
+-    }
+-    //cont..
+-}
+Index: src/main/java/boundary/Category/EditCategoryInputBoundary.java
+===================================================================
+diff --git a/src/main/java/boundary/Category/EditCategoryInputBoundary.java b/src/main/java/boundary/Category/EditCategoryInputBoundary.java
+deleted file mode 100644
+--- a/src/main/java/boundary/Category/EditCategoryInputBoundary.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
++++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+@@ -1,7 +0,0 @@
+-package boundary.Category;
+-
+-import responseModel.Category.CategoryResponseModel;
+-
+-public interface EditCategoryInputBoundary {
+-    //CategoryResponseModel edit();
+-}
+Index: src/main/java/controller/Category/CategoryCreationController.java
+===================================================================
+diff --git a/src/main/java/controller/Category/CategoryCreationController.java b/src/main/java/controller/Category/CategoryCreationController.java
+deleted file mode 100644
+--- a/src/main/java/controller/Category/CategoryCreationController.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
++++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+@@ -1,36 +0,0 @@
+-package controller.Category;
+-
+-import boundary.Category.CategoryCreationInputBoundary;
+-import presenter.AddCategoryPresenter;
+-import requestModel.CategoryCreationRequestModel;
+-<<<<<<< HEAD
+-import responseModel.Category.CategoryCreationResponseModel;
+-=======
+-import responseModel.Category.CategoryResponseModel;
+->>>>>>> origin/feature-8-user
+-
+-public class CategoryCreationController {
+-    final CategoryCreationInputBoundary addCategoryInputBoundary;
+-
+-    final AddCategoryPresenter presenter;
+-
+-    public CategoryCreationController(CategoryCreationInputBoundary inputBoundary, AddCategoryPresenter presenter){
+-        this.addCategoryInputBoundary = inputBoundary;
+-        this.presenter = presenter;
+-    }
+-
+-<<<<<<< HEAD
+-    public CategoryCreationResponseModel create(String title, Boolean status){
+-=======
+-    public CategoryResponseModel create(String title, Boolean status){
+->>>>>>> origin/feature-8-user
+-        if (title.isBlank() || (status == null)){
+-            return presenter.prepareFailView("Please Fill in ALl Fields");
+-        }
+-
+-        CategoryCreationRequestModel newInputData = new CategoryCreationRequestModel(title, status);
+-        return addCategoryInputBoundary.create(newInputData);
+-
+-    }
+-
+-}
+Index: src/main/java/presenter/AddCategoryPresenter.java
+===================================================================
+diff --git a/src/main/java/presenter/AddCategoryPresenter.java b/src/main/java/presenter/AddCategoryPresenter.java
+deleted file mode 100644
+--- a/src/main/java/presenter/AddCategoryPresenter.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
++++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+@@ -1,22 +0,0 @@
+-package presenter;
+-
+-<<<<<<< HEAD
+-import responseModel.Category.CategoryCreationResponseModel;
+-
+-
+-public interface AddCategoryPresenter {
+-    CategoryCreationResponseModel prepareSuccessView(CategoryCreationResponseModel categoryCreationResponseModel);
+-
+-
+-    CategoryCreationResponseModel prepareFailView(String error);
+-=======
+-import responseModel.Category.CategoryResponseModel;
+-
+-
+-public interface AddCategoryPresenter {
+-    CategoryResponseModel prepareSuccessView(CategoryResponseModel categoryResponseModel);
+-
+-
+-    CategoryResponseModel prepareFailView(String error);
+->>>>>>> origin/feature-8-user
+-}
+Index: src/main/java/useCaseInteractor/Category/EditCategory.java
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/Category/EditCategory.java b/src/main/java/useCaseInteractor/Category/EditCategory.java
+deleted file mode 100644
+--- a/src/main/java/useCaseInteractor/Category/EditCategory.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
++++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+@@ -1,5 +0,0 @@
+-package useCaseInteractor.Category;
+-
+-public class EditCategory {
+-
+-}
+Index: src/main/java/useCaseInteractor/Category/AddCommonCategory.java
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/Category/AddCommonCategory.java b/src/main/java/useCaseInteractor/Category/AddCommonCategory.java
+deleted file mode 100644
+--- a/src/main/java/useCaseInteractor/Category/AddCommonCategory.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
++++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+@@ -1,42 +0,0 @@
+-package useCaseInteractor.Category;
+-
+-import boundary.Category.CategoryCreationInputBoundary;
+-import entity.Category.Category;
+-import entity.Category.CategoryFactory;
+-import presenter.AddCategoryPresenter;
+-import requestModel.CategoryCreationRequestModel;
+-<<<<<<< HEAD
+-import responseModel.Category.CategoryCreationResponseModel;
+-=======
+-import responseModel.Category.CategoryResponseModel;
+->>>>>>> origin/feature-8-user
+-import useCaseInteractor.DataAccess;
+-
+-public class AddCommonCategory implements CategoryCreationInputBoundary {
+-    final DataAccess dataAccess;
+-
+-    final CategoryFactory categoryFactory;
+-
+-    final AddCategoryPresenter categoryPresenter;
+-
+-    public AddCommonCategory(DataAccess dataAccess, CategoryFactory categoryFactory, AddCategoryPresenter categoryPresenter) {
+-        this.dataAccess = dataAccess;
+-        this.categoryFactory = categoryFactory;
+-        this.categoryPresenter = categoryPresenter;
+-    }
+-
+-    @Override
+-<<<<<<< HEAD
+-    public CategoryCreationResponseModel create(CategoryCreationRequestModel requestModel) {
+-        Category category = categoryFactory.create(requestModel.getName(), requestModel.getStatus());
+-        dataAccess.setCategory(requestModel);
+-        CategoryCreationResponseModel responseModel = new CategoryCreationResponseModel(category.getName(), category.getStatus());
+-=======
+-    public CategoryResponseModel create(CategoryCreationRequestModel requestModel) {
+-        Category category = categoryFactory.create(requestModel.getName(), requestModel.getStatus());
+-        dataAccess.setCategory(requestModel);
+-        CategoryResponseModel responseModel = new CategoryResponseModel(category.getName(), category.isStatus());
+->>>>>>> origin/feature-8-user
+-        return categoryPresenter.prepareSuccessView(responseModel);
+-    }
+-}
+Index: src/main/java/responseModel/Category/CategoryResponseModel.java
+===================================================================
+diff --git a/src/main/java/responseModel/Category/CategoryResponseModel.java b/src/main/java/responseModel/Category/CategoryResponseModel.java
+deleted file mode 100644
+--- a/src/main/java/responseModel/Category/CategoryResponseModel.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
++++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+@@ -1,35 +0,0 @@
+-package responseModel.Category;
+-
+-<<<<<<< HEAD
+-public class CategoryCreationResponseModel {
+-    String name;
+-    boolean status;
+-
+-    public CategoryCreationResponseModel (String name, boolean status) {
+-=======
+-public class CategoryResponseModel {
+-    String name;
+-    boolean status;
+-
+-    public CategoryResponseModel(String name, boolean status) {
+->>>>>>> origin/feature-8-user
+-        this.name = name;
+-        this.status = status;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    public boolean getStatus() {
+-        return status;
+-    }
+-
+-    public void setStatus(boolean status) {
+-        this.status = status;
+-    }
+-}
