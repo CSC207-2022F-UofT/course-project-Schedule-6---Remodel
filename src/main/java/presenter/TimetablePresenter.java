@@ -2,20 +2,19 @@ package presenter;
 
 import com.calendarfx.model.Calendar;
 import com.calendarfx.view.CalendarView;
-import controller.Schedule.TimetableController;
+import entity.Schedule.TimeManagement;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
-import entity.Schedule.TimeManagement;
 import main.LoginPage;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
+import useCaseInteractor.Schedule.AddScheduleItem;
 
 
 public class TimetablePresenter {
@@ -24,11 +23,15 @@ public class TimetablePresenter {
 
 
     public void printCalendarEntries(Label entriesSaved, CalendarView calendar) {
+        ArrayList<ArrayList> allEntries = new ArrayList<>();
+        Map map = new HashMap();
         for (Calendar temp : calendar.getCalendars()) {
             System.out.println(temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone()));
-            Map map = temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone());
+            map = temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone());
+        }
         int count = 1;
         for (Object entry : map.values()) {
+            ArrayList<String> entries = new ArrayList<>();
 
             //Finds the title in the values of the map
             int title_start = entry.toString().toUpperCase().indexOf("TITLE=") + ("TITLE=").length();
@@ -59,7 +62,17 @@ public class TimetablePresenter {
             System.out.println("Event " + count + ": " + title + ", " + startDate + ", " + endDate +
                     ", " + startTime + ", " + endTime);
             count+=1;
+            entries.add(title);
+            entries.add(startDate);
+            entries.add(endDate);
+            entries.add(startTime);
+            entries.add(endTime);
+
+            allEntries.add(entries);
             }
+        System.out.println(allEntries);
+        for(ArrayList entry : allEntries){
+            System.out.println(entry);
         }
 
 
