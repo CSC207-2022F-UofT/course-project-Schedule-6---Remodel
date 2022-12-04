@@ -1,10 +1,8 @@
 package screens;
 
-import controller.Schedule.AddScheduleController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import org.controlsfx.control.action.Action;
 
 public class AddScheduleScreen {
 
@@ -42,9 +40,9 @@ public class AddScheduleScreen {
 
 
 
-//    private final AddScheduleController addScheduleController;
+//    private final UpdateScheduleController addScheduleController;
 
-//    public AddScheduleScreen(AddScheduleController controller) {
+//    public AddScheduleScreen(UpdateScheduleController controller) {
 //        this.addScheduleController = controller;
 //    }
 //
