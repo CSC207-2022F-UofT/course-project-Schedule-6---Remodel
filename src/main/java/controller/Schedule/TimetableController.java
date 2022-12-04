@@ -46,8 +46,7 @@ public class TimetableController {
         TTP.loadSchedule(calendar, schedule.getSchedule());
     }
 
-    public void printCalendarEntries(ActionEvent event, Label entriesSaved)
-    {TTP.printCalendarEntries(entriesSaved);}
+    public void printCalendarEntries(ActionEvent event, Label entriesSaved) throws UnknownHostException {TTP.printCalendarEntries(entriesSaved);}
 
     public void addScheduleAction(ActionEvent event, TextField scheduleTitle, DatePicker startDate,
                                   DatePicker endDate, TextField startTime, TextField endTime, Label errorMessage)
