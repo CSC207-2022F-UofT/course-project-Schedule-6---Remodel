@@ -1,5 +1,6 @@
 package screens;
 
+import controller.Task.ToDoController;
 import entity.Task.CommonTask;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -46,27 +47,36 @@ public class ToDoScreen {
     @FXML
     private Button taskAdd;
 
-    public void initialize(){
+    private ToDoController controller = new ToDoController();
+
+    public void initialize() {
         TableView.TableViewSelectionModel<CommonTask> selectionModel = todoTable.getSelectionModel();
         selectionModel.setSelectionMode(SelectionMode.SINGLE);
 
         taskDescription.setCellValueFactory(new PropertyValueFactory<CommonTask, String>("description"));
         taskDate.setCellValueFactory(new PropertyValueFactory<CommonTask, LocalDate>("date"));
         taskCategory.setCellValueFactory(new PropertyValueFactory<CommonTask, String>("category"));
-        //LocalDate date = LocalDate.of(2020, 1, 8);
-        //todoTable.getItems().add(new CommonTask("a", date, false, "a"));
-        //todoTable.getItems().add(new CommonTask("a", date, false, "a"));
-        //todoTable.getItems().add(new CommonTask("a", date, false, "a"));
+        LocalDate date = LocalDate.of(2022, 12, 5);
+        LocalDate date2 = LocalDate.of(2022, 12, 16);
+        LocalDate date3 = LocalDate.of(2022, 12, 13);
+        LocalDate date4 = LocalDate.of(2022, 12, 5);
+        todoTable.getItems().add(new CommonTask("Project Presentation", date, "CSC207"));
+        todoTable.getItems().add(new CommonTask("Final Exam", date2, "CSC207"));
+        todoTable.getItems().add(new CommonTask("Buy cat food", date3, "Pet"));
+        todoTable.getItems().add(new CommonTask("Send manager work schedule", date4, "Work"));
+
+
 
     }
 
+
     public void todoAddAction(ActionEvent actionEvent) {
-        CreateAddTaskScreen.newForm();
+        controller.todoAddAction(actionEvent);
     }
 
     public void todoEditButton(ActionEvent actionEvent) {
         CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();
-        CreateEditTaskScreen.newForm();
+        controller.todoEditButton(actionEvent, selectedItem);
 
 
     }
@@ -76,5 +86,12 @@ public class ToDoScreen {
         todoTable.getItems().remove(selectedItem);
     }
 
-}
+    public CommonTask getSelectedItem() {
+        if (!todoTable.getItems().isEmpty()) {
+            return (CommonTask) todoTable.getSelectionModel().getSelectedItem();
+        }
 
+        return null;
+    }
+
+}

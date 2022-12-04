@@ -14,6 +14,7 @@ public class CreateAddTaskScreen {
             Stage taskStage = new Stage();
             taskStage.initStyle(StageStyle.DECORATED);
             taskStage.setScene(scene);
+            taskStage.setResizable(false);
             taskStage.show();
 
         } catch (Exception e) {
