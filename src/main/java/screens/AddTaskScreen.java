@@ -31,8 +31,14 @@ public class AddTaskScreen {
 
     }
 
-    public void cancelTask(ActionEvent actionEvent) {
-        Stage stage = (Stage) taskCancel.getScene().getWindow();
+
+    @FXML
+    public void addTask(ActionEvent event) {
+     
+    }
+
+    public void taskCancelAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) taskCancelButton.getScene().getWindow();
         stage.close();
     }
 }

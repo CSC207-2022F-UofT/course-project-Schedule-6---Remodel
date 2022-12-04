@@ -40,6 +40,11 @@
                </font>
             </Label>
             <Line layoutX="1099.0" startY="700.0" stroke="WHITE" />
+            <Button fx:id="fileImportButton" layoutX="758.0" layoutY="23.0" mnemonicParsing="false" onAction="#addNewFile" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: white;" text="IMPORT ICS FILE">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="16.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
       <GridPane fx:id="Gridlock" layoutX="21.0" layoutY="96.0" prefHeight="584.0" prefWidth="1057.0">

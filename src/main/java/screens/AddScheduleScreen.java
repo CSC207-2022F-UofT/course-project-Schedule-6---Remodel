@@ -1,6 +1,6 @@
 package screens;
 
-import controller.Schedule.AddScheduleController;
+import controller.Schedule.TimetableController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -18,32 +18,35 @@ public class AddScheduleScreen {
 
     @FXML
     private DatePicker endDate;
+
     @FXML
     private TextField startTime;
+
     @FXML
     private TextField endTime;
     @FXML
-    private ChoiceBox<String> startAMPM;
-
-    @FXML
-    private ChoiceBox<String> endAMPM;
-
-    @FXML
     private Label errorMessage;
+    private TimetableController TTC = new TimetableController();
 
-    public void addScheduleAction(ActionEvent event){};
-    public void cancelScheduleAction(ActionEvent event){};
+    public void addScheduleAction(ActionEvent event){TTC.addScheduleAction(
+            event, scheduleTitle, startDate, endDate, startTime, endTime, errorMessage);}
+    public void cancelScheduleAction(ActionEvent event){}
 
 
-//    public AddScheduleScreen(AddScheduleController controller) {
+
+
+
+//    private final UpdateScheduleController addScheduleController;
+
+//    public AddScheduleScreen(UpdateScheduleController controller) {
 //        this.addScheduleController = controller;
 //    }
 //
 //    public void addScheduleAction(ActionEvent event) {
 //        System.out.println("Click" + event.getEventType());
 //
-//        // add try and catch to catch errorMessage from controller
-//        addScheduleController.create(this.scheduleTitle.getText(), this.scheduleDate.getValue(),
+//        addScheduleController.create(errorMessage, this.scheduleTitle.getText(),
+//                this.startDate.getValue(), this.endDate.getValue(),
 //                this.startTime.getText(), this.endTime.getText(), this.startAMPM.getValue(), this.endAMPM.getValue());
 //    }
 }

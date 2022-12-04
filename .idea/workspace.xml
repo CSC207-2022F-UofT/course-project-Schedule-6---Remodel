@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Fixing login controller with new User entity">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2INA223FaAmzXW1zgH1gGhjfbAe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
+      <module name="schedule-6---Remodel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LoginPage" />
+        <item itemvalue="Application.LoginPage" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="changed parameter privacySetting to boolean">
+      <created>1669961936020</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669961936020</updated>
+    </task>
+    <task id="LOCAL-00002" summary="implemented EditTask [WIP]">
+      <created>1669967017600</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669967017600</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added DeleteTaskController">
+      <created>1669967031403</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669967031403</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Added DeleteTaskController" />
+      <created>1670011459433</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670011459433</updated>
+      <workItem from="1670011461468" duration="720000" />
+      <workItem from="1670012198091" duration="13241000" />
+    </task>
+    <task id="LOCAL-00004" summary="Added DeleteTaskInputBoundary and EditTaskInputBoundary">
+      <created>1670012955360</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670012955360</updated>
+    </task>
+    <task id="LOCAL-00005" summary="renamed AddTaskPresenter to TaskPresenter">
+      <created>1670014599940</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670014599940</updated>
+    </task>
+    <task id="LOCAL-00006" summary="implemented DeleteTaskController">
+      <created>1670014640736</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670014640736</updated>
+    </task>
+    <task id="LOCAL-00007" summary="changed title to description">
+      <created>1670015392310</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670015392310</updated>
+    </task>
+    <task id="LOCAL-00008" summary="implemented DeleteTask, typo fix">
+      <created>1670017871765</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670017871765</updated>
+    </task>
+    <task id="LOCAL-00009" summary="misc.xml">
+      <created>1670017901944</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670017901944</updated>
+    </task>
+    <task id="LOCAL-00010" summary="implemented EditTaskController">
+      <created>1670020438548</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670020438548</updated>
+    </task>
+    <task id="LOCAL-00011" summary="typo">
+      <created>1670020462490</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670020462490</updated>
+    </task>
+    <task id="LOCAL-00012" summary="misc.xml">
+      <created>1670020472855</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670020472855</updated>
+    </task>
+    <task id="LOCAL-00013" summary="typos">
+      <created>1670023241636</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670023241636</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update from main">
+      <created>1670023400018</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670023400018</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add schedule to DB from calendar works">
+      <created>1670076598325</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670076598325</updated>
+    </task>
+    <task id="LOCAL-00016" summary="removed unused variables">
+      <created>1670076698230</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670076698230</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added User entity interface">
+      <created>1670077214414</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670077214414</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added User entity classes">
+      <created>1670077646281</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1670077646281</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fixing login controller with new User entity">
+      <created>1670078932568</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1670078932568</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changed parameter privacySetting to boolean" />
+    <MESSAGE value="implemented EditTask [WIP]" />
+    <MESSAGE value="Added DeleteTaskController" />
+    <MESSAGE value="Added DeleteTaskInputBoundary and EditTaskInputBoundary" />
+    <MESSAGE value="renamed AddTaskPresenter to TaskPresenter" />
+    <MESSAGE value="implemented DeleteTaskController" />
+    <MESSAGE value="changed title to description" />
+    <MESSAGE value="implemented DeleteTask, typo fix" />
+    <MESSAGE value="implemented EditTaskController" />
+    <MESSAGE value="typo" />
+    <MESSAGE value="misc.xml" />
+    <MESSAGE value="typos" />
+    <MESSAGE value="update from main" />
+    <MESSAGE value="added getTaskExist" />
+    <MESSAGE value="added [Todo] (possible bug we might run into)" />
+    <MESSAGE value="update xml files" />
+    <MESSAGE value="Working on breaking down map for schedule" />
+    <MESSAGE value="add schedule to DB from calendar works" />
+    <MESSAGE value="removed unused variables" />
+    <MESSAGE value="added User entity interface" />
+    <MESSAGE value="added User entity classes" />
+    <MESSAGE value="Fixing login controller with new User entity" />
+    <MESSAGE value="xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

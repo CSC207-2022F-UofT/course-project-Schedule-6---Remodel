@@ -17,10 +17,12 @@ public class DeleteTask implements DeleteTaskInputBoundary {
     }
 
     public TaskResponseModel delete(TaskRequestModel inputData){
-        dataAccess.deleteTask(inputData);
 
-        TaskResponseModel responseModel = new TaskResponseModel(inputData.getDescripiton(), inputData.getDate(),
-                inputData.getPrivacy(), inputData.getCategory());
+        TaskResponseModel responseModel = new TaskResponseModel(inputData.getDescription(), inputData.getDate(),
+                inputData.getCategory());
+
+        dataAccess.deleteTask(responseModel);
+
         return presenter.prepareSuccessView(responseModel);
     }
 }

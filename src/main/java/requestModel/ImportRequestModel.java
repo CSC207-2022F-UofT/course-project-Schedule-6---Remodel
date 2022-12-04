@@ -25,9 +25,17 @@ public class ImportRequestModel {
         return this.titles;
     }
 
-    public ArrayList<LocalDate> getDates(){
+    public ArrayList<LocalDate> getStartDates(){
+        return getDates(this.starts);
+    }
+
+    public ArrayList<LocalDate> getEndDates(){
+        return getDates(this.ends);
+    }
+
+    private ArrayList<LocalDate> getDates(ArrayList<String> input){
         ArrayList<LocalDate> dates = new ArrayList<>();
-        for (String dateEntry : this.starts) {
+        for (String dateEntry : input) {
             int index = dateEntry.indexOf("2"); //The index where the date expression starts
             LocalDate localDate = LocalDate.parse(dateEntry.substring(index, index + 8),
                     DateTimeFormatter.ofPattern("yyyyMMdd"));
