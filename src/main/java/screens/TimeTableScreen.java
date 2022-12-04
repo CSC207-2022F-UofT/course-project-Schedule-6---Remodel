@@ -1,24 +1,18 @@
 package screens;
 
-import com.calendarfx.view.CalendarView;
 import controller.Schedule.TimetableController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import main.LoginPage;
 import useCaseInteractor.User.userCollection;
 
 
 import java.io.IOException;
 import java.net.UnknownHostException;
-import java.util.Objects;
 
 public class TimeTableScreen {
     @FXML
@@ -39,9 +33,6 @@ public class TimeTableScreen {
     private Stage filePicker = new Stage();
     private TimetableController TTC = new TimetableController();
 
-    public void showSchedule(ActionEvent event) {
-        TTC.showSchedule(event);
-    }
     public void printCalendarEntries(ActionEvent event) throws InterruptedException, UnknownHostException {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
 
     public void addFutureEntries(ActionEvent event) {TTC.futureEventButton(event);}
