@@ -1,0 +1,62 @@
+Index: src/main/resources/todo.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"700.0\" prefWidth=\"400.0\" style=\"-fx-background-color: #82AA68;\" xmlns=\"http://javafx.com/javafx/19\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"screens.ToDoScreen\">\r\n   <children>\r\n      <Label layoutX=\"14.0\" layoutY=\"10.0\" prefHeight=\"54.0\" prefWidth=\"78.0\" text=\"TODO\" textFill=\"WHITE\">\r\n         <font>\r\n            <Font name=\"Gill Sans MT Condensed\" size=\"40.0\" />\r\n         </font>\r\n      </Label>\r\n      <Button fx:id=\"todoAddButton\" layoutX=\"99.0\" layoutY=\"14.0\" mnemonicParsing=\"false\" onAction=\"#todoAddAction\" prefHeight=\"31.0\" prefWidth=\"54.0\" style=\"-fx-background-color: white;\" text=\"ADD\">\r\n         <font>\r\n            <Font name=\"Gill Sans MT Condensed\" size=\"16.0\" />\r\n         </font>\r\n      </Button>\r\n      <TableView fx:id=\"todoTable\" layoutY=\"78.0\" prefHeight=\"627.0\" prefWidth=\"400.0\">\r\n         <placeholder>\r\n            <Label text=\"No tasks yet\" />\r\n         </placeholder>\r\n        <columns>\r\n          <TableColumn fx:id=\"taskTitle\" prefWidth=\"200.0\" text=\"TASK\" />\r\n            <TableColumn fx:id=\"taskCategory\" minWidth=\"0.0\" prefWidth=\"119.0\" text=\"CATEGORY\" />\r\n          <TableColumn fx:id=\"taskDate\" minWidth=\"0.0\" prefWidth=\"85.0\" text=\"DATE\" />\r\n        </columns>\r\n      </TableView>\r\n      <Button fx:id=\"deleteTaskButton\" layoutX=\"316.0\" layoutY=\"21.0\" mnemonicParsing=\"false\" onAction=\"#todoDeleteButton\" prefHeight=\"31.0\" prefWidth=\"70.0\" style=\"-fx-background-color: white;\" text=\"DELETE\">\r\n         <font>\r\n            <Font name=\"Gill Sans MT Condensed\" size=\"16.0\" />\r\n         </font>\r\n      </Button>\r\n      <Button fx:id=\"editTaskButton\" layoutX=\"253.0\" layoutY=\"21.0\" mnemonicParsing=\"false\" onAction=\"#todoEditButton\" prefHeight=\"31.0\" prefWidth=\"54.0\" style=\"-fx-background-color: white;\" text=\"EDIT\">\r\n         <font>\r\n            <Font name=\"Gill Sans MT Condensed\" size=\"16.0\" />\r\n         </font>\r\n      </Button>\r\n      <Button fx:id=\"taskAdd\" layoutX=\"190.0\" layoutY=\"21.0\" mnemonicParsing=\"false\" onAction=\"#todoAddTask\" prefHeight=\"31.0\" prefWidth=\"54.0\" style=\"-fx-background-color: white;\" text=\"ADD\">\r\n         <font>\r\n            <Font name=\"Gill Sans MT Condensed\" size=\"16.0\" />\r\n         </font>\r\n      </Button>\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/todo.fxml b/src/main/resources/todo.fxml
+--- a/src/main/resources/todo.fxml	(revision edb8f84faa192a72cc64e254e9d6696d3943f025)
++++ b/src/main/resources/todo.fxml	(date 1670168018744)
+@@ -14,11 +14,7 @@
+             <Font name="Gill Sans MT Condensed" size="40.0" />
+          </font>
+       </Label>
+-      <Button fx:id="todoAddButton" layoutX="99.0" layoutY="14.0" mnemonicParsing="false" onAction="#todoAddAction" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="ADD">
+-         <font>
+-            <Font name="Gill Sans MT Condensed" size="16.0" />
+-         </font>
+-      </Button>
++
+       <TableView fx:id="todoTable" layoutY="78.0" prefHeight="627.0" prefWidth="400.0">
+          <placeholder>
+             <Label text="No tasks yet" />
+Index: src/main/java/screens/ToDoScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package screens;\r\n\r\nimport entity.Task.CommonTask;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.SelectionMode;\r\nimport javafx.scene.control.TableColumn;\r\nimport javafx.scene.control.TableView;\r\n\r\nimport java.net.URL;\r\n\r\nimport java.util.ResourceBundle;\r\n\r\npublic class ToDoScreen {\r\n\r\n    @FXML\r\n    private TableColumn taskTitle;\r\n\r\n    @FXML\r\n    private TableColumn taskDate;\r\n\r\n    @FXML\r\n    private TableColumn taskCategory;\r\n\r\n    @FXML\r\n    private ResourceBundle resources;\r\n\r\n    @FXML\r\n    private URL location;\r\n\r\n    @FXML\r\n    private Button todoAddButton;\r\n\r\n    @FXML\r\n    private TableView todoTable;\r\n\r\n    @FXML\r\n    private Button deleteTaskButton;\r\n\r\n    @FXML\r\n    private Button editTaskButton;\r\n\r\n    @FXML\r\n    private Button taskAdd;\r\n\r\n    public void initialize(){\r\n        TableView.TableViewSelectionModel selectionModel = todoTable.getSelectionModel();\r\n        selectionModel.setSelectionMode(SelectionMode.SINGLE);\r\n    }\r\n\r\n    public void todoAddAction(ActionEvent actionEvent) {\r\n        CreateAddTaskScreen.newForm();\r\n    }\r\n\r\n    public void todoEditButton(ActionEvent actionEvent) {\r\n        CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();\r\n        CreateEditTaskScreen.newForm();\r\n\r\n    }\r\n\r\n    public void todoDeleteButton(ActionEvent actionEvent) {\r\n        CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();\r\n        todoTable.getItems().remove(selectedItem);\r\n    }\r\n\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/screens/ToDoScreen.java b/src/main/java/screens/ToDoScreen.java
+--- a/src/main/java/screens/ToDoScreen.java	(revision edb8f84faa192a72cc64e254e9d6696d3943f025)
++++ b/src/main/java/screens/ToDoScreen.java	(date 1670167933453)
+@@ -49,7 +49,7 @@
+         selectionModel.setSelectionMode(SelectionMode.SINGLE);
+     }
+ 
+-    public void todoAddAction(ActionEvent actionEvent) {
++    public void todoAddTask(ActionEvent actionEvent) {
+         CreateAddTaskScreen.newForm();
+     }
+ 
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_19\" default=\"true\" project-jdk-name=\"zulu-19\" project-jdk-type=\"JavaSDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision edb8f84faa192a72cc64e254e9d6696d3943f025)
++++ b/.idea/misc.xml	(date 1670167816711)
+@@ -7,5 +7,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="zulu-19" project-jdk-type="JavaSDK" />
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="zulu-19" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
+ </project>
+\ No newline at end of file
