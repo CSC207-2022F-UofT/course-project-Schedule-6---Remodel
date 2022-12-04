@@ -1,0 +1,147 @@
+Index: src/main/resources/todo.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"700.0\" prefWidth=\"400.0\" style=\"-fx-background-color: #82AA68;\" xmlns=\"http://javafx.com/javafx/19\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"screens.ToDoScreen\">\r\n   <children>\r\n      <Label layoutX=\"14.0\" layoutY=\"10.0\" prefHeight=\"54.0\" prefWidth=\"78.0\" text=\"TODO\" textFill=\"WHITE\">\r\n         <font>\r\n            <Font name=\"Gill Sans MT Condensed\" size=\"40.0\" />\r\n         </font>\r\n      </Label>\r\n      <Button fx:id=\"todoAddButton\" layoutX=\"189.0\" layoutY=\"21.0\" mnemonicParsing=\"false\" onAction=\"#todoAddButton\" prefHeight=\"31.0\" prefWidth=\"54.0\" style=\"-fx-background-color: white;\" text=\"ADD\">\r\n         <font>\r\n            <Font name=\"Gill Sans MT Condensed\" size=\"16.0\" />\r\n         </font>\r\n      </Button>\r\n      <TableView fx:id=\"todoTable\" layoutY=\"78.0\" prefHeight=\"627.0\" prefWidth=\"400.0\">\r\n         <placeholder>\r\n            <Label text=\"No tasks yet\" />\r\n         </placeholder>\r\n        <columns>\r\n          <TableColumn fx:id=\"taskTitle\" prefWidth=\"200.0\" text=\"TASK\" />\r\n            <TableColumn fx:id=\"taskCategory\" minWidth=\"0.0\" prefWidth=\"119.0\" text=\"CATEGORY\" />\r\n          <TableColumn fx:id=\"taskDate\" minWidth=\"0.0\" prefWidth=\"85.0\" text=\"DATE\" />\r\n        </columns>\r\n      </TableView>\r\n      <Button fx:id=\"deleteTaskButton\" layoutX=\"316.0\" layoutY=\"21.0\" mnemonicParsing=\"false\" onAction=\"#todoDeleteButton\" prefHeight=\"31.0\" prefWidth=\"70.0\" style=\"-fx-background-color: white;\" text=\"DELETE\">\r\n         <font>\r\n            <Font name=\"Gill Sans MT Condensed\" size=\"16.0\" />\r\n         </font>\r\n      </Button>\r\n      <Button fx:id=\"editTaskButton\" layoutX=\"253.0\" layoutY=\"21.0\" mnemonicParsing=\"false\" onAction=\"#todoEditButton\" prefHeight=\"31.0\" prefWidth=\"54.0\" style=\"-fx-background-color: white;\" text=\"EDIT\">\r\n         <font>\r\n            <Font name=\"Gill Sans MT Condensed\" size=\"16.0\" />\r\n         </font>\r\n      </Button>\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/todo.fxml b/src/main/resources/todo.fxml
+--- a/src/main/resources/todo.fxml	(revision 73e60018b0f186bc262cf374b1176944878fc59a)
++++ b/src/main/resources/todo.fxml	(date 1670168332172)
+@@ -14,7 +14,7 @@
+             <Font name="Gill Sans MT Condensed" size="40.0" />
+          </font>
+       </Label>
+-      <Button fx:id="todoAddButton" layoutX="189.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoAddButton" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="ADD">
++      <Button fx:id="todoAddButton" layoutX="99.0" layoutY="14.0" mnemonicParsing="false" onAction="#todoAddAction" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="ADD">
+          <font>
+             <Font name="Gill Sans MT Condensed" size="16.0" />
+          </font>
+@@ -35,6 +35,11 @@
+          </font>
+       </Button>
+       <Button fx:id="editTaskButton" layoutX="253.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoEditButton" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="EDIT">
++         <font>
++            <Font name="Gill Sans MT Condensed" size="16.0" />
++         </font>
++      </Button>
++      <Button fx:id="taskAdd" layoutX="190.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoAddAction" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="ADD">
+          <font>
+             <Font name="Gill Sans MT Condensed" size="16.0" />
+          </font>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"8ef2ecaa-91cc-4747-aeed-5efd224948ce\" name=\"Changes\" comment=\"Fixing login controller with new User entity\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m___Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m___Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m___Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m___Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m___Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m___Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GithubProjectSettings\">\r\n    <option name=\"branchProtectionPatterns\">\r\n      <list>\r\n        <option value=\"main\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2INA223FaAmzXW1zgH1gGhjfbAe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"LoginPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.LoginPage\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.LoginPage\" />\r\n        <item itemvalue=\"Application.LoginPage\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task id=\"LOCAL-00001\" summary=\"changed parameter privacySetting to boolean\">\r\n      <created>1669961936020</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669961936020</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"implemented EditTask [WIP]\">\r\n      <created>1669967017600</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669967017600</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Added DeleteTaskController\">\r\n      <created>1669967031403</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669967031403</updated>\r\n    </task>\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"8ef2ecaa-91cc-4747-aeed-5efd224948ce\" name=\"Changes\" comment=\"Added DeleteTaskController\" />\r\n      <created>1670011459433</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1670011459433</updated>\r\n      <workItem from=\"1670011461468\" duration=\"720000\" />\r\n      <workItem from=\"1670012198091\" duration=\"13241000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Added DeleteTaskInputBoundary and EditTaskInputBoundary\">\r\n      <created>1670012955360</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670012955360</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"renamed AddTaskPresenter to TaskPresenter\">\r\n      <created>1670014599940</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670014599940</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"implemented DeleteTaskController\">\r\n      <created>1670014640736</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670014640736</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"changed title to description\">\r\n      <created>1670015392310</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670015392310</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"implemented DeleteTask, typo fix\">\r\n      <created>1670017871765</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670017871765</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"misc.xml\">\r\n      <created>1670017901944</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670017901944</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"implemented EditTaskController\">\r\n      <created>1670020438548</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670020438548</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"typo\">\r\n      <created>1670020462490</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670020462490</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"misc.xml\">\r\n      <created>1670020472855</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670020472855</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"typos\">\r\n      <created>1670023241636</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670023241636</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"update from main\">\r\n      <created>1670023400018</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670023400018</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"add schedule to DB from calendar works\">\r\n      <created>1670076598325</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670076598325</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"removed unused variables\">\r\n      <created>1670076698230</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670076698230</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"added User entity interface\">\r\n      <created>1670077214414</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670077214414</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"added User entity classes\">\r\n      <created>1670077646281</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670077646281</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"Fixing login controller with new User entity\">\r\n      <created>1670078932568</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670078932568</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"20\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"changed parameter privacySetting to boolean\" />\r\n    <MESSAGE value=\"implemented EditTask [WIP]\" />\r\n    <MESSAGE value=\"Added DeleteTaskController\" />\r\n    <MESSAGE value=\"Added DeleteTaskInputBoundary and EditTaskInputBoundary\" />\r\n    <MESSAGE value=\"renamed AddTaskPresenter to TaskPresenter\" />\r\n    <MESSAGE value=\"implemented DeleteTaskController\" />\r\n    <MESSAGE value=\"changed title to description\" />\r\n    <MESSAGE value=\"implemented DeleteTask, typo fix\" />\r\n    <MESSAGE value=\"implemented EditTaskController\" />\r\n    <MESSAGE value=\"typo\" />\r\n    <MESSAGE value=\"misc.xml\" />\r\n    <MESSAGE value=\"typos\" />\r\n    <MESSAGE value=\"update from main\" />\r\n    <MESSAGE value=\"added getTaskExist\" />\r\n    <MESSAGE value=\"added [Todo] (possible bug we might run into)\" />\r\n    <MESSAGE value=\"update xml files\" />\r\n    <MESSAGE value=\"Working on breaking down map for schedule\" />\r\n    <MESSAGE value=\"add schedule to DB from calendar works\" />\r\n    <MESSAGE value=\"removed unused variables\" />\r\n    <MESSAGE value=\"added User entity interface\" />\r\n    <MESSAGE value=\"added User entity classes\" />\r\n    <MESSAGE value=\"Fixing login controller with new User entity\" />\r\n    <MESSAGE value=\"xml\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"xml\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 73e60018b0f186bc262cf374b1176944878fc59a)
++++ b/.idea/workspace.xml	(date 1670169532831)
+@@ -4,12 +4,22 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Fixing login controller with new User entity">
++    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__6_16_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__6_16_p_m___Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m___Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m___Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_9_37_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_9_37_p_m___Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_9_40_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_9_40_p_m___Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28__7_52_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28__7_52_p_m___Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m___Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m___Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m___Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__3_01_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__3_01_p_m___Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/screens/ToDoScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/ToDoScreen.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/todo.fxml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -27,7 +37,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
++        <entry key="$PROJECT_DIR$" value="feature-5-todo-list" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -56,17 +66,18 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Git.Branch.Popup.ShowAllRemotes": "true",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "node.js.detected.package.eslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml"
+   }
+-}</component>
++}]]></component>
+   <component name="RunManager">
+     <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
+@@ -83,6 +94,7 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Application.LoginPage" />
+         <item itemvalue="Application.LoginPage" />
+         <item itemvalue="Application.LoginPage" />
+       </list>
+Index: src/main/java/screens/ToDoScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package screens;\r\n\r\nimport entity.Task.CommonTask;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.SelectionMode;\r\nimport javafx.scene.control.TableColumn;\r\nimport javafx.scene.control.TableView;\r\n\r\nimport java.net.URL;\r\n\r\nimport java.util.ResourceBundle;\r\n\r\npublic class ToDoScreen {\r\n\r\n    @FXML\r\n    private TableColumn taskTitle;\r\n\r\n    @FXML\r\n    private TableColumn taskDate;\r\n\r\n    @FXML\r\n    private TableColumn taskCategory;\r\n\r\n    @FXML\r\n    private ResourceBundle resources;\r\n\r\n    @FXML\r\n    private URL location;\r\n\r\n    @FXML\r\n    private Button todoAddButton;\r\n\r\n    @FXML\r\n    private TableView todoTable;\r\n\r\n    public void initialize(){\r\n        TableView.TableViewSelectionModel selectionModel = todoTable.getSelectionModel();\r\n        selectionModel.setSelectionMode(SelectionMode.SINGLE);\r\n    }\r\n\r\n    public void todoAddButton(ActionEvent actionEvent) {\r\n        createTaskForm.newForm();\r\n    }\r\n\r\n    public void todoEditButton(ActionEvent actionEvent) {\r\n        CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();\r\n        CreateEditTaskScreen.newForm();\r\n\r\n    }\r\n\r\n    public void todoDeleteButton(ActionEvent actionEvent) {\r\n        CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();\r\n        todoTable.getItems().remove(selectedItem);\r\n    }\r\n\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/screens/ToDoScreen.java b/src/main/java/screens/ToDoScreen.java
+--- a/src/main/java/screens/ToDoScreen.java	(revision 73e60018b0f186bc262cf374b1176944878fc59a)
++++ b/src/main/java/screens/ToDoScreen.java	(date 1670168285837)
+@@ -35,13 +35,22 @@
+     @FXML
+     private TableView todoTable;
+ 
++    @FXML
++    private Button deleteTaskButton;
++
++    @FXML
++    private Button editTaskButton;
++
++    @FXML
++    private Button taskAdd;
++
+     public void initialize(){
+         TableView.TableViewSelectionModel selectionModel = todoTable.getSelectionModel();
+         selectionModel.setSelectionMode(SelectionMode.SINGLE);
+     }
+ 
+-    public void todoAddButton(ActionEvent actionEvent) {
+-        createTaskForm.newForm();
++    public void todoAddAction(ActionEvent actionEvent) {
++        //CreateAddTaskScreen.newForm();
+     }
+ 
+     public void todoEditButton(ActionEvent actionEvent) {
