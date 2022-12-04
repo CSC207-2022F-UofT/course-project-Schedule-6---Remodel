@@ -35,8 +35,7 @@ public class TimetablePresenter {
 
     private final TimeManagement TM  = new TimeManagement();
 
-    public void showSchedule(CalendarView calendar) {
-        ArrayList<ArrayList<Object>> entireSchedule = null;
+    public void loadSchedule(CalendarView calendar, ArrayList<ArrayList<Object>> entireSchedule) {
         for (Calendar temp : calendar.getCalendars()) {
             temp.clear();
             for (ArrayList<Object> schedule : entireSchedule) {
