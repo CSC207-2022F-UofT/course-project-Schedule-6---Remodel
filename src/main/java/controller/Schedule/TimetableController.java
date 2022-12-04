@@ -1,5 +1,6 @@
 package controller.Schedule;
 
+import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.CalendarSource;
@@ -16,7 +17,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
 import java.io.File;
@@ -31,6 +34,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Window;
 import javafx.util.Duration;
 import main.LoginPage;
+import presenter.AddSchedulePresenter;
 import presenter.TimetablePresenter;
 import screens.CreateNewEntryScreen;
 import screens.CreateRegistrationScreen;
@@ -40,17 +44,19 @@ import main.collectCollection;
 import javafx.stage.Stage;
 
 public class TimetableController {
-    private CalendarView calendar;
-    private TimeManagement TM = new TimeManagement();
+    public static CalendarView calendar = new CalendarView();
     private TimetablePresenter TTP = new TimetablePresenter();
 
     public void showSchedule(ActionEvent event) {
         TTP.showSchedule(calendar);
     }
 
-    public void printCalendarEntries(ActionEvent event, Label entriesSaved) throws InterruptedException, UnknownHostException {
-        TTP.printCalendarEntries(entriesSaved, calendar);
-    }
+    public void printCalendarEntries(ActionEvent event, Label entriesSaved)
+    {TTP.printCalendarEntries(entriesSaved);}
+
+    public void addScheduleAction(ActionEvent event, TextField scheduleTitle, DatePicker startDate,
+                                  DatePicker endDate, TextField startTime, TextField endTime, Label errorMessage)
+    {TTP.addScheduleAction(scheduleTitle, startDate, endDate, startTime, endTime, errorMessage);}
 
     public void setUsernameChangeLabel(String name){
         for (Calendar temp: calendar.getCalendars()) {
@@ -60,13 +66,10 @@ public class TimetableController {
     public void futureEventButton(ActionEvent event){
         CreateNewEntryScreen.newForm();}
 
-    public void loadCalendar(GridPane Gridlock) throws UnknownHostException {
-        calendar = new CalendarView();
+    public void loadCalendar(GridPane Gridlock) {
         CalendarSource myCalendarSource = new CalendarSource("");
         calendar.getCalendarSources().addAll(myCalendarSource);
-        calendar.getCalendarSources().remove(1);
         calendar.setRequestedTime(LocalTime.now());
-
         Thread updateTimeThread = new Thread("Calendar: Update Time Thread") {
             @Override
             public void run() {
@@ -105,11 +108,10 @@ public class TimetableController {
 
         FileChooser file_chooser = new FileChooser();
         file_chooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text Files", "*.ics"));
-        EventHandler<ActionEvent> e = new EventHandler<ActionEvent>() {public void handle(ActionEvent e){
+        EventHandler<ActionEvent> e = e1 -> {
             // get the file selected
             File file = file_chooser.showOpenDialog(stage);
-            }
-        };
+            };
         fileImportButton.setOnAction(e);
     }
 }
