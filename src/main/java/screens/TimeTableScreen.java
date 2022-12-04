@@ -33,7 +33,7 @@ public class TimeTableScreen {
     private Stage filePicker = new Stage();
     private TimetableController TTC = new TimetableController();
 
-    public void printCalendarEntries(ActionEvent event) {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
+    public void printCalendarEntries(ActionEvent event) throws UnknownHostException {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
 
     public void addFutureEntries(ActionEvent event) {TTC.futureEventButton(event);}
     public void addNewFile(ActionEvent event) {TTC.addNewFile(event, fileImportButton, filePicker);}
