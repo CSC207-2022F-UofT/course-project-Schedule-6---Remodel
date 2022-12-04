@@ -35,13 +35,22 @@ public class ToDoScreen {
     @FXML
     private TableView todoTable;
 
+    @FXML
+    private Button deleteTaskButton;
+
+    @FXML
+    private Button editTaskButton;
+
+    @FXML
+    private Button taskAdd;
+
     public void initialize(){
         TableView.TableViewSelectionModel selectionModel = todoTable.getSelectionModel();
         selectionModel.setSelectionMode(SelectionMode.SINGLE);
     }
 
-    public void todoAddButton(ActionEvent actionEvent) {
-        createTaskForm.newForm();
+    public void todoAddAction(ActionEvent actionEvent) {
+        //CreateAddTaskScreen.newForm();
     }
 
     public void todoEditButton(ActionEvent actionEvent) {

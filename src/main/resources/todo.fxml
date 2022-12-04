@@ -14,7 +14,7 @@
             <Font name="Gill Sans MT Condensed" size="40.0" />
          </font>
       </Label>
-      <Button fx:id="todoAddButton" layoutX="189.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoAddButton" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="ADD">
+      <Button fx:id="todoAddButton" layoutX="99.0" layoutY="14.0" mnemonicParsing="false" onAction="#todoAddAction" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="ADD">
          <font>
             <Font name="Gill Sans MT Condensed" size="16.0" />
          </font>
@@ -35,6 +35,11 @@
          </font>
       </Button>
       <Button fx:id="editTaskButton" layoutX="253.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoEditButton" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="EDIT">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="taskAdd" layoutX="190.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoAddAction" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="ADD">
          <font>
             <Font name="Gill Sans MT Condensed" size="16.0" />
          </font>
