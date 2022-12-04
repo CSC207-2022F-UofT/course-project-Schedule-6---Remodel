@@ -1,7 +1,5 @@
 package screens;
 
-import controller.Task.TaskCreationController;
-import database.MongoDBAccess;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -12,17 +10,13 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class AddTaskScreen {
-    public Button taskCancelButton;
-
-    public Label taskError;
-    @FXML
-    private ComboBox<?> categoryComboBox;
+    public Button taskCancel;
 
     @FXML
-    private ComboBox<String> privacyComboBox;
+    private TextField taskCategory;
 
     @FXML
-    private Button taskCreateAddButton;
+    private Button taskAdd;
 
     @FXML
     private DatePicker taskDate;
@@ -31,25 +25,15 @@ public class AddTaskScreen {
     private TextField taskDescription;
 
     @FXML
-    public TableView todoTable;
-
-    private final TaskCreationController taskCreationController;
-
-    public AddTaskScreen(TaskCreationController controller){
-        this.taskCreationController = controller;
-    }
+    private Label errorMessage;
 
 
-    @FXML
     public void addTask(ActionEvent event) {
-        taskCreationController.create(taskError, taskDescription.getText(), taskDate.getValue(), (String) categoryComboBox.getValue());
-
+     
     }
 
-
-
-    public void taskCancelAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) taskCancelButton.getScene().getWindow();
+    public void cancelTask(ActionEvent actionEvent) {
+        Stage stage = (Stage) taskCancel.getScene().getWindow();
         stage.close();
     }
 }

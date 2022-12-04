@@ -14,17 +14,12 @@
             <Font name="Gill Sans MT Condensed" size="40.0" />
          </font>
       </Label>
-      <Button fx:id="todoAddButton" layoutX="189.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoAddButton" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="ADD">
-         <font>
-            <Font name="Gill Sans MT Condensed" size="16.0" />
-         </font>
-      </Button>
       <TableView fx:id="todoTable" layoutY="78.0" prefHeight="627.0" prefWidth="400.0">
          <placeholder>
             <Label text="No tasks yet" />
          </placeholder>
         <columns>
-          <TableColumn fx:id="taskTitle" prefWidth="200.0" text="TASK" />
+          <TableColumn fx:id="taskDescription" prefWidth="200.0" text="TASK" />
             <TableColumn fx:id="taskCategory" minWidth="0.0" prefWidth="119.0" text="CATEGORY" />
           <TableColumn fx:id="taskDate" minWidth="0.0" prefWidth="85.0" text="DATE" />
         </columns>
@@ -35,6 +30,11 @@
          </font>
       </Button>
       <Button fx:id="editTaskButton" layoutX="253.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoEditButton" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="EDIT">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="taskAdd" layoutX="190.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoAddAction" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="ADD">
          <font>
             <Font name="Gill Sans MT Condensed" size="16.0" />
          </font>
