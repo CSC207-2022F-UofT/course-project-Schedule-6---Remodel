@@ -84,7 +84,7 @@ public class TimeTableScreen {
     public void showSchedule(ActionEvent event) {
         TTC.showSchedule(event);
     }
-    public void printCalendarEntries(ActionEvent event) throws InterruptedException, UnknownHostException {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
+    public void printCalendarEntries(ActionEvent event) {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
 
     public void addFutureEntries(ActionEvent event) {TTC.futureEventButton(event);}
     public void addNewFile(ActionEvent event) {importControl.addNewFile(event, fileImportButton, filePicker);}
