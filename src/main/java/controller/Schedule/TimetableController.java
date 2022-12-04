@@ -29,7 +29,8 @@ import main.collectCollection;
 import javafx.stage.Stage;
 
 public class TimetableController {
-    private CalendarView calendar;
+    public static CalendarView calendar = new CalendarView();
+
     private TimeManagement TM = new TimeManagement();
     private TimetablePresenter TTP = new TimetablePresenter();
 
@@ -52,7 +53,6 @@ public class TimetableController {
         CreateNewEntryScreen.newForm();}
 
     public void loadCalendar(GridPane Gridlock) throws UnknownHostException {
-        calendar = new CalendarView();
         CalendarSource myCalendarSource = new CalendarSource("");
         calendar.getCalendarSources().addAll(myCalendarSource);
         calendar.getCalendarSources().remove(1);
