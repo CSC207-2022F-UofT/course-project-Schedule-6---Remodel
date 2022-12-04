@@ -1,25 +1,20 @@
 package useCaseInteractor.Schedule;
 
-import boundary.Schedule.AddScheduleItemInputBoundary;
+import boundary.Schedule.UpdateScheduleInputBoundary;
 import entity.Schedule.ScheduleItem;
 import entity.Schedule.ScheduleItemFactory;
-import boundary.Schedule.AddScheduleOutputBoundary;
 import requestModel.ScheduleItemRequestModel;
 import responseModel.Schedule.ScheduleItemResponseModel;
 import useCaseInteractor.DataAccess;
 
-public class AddScheduleItem implements AddScheduleItemInputBoundary {
+public class UpdateScheduleItem implements UpdateScheduleInputBoundary {
 
     final DataAccess dataAccess;
     final ScheduleItemFactory scheduleItemFactory;
 
-    final AddScheduleOutputBoundary outputBoundary;
-
-    public AddScheduleItem(DataAccess dataAccess, ScheduleItemFactory scheduleItemFactory,
-                           AddScheduleOutputBoundary outputBoundary) {
+    public UpdateScheduleItem(DataAccess dataAccess, ScheduleItemFactory scheduleItemFactory) {
         this.dataAccess = dataAccess;
         this.scheduleItemFactory = scheduleItemFactory;
-        this.outputBoundary = outputBoundary;
     }
 
     @Override

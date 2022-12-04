@@ -14,7 +14,7 @@ public class EditTaskScreen {
     private Button editCancelButton;
 
     @FXML
-    private ComboBox<?> newCategoryComboBox;
+    private TextField newCategory;
 
     @FXML
     private DatePicker newDate;
@@ -27,6 +27,7 @@ public class EditTaskScreen {
 
     @FXML
     void editButtonAction(ActionEvent event) {
+
 
     }
 

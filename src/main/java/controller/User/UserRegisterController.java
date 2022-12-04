@@ -4,6 +4,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import database.MongoDBAccess;
+import javafx.animation.FadeTransition;
 import javafx.animation.PauseTransition;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -24,23 +25,26 @@ public class UserRegisterController {
                                        TextField RGfirstname, TextField RGlastname, TextField RGusername,
                                        TextField RGpassword, TextField RGconfirmpassword,
                                        Button RGclosebutton, Label inuselabel) throws UnknownHostException {
-        registrationMessage.setText("");
-        passwordMisMatch.setText("");
         if (RGfirstname.getText().isBlank() || RGlastname.getText().isBlank() || RGusername.getText().isBlank() ||
                 RGpassword.getText().isBlank() || RGconfirmpassword.getText().isBlank()) {
             registrationMessage.setText("PLEASE FILL IN ALL FIELDS");
-
+            FadeTransition ft = new FadeTransition(Duration.millis(3125), registrationMessage);
+            ft.setFromValue(1.0);
+            ft.setToValue(0.0);
+            ft.setAutoReverse(true);
+            ft.play();
         } else {
-            if(RGpassword.getText().length() <= 6){
-                registrationMessage.setText("PLEASE ENTER A PASSWORD LONGER THAN 6 CHARACTERS");
-            }
-            else if (RGpassword.getText().equals(RGconfirmpassword.getText())) {
-                passwordMisMatch.setText("");
+            if (RGpassword.getText().equals(RGconfirmpassword.getText())) {
                 registerUser(registrationMessage, passwordMisMatch,
                         RGfirstname, RGlastname, RGusername,
                         RGpassword, RGclosebutton, inuselabel);
             } else {
                 passwordMisMatch.setText("PASSWORDS DO NOT MATCH");
+                FadeTransition ft = new FadeTransition(Duration.millis(3125), passwordMisMatch);
+                ft.setFromValue(1.0);
+                ft.setToValue(0.0);
+                ft.setAutoReverse(true);
+                ft.play();
             }
         }
     }

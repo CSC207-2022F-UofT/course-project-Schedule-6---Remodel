@@ -1,19 +1,24 @@
 package controller.User;
 
 
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
+import boundary.User.loadUserScheduleInputBoundary;
+import controller.Schedule.TimetableController;
+import entity.User.CommonUser;
 import entity.User.User;
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import screens.CreateRegistrationScreen;
 import screens.CreateScheduleScreen;
 import java.net.UnknownHostException;
+
+import screens.TimeTableScreen;
+import useCaseInteractor.DataAccess;
+import useCaseInteractor.User.loadUserSchedule;
 import useCaseInteractor.User.setUsername;
 import useCaseInteractor.User.userCollection;
 import database.MongoDBAccess;
@@ -44,9 +49,19 @@ public class LoginPageController {
             }
             if (loginAttempt == null) {
                 loginMessageLabel.setText("USERNAME OR PASSWORD INCORRECT");
+                FadeTransition ft = new FadeTransition(Duration.millis(2850), loginMessageLabel);
+                ft.setFromValue(1.0);
+                ft.setToValue(0.0);
+                ft.setAutoReverse(true);
+                ft.play();
             }
         } else {
             loginMessageLabel.setText("PLEASE ENTER A USERNAME AND PASSWORD");
+            FadeTransition ft = new FadeTransition(Duration.millis(2850), loginMessageLabel);
+            ft.setFromValue(1.0);
+            ft.setToValue(0.0);
+            ft.setAutoReverse(true);
+            ft.play();
         }
 
     }
@@ -54,14 +69,11 @@ public class LoginPageController {
         CreateRegistrationScreen.newForm();}
 
     public User login(TextField usernameTextField, TextField passwordTextField) throws UnknownHostException {
-        User user;
 
         MongoDBAccess client = new MongoDBAccess(collectCollection.main(), usernameTextField.getText());
 
         if(client.getUserExist(usernameTextField.getText()) && client.checkPassword(passwordTextField.getText())){
-            user = new User();
-            user.username = usernameTextField.getText();
-            user.password = passwordTextField.getText();
+            User user = new CommonUser(usernameTextField.getText(), passwordTextField.getText());
             return user;
         }
         return null;

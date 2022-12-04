@@ -1,10 +1,16 @@
 package presenter;
 
-import boundary.Schedule.AddScheduleOutputBoundary;
+import boundary.Schedule.UpdateScheduleOutputBoundary;
+import com.calendarfx.model.Calendar;
+import com.calendarfx.model.Entry;
+import com.calendarfx.view.CalendarView;
 import javafx.scene.control.Label;
-import responseModel.Schedule.ScheduleItemResponseModel;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class AddSchedulePresenter implements AddScheduleOutputBoundary {
+import java.time.LocalDate;
+
+public class AddSchedulePresenter implements UpdateScheduleOutputBoundary {
     @Override
     public void prepareSuccessView(Label text, String message) {
         text.setText(message);
@@ -14,4 +20,8 @@ public class AddSchedulePresenter implements AddScheduleOutputBoundary {
     public void prepareFailView(Label text, String message) {
         text.setText(message);
     }
+
+
+
 }
+

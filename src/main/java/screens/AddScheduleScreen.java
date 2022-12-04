@@ -1,10 +1,9 @@
 package screens;
 
-import controller.Schedule.AddScheduleController;
+import controller.Schedule.TimetableController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import org.controlsfx.control.action.Action;
 
 public class AddScheduleScreen {
 
@@ -25,26 +24,21 @@ public class AddScheduleScreen {
 
     @FXML
     private TextField endTime;
-
-    @FXML
-    private ChoiceBox<String> startAMPM;
-
-    @FXML
-    private ChoiceBox<String> endAMPM;
-
     @FXML
     private Label errorMessage;
+    private TimetableController TTC = new TimetableController();
 
-    public void addScheduleAction(ActionEvent event){}
+    public void addScheduleAction(ActionEvent event){TTC.addScheduleAction(
+            event, scheduleTitle, startDate, endDate, startTime, endTime, errorMessage);}
     public void cancelScheduleAction(ActionEvent event){}
 
 
 
 
 
-//    private final AddScheduleController addScheduleController;
+//    private final UpdateScheduleController addScheduleController;
 
-//    public AddScheduleScreen(AddScheduleController controller) {
+//    public AddScheduleScreen(UpdateScheduleController controller) {
 //        this.addScheduleController = controller;
 //    }
 //

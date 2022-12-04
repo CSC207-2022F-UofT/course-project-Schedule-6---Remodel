@@ -1,6 +1,6 @@
 package controller.Schedule;
 
-import boundary.Schedule.AddScheduleItemInputBoundary;
+import boundary.Schedule.UpdateScheduleInputBoundary;
 import javafx.scene.control.Label;
 import presenter.AddSchedulePresenter;
 import requestModel.ScheduleItemRequestModel;
@@ -8,13 +8,13 @@ import requestModel.ScheduleItemRequestModel;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class AddScheduleController {
+public class UpdateScheduleController {
 
-    final AddScheduleItemInputBoundary addScheduleItemInputBoundary;
+    final UpdateScheduleInputBoundary addScheduleItemInputBoundary;
 
     final AddSchedulePresenter presenter;
 
-    public AddScheduleController(AddScheduleItemInputBoundary inputBoundary, AddSchedulePresenter presenter) {
+    public UpdateScheduleController(UpdateScheduleInputBoundary inputBoundary, AddSchedulePresenter presenter) {
         this.addScheduleItemInputBoundary = inputBoundary;
         this.presenter = presenter;
     }

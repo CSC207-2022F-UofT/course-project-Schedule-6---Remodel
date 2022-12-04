@@ -19,11 +19,11 @@ public class EditTask implements  boundary.Task.EditTaskInputBoundary{
     public TaskResponseModel edit(TaskRequestModel newInputdata, TaskRequestModel oldInputData) {
 
 
-        TaskResponseModel newresponseModel = new TaskResponseModel(newInputdata.getDescription(), newInputdata.getDate(),
-                newInputdata.getPrivacy(), newInputdata.getCategory());
+        TaskResponseModel newresponseModel = new TaskResponseModel(newInputdata.getDescription(), newInputdata.getDate()
+                , newInputdata.getCategory());
 
-        TaskResponseModel oldresponseModel = new TaskResponseModel(oldInputData.getDescription(), oldInputData.getDate(),
-                oldInputData.getPrivacy(), oldInputData.getCategory());
+        TaskResponseModel oldresponseModel = new TaskResponseModel(oldInputData.getDescription(), oldInputData.getDate()
+                , oldInputData.getCategory());
 
         dataAccess.deleteTask(oldresponseModel);
         dataAccess.setTask(newresponseModel);
