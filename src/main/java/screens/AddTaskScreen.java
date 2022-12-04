@@ -29,7 +29,7 @@ public class AddTaskScreen {
 
 
     public void addTask(ActionEvent event) {
-     
+
     }
 
     public void cancelTask(ActionEvent actionEvent) {
