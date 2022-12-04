@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.LoginScreen">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.LoginScreen">
    <bottom>
       <AnchorPane prefHeight="600.0" prefWidth="468.0" style="-fx-background-color: FFFFFF;" BorderPane.alignment="CENTER">
          <children>
@@ -31,22 +31,22 @@
                </font>
             </Label>
             <PasswordField fx:id="passwordTextField" layoutX="106.0" layoutY="328.0" prefHeight="26.0" prefWidth="330.0" promptText="password" />
-            <Button fx:id="loginButton" layoutX="148.0" layoutY="428.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="45.0" prefWidth="90.0" style="-fx-background-color: #82AA68;" text="LOGIN" textFill="WHITE">
+            <Button fx:id="loginButton" layoutX="125.0" layoutY="434.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="45.0" prefWidth="90.0" style="-fx-background-color: #82AA68;" text="LOGIN" textFill="WHITE">
                <font>
                   <Font name="Gill Sans MT Condensed" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="cancelButton" layoutX="148.0" layoutY="491.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="45.0" prefWidth="197.0" style="-fx-background-color: #82AA68;" text="CLOSE" textFill="WHITE">
+            <Button fx:id="cancelButton" layoutX="125.0" layoutY="493.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="45.0" prefWidth="197.0" style="-fx-background-color: #82AA68;" text="CLOSE" textFill="WHITE">
                <font>
                   <Font name="Gill Sans MT Condensed" size="18.0" />
                </font>
             </Button>
-            <Label fx:id="loginMessageLabel" layoutX="105.0" layoutY="376.0" prefHeight="22.0" prefWidth="333.0" textAlignment="CENTER">
+            <Label fx:id="loginMessageLabel" layoutX="120.0" layoutY="379.0" prefHeight="23.0" prefWidth="315.0" textFill="#82aa68">
                <font>
                   <Font name="Gill Sans MT Condensed" size="19.0" />
                </font>
             </Label>
-            <Button fx:id="registerButton" layoutX="253.0" layoutY="428.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="45.0" prefWidth="90.0" style="-fx-background-color: #82AA68;" text="REGISTER" textFill="WHITE">
+            <Button fx:id="registerButton" layoutX="234.0" layoutY="434.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="45.0" prefWidth="90.0" style="-fx-background-color: #82AA68;" text="REGISTER" textFill="WHITE">
                <font>
                   <Font name="Gill Sans MT Condensed" size="18.0" />
                </font>
