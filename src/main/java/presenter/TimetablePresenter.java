@@ -84,6 +84,7 @@ public class TimetablePresenter {
         dataAccess.resetSchedule();
         for (String s : newSet) {
             findEntryData(s);
+        }
         entriesSaved.setText("ALL ENTIRES SAVED");
         FadeTransition ft = new FadeTransition(Duration.millis(1850), entriesSaved);
         ft.setFromValue(1.0);
@@ -91,7 +92,7 @@ public class TimetablePresenter {
         ft.setAutoReverse(true);
         ft.play();
         }
-    }
+
 
     public void findEntryData(Object entry) throws UnknownHostException {
         //Finds the title in the values of the map
@@ -118,16 +119,13 @@ public class TimetablePresenter {
         int endTime_start = entry.toString().toUpperCase().indexOf("ENDTIME=") + ("ENDTIME=").length();
         int endTime_end = endTime_start + 5;
         String endTime = entry.toString().substring(endTime_start, endTime_end);
-
-
-        System.out.println("Event" + ": " + title + ", " + startDate + ", " + endDate +
-                ", " + startTime + ", " + endTime);
+//        System.out.println("Event" + ": " + title + ", " + startDate + ", " + endDate +
+//                ", " + startTime + ", " + endTime);
             String[] newStartDate = startDate.split("-");
             String[] newEndDate = endDate.split("-");
-//
             String[] newStartTime = startTime.split(":");
             String[] newEndTime = endTime.split(":");
-            System.out.println(newStartDate[0] + ", "+newEndDate.toString()+", "+newStartTime[0]+", "+newEndDate.toString());
+//            System.out.println(newStartDate[0] + ", "+newEndDate.toString()+", "+newStartTime[0]+", "+newEndDate.toString());
             ScheduleItemFactory item = new CommonScheduleItemFactory();
             DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
             UpdateScheduleInputBoundary addSchedule = new UpdateScheduleItem(dataAccess, item);
