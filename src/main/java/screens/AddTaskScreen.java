@@ -27,18 +27,13 @@ public class AddTaskScreen {
     @FXML
     private Label errorMessage;
 
-    public void addTask(ActionEvent event){
 
-    }
-
-
-    @FXML
     public void addTask(ActionEvent event) {
      
     }
 
-    public void taskCancelAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) taskCancelButton.getScene().getWindow();
+    public void cancelTask(ActionEvent actionEvent) {
+        Stage stage = (Stage) taskCancel.getScene().getWindow();
         stage.close();
     }
 }
