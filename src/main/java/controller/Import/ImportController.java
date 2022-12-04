@@ -1,6 +1,7 @@
 package controller.Import;
 
 import boundary.Import.ImportInputBoundary;
+import controller.Schedule.TimetableController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
@@ -9,6 +10,8 @@ import javafx.stage.Stage;
 
 import net.fortuna.ical4j.data.ParserException;
 import presenter.ImportPresenter;
+import screens.AddScheduleScreen;
+import screens.TimeTableScreen;
 import useCaseInteractor.Import.IcsParser;
 import requestModel.ImportRequestModel;
 import responseModel.Import.ImportResponseModel;
@@ -29,7 +32,7 @@ public class ImportController {
             IcsParser icsParser = new IcsParser(in);
             ImportRequestModel requestModel = new ImportRequestModel(icsParser);
             return this.input.create(requestModel);
-        } catch (IOException | ParserException e) {
+        } catch (IOException | ParserException ex) {
             return presenter.failedImport("File format is invalid");
             /* Area for improvement: having the useCase interactor to reflect a failure in import to presenter
             through outputBoundary would better adhere to the clean architecture*/
