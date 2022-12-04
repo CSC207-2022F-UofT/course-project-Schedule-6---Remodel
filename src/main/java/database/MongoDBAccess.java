@@ -135,7 +135,7 @@ public class MongoDBAccess implements DataAccess {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
         lst.add(responseModel.getDescription());
-        lst.add(responseModel.getDate());
+        lst.add(responseModel.getDate().toString());
         lst.add(responseModel.getCategory());
         DBObject updateObj = new BasicDBObject("tasks", lst);
         this.collection.update(query, new BasicDBObject("$push", updateObj));
@@ -145,7 +145,7 @@ public class MongoDBAccess implements DataAccess {
     public ArrayList<Object> getSingleTask(TaskResponseModel responseModel) {
         ArrayList<Object> lst = new ArrayList<>();
         lst.add(responseModel.getDescription());
-        lst.add(responseModel.getDate());
+        lst.add(responseModel.getDate().toString());
         lst.add(responseModel.getCategory());
 
         ArrayList<ArrayList<Object>> entireTask = this.getUserEntireTask();
@@ -175,7 +175,7 @@ public class MongoDBAccess implements DataAccess {
 
         ArrayList<Object> lst = new ArrayList<>();
         lst.add(responseModel.getDescription());
-        lst.add(responseModel.getDate());
+        lst.add(responseModel.getDate().toString());
         lst.add(responseModel.getCategory());
 
         ArrayList<ArrayList<Object>> entireTask = this.getUserEntireTask();
@@ -194,7 +194,7 @@ public class MongoDBAccess implements DataAccess {
 
         ArrayList<Object> lst = new ArrayList<>();
         lst.add(responseModel.getDescription());
-        lst.add(responseModel.getDate());
+        lst.add(responseModel.getDate().toString());
         lst.add(responseModel.getCategory());
         for (ArrayList<Object> objects : entireTask) {
             if (objects.equals(lst)){
