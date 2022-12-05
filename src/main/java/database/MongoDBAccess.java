@@ -39,8 +39,13 @@ public class MongoDBAccess implements DataAccess {
 
     @Override
     public String getFnameLname() {
-        return null;
+        String fullName = collection.findOne(this.username).get("firstName")+" "+collection.findOne(this.username).get("lastName");;
+        return fullName;
     }
+
+
+
+
 
     @Override
     public void resetSchedule(){

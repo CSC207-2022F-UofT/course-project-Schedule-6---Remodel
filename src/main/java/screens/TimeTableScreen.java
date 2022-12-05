@@ -75,10 +75,10 @@ public class TimeTableScreen {
 
     public void addFutureEntries(ActionEvent event) {TTC.futureEventButton(event);}
     public void addNewFile(ActionEvent event) {importControl.addNewFile(event, fileImportButton, filePicker);}
-    public void initialize() throws IOException {
+    public void initialize() throws IOException{
         TTC.loadCalendar(Gridlock);
         usernameChangeLabel = TimetableUserName;
-        usernameChangeLabel.setText(dataAccess.getFnameLname());
+        //usernameChangeLabel.setText(dataAccess.getFnameLname());
         TTC.setUsernameChangeLabel(dataAccess.getFnameLname());
         TTC.loadTODO(TODO);
     }
