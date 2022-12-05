@@ -29,12 +29,12 @@
             <Font name="Gill Sans MT Condensed" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="editTaskButton" layoutX="253.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoEditButton" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="EDIT">
+      <Button fx:id="saveButton" layoutX="191.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoSave" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="SAVE">
          <font>
             <Font name="Gill Sans MT Condensed" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="taskAdd" layoutX="190.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoAddAction" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="ADD">
+      <Button fx:id="taskAdd" layoutX="255.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoAddAction" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: white;" text="ADD">
          <font>
             <Font name="Gill Sans MT Condensed" size="16.0" />
          </font>
