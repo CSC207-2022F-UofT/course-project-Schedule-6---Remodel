@@ -7,6 +7,5 @@ import java.time.LocalDate;
 public interface Search {
 
 
-
     boolean sendRequest(DBCollection collection);
 }

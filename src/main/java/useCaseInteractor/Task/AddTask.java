@@ -12,7 +12,6 @@ public class AddTask implements boundary.Task.AddTaskItemInputBoundary{
 
     final TaskFactory taskFactory;
 
-
     public AddTask(DataAccess dataAccess, TaskFactory taskFactory) {
         this.dataAccess = dataAccess;
         this.taskFactory = taskFactory;
