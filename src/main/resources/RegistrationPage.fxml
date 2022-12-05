@@ -50,7 +50,7 @@
             <Font name="Gill Sans MT Condensed" size="18.0" />
          </font>
       </Button>
-      <Label fx:id="registrationMessage" layoutX="83.0" layoutY="130.0" prefHeight="17.0" prefWidth="302.0" textFill="#82aa68">
+      <Label fx:id="registrationMessage" layoutX="143.0" layoutY="169.0" prefHeight="17.0" prefWidth="302.0" textFill="#82aa68">
          <font>
             <Font name="Gill Sans MT Condensed" size="18.0" />
          </font>
@@ -65,7 +65,7 @@
             <Font name="Gill Sans MT Condensed" size="18.0" />
          </font>
       </Label>
-      <ImageView fitHeight="189.0" fitWidth="279.0" layoutX="83.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="189.0" fitWidth="279.0" layoutX="83.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/project6logo.png" />
          </image>
