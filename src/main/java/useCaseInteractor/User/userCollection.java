@@ -9,7 +9,6 @@ public class userCollection {
     public static void setUser(User user){
         labelUser = user;
 
-
     }
     public static String getUsername(){return labelUser.getUsername();}
 }
