@@ -119,8 +119,6 @@ public class TimetablePresenter {
         int endTime_start = entry.toString().toUpperCase().indexOf("ENDTIME=") + ("ENDTIME=").length();
         int endTime_end = endTime_start + 5;
         String endTime = entry.toString().substring(endTime_start, endTime_end);
-//        System.out.println("Event" + ": " + title + ", " + startDate + ", " + endDate +
-//                ", " + startTime + ", " + endTime);
             String[] newStartDate = startDate.split("-");
             String[] newEndDate = endDate.split("-");
             String[] newStartTime = startTime.split(":");
@@ -133,8 +131,11 @@ public class TimetablePresenter {
                     Integer.parseInt(newStartDate[1]),Integer.parseInt(newStartDate[2])), LocalDate.of(Integer.parseInt(newEndDate[0]),
                     Integer.parseInt(newEndDate[1]),Integer.parseInt(newEndDate[2])),
                     LocalTime.of(Integer.parseInt(newStartTime[0]),Integer.parseInt(newStartTime[1])), LocalTime.of(Integer.parseInt(newEndTime[0]),Integer.parseInt(newEndTime[1])));
-
-            addSchedule.create(request);
+            if(!dataAccess.scheduleExists(request)) {
+                System.out.println("Event" + ": " + title + ", " + startDate + ", " + endDate +
+                        ", " + startTime + ", " + endTime);
+                addSchedule.create(request);
+            }
     }
 
     public void addScheduleAction(TextField scheduleTitle, DatePicker startDate, DatePicker endDate,
