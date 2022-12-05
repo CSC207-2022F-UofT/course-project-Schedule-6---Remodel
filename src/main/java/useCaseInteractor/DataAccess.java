@@ -16,6 +16,8 @@ public interface DataAccess {
 
     void resetSchedule();
 
+    void resetTask();
+
     void setSchedule(ScheduleItemResponseModel responseModel);
 
     ArrayList<Object> getSingleSchedule(ScheduleItemResponseModel responseModel);

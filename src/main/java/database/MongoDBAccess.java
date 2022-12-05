@@ -38,9 +38,8 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public String getFnameLname(){
-        String fullName = collection.findOne(this.username).get("firstName") + " "+ collection.findOne(this.username).get("lastName");
-        return fullName;
+    public String getFnameLname() {
+        return null;
     }
 
     @Override
@@ -48,6 +47,14 @@ public class MongoDBAccess implements DataAccess {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
         DBObject updateObj = new BasicDBObject("schedules", lst);
+        this.collection.update(query, new BasicDBObject("$set", updateObj));
+    }
+
+    @Override
+    public void resetTask() {
+        DBObject query = new BasicDBObject("_id", this.username);
+        ArrayList<Object> lst = new ArrayList<>();
+        DBObject updateObj = new BasicDBObject("tasks", lst);
         this.collection.update(query, new BasicDBObject("$set", updateObj));
     }
 
@@ -83,7 +90,6 @@ public class MongoDBAccess implements DataAccess {
             lst.remove(requestModel.getEndTime().get(i));
         }
     }
-
 
     @Override
     public ArrayList<Object> getSingleSchedule(ScheduleItemResponseModel responseModel) {
