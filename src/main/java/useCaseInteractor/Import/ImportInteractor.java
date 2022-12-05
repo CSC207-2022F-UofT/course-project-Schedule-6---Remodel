@@ -6,6 +6,7 @@ import database.MongoDBAccess;
 import entity.Schedule.ScheduleItem;
 import entity.Schedule.ScheduleItemFactory;
 import presenter.ImportPresenter;
+import presenter.TimetablePresenter;
 import requestModel.ImportRequestModel;
 import responseModel.Import.ImportResponseModel;
 import useCaseInteractor.DataAccess;
@@ -35,8 +36,12 @@ public class ImportInteractor implements ImportInputBoundary {
         }
         dataAccess.setImportSchedule(requestModel);
 
-        LocalDateTime creation = LocalDateTime.now();
-        ImportResponseModel responseModel = new ImportResponseModel(creation.toString(), itemNum);
+        ImportResponseModel responseModel = new ImportResponseModel(requestModel.getTitles(),
+                requestModel.getStartDates(),
+                requestModel.getEndDates(),
+                requestModel.getStartTime(),
+                requestModel.getEndTime(),
+                requestModel.getRRules());
         // Area for improvement: The Import usecase might share response model with AddSchecule to avoid lazy class
 
         ImportOutputBoundary output = new ImportPresenter();

@@ -36,7 +36,7 @@ public class CommonScheduleItem implements ScheduleItem {
 
     @Override
     public LocalDate getEndDate() {
-        return this.startDate;
+        return this.endDate;
     }
 
     @Override

@@ -1,12 +1,9 @@
 package controller.User;
 
 
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
+import boundary.User.loadUserScheduleInputBoundary;
+import controller.Schedule.TimetableController;
 import entity.User.CommonUser;
-import entity.User.CommonUserFactory;
 import entity.User.User;
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
@@ -18,6 +15,10 @@ import javafx.util.Duration;
 import screens.CreateRegistrationScreen;
 import screens.CreateScheduleScreen;
 import java.net.UnknownHostException;
+
+import screens.TimeTableScreen;
+import useCaseInteractor.DataAccess;
+import useCaseInteractor.User.loadUserSchedule;
 import useCaseInteractor.User.setUsername;
 import useCaseInteractor.User.userCollection;
 import database.MongoDBAccess;

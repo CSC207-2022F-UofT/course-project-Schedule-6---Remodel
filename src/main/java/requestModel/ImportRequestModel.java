@@ -15,14 +15,21 @@ public class ImportRequestModel {
 
     private final ArrayList<String> ends;
 
+    private final ArrayList<String> rRules;
+
     public ImportRequestModel(IcsParser data) {
         this.titles = data.getTitles();
         this.starts = data.getStartDates();
         this.ends = data.getEndDates();
+        this.rRules = data.getRRules();
     }
 
     public ArrayList<String> getTitles(){
         return this.titles;
+    }
+
+    public ArrayList<String> getRRules(){
+        return this.rRules;
     }
 
     public ArrayList<LocalDate> getStartDates(){
