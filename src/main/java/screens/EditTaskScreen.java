@@ -39,18 +39,6 @@ public class EditTaskScreen {
 //        newDescription.setText(oldTask.getDescription());
 
     }
-    @FXML
-    public void editButtonAction(ActionEvent event) {
-        // call the screen ToDoScreen
-        CommonTask CT = TDS.getSelectedItem();
-        if (CT != null) {
-            String oldDescription = CT.getDescription();
-            //LocalDate oldDate = CT.getDate();
-            String oldCategory = CT.getCategory();
-        }
-        //ETC.(newDescription.getText(), newDate.getValue(), newCategory.getText(), oldDescription, oldDate, oldCategory)
-
-    }
 
     @FXML
     public void editCancelAction(ActionEvent event) {

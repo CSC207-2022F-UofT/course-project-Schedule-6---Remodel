@@ -1,17 +1,40 @@
 package screens;
 
+import boundary.Schedule.UpdateScheduleInputBoundary;
+import boundary.Task.AddTaskItemInputBoundary;
 import controller.Task.ToDoController;
+import controller.Task.ToDoListController;
+import database.MongoDBAccess;
+import entity.Schedule.CommonScheduleItemFactory;
+import entity.Schedule.ScheduleItemFactory;
 import entity.Task.CommonTask;
+import entity.Task.CommonTaskFactory;
+import entity.Task.TaskFactory;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.stage.Screen;
+import main.collectCollection;
+import requestModel.ScheduleItemRequestModel;
+import requestModel.TaskRequestModel;
+import responseModel.Task.TaskResponseModel;
+import useCaseInteractor.DataAccess;
+import useCaseInteractor.Schedule.UpdateScheduleItem;
+import useCaseInteractor.Task.AddTask;
+import useCaseInteractor.User.userCollection;
 
 import java.net.URL;
 
+import java.net.UnknownHostException;
+import java.text.AttributedCharacterIterator;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.function.ToDoubleBiFunction;
 
 public class ToDoScreen {
 
@@ -45,10 +68,8 @@ public class ToDoScreen {
     @FXML
     private Button taskAdd;
 
-    private ToDoController controller = new ToDoController();
 
-
-    public void initialize() {
+    public void initialize() throws UnknownHostException {
         todoTable.setEditable(true);
         TableView.TableViewSelectionModel<CommonTask> selectionModel = todoTable.getSelectionModel();
         selectionModel.setSelectionMode(SelectionMode.SINGLE);
@@ -85,28 +106,12 @@ public class ToDoScreen {
             }
         });
 
-
-//        LocalDate date = LocalDate.of(2022, 12, 5);
-//        LocalDate date2 = LocalDate.of(2022, 12, 16);
-//        LocalDate date3 = LocalDate.of(2022, 12, 13);
-//        LocalDate date4 = LocalDate.of(2022, 12, 5);
-        todoTable.getItems().add(new CommonTask("Project Presentation", "2022-12-08", "CSC207"));
-        todoTable.getItems().add(new CommonTask("Final Exam", "2022-12-09", "CSC207"));
-        todoTable.getItems().add(new CommonTask("Buy cat food", "2022-12-06", "Pet"));
-        todoTable.getItems().add(new CommonTask("Send work schedule", "2022-12-03", "Work"));
-
+        presentTask();
     }
 
 
     public void todoAddAction(ActionEvent actionEvent) {
-        controller.todoAddAction(actionEvent);
-    }
-
-    public void todoEditButton(ActionEvent actionEvent) {
-        CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();
-        controller.todoEditButton(actionEvent, selectedItem);
-
-
+        CreateAddTaskScreen.newForm();
     }
 
     public void todoDeleteButton(ActionEvent actionEvent) {
@@ -115,12 +120,31 @@ public class ToDoScreen {
         todoTable.getItems().remove(selectedItem);
     }
 
-    public CommonTask getSelectedItem() {
-        if (!todoTable.getItems().isEmpty()) {
-            return (CommonTask) todoTable.getSelectionModel().getSelectedItem();
+    // need to have it be called from a save button - save button needs to be made
+    public void saveFromTable(ActionEvent event) throws UnknownHostException {
+        DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
+        dataAccess.resetTask();
+        for (int i = 0 ; i < todoTable.getItems().size() ; i++) {
+            TaskFactory task = new CommonTaskFactory();
+            AddTaskItemInputBoundary inputBoundary = new AddTask(dataAccess, task);
+            TaskRequestModel requestModel = new TaskRequestModel(
+                    todoTable.getItems().get(i).getDescription(),
+                    todoTable.getItems().get(i).getDate(),
+                    todoTable.getItems().get(i).getCategory());
+            inputBoundary.create(requestModel);
         }
-
-        return null;
     }
 
+    public void presentTask() throws UnknownHostException {
+        ArrayList<ArrayList<Object>> allTasks = new ToDoListController().getAllTasks();
+        for (int i = 0 ; i < allTasks.size() ; i++) {
+            todoTable.getItems().add(new CommonTask(allTasks.get(i).get(0).toString(),
+                    allTasks.get(i).get(1).toString(),
+                    allTasks.get(i).get(2).toString()));
+        }
+    }
+
+    public TableView<CommonTask> getTodoTable() {
+        return todoTable;
+    }
 }

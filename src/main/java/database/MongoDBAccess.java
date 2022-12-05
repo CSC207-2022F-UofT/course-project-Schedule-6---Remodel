@@ -38,10 +38,18 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public void resetSchedule(){
+    public void resetSchedule() {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
         DBObject updateObj = new BasicDBObject("schedules", lst);
+        this.collection.update(query, new BasicDBObject("$set", updateObj));
+    }
+
+    @Override
+    public void resetTask() {
+        DBObject query = new BasicDBObject("_id", this.username);
+        ArrayList<Object> lst = new ArrayList<>();
+        DBObject updateObj = new BasicDBObject("tasks", lst);
         this.collection.update(query, new BasicDBObject("$set", updateObj));
     }
 
