@@ -82,6 +82,11 @@ public class ToDoScreen {
         taskDescription.setCellFactory(TextFieldTableCell.forTableColumn());
         taskCategory.setCellFactory(TextFieldTableCell.forTableColumn());
 
+        taskDescription.setOnEditCommit(event -> {
+            CommonTask task = event.getRowValue();
+            task.setDate(event.getNewValue());
+        });
+
         taskDate.setOnEditCommit(event -> {
             CommonTask task = event.getRowValue();
             task.setDate(event.getNewValue());
