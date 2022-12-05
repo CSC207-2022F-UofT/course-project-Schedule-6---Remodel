@@ -4,13 +4,101 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Working on breaking down map for schedule">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__6_16_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__6_16_p_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-25__6_08_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-25__6_08_p_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28__7_52_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28__7_52_p_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__3_01_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__3_01_p_m___Changes_.xml" afterDir="false" />
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="EVERYTHING WORKS">
+      <change afterPath="$PROJECT_DIR$/src/main/How To make your own Mysql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/Schedule/UpdateScheduleInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/Schedule/UpdateScheduleOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/Task/AddTaskItemInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/Task/DeleteTaskInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/Task/EditTaskInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/Task/TaskCreationOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/User/loadUserScheduleInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Import/ImportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/UpdateScheduleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Task/DeleteTaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Task/EditTaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Task/TaskCreationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Task/ToDoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Task/ToDoListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/MongoTesting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Schedule/CommonScheduleItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Schedule/CommonScheduleItemFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Schedule/ScheduleItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Schedule/ScheduleItemFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Schedule/TimeManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTaskFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Task/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Task/TaskFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/User/CommonUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/User/CommonUserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/User/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/User/Search.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/User/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/User/UserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/ScheduleButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/TodoPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/collectCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/AddSchedulePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/ImportPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/TaskCreationPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/TaskPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/TimetablePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/ToDoPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/WeekViewPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/tempPre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/requestModel/ImportRequestModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/requestModel/ScheduleItemRequestModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/requestModel/TaskRequestModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/responseModel/Import/ImportResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/responseModel/Schedule/ScheduleItemResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/responseModel/Task/TaskResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/responseModel/User/searchResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/AddScheduleScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/AddTaskScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/CreateNewEntryScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/CreateRegistrationScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/CreateScheduleScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/LoginScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/RegistrationScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/ToDoScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/IcsParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Requests/RequestProcess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Schedule/UpdateScheduleItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Search/launchSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/AddTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/DeleteTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/EditTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/loadUserSchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/setUsername.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/userCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/viewModel/tempVM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/UserIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/person-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/plusicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/project6-design.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/project6logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/table-how-to.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/RegistrationPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ScheduleInputs.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/todo.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/coursesCalendar.ics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/useCaseInteractor/Import/IcsParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/useCaseInteractor/Import/ImportInteractorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +115,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -162,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670023400018</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="EVERYTHING WORKS">
+      <created>1670235431453</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670235431453</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +298,7 @@
     <MESSAGE value="added getTaskExist" />
     <MESSAGE value="added [Todo] (possible bug we might run into)" />
     <MESSAGE value="update xml files" />
-    <option name="LAST_COMMIT_MESSAGE" value="update xml files" />
+    <MESSAGE value="EVERYTHING WORKS" />
+    <option name="LAST_COMMIT_MESSAGE" value="EVERYTHING WORKS" />
   </component>
 </project>

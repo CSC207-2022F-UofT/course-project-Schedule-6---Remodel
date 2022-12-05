@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: #82AA68;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.ToDoScreen">
+   <children>
+      <Label layoutX="14.0" layoutY="10.0" prefHeight="54.0" prefWidth="78.0" text="TASKS" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="40.0" />
+         </font>
+      </Label>
+      <TableView fx:id="todoTable" layoutY="137.0" prefHeight="564.0" prefWidth="400.0">
+         <placeholder>
+            <Label text="No tasks yet" />
+         </placeholder>
+        <columns>
+          <TableColumn fx:id="taskDescription" prefWidth="200.0" text="DESCRIPTION" />
+            <TableColumn fx:id="taskCategory" minWidth="0.0" prefWidth="119.0" text="CATEGORY" />
+          <TableColumn fx:id="taskDate" minWidth="0.0" prefWidth="85.0" text="DATE" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteTaskButton" layoutX="316.0" layoutY="21.0" mnemonicParsing="false" onAction="#todoDeleteButton" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: white;" text="DELETE">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveButton" layoutX="237.0" layoutY="21.0" mnemonicParsing="false" onAction="#saveFromTable" prefHeight="32.0" prefWidth="70.0" style="-fx-background-color: white;" text="SAVE">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="taskAdd" layoutX="1.0" layoutY="104.0" mnemonicParsing="false" onAction="#todoAddAction" prefHeight="25.0" prefWidth="400.0" style="-fx-background-color: white;" text="ADD">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="newTaskDescription" layoutX="1.0" layoutY="78.0" prefHeight="26.0" prefWidth="201.0" promptText="DESCRIPTION" />
+      <TextField fx:id="newTaskCategory" layoutX="201.0" layoutY="78.0" prefHeight="26.0" prefWidth="121.0" promptText="CATEGORY" />
+      <Line endX="298.9999694824219" endY="7.62939453125E-6" layoutX="101.0" layoutY="137.0" startX="-100.0" stroke="#82aa68" />
+      <TextField fx:id="newTaskDate" layoutX="322.0" layoutY="78.0" prefHeight="26.0" prefWidth="78.0" promptText="YYYY-MM-DD">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <Label fx:id="errorMessage" layoutX="106.0" layoutY="51.0" prefHeight="26.0" prefWidth="221.0" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
