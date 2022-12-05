@@ -1,37 +1,29 @@
 package screens;
 
-import boundary.Schedule.UpdateScheduleInputBoundary;
 import boundary.Task.AddTaskItemInputBoundary;
 import controller.Task.ToDoController;
 import controller.Task.ToDoListController;
 import database.MongoDBAccess;
-import entity.Schedule.CommonScheduleItemFactory;
-import entity.Schedule.ScheduleItemFactory;
 import entity.Task.CommonTask;
 import entity.Task.CommonTaskFactory;
 import entity.Task.TaskFactory;
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.stage.Screen;
+import javafx.util.Duration;
 import main.collectCollection;
-import requestModel.ScheduleItemRequestModel;
 import requestModel.TaskRequestModel;
-import responseModel.Task.TaskResponseModel;
 import useCaseInteractor.DataAccess;
-import useCaseInteractor.Schedule.UpdateScheduleItem;
 import useCaseInteractor.Task.AddTask;
 import useCaseInteractor.User.userCollection;
 
 import java.net.URL;
 
 import java.net.UnknownHostException;
-import java.text.AttributedCharacterIterator;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.function.ToDoubleBiFunction;
@@ -90,33 +82,17 @@ public class ToDoScreen {
         taskCategory.setCellValueFactory(new PropertyValueFactory<CommonTask, String>("category"));
 
         taskDescription.setCellFactory(TextFieldTableCell.forTableColumn());
-        taskDate.setCellFactory(TextFieldTableCell.forTableColumn());
         taskCategory.setCellFactory(TextFieldTableCell.forTableColumn());
 
-        taskDescription.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<CommonTask, String>>() {
-            @Override
-            public void handle(TableColumn.CellEditEvent<CommonTask, String> event) {
-                CommonTask task = event.getRowValue();
-                task.setDescription(event.getNewValue());
-            }
+        taskDate.setOnEditCommit(event -> {
+            CommonTask task = event.getRowValue();
+            task.setDate(event.getNewValue());
         });
 
-        taskDate.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<CommonTask, String>>() {
-            @Override
-            public void handle(TableColumn.CellEditEvent<CommonTask, String> event) {
-                CommonTask task = event.getRowValue();
-                task.setDate(event.getNewValue());
-            }
+        taskCategory.setOnEditCommit(event -> {
+            CommonTask task = event.getRowValue();
+            task.setCategory(event.getNewValue());
         });
-
-        taskCategory.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<CommonTask, String>>() {
-            @Override
-            public void handle(TableColumn.CellEditEvent<CommonTask, String> event) {
-                CommonTask task = event.getRowValue();
-                task.setCategory(event.getNewValue());
-            }
-        });
-
         presentTask();
     }
 

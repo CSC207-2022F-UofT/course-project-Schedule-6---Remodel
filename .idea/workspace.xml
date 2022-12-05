@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="pulled from main to enable saving function">
-      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/ToDoPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/screens/launchSearchScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/project6logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/ToDoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/ToDoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/CommonUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/CommonUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/AddTaskScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/AddTaskScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/CreateAddTaskScreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/CreateEditTaskScreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/EditTaskScreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/setUsername.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/setUsername.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/userCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/userCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TaskAdd.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TaskEdit.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Make the ability to add tasks and changed the UI" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,6 +136,8 @@
       <workItem from="1670175680981" duration="2925000" />
       <workItem from="1670181619556" duration="838000" />
       <workItem from="1670197608700" duration="3752000" />
+      <workItem from="1670211710393" duration="399000" />
+      <workItem from="1670214559499" duration="16370000" />
     </task>
     <task id="LOCAL-00004" summary="Added DeleteTaskInputBoundary and EditTaskInputBoundary">
       <created>1670012955360</created>
@@ -291,7 +272,35 @@
       <option name="project" value="LOCAL" />
       <updated>1670227484876</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Make the ability to add tasks and changed the UI">
+      <created>1670223386277</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1670223386277</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Make the ability to add tasks and changed the UI">
+      <created>1670230564394</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1670230564394</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Make the ability to add tasks and changed the UI">
+      <created>1670230719193</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1670230719193</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Make the ability to add tasks and changed the UI">
+      <created>1670231163176</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1670231163176</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,8 +318,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed parameter privacySetting to boolean" />
-    <MESSAGE value="implemented EditTask [WIP]" />
     <MESSAGE value="Added DeleteTaskController" />
     <MESSAGE value="Added DeleteTaskInputBoundary and EditTaskInputBoundary" />
     <MESSAGE value="renamed AddTaskPresenter to TaskPresenter" />
@@ -334,7 +341,9 @@
     <MESSAGE value="xml" />
     <MESSAGE value="update&amp;fixes" />
     <MESSAGE value="pulled from main to enable saving function" />
-    <option name="LAST_COMMIT_MESSAGE" value="pulled from main to enable saving function" />
+    <MESSAGE value="add save button to todoUI" />
+    <MESSAGE value="Make the ability to add tasks and changed the UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make the ability to add tasks and changed the UI" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

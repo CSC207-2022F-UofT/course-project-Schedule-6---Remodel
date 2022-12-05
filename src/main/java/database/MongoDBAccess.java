@@ -51,7 +51,7 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public void resetTask() {
+    public void resetTask(){
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
         DBObject updateObj = new BasicDBObject("tasks", lst);

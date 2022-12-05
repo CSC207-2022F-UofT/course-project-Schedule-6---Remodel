@@ -28,11 +28,12 @@ public class ToDoController {
         }
     }
 
-    private boolean checkFormat(String text) {
+    public boolean checkFormat(String text) {
         String[] lst = text.split("-");
         return text.matches("\\d{4}-\\d{2}-\\d{2}") &&
                 ((Integer.parseInt(lst[0]) > 0) && Integer.parseInt(lst[0]) < 10000) &&
                 ((Integer.parseInt(lst[1]) > 0) && Integer.parseInt(lst[1]) <= 12) &&
                 ((Integer.parseInt(lst[2]) > 0) && Integer.parseInt(lst[2]) <= 31);
     }
+
 }
