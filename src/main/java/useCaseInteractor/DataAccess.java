@@ -12,6 +12,8 @@ public interface DataAccess {
 
     boolean createUser(String password, String fName, String lName);
 
+    boolean scheduleExists(ScheduleItemRequestModel request);
+
     void resetSchedule();
 
     void resetTask();
