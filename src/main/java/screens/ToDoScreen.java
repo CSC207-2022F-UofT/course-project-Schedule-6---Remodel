@@ -40,12 +40,12 @@ public class ToDoScreen {
     private Button deleteTaskButton;
 
     @FXML
-    private Button editTaskButton;
+    private Button saveButton;
 
     @FXML
     private Button taskAdd;
 
-    private ToDoController controller = new ToDoController();
+    //private ToDoController controller = new ToDoController();
 
 
     public void initialize() {
@@ -99,12 +99,10 @@ public class ToDoScreen {
 
 
     public void todoAddAction(ActionEvent actionEvent) {
-        controller.todoAddAction(actionEvent);
+        CreateAddTaskScreen.newForm();
     }
 
-    public void todoEditButton(ActionEvent actionEvent) {
-        CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();
-        controller.todoEditButton(actionEvent, selectedItem);
+    public void todoSave(ActionEvent actionEvent) {
 
 
     }
@@ -115,12 +113,5 @@ public class ToDoScreen {
         todoTable.getItems().remove(selectedItem);
     }
 
-    public CommonTask getSelectedItem() {
-        if (!todoTable.getItems().isEmpty()) {
-            return (CommonTask) todoTable.getSelectionModel().getSelectedItem();
-        }
-
-        return null;
-    }
 
 }
