@@ -26,6 +26,7 @@ import java.net.URL;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.function.ToDoubleBiFunction;
 
 public class ToDoScreen {
 
@@ -69,6 +70,7 @@ public class ToDoScreen {
     @FXML
     private Label errorMessage;
 
+    private ToDoController TDC = new ToDoController();
 
     public void initialize() throws UnknownHostException {
         todoTable.setEditable(true);
@@ -93,12 +95,19 @@ public class ToDoScreen {
         });
         presentTask();
     }
-    private ToDoController TDC = new ToDoController();
+
     public void todoAddAction(ActionEvent actionEvent) {
         //Code that takes the data and makes a new event
         TDC.addNewEntry(todoTable, newTaskDescription, newTaskDate, newTaskCategory, errorMessage);
     }
 
+    public void todoDeleteButton(ActionEvent actionEvent) {
+        CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();
+
+        todoTable.getItems().remove(selectedItem);
+    }
+
+    // need to have it be called from a save button - save button needs to be made
     public void saveFromTable(ActionEvent event) throws UnknownHostException {
         DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
         dataAccess.resetTask();
@@ -111,12 +120,6 @@ public class ToDoScreen {
                     todoTable.getItems().get(i).getCategory());
             inputBoundary.create(requestModel);
         }
-        errorMessage.setText("ALL TASKS SAVED");
-        FadeTransition ft = new FadeTransition(Duration.millis(1850), errorMessage);
-        ft.setFromValue(1.0);
-        ft.setToValue(0.0);
-        ft.setAutoReverse(true);
-        ft.play();
     }
 
     public void presentTask() throws UnknownHostException {
@@ -127,11 +130,4 @@ public class ToDoScreen {
                     allTask.get(2).toString()));
         }
     }
-
-    public void todoDeleteButton(ActionEvent actionEvent) {
-        CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();
-        todoTable.getItems().remove(selectedItem);
-    }
-
-
 }

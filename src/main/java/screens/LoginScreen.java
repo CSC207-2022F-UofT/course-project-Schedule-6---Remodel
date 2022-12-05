@@ -1,6 +1,7 @@
 package screens;
 
 import controller.Schedule.TimetableController;
+import controller.Task.ToDoListController;
 import controller.User.LoginPageController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -26,10 +27,13 @@ public class LoginScreen {
 
     private TimetableController TTC = new TimetableController();
 
+    private ToDoListController toDoListController = new ToDoListController();
+
     public void cancelButtonAction(ActionEvent event) {LPC.cancelButtonAction(event, cancelButton);}
     public void loginButtonAction(ActionEvent event) throws UnknownHostException {
         LPC.loginButtonAction(event, usernameTextField, passwordTextField, loginButton, loginMessageLabel);
         TTC.loadSchedule();
+        toDoListController.getAllTasks();
     }
     public void registerButtonAction(ActionEvent event){LPC.registerButtonAction(event);}
 }
