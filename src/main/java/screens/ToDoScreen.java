@@ -82,20 +82,28 @@ public class ToDoScreen {
         taskDescription.setCellFactory(TextFieldTableCell.forTableColumn());
         taskCategory.setCellFactory(TextFieldTableCell.forTableColumn());
 
-        taskDescription.setOnEditCommit(event -> {
-            CommonTask task = event.getRowValue();
-            task.setDate(event.getNewValue());
-        });
+        taskDescription.setOnEditCommit(
+                new EventHandler<TableColumn.CellEditEvent<CommonTask, String>>() {
+                    @Override
+                    public void handle(TableColumn.CellEditEvent<CommonTask, String> t) {
+                        ((CommonTask) t.getTableView().getItems().get(
+                                t.getTablePosition().getRow())
+                        ).setDescription(t.getNewValue());
+                    }
+                });
 
-        taskDate.setOnEditCommit(event -> {
-            CommonTask task = event.getRowValue();
-            task.setDate(event.getNewValue());
-        });
+        taskCategory.setOnEditCommit(
+                new EventHandler<TableColumn.CellEditEvent<CommonTask, String>>() {
+                    @Override
+                    public void handle(TableColumn.CellEditEvent<CommonTask, String> t) {
+                        ((CommonTask) t.getTableView().getItems().get(
+                                t.getTablePosition().getRow())
+                        ).setCategory(t.getNewValue());
+                    }
+                });
 
-        taskCategory.setOnEditCommit(event -> {
-            CommonTask task = event.getRowValue();
-            task.setCategory(event.getNewValue());
-        });
+
+
         presentTask();
     }
     private ToDoController TDC = new ToDoController();
