@@ -24,7 +24,7 @@
                   <Font name="Gill Sans MT Condensed" size="16.0" />
                </font>
             </Button>
-            <Label disable="true" layoutX="14.0" layoutY="15.0" text="WELCOME BACK:" textFill="WHITE">
+            <Label layoutX="14.0" layoutY="15.0" text="WELCOME BACK:" textFill="WHITE">
                <font>
                   <Font name="Gill Sans MT Condensed" size="40.0" />
                </font>
