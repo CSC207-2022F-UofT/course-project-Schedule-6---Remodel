@@ -4,9 +4,11 @@ package useCaseInteractor.User;
 import controller.Schedule.TimetableController;
 import screens.TimeTableScreen;
 
+import java.net.UnknownHostException;
+
 public class setUsername {
 
-    public static void setName() {
-        TimeTableScreen.usernameChangeLabel.setText(userCollection.getUsername());
+    public static void setName() throws UnknownHostException {
+        TimeTableScreen.usernameChangeLabel.setText(userCollection.getFullName());
     }
 }

@@ -37,8 +37,6 @@ public class AddTaskScreen {
     private Label errorMessage;
 
     public void addTask(ActionEvent event) {
-
-
         Stage stage = (Stage) taskAdd.getScene().getWindow();
         stage.close();
     }
