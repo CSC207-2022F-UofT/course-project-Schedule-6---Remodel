@@ -48,6 +48,13 @@ public class ToDoScreen {
     private TableColumn<CommonTask, String> taskCategory;
 
     @FXML
+    private TextField newTaskDescription;
+    @FXML
+    private TextField newTaskCategory;
+    @FXML
+    private TextField newTaskDate;
+
+    @FXML
     private ResourceBundle resources;
 
     @FXML
@@ -63,11 +70,15 @@ public class ToDoScreen {
     private Button deleteTaskButton;
 
     @FXML
-    private Button editTaskButton;
+    private Button saveButton;
 
     @FXML
     private Button taskAdd;
 
+    @FXML
+    private Label errorMessage;
+
+    private ToDoController TDC = new ToDoController();
 
     public void initialize() throws UnknownHostException {
         todoTable.setEditable(true);
@@ -109,9 +120,9 @@ public class ToDoScreen {
         presentTask();
     }
 
-
     public void todoAddAction(ActionEvent actionEvent) {
-        CreateAddTaskScreen.newForm();
+        //Code that takes the data and makes a new event
+        TDC.addNewEntry(todoTable, newTaskDescription, newTaskDate, newTaskCategory, errorMessage);
     }
 
     public void todoDeleteButton(ActionEvent actionEvent) {
@@ -137,14 +148,10 @@ public class ToDoScreen {
 
     public void presentTask() throws UnknownHostException {
         ArrayList<ArrayList<Object>> allTasks = new ToDoListController().getAllTasks();
-        for (int i = 0 ; i < allTasks.size() ; i++) {
-            todoTable.getItems().add(new CommonTask(allTasks.get(i).get(0).toString(),
-                    allTasks.get(i).get(1).toString(),
-                    allTasks.get(i).get(2).toString()));
+        for (ArrayList<Object> allTask : allTasks) {
+            todoTable.getItems().add(new CommonTask(allTask.get(0).toString(),
+                    allTask.get(1).toString(),
+                    allTask.get(2).toString()));
         }
-    }
-
-    public TableView<CommonTask> getTodoTable() {
-        return todoTable;
     }
 }

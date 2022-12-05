@@ -38,7 +38,12 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public void resetSchedule() {
+    public String getFnameLname() {
+        return null;
+    }
+
+    @Override
+    public void resetSchedule(){
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
         DBObject updateObj = new BasicDBObject("schedules", lst);
