@@ -14,9 +14,9 @@
    <bottom>
       <AnchorPane prefHeight="600.0" prefWidth="468.0" style="-fx-background-color: FFFFFF;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="139.0" fitWidth="319.0" layoutX="78.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="310.0" fitWidth="444.0" layoutX="12.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Images/project6-design.png" />
+                  <Image url="@Images/project6logo.png" />
                </image>
             </ImageView>
             <Label layoutX="27.0" layoutY="269.0" prefHeight="23.0" prefWidth="106.0" text="USERNAME">

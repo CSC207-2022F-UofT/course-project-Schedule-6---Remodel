@@ -1,5 +1,6 @@
 package screens;
 
+import controller.Task.ToDoController;
 import entity.Task.CommonTask;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -24,6 +25,13 @@ public class ToDoScreen {
     private TableColumn<CommonTask, String> taskCategory;
 
     @FXML
+    private TextField newTaskDescription;
+    @FXML
+    private TextField newTaskCategory;
+    @FXML
+    private TextField newTaskDate;
+
+    @FXML
     private ResourceBundle resources;
 
     @FXML
@@ -43,6 +51,9 @@ public class ToDoScreen {
 
     @FXML
     private Button taskAdd;
+
+    @FXML
+    private Label errorMessage;
 
 
     public void initialize() {
@@ -81,32 +92,18 @@ public class ToDoScreen {
                 task.setCategory(event.getNewValue());
             }
         });
-
-
-//        LocalDate date = LocalDate.of(2022, 12, 5);
-//        LocalDate date2 = LocalDate.of(2022, 12, 16);
-//        LocalDate date3 = LocalDate.of(2022, 12, 13);
-//        LocalDate date4 = LocalDate.of(2022, 12, 5);
-        todoTable.getItems().add(new CommonTask("Project Presentation", "2022-12-08", "CSC207"));
-        todoTable.getItems().add(new CommonTask("Final Exam", "2022-12-09", "CSC207"));
-        todoTable.getItems().add(new CommonTask("Buy cat food", "2022-12-06", "Pet"));
-        todoTable.getItems().add(new CommonTask("Send work schedule", "2022-12-03", "Work"));
-
     }
-
-
+    private ToDoController TDC = new ToDoController();
     public void todoAddAction(ActionEvent actionEvent) {
-        CreateAddTaskScreen.newForm();
+        //Code that takes the data and makes a new event
+        TDC.addNewEntry(todoTable, newTaskDescription, newTaskDate, newTaskCategory, errorMessage);
     }
 
     public void todoSave(ActionEvent actionEvent) {
-
-
     }
 
     public void todoDeleteButton(ActionEvent actionEvent) {
         CommonTask selectedItem = (CommonTask) todoTable.getSelectionModel().getSelectedItem();
-
         todoTable.getItems().remove(selectedItem);
     }
 
