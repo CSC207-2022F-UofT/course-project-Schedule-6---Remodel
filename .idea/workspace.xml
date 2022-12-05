@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Fixing login controller with new User entity">
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="RAD CHANGES SAVING WORKS NEED TO FIX OVERLAP">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/TaskCreationPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/TaskCreationPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/AddTaskScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/AddTaskScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/userCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/userCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="saving_entry_data" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,6 +57,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Git.Branch.Popup.ShowAllRemotes": "true",
@@ -69,7 +81,7 @@
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
@@ -86,7 +98,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LoginPage" />
         <item itemvalue="Application.LoginPage" />
         <item itemvalue="Application.LoginPage" />
         <item itemvalue="Application.LoginPage" />
@@ -124,9 +135,7 @@
       <updated>1670011459433</updated>
       <workItem from="1670011461468" duration="720000" />
       <workItem from="1670012198091" duration="13241000" />
-      <workItem from="1670175447034" duration="54000" />
-      <workItem from="1670175680981" duration="2925000" />
-      <workItem from="1670181619556" duration="838000" />
+      <workItem from="1670192550945" duration="4448000" />
     </task>
     <task id="LOCAL-00004" summary="Added DeleteTaskInputBoundary and EditTaskInputBoundary">
       <created>1670012955360</created>
@@ -240,12 +249,12 @@
       <option name="project" value="LOCAL" />
       <updated>1670078932568</updated>
     </task>
-    <task id="LOCAL-00020" summary="update&amp;fixes">
-      <created>1670172942761</created>
+    <task id="LOCAL-00020" summary="RAD CHANGES SAVING WORKS NEED TO FIX OVERLAP">
+      <created>1670178056390</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1670172942761</updated>
+      <updated>1670178056390</updated>
     </task>
     <option name="localTasksCounter" value="21" />
     <servers />
@@ -288,8 +297,8 @@
     <MESSAGE value="added User entity classes" />
     <MESSAGE value="Fixing login controller with new User entity" />
     <MESSAGE value="xml" />
-    <MESSAGE value="update&amp;fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="update&amp;fixes" />
+    <MESSAGE value="RAD CHANGES SAVING WORKS NEED TO FIX OVERLAP" />
+    <option name="LAST_COMMIT_MESSAGE" value="RAD CHANGES SAVING WORKS NEED TO FIX OVERLAP" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
