@@ -1,6 +1,5 @@
 package screens;
 
-import controller.Task.ToDoController;
 import entity.Task.CommonTask;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -44,8 +43,6 @@ public class ToDoScreen {
 
     @FXML
     private Button taskAdd;
-
-    //private ToDoController controller = new ToDoController();
 
 
     public void initialize() {
