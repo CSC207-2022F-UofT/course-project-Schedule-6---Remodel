@@ -110,7 +110,7 @@
     </configuration>
     <configuration name="TodoPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.TodoPage" />
-      <module name="schedule-6---Remodel" />
+      <module name="course-project-Schedule-6---Remodel" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="main.*" />
@@ -166,7 +166,8 @@
       <workItem from="1670181619556" duration="838000" />
       <workItem from="1670197608700" duration="3752000" />
       <workItem from="1670211710393" duration="399000" />
-      <workItem from="1670214559499" duration="8215000" />
+      <workItem from="1670219338475" duration="960000" />
+      <workItem from="1670220322014" duration="1609000" />
     </task>
     <task id="LOCAL-00004" summary="Added DeleteTaskInputBoundary and EditTaskInputBoundary">
       <created>1670012955360</created>

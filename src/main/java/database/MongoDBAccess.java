@@ -38,6 +38,12 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
+    public String getFnameLname(){
+        String fullName = collection.findOne(this.username).get("firstName") + " "+ collection.findOne(this.username).get("lastName");
+        return fullName;
+    }
+
+    @Override
     public void resetSchedule(){
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
@@ -77,6 +83,7 @@ public class MongoDBAccess implements DataAccess {
             lst.remove(requestModel.getEndTime().get(i));
         }
     }
+
 
     @Override
     public ArrayList<Object> getSingleSchedule(ScheduleItemResponseModel responseModel) {
