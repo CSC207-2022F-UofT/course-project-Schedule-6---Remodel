@@ -17,8 +17,8 @@ public class EditTaskController {
         this.taskPresenter = taskPresenter;
     }
 
-    public TaskResponseModel edit(String newDescription, LocalDate newDate, String newCategory,
-                                  String oldDescription, LocalDate oldDate, String oldCategory) {
+    public TaskResponseModel edit(String newDescription, String newDate, String newCategory,
+                                  String oldDescription, String oldDate, String oldCategory) {
         if ((newDescription.isBlank()) || (newDate == null) || (newCategory.isBlank())) {
             return taskPresenter.prepareFailView("Please fill in all fields");
         }

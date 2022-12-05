@@ -6,11 +6,11 @@ public class CommonTask implements Task {
 
     private String description;
 
-    private LocalDate date;
+    private String date;
 
     private String category;
 
-    public CommonTask(String description, LocalDate date, String category) {
+    public CommonTask(String description, String date, String category) {
         this.description = description;
         this.date = date;
         this.category = category;
@@ -22,12 +22,24 @@ public class CommonTask implements Task {
     }
 
     @Override
-    public LocalDate getDate() {
+    public String getDate() {
         return this.date;
     }
 
     @Override
     public String getCategory() {
         return this.category;
+    }
+
+    public void setDescription(String newDescription ) {
+        this.description = newDescription;
+    }
+
+    public void setDate(String newDate) {
+        this.date = newDate;
+    }
+
+    public void setCategory(String newCategory) {
+        this.category = newCategory;
     }
 }

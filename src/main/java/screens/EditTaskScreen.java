@@ -33,10 +33,10 @@ public class EditTaskScreen {
     private ToDoScreen TDS = new ToDoScreen();
 
     public void initialize(){
-        CommonTask oldTask = TDS.getSelectedItem();
-        newCategory.setText(oldTask.getCategory());
-        newDate.setValue(oldTask.getDate());
-        newDescription.setText(oldTask.getDescription());
+//        CommonTask oldTask = TDS.getSelectedItem();
+//        newCategory.setText(oldTask.getCategory());
+//        newDate.setText(oldTask.getDate());
+//        newDescription.setText(oldTask.getDescription());
 
     }
     @FXML
@@ -45,7 +45,7 @@ public class EditTaskScreen {
         CommonTask CT = TDS.getSelectedItem();
         if (CT != null) {
             String oldDescription = CT.getDescription();
-            LocalDate oldDate = CT.getDate();
+            //LocalDate oldDate = CT.getDate();
             String oldCategory = CT.getCategory();
         }
         //ETC.(newDescription.getText(), newDate.getValue(), newCategory.getText(), oldDescription, oldDate, oldCategory)

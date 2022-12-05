@@ -20,7 +20,7 @@ public class TaskCreationController<String> {
         this.taskCreationPresenter = taskCreationPresenter;
     }
 
-    public void create(Label label,java.lang.String description, LocalDate date, java.lang.String category){
+    public void create(Label label,java.lang.String description, java.lang.String date, java.lang.String category){
         if (description.isBlank() || (date == null) || (category == null)){
             taskCreationPresenter.prepareFailView(label,"Please Fill in All Fields");
         }

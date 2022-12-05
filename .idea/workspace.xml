@@ -4,16 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Fixing login controller with new User entity">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Task/ToDoController.java" afterDir="false" />
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Todo UI">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27,_6_16_p_m__[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__6_16_p_m___Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/AddTaskScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/AddTaskScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/CreateAddTaskScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateAddTaskScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/CreateEditTaskScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateEditTaskScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/DeleteTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/DeleteTaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/EditTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/EditTaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/TaskCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/TaskCreationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/ToDoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/ToDoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTaskFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/TaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/TaskFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/TaskRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/TaskRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/Task/TaskResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/responseModel/Task/TaskResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/AddCategoryScreen.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/EditTaskScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/EditTaskScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/ToDoScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/ToDoScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TaskAdd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TaskAdd.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TaskEdit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TaskEdit.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CategoryCreate.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/todo.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +150,8 @@
       <workItem from="1670011461468" duration="720000" />
       <workItem from="1670012198091" duration="13241000" />
       <workItem from="1670173478148" duration="4231000" />
-      <workItem from="1670178121018" duration="6668000" />
+      <workItem from="1670178121018" duration="12390000" />
+      <workItem from="1670199215104" duration="5803000" />
     </task>
     <task id="LOCAL-00004" summary="Added DeleteTaskInputBoundary and EditTaskInputBoundary">
       <created>1670012955360</created>
@@ -255,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670078932568</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Todo UI">
+      <created>1670187597363</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1670187597363</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +313,8 @@
     <MESSAGE value="added User entity classes" />
     <MESSAGE value="Fixing login controller with new User entity" />
     <MESSAGE value="xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="xml" />
+    <MESSAGE value="Todo UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todo UI" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

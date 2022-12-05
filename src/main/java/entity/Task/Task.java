@@ -6,7 +6,7 @@ public interface Task {
 
     String getDescription();
 
-    LocalDate getDate();
+    String getDate();
 
     String getCategory();
 }

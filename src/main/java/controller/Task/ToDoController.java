@@ -15,7 +15,9 @@ public class ToDoController {
     }
 
     public void todoEditButton(ActionEvent event, CommonTask selectedTask){
-
+        String oldDescription = selectedTask.getDescription();
+        String oldDate = selectedTask.getDate();
+        String oldCategory = selectedTask.getCategory();
 
 
         CreateEditTaskScreen.newForm();
