@@ -40,7 +40,8 @@ public class ImportInteractor implements ImportInputBoundary {
                 requestModel.getStartDates(),
                 requestModel.getEndDates(),
                 requestModel.getStartTime(),
-                requestModel.getEndTime());
+                requestModel.getEndTime(),
+                requestModel.getRRules());
         // Area for improvement: The Import usecase might share response model with AddSchecule to avoid lazy class
 
         ImportOutputBoundary output = new ImportPresenter();

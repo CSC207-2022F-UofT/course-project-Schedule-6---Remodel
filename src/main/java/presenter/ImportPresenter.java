@@ -20,6 +20,7 @@ public class ImportPresenter implements ImportOutputBoundary {
                     responseModel.getStartTimes().get(i),
                     responseModel.getEndDates().get(i),
                     responseModel.getEndTimes().get(i));
+            entry.setRecurrenceRule(responseModel.getRRules().get(i));
             for (Calendar temp : calendar.getCalendars()) {
                 temp.addEntry(entry);
             }

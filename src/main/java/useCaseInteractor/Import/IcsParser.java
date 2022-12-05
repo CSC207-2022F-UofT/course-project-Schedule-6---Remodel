@@ -63,4 +63,16 @@ public class IcsParser {
         return endDates;
     }
 
+    public ArrayList<String> getRRules(){
+        ArrayList<String> rRules = new ArrayList<>();
+        for (CalendarComponent component:this.components) {
+            if (component instanceof VEvent) {
+                String rRule = String.valueOf(component.getProperty(Property.RRULE));
+                String eventRule = rRule.substring(rRule.indexOf("[") + 1, rRule.indexOf(";U"));
+                rRules.add(eventRule.strip());
+            }
+        }
+        return rRules;
+    }
+
 }
