@@ -1,20 +1,43 @@
 package responseModel.Import;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
 public class ImportResponseModel {
-    private String timeCreated;
-    private int numOfItems;
+    private ArrayList<String> titles;
+    private ArrayList<LocalDate> startDates;
+    private ArrayList<LocalDate> endDates;
+    private ArrayList<LocalTime> startTimes;
+    private ArrayList<LocalTime> endTimes;
 
-    public ImportResponseModel(String timeCreated, int num){
-        this.timeCreated = timeCreated;
-        this.numOfItems = num;
+    public ImportResponseModel(ArrayList<String> titles, ArrayList<LocalDate> startDates,
+                               ArrayList<LocalDate> endDates, ArrayList<LocalTime> startTimes,
+                               ArrayList<LocalTime> endTimes){
+        this.titles = titles;
+        this.startDates = startDates;
+        this.endDates = endDates;
+        this.startTimes = startTimes;
+        this.endTimes = endTimes;
     }
 
-    public String getTimeCreated(){
-        return this.timeCreated;
+    public ArrayList<String> getTitles(){
+        return this.titles;
     }
 
-    public int getNumOfItems(){
-        return this.numOfItems;
+    public ArrayList<LocalDate> getStartDates(){
+        return this.startDates;
     }
 
+    public ArrayList<LocalDate> getEndDates(){
+        return this.endDates;
+    }
+
+    public ArrayList<LocalTime> getStartTimes(){
+        return this.startTimes;
+    }
+
+    public ArrayList<LocalTime> getEndTimes(){
+        return this.endTimes;
+    }
 }

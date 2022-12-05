@@ -97,15 +97,5 @@ public class TimetableController {
 
     public void loadTODO(GridPane TODO) throws IOException {
         TTP.loadTODO(TODO);
-}
-    public void addNewFile(ActionEvent event, Button fileImportButton, Stage stage){
-
-        FileChooser file_chooser = new FileChooser();
-        file_chooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text Files", "*.ics"));
-        EventHandler<ActionEvent> e = e1 -> {
-            // get the file selected
-            File file = file_chooser.showOpenDialog(stage);
-            };
-        fileImportButton.setOnAction(e);
     }
 }
