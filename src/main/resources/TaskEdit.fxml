@@ -7,39 +7,37 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="348.0" prefWidth="402.0" style="-fx-background-color: #82AA68;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.EditTaskScreen">
+<AnchorPane prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #82AA68;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.EditTaskScreen">
    <children>
       <AnchorPane layoutX="1.0" layoutY="78.0" prefHeight="290.0" prefWidth="401.0" style="-fx-background-color: white;">
-         <children>
-            <Button fx:id="taskEditButton" layoutX="312.0" layoutY="233.0" mnemonicParsing="false" onAction="#editButtonAction" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: #82AA68;" text="EDIT" textFill="WHITE">
-               <font>
-                  <Font name="Gill Sans MT Condensed" size="16.0" />
-               </font>
-            </Button>
-            <Button fx:id="editCancelButton" layoutX="15.0" layoutY="233.0" mnemonicParsing="false" onAction="#editCancelAction" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: #82AA68;" text="CANCEL">
-               <font>
-                  <Font name="Gill Sans MT Condensed" size="16.0" />
-               </font>
-            </Button>
-            <Label layoutX="15.0" layoutY="148.0" prefHeight="28.0" prefWidth="87.0" text="CATEGORY">
-               <font>
-                  <Font name="Gill Sans MT Condensed" size="23.0" />
-               </font>
-            </Label>
-            <Label layoutX="17.0" layoutY="79.0" prefHeight="28.0" prefWidth="87.0" text="DATE">
-               <font>
-                  <Font name="Gill Sans MT Condensed" size="23.0" />
-               </font>
-            </Label>
-            <Label layoutX="17.0" layoutY="14.0" prefHeight="28.0" prefWidth="87.0" text="DESCRIPTION">
-               <font>
-                  <Font name="Gill Sans MT Condensed" size="23.0" />
-               </font>
-            </Label>
-            <TextField fx:id="newDescription" layoutX="15.0" layoutY="42.0" prefHeight="26.0" prefWidth="226.0" promptText="Description" />
-            <DatePicker fx:id="newDate" layoutX="14.0" layoutY="107.0" prefHeight="26.0" prefWidth="226.0" promptText="Date" />
-            <TextField fx:id="newCategory" layoutX="14.0" layoutY="176.0" prefHeight="26.0" prefWidth="226.0" promptText="Category" />
-         </children>
+         <Button fx:id="taskEditButton" layoutX="313.0" layoutY="239.0" mnemonicParsing="false" onAction="#editButtonAction" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: #82AA68;" text="EDIT">
+            <font>
+               <Font name="Gill Sans MT Condensed" size="16.0" />
+            </font>
+         </Button>
+         <Button fx:id="editCancelButton" layoutX="17.0" layoutY="239.0" mnemonicParsing="false" onAction="#editCancelAction" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: #82AA68;" text="CANCEL">
+            <font>
+               <Font name="Gill Sans MT Condensed" size="16.0" />
+            </font>
+         </Button>
+         <Label layoutX="15.0" layoutY="148.0" prefHeight="28.0" prefWidth="87.0" text="CATEGORY">
+            <font>
+               <Font name="Gill Sans MT Condensed" size="23.0" />
+            </font>
+         </Label>
+         <Label layoutX="17.0" layoutY="79.0" prefHeight="28.0" prefWidth="87.0" text="DATE">
+            <font>
+               <Font name="Gill Sans MT Condensed" size="23.0" />
+            </font>
+         </Label>
+         <Label layoutX="17.0" layoutY="14.0" prefHeight="28.0" prefWidth="87.0" text="DESCRIPTION">
+            <font>
+               <Font name="Gill Sans MT Condensed" size="23.0" />
+            </font>
+         </Label>
+         <TextField fx:id="newDescription" layoutX="15.0" layoutY="42.0" prefHeight="26.0" prefWidth="226.0" promptText="Description" />
+         <DatePicker fx:id="newDate" layoutX="14.0" layoutY="107.0" prefHeight="26.0" prefWidth="226.0" promptText="Date" />
+         <TextField fx:id="newCategory" layoutX="14.0" layoutY="176.0" prefHeight="26.0" prefWidth="226.0" promptText="Category" />
       </AnchorPane>
       <Label layoutX="129.0" layoutY="14.0" text="EDIT TASK" textFill="WHITE">
          <font>

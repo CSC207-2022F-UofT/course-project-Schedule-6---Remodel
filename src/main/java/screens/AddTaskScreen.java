@@ -36,15 +36,11 @@ public class AddTaskScreen {
     @FXML
     private Label errorMessage;
 
-    private DataAccess DB = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
+    public void addTask(ActionEvent event) {
 
-    public AddTaskScreen() throws UnknownHostException {
-    }
 
-    public void addTask(ActionEvent event) throws UnknownHostException{
-        TaskResponseModel model = new TaskResponseModel(taskDescription.getText(), taskDate.getValue(), taskCategory.getText());
-        DB.setTask(model);
-        this.cancelTask(new ActionEvent());
+        Stage stage = (Stage) taskAdd.getScene().getWindow();
+        stage.close();
     }
 
     public void cancelTask(ActionEvent actionEvent) {

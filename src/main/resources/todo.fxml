@@ -9,17 +9,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: #82AA68;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.ToDoScreen">
    <children>
-      <Label layoutX="14.0" layoutY="10.0" prefHeight="54.0" prefWidth="78.0" text="TODO" textFill="WHITE">
+      <Label layoutX="14.0" layoutY="10.0" prefHeight="54.0" prefWidth="78.0" text="2-DO" textFill="WHITE">
          <font>
             <Font name="Gill Sans MT Condensed" size="40.0" />
          </font>
       </Label>
-      <TableView fx:id="todoTable" layoutY="78.0" prefHeight="627.0" prefWidth="400.0">
+      <TableView fx:id="todoTable" layoutY="78.0" prefHeight="623.0" prefWidth="400.0">
          <placeholder>
             <Label text="No tasks yet" />
          </placeholder>
         <columns>
-          <TableColumn fx:id="taskDescription" prefWidth="200.0" text="TASK" />
+          <TableColumn fx:id="taskDescription" prefWidth="200.0" text="DESCRIPTION" />
             <TableColumn fx:id="taskCategory" minWidth="0.0" prefWidth="119.0" text="CATEGORY" />
           <TableColumn fx:id="taskDate" minWidth="0.0" prefWidth="85.0" text="DATE" />
         </columns>
