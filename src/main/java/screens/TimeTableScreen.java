@@ -78,7 +78,8 @@ public class TimeTableScreen {
     public void initialize() throws IOException {
         TTC.loadCalendar(Gridlock);
         usernameChangeLabel = TimetableUserName;
-        TTC.setUsernameChangeLabel(userCollection.getUsername());
+        usernameChangeLabel.setText(dataAccess.getFnameLname());
+        TTC.setUsernameChangeLabel(dataAccess.getFnameLname());
         TTC.loadTODO(TODO);
     }
 }
