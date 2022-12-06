@@ -1,56 +1,49 @@
 package controller.Schedule;
 
 import boundary.User.loadUserScheduleInputBoundary;
-import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.CalendarSource;
-import entity.Schedule.TimeManagement;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.UnknownHostException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 import database.MongoDBAccess;
-import javafx.stage.FileChooser;
-import javafx.stage.Window;
-import javafx.util.Duration;
-import main.LoginPage;
-import presenter.AddSchedulePresenter;
-import presenter.TimetablePresenter;
+import javafx.stage.Stage;
+import presenter.SchedulePresenter;
 import screens.CreateNewEntryScreen;
 import useCaseInteractor.DataAccess;
 import useCaseInteractor.User.loadUserSchedule;
 import useCaseInteractor.User.userCollection;
 import main.collectCollection;
-import javafx.stage.Stage;
 
-public class TimetableController {
+public class ScheduleController {
     public static CalendarView calendar = new CalendarView();
 
-    private TimetablePresenter TTP = new TimetablePresenter();
+    private final SchedulePresenter schedulePresenter = new SchedulePresenter();
 
     public void loadSchedule() throws UnknownHostException {
         DataAccess database = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
         loadUserScheduleInputBoundary schedule = new loadUserSchedule(database);
-        TTP.loadSchedule(calendar, schedule.getSchedule());
+        schedulePresenter.loadSchedule(calendar, schedule.getSchedule());
     }
 
-    public void printCalendarEntries(ActionEvent event, Label entriesSaved) throws UnknownHostException {TTP.printCalendarEntries(entriesSaved);}
+    public void printCalendarEntries(ActionEvent event, Label entriesSaved) throws UnknownHostException {
+        schedulePresenter.printCalendarEntries(entriesSaved);}
 
     public void addScheduleAction(ActionEvent event, TextField scheduleTitle, DatePicker startDate,
                                   DatePicker endDate, TextField startTime, TextField endTime, Label errorMessage)
-    {TTP.addScheduleAction(scheduleTitle, startDate, endDate, startTime, endTime, errorMessage);}
+    {
+        schedulePresenter.addScheduleAction(scheduleTitle, startDate, endDate, startTime, endTime, errorMessage);}
 
     public void setUsernameChangeLabel(String name){
         for (Calendar temp: calendar.getCalendars()) {
@@ -96,6 +89,11 @@ public class TimetableController {
     }
 
     public void loadTODO(GridPane TODO) throws IOException {
-        TTP.loadTODO(TODO);
+        schedulePresenter.loadTODO(TODO);
+    }
+
+    public void cancelScheduleAction(ActionEvent event, Button cancelButton) {
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
+        stage.close();
     }
 }

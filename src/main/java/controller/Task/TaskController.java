@@ -4,26 +4,22 @@ import entity.Task.CommonTask;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import presenter.ToDoPresenter;
+import presenter.TaskPresenter;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
-
-public class ToDoController {
-    private ToDoPresenter TDP = new ToDoPresenter();
+public class TaskController {
+    private final TaskPresenter taskPresenter = new TaskPresenter();
     public void addNewEntry(TableView<CommonTask> todoTable, TextField newTaskDescription,
                             TextField newTaskDate, TextField newTaskCategory, Label errorMessage) {
 
         if (newTaskDescription.getText().isBlank() || newTaskCategory.getText().isBlank() || newTaskDate.getText().isBlank()) {
-            TDP.setError(errorMessage);
+            taskPresenter.setError(errorMessage);
         } else {
             if (checkFormat(newTaskDate.getText())) {
                 todoTable.getItems().add(new CommonTask(newTaskDescription.getText(),
                         newTaskDate.getText(), newTaskCategory.getText()));
-                TDP.setText(newTaskDescription, newTaskDate, newTaskCategory);
+                taskPresenter.setText(newTaskDescription, newTaskDate, newTaskCategory);
             } else {
-                TDP.setDateError(errorMessage);
+                taskPresenter.setDateError(errorMessage);
             }
         }
     }

@@ -9,8 +9,6 @@ import javafx.scene.control.TextField;
 import java.net.UnknownHostException;
 public class RegistrationScreen {
     @FXML
-    private Button RGregisterbutton;
-    @FXML
     public Button RGclosebutton;
     @FXML
     private TextField RGfirstname;
@@ -25,7 +23,7 @@ public class RegistrationScreen {
     @FXML
     private Label registrationMessage;
     @FXML
-    private Label inuselabel;
+    private Label inUseLabel;
     @FXML
     private Label passwordMisMatch;
 
@@ -33,6 +31,6 @@ public class RegistrationScreen {
     public void cancelButtonAction(ActionEvent event) {URG.cancelButtonAction(event, RGclosebutton);}
     public void registerButtonOnAction(ActionEvent event) throws UnknownHostException
     {URG.registerButtonOnAction(event, registrationMessage, passwordMisMatch, RGfirstname,
-            RGlastname, RGusername, RGpassword, RGconfirmpassword, RGclosebutton, inuselabel);}
+            RGlastname, RGusername, RGpassword, RGconfirmpassword, RGclosebutton, inUseLabel);}
 }
 

@@ -34,10 +34,8 @@ public class launchSearch implements Search {
 
     //connects to DB and adds follow request
     public void main(String[] args) throws UnknownHostException {
-        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
-
-        //Brians remote database
-//        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://123:123@cluster1.d3e1rhp.mongodb.net/?retryWrites=true&w=majority"));
+        MongoClient mongoClient = new MongoClient(new MongoClientURI(
+                "mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
 
 
         DB database = mongoClient.getDB("schedule6-testingdb");

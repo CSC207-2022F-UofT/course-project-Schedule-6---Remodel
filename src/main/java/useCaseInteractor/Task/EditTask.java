@@ -1,6 +1,6 @@
 package useCaseInteractor.Task;
 
-import presenter.TaskPresenter;
+import presenter.TaskPresenterInterface;
 import requestModel.TaskRequestModel;
 import responseModel.Task.TaskResponseModel;
 import useCaseInteractor.DataAccess;
@@ -8,12 +8,12 @@ import useCaseInteractor.DataAccess;
 public class EditTask implements  boundary.Task.EditTaskInputBoundary{
     final DataAccess dataAccess;
 
-    final TaskPresenter taskPresenter;
+    final TaskPresenterInterface taskPresenterInterface;
 
 
-    public EditTask(DataAccess dataAccess, TaskPresenter taskPresenter) {
+    public EditTask(DataAccess dataAccess, TaskPresenterInterface taskPresenterInterface) {
         this.dataAccess = dataAccess;
-        this.taskPresenter = taskPresenter;
+        this.taskPresenterInterface = taskPresenterInterface;
     }
 
     public TaskResponseModel edit(TaskRequestModel newInputdata, TaskRequestModel oldInputData) {
@@ -28,6 +28,6 @@ public class EditTask implements  boundary.Task.EditTaskInputBoundary{
         dataAccess.deleteTask(oldresponseModel);
         dataAccess.setTask(newresponseModel);
 
-        return taskPresenter.prepareSuccessView(newresponseModel);
+        return taskPresenterInterface.prepareSuccessView(newresponseModel);
     }
 }
