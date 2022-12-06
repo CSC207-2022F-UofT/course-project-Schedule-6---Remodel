@@ -1,7 +1,6 @@
 package controller.Import;
 
 import boundary.Import.ImportInputBoundary;
-import controller.Schedule.TimetableController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
@@ -10,8 +9,6 @@ import javafx.stage.Stage;
 
 import net.fortuna.ical4j.data.ParserException;
 import presenter.ImportPresenter;
-import screens.AddScheduleScreen;
-import screens.TimeTableScreen;
 import useCaseInteractor.Import.IcsParser;
 import requestModel.ImportRequestModel;
 import responseModel.Import.ImportResponseModel;

@@ -4,7 +4,7 @@ package screens;
 
 import boundary.Import.ImportInputBoundary;
 import controller.Import.ImportController;
-import controller.Schedule.TimetableController;
+import controller.Schedule.ScheduleController;
 import database.MongoDBAccess;
 import entity.Schedule.CommonScheduleItemFactory;
 import entity.Schedule.ScheduleItemFactory;
@@ -25,15 +25,11 @@ import useCaseInteractor.User.userCollection;
 import java.io.IOException;
 import java.net.UnknownHostException;
 
-public class TimeTableScreen {
+public class ScheduleScreen {
     @FXML
     private Label TimetableUserName;
     @FXML
     private GridPane Gridlock;
-    @FXML
-    private Button saveButton;
-    @FXML
-    private Button futureEventButton;
     @FXML
     private Label allEntriesSavedLabel;
     @FXML
@@ -41,8 +37,8 @@ public class TimeTableScreen {
     @FXML
     private Button fileImportButton;
     public static Label usernameChangeLabel;
-    private Stage filePicker = new Stage();
-    private TimetableController TTC = new TimetableController();
+    private final Stage filePicker = new Stage();
+    private final ScheduleController scheduleController = new ScheduleController();
 
     private final ImportPresenter presenter = new ImportPresenter();
 
@@ -56,29 +52,20 @@ public class TimeTableScreen {
             throw new RuntimeException(e);
         }
     }
-
     private final ImportInputBoundary importInputBoundary= new ImportInteractor(presenter, factory, dataAccess);
 
     private final ImportController importControl = new ImportController(importInputBoundary, presenter);
+    public void printCalendarEntries(ActionEvent event) throws UnknownHostException {
+        scheduleController.printCalendarEntries(event,
+            allEntriesSavedLabel);}
 
-    // private TimetableController timetableController;
-    // private ImportController importControl;
-
-    /*
-    public TimeTableScreen(TimetableController controller1, ImportController controller2){
-        this.timetableController = controller1;
-        this.importControl = controller2;
-    }
-     */
-
-    public void printCalendarEntries(ActionEvent event) throws UnknownHostException {TTC.printCalendarEntries(event, allEntriesSavedLabel);}
-
-    public void addFutureEntries(ActionEvent event) {TTC.futureEventButton(event);}
+    public void addFutureEntries(ActionEvent event) {
+        scheduleController.futureEventButton(event);}
     public void addNewFile(ActionEvent event) {importControl.addNewFile(event, fileImportButton, filePicker);}
     public void initialize() throws IOException {
-        TTC.loadCalendar(Gridlock);
+        scheduleController.loadCalendar(Gridlock);
         usernameChangeLabel = TimetableUserName;
-        TTC.setUsernameChangeLabel(userCollection.getUsername());
-        TTC.loadTODO(TODO);
+        scheduleController.setUsernameChangeLabel(userCollection.getUsername());
+        scheduleController.loadTODO(TODO);
     }
 }

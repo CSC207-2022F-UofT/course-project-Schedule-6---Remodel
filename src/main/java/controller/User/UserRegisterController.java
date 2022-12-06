@@ -61,7 +61,7 @@ public class UserRegisterController {
 
         if(client.createUser(password_, firstName_, lastName_)){
             registrationMessage.setText("USER REGISTRATION SUCCESSFUL");
-            PauseTransition delay = new PauseTransition(Duration.seconds(4.5));
+            PauseTransition delay = new PauseTransition(Duration.seconds(3.5));
             Stage stage = (Stage) RGclosebutton.getScene().getWindow();
             delay.setOnFinished( event -> stage.close() );
             delay.play();
@@ -69,6 +69,11 @@ public class UserRegisterController {
         }
         else{
             inuselabel.setText("USERNAME IN USE");
+            FadeTransition ft = new FadeTransition(Duration.millis(3125), passwordMisMatch);
+            ft.setFromValue(1.0);
+            ft.setToValue(0.0);
+            ft.setAutoReverse(true);
+            ft.play();
         }
 
     }

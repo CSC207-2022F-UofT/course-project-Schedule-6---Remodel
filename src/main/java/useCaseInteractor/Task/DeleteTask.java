@@ -1,7 +1,7 @@
 package useCaseInteractor.Task;
 
 import boundary.Task.DeleteTaskInputBoundary;
-import presenter.TaskPresenter;
+import presenter.TaskPresenterInterface;
 import requestModel.TaskRequestModel;
 import responseModel.Task.TaskResponseModel;
 import useCaseInteractor.DataAccess;
@@ -9,9 +9,9 @@ import useCaseInteractor.DataAccess;
 public class DeleteTask implements DeleteTaskInputBoundary {
     final DataAccess dataAccess;
 
-    final TaskPresenter presenter;
+    final TaskPresenterInterface presenter;
 
-    public DeleteTask(DataAccess dataAccess, TaskPresenter presenter) {
+    public DeleteTask(DataAccess dataAccess, TaskPresenterInterface presenter) {
         this.dataAccess = dataAccess;
         this.presenter = presenter;
     }

@@ -2,16 +2,12 @@ package useCaseInteractor.Import;
 
 import boundary.Import.ImportInputBoundary;
 import boundary.Import.ImportOutputBoundary;
-import database.MongoDBAccess;
 import entity.Schedule.ScheduleItem;
 import entity.Schedule.ScheduleItemFactory;
 import presenter.ImportPresenter;
-import presenter.TimetablePresenter;
 import requestModel.ImportRequestModel;
 import responseModel.Import.ImportResponseModel;
 import useCaseInteractor.DataAccess;
-
-import java.time.LocalDateTime;
 
 public class ImportInteractor implements ImportInputBoundary {
     final ImportPresenter presenter;
