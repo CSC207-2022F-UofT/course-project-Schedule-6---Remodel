@@ -146,7 +146,7 @@ public class SchedulePresenter {
                 FTNotValidTime.setAutoReverse(true);
                 FTNotValidTime.play();
             }
-            if (isNotBlank(scheduleTitle, startDate, endDate, startTime, endTime)) {
+            else if (isNotBlank(scheduleTitle, startDate, endDate, startTime, endTime)) {
                 errorMessage.setText("Please Fill in All Fields".toUpperCase());
                 FadeTransition FTBlank = new FadeTransition(Duration.millis(2850), errorMessage);
                 FTBlank.setFromValue(1.0);
@@ -154,7 +154,7 @@ public class SchedulePresenter {
                 FTBlank.setAutoReverse(true);
                 FTBlank.play();
             }
-            if (startDate.getValue().isAfter(endDate.getValue()) || endDate.getValue().isBefore(startDate.getValue())) {
+            else if (startDate.getValue().isAfter(endDate.getValue()) || endDate.getValue().isBefore(startDate.getValue())) {
                 errorMessage.setText("Start date can't be after the end date".toUpperCase());
                 FadeTransition FTNotValidDate = new FadeTransition(Duration.millis(3950), errorMessage);
                 FTNotValidDate.setFromValue(1.0);
@@ -162,29 +162,33 @@ public class SchedulePresenter {
                 FTNotValidDate.setAutoReverse(true);
                 FTNotValidDate.play();
             }
-
-            String[] arrayStartTime = startTime.getText().split(":");
-            String[] arrayEndTime = endTime.getText().split(":");
-            LocalTime LTS = LocalTime.of(Integer.parseInt(arrayStartTime[0]), Integer.parseInt(arrayStartTime[1]));
-            LocalTime LTE = LocalTime.of(Integer.parseInt(arrayEndTime[0]), Integer.parseInt(arrayEndTime[1]));
-
-            if (LTS.isAfter(LTE) || LTE.isBefore(LTS)){
-                errorMessage.setText("Start time can't be after the end time".toUpperCase());
-                FadeTransition FTNotValidTime = new FadeTransition(Duration.millis(3950), errorMessage);
-                FTNotValidTime.setFromValue(1.0);
-                FTNotValidTime.setToValue(0.0);
-                FTNotValidTime.setAutoReverse(true);
-                FTNotValidTime.play();
-            }
             //Makes the event with the name scheduleTitle
-            Entry entry = new Entry(scheduleTitle.getText());
-            //sets the days and time for the entry.
-            entry.setInterval(startDate.getValue(), LTS, endDate.getValue(), LTE);
-            for (Calendar temp : calendar.getCalendars()) {
-                temp.addEntry(entry);
+            else {
+                String[] arrayStartTime = startTime.getText().split(":");
+                String[] arrayEndTime = endTime.getText().split(":");
+                LocalTime LTS = LocalTime.of(Integer.parseInt(arrayStartTime[0]), Integer.parseInt(arrayStartTime[1]));
+                LocalTime LTE = LocalTime.of(Integer.parseInt(arrayEndTime[0]), Integer.parseInt(arrayEndTime[1]));
+
+                if (LTS.isAfter(LTE) || LTE.isBefore(LTS)){
+                    errorMessage.setText("Start time can't be after the end time".toUpperCase());
+                    FadeTransition FTNotValidTime = new FadeTransition(Duration.millis(3950), errorMessage);
+                    FTNotValidTime.setFromValue(1.0);
+                    FTNotValidTime.setToValue(0.0);
+                    FTNotValidTime.setAutoReverse(true);
+                    FTNotValidTime.play();
+                }
+                else{
+                    Entry entry = new Entry(scheduleTitle.getText());
+                    //sets the days and time for the entry.
+                    entry.setInterval(startDate.getValue(), LTS, endDate.getValue(), LTE);
+                    for (Calendar temp : calendar.getCalendars()) {
+                        temp.addEntry(entry);
+                    }
+                    Stage stage = (Stage) scheduleTitle.getScene().getWindow();
+                    stage.close();
+                }
+
             }
-            Stage stage = (Stage) scheduleTitle.getScene().getWindow();
-            stage.close();
         } catch (Exception e) {}
     }
 
@@ -198,7 +202,7 @@ public class SchedulePresenter {
     }
     public boolean isNotBlank(TextField scheduleTitle, DatePicker startDate, DatePicker endDate,
                               TextField startTime, TextField endTime) {
-        if (scheduleTitle.getText().isBlank() || (startDate == null) || (endDate == null) ||
+        if (scheduleTitle.getText() == "" || (startDate == null) || (endDate == null) ||
                 startTime.getText().isBlank() || endTime.getText().isBlank()) {
             return true;
         }
