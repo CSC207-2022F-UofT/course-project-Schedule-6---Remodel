@@ -6,12 +6,12 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.Main;
 
-public class CreateScheduleScreen {
+public class CreateEventScreen {
 
     public static void newForm() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getClassLoader().getResource
-                    ("Schedule.fxml"));
+                    ("Timetable.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1500, 700);
             Stage loginStage = new Stage();
             loginStage.initStyle(StageStyle.DECORATED);

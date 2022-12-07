@@ -4,10 +4,10 @@ package screens;
 
 import boundary.Import.ImportInputBoundary;
 import controller.Import.ImportController;
-import controller.Schedule.ScheduleController;
+import controller.Event.TimetableController;
 import database.MongoDBAccess;
-import entity.Schedule.CommonScheduleItemFactory;
-import entity.Schedule.ScheduleItemFactory;
+import entity.Event.CommonEventItemFactory;
+import entity.Event.EventItemFactory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -25,7 +25,7 @@ import useCaseInteractor.User.userCollection;
 import java.io.IOException;
 import java.net.UnknownHostException;
 
-public class ScheduleScreen {
+public class TimetableScreen {
     @FXML
     private Label TimetableUserName;
     @FXML
@@ -38,11 +38,11 @@ public class ScheduleScreen {
     private Button fileImportButton;
     public static Label usernameChangeLabel;
     private final Stage filePicker = new Stage();
-    private final ScheduleController scheduleController = new ScheduleController();
+    private final TimetableController timetableController = new TimetableController();
 
     private final ImportPresenter presenter = new ImportPresenter();
 
-    private final ScheduleItemFactory factory = new CommonScheduleItemFactory();
+    private final EventItemFactory factory = new CommonEventItemFactory();
 
     private final DataAccess dataAccess;
     {
@@ -56,16 +56,19 @@ public class ScheduleScreen {
 
     private final ImportController importControl = new ImportController(importInputBoundary, presenter);
     public void printCalendarEntries(ActionEvent event) throws UnknownHostException {
-        scheduleController.printCalendarEntries(event,
-            allEntriesSavedLabel);}
+        timetableController.saveCalendarEntries(event, allEntriesSavedLabel);
+    }
 
     public void addFutureEntries(ActionEvent event) {
-        scheduleController.futureEventButton(event);}
-    public void addNewFile(ActionEvent event) {importControl.addNewFile(event, fileImportButton, filePicker);}
+        timetableController.futureEventButton(event);
+    }
+    public void addNewFile(ActionEvent event) {
+        importControl.addNewFile(event, fileImportButton, filePicker);
+    }
     public void initialize() throws IOException {
-        scheduleController.loadCalendar(Gridlock);
+        timetableController.loadCalendar(Gridlock);
         usernameChangeLabel = TimetableUserName;
-        scheduleController.setUsernameChangeLabel(userCollection.getUsername());
-        scheduleController.loadTODO(TODO);
+        timetableController.setUsernameChangeLabel(userCollection.getUsername());
+        timetableController.loadTODO(TODO);
     }
 }

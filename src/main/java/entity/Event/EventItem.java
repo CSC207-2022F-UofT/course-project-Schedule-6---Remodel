@@ -1,9 +1,9 @@
-package entity.Schedule;
+package entity.Event;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public interface ScheduleItem {
+public interface EventItem {
     String getTitle();
 
     LocalDate getStartDate();

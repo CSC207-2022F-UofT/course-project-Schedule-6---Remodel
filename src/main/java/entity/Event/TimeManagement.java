@@ -1,4 +1,4 @@
-package entity.Schedule;
+package entity.Event;
 
 import java.time.LocalDate;
 import java.time.ZoneId;

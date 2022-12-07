@@ -1,9 +1,9 @@
-package entity.Schedule;
+package requestModel;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class CommonScheduleItem implements ScheduleItem {
+public class EventItemRequestModel {
 
     private String title;
 
@@ -15,8 +15,8 @@ public class CommonScheduleItem implements ScheduleItem {
 
     private LocalTime endTime;
 
-    public CommonScheduleItem(String title, LocalDate startDate, LocalDate endDate,
-                              LocalTime startTime, LocalTime endTime) {
+    public EventItemRequestModel(String title, LocalDate startDate, LocalDate endDate,
+                                 LocalTime startTime, LocalTime endTime) {
         this.title = title;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -24,27 +24,20 @@ public class CommonScheduleItem implements ScheduleItem {
         this.endTime = endTime;
     }
 
-    @Override
     public String getTitle() {
         return this.title;
     }
 
-    @Override
     public LocalDate getStartDate() {
         return this.startDate;
     }
 
-    @Override
-    public LocalDate getEndDate() {
-        return this.endDate;
-    }
+    public LocalDate getEndDate() {return this.endDate;}
 
-    @Override
     public LocalTime getStartTime() {
         return this.startTime;
     }
 
-    @Override
     public LocalTime getEndTime() {
         return this.endTime;
     }

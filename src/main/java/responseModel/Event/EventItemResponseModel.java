@@ -1,9 +1,9 @@
-package requestModel;
+package responseModel.Event;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class ScheduleItemRequestModel {
+public class EventItemResponseModel {
 
     private String title;
 
@@ -15,8 +15,8 @@ public class ScheduleItemRequestModel {
 
     private LocalTime endTime;
 
-    public ScheduleItemRequestModel(String title, LocalDate startDate, LocalDate endDate,
-                                    LocalTime startTime, LocalTime endTime) {
+    public EventItemResponseModel(String title, LocalDate startDate, LocalDate endDate,
+                                  LocalTime startTime, LocalTime endTime) {
         this.title = title;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -32,7 +32,9 @@ public class ScheduleItemRequestModel {
         return this.startDate;
     }
 
-    public LocalDate getEndDate() {return this.endDate;}
+    public LocalDate getEndDate() {
+        return this.endDate;
+    }
 
     public LocalTime getStartTime() {
         return this.startTime;
@@ -42,3 +44,4 @@ public class ScheduleItemRequestModel {
         return this.endTime;
     }
 }
+

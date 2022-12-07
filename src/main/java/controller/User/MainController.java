@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import screens.CreateRegistrationScreen;
-import screens.CreateScheduleScreen;
+import screens.CreateEventScreen;
 import java.net.UnknownHostException;
 
 import useCaseInteractor.User.setUsername;
@@ -38,8 +38,8 @@ public class MainController {
                 stage.close();
                 //Username of the person logged in is Stored in the user collector
                 userCollection.setUser(loginAttempt);
-                //The schedule form opens
-                CreateScheduleScreen.newForm();
+                //The event form opens
+                CreateEventScreen.newForm();
                 setUsername.setName();
             }
             if (loginAttempt == null) {

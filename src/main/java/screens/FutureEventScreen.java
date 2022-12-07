@@ -1,6 +1,6 @@
 package screens;
 
-import controller.Schedule.ScheduleController;
+import controller.Event.TimetableController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -8,7 +8,7 @@ import javafx.scene.control.*;
 public class FutureEventScreen {
 
     @FXML
-    private TextField scheduleTitle;
+    private TextField eventTitle;
 
     @FXML
     private DatePicker startDate;
@@ -24,13 +24,13 @@ public class FutureEventScreen {
     @FXML
     private Label errorMessage;
     @FXML
-    private Button cancelScheduleButton;
-    private final ScheduleController scheduleController = new ScheduleController();
+    private Button cancelEventButton;
+    private final TimetableController timetableController = new TimetableController();
 
-    public void addScheduleAction(ActionEvent event){
-        scheduleController.addScheduleAction(
-            event, scheduleTitle, startDate, endDate, startTime, endTime, errorMessage);}
-    public void cancelScheduleAction(ActionEvent event){
-        scheduleController.cancelScheduleAction(event, cancelScheduleButton);}
+    public void addEventAction(ActionEvent event){
+        timetableController.addEventAction(
+            event, eventTitle, startDate, endDate, startTime, endTime, errorMessage);}
+    public void cancelEventAction(ActionEvent event){
+        timetableController.cancelEventAction(event, cancelEventButton);}
 
 }
