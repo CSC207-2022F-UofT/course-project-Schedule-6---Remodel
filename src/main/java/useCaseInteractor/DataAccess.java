@@ -31,7 +31,7 @@ public interface DataAccess {
 
     ArrayList<Object> getSingleTask(TaskResponseModel responseModel);
 
-    ArrayList<ArrayList<Object>> getUserEntireTask();
+    ArrayList<ArrayList<Object>> getUserTasks();
 
     void deleteTask(TaskResponseModel responseModel);
 

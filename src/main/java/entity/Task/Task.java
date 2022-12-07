@@ -1,7 +1,5 @@
 package entity.Task;
 
-import java.time.LocalDate;
-
 public interface Task {
 
     String getDescription();
@@ -9,4 +7,10 @@ public interface Task {
     String getDate();
 
     String getCategory();
+
+    void setDescription(String newDescription);
+
+    void setDate(String newDate);
+
+    void setCategory(String newCategory);
 }

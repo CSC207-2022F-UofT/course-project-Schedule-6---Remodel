@@ -55,8 +55,8 @@ public class TimetableScreen {
     private final ImportInputBoundary importInputBoundary= new ImportInteractor(presenter, factory, dataAccess);
 
     private final ImportController importControl = new ImportController(importInputBoundary, presenter);
-    public void printCalendarEntries(ActionEvent event) throws UnknownHostException {
-        timetableController.saveCalendarEntries(event, allEntriesSavedLabel);
+    public void saveCalenderEntries(ActionEvent event) throws UnknownHostException {
+        timetableController.saveCalendarEntries(allEntriesSavedLabel);
     }
 
     public void addFutureEntries(ActionEvent event) {
@@ -70,5 +70,6 @@ public class TimetableScreen {
         usernameChangeLabel = TimetableUserName;
         timetableController.setUsernameChangeLabel(userCollection.getUsername());
         timetableController.loadTODO(TODO);
+        timetableController.loginLoadEvents();
     }
 }

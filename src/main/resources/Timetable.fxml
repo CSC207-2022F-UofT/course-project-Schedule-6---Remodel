@@ -19,7 +19,7 @@
                   <Font name="Gill Sans MT Condensed" size="40.0" />
                </font>
             </Label>
-            <Button fx:id="saveButton" layoutX="1016.0" layoutY="23.0" mnemonicParsing="false" onAction="#printCalendarEntries" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: white;" text="SAVE">
+            <Button fx:id="saveButton" layoutX="1016.0" layoutY="23.0" mnemonicParsing="false" onAction="#saveCalenderEntries" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: white;" text="SAVE">
                <font>
                   <Font name="Gill Sans MT Condensed" size="16.0" />
                </font>

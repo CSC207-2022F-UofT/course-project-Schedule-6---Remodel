@@ -24,13 +24,10 @@ public class MainScreen {
 
     private final MainController mainController = new MainController();
 
-    private final TimetableController timetableController = new TimetableController();
-
     public void cancelButtonAction(ActionEvent event) {
         mainController.cancelButtonAction(event, cancelButton);}
     public void loginButtonAction(ActionEvent event) throws UnknownHostException {
         mainController.loginButtonAction(event, usernameTextField, passwordTextField, loginButton, loginMessageLabel);
-        timetableController.loginLoadEvents();
     }
     public void registerButtonAction(ActionEvent event){
         mainController.registerButtonAction(event);}
