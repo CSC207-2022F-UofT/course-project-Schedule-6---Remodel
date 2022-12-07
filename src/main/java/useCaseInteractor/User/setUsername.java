@@ -1,11 +1,10 @@
 package useCaseInteractor.User;
 
-
-import screens.ScheduleScreen;
+import screens.TimetableScreen;
 
 public class setUsername {
 
     public static void setName() {
-        ScheduleScreen.usernameChangeLabel.setText(userCollection.getUsername());
+        TimetableScreen.usernameChangeLabel.setText(userCollection.getUsername());
     }
 }

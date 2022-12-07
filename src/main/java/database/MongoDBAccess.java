@@ -1,8 +1,8 @@
 package database;
 
 import com.mongodb.*;
-import requestModel.ScheduleItemRequestModel;
-import responseModel.Schedule.ScheduleItemResponseModel;
+import requestModel.EventItemRequestModel;
+import responseModel.Event.EventItemResponseModel;
 import responseModel.Task.TaskResponseModel;
 import requestModel.ImportRequestModel;
 import useCaseInteractor.DataAccess;
@@ -25,13 +25,13 @@ public class MongoDBAccess implements DataAccess {
         if(this.getUserExist()){
             return false;
         }
-        ArrayList<Object> schedules = new ArrayList<>();
+        ArrayList<Object> events = new ArrayList<>();
         ArrayList<Object> tasks = new ArrayList<>();
         ArrayList<Object> followers = new ArrayList<>();
         ArrayList<Object> requests = new ArrayList<>();
         DBObject person = new BasicDBObject("_id", this.username)
                 .append("password", password).append("firstName", fName).append("lastName", lName)
-                .append("schedules", schedules).append("tasks", tasks)
+                .append("events", events).append("tasks", tasks)
                 .append("followers", followers)
                 .append("requests", requests);
         collection.insert(person);
@@ -39,12 +39,12 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public boolean scheduleExists(ScheduleItemRequestModel request){
-        ArrayList<ArrayList<Object>> schedules = this.getUserEntireSchedule();
-        for(ArrayList<Object> schedule: schedules){
-            if((schedule.get(0).equals(request.getTitle())) && (schedule.get(1).equals(request.getStartDate().toString())) &&
-                    (schedule.get(2).equals(request.getEndDate().toString())) && (schedule.get(3).equals(request.getStartTime().toString())) &&
-                    (schedule.get(4).equals(request.getEndTime().toString()))){
+    public boolean eventExists(EventItemRequestModel request){
+        ArrayList<ArrayList<Object>> events = this.getUserEvents();
+        for(ArrayList<Object> event: events){
+            if((event.get(0).equals(request.getTitle())) && (event.get(1).equals(request.getStartDate().toString())) &&
+                    (event.get(2).equals(request.getEndDate().toString())) && (event.get(3).equals(request.getStartTime().toString())) &&
+                    (event.get(4).equals(request.getEndTime().toString()))){
                 return true;
             }
         }
@@ -52,10 +52,10 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public void resetSchedule(){
+    public void resetEvents(){
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
-        DBObject updateObj = new BasicDBObject("schedules", lst);
+        DBObject updateObj = new BasicDBObject("events", lst);
         this.collection.update(query, new BasicDBObject("$set", updateObj));
     }
 
@@ -68,7 +68,7 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public void setSchedule(ScheduleItemResponseModel responseModel) {
+    public void setEvent(EventItemResponseModel responseModel) {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
         lst.add(responseModel.getTitle());
@@ -76,12 +76,12 @@ public class MongoDBAccess implements DataAccess {
         lst.add(responseModel.getEndDate().toString());
         lst.add(responseModel.getStartTime().toString());
         lst.add(responseModel.getEndTime().toString());
-        DBObject updateObj = new BasicDBObject("schedules", lst);
+        DBObject updateObj = new BasicDBObject("events", lst);
         this.collection.update(query, new BasicDBObject("$push", updateObj));
     }
 
     @Override
-    public void setImportSchedule(ImportRequestModel requestModel) {
+    public void setImportEvents(ImportRequestModel requestModel) {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
         for(int i = 0; i < requestModel.getTitles().size(); i++) {
@@ -90,7 +90,7 @@ public class MongoDBAccess implements DataAccess {
             lst.add(requestModel.getEndDates().get(i));
             lst.add(requestModel.getStartTime().get(i));
             lst.add(requestModel.getEndTime().get(i));
-            DBObject updateObj = new BasicDBObject("schedules", lst);
+            DBObject updateObj = new BasicDBObject("events", lst);
             this.collection.update(query, new BasicDBObject("$push", updateObj));
             lst.remove(requestModel.getTitles().get(i));
             lst.remove(requestModel.getStartDates().get(i));
@@ -101,7 +101,7 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public ArrayList<Object> getSingleSchedule(ScheduleItemResponseModel responseModel) {
+    public ArrayList<Object> getSingleEvent(EventItemResponseModel responseModel) {
         ArrayList<Object> lst = new ArrayList<>();
         lst.add(responseModel.getTitle());
         lst.add(responseModel.getStartDate());
@@ -109,9 +109,9 @@ public class MongoDBAccess implements DataAccess {
         lst.add(responseModel.getStartTime());
         lst.add(responseModel.getEndTime());
 
-        ArrayList<ArrayList<Object>> entireSchedule = this.getUserEntireSchedule();
+        ArrayList<ArrayList<Object>> allEvents = this.getUserEvents();
 
-        for (ArrayList<Object> objects : entireSchedule) {
+        for (ArrayList<Object> objects : allEvents) {
             if (objects.equals(lst)) {
                 return objects;
             }
@@ -120,9 +120,9 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public ArrayList<ArrayList<Object>>  getUserEntireSchedule() {
+    public ArrayList<ArrayList<Object>> getUserEvents() {
         DBObject document = collection.findOne(this.username);
-        BasicDBList list = (BasicDBList) document.get("schedules");
+        BasicDBList list = (BasicDBList) document.get("events");
         ArrayList<ArrayList<Object>> entireList = new ArrayList<>();
         for (Object sublist: list) {
             entireList.add((ArrayList<Object>) sublist);
@@ -131,7 +131,7 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public void deleteScheduleItem(ScheduleItemResponseModel responseModel) {
+    public void deleteEventItem(EventItemResponseModel responseModel) {
         DBObject query = new BasicDBObject("_id", this.username);
 
         ArrayList<Object> lst = new ArrayList<>();
@@ -141,12 +141,12 @@ public class MongoDBAccess implements DataAccess {
         lst.add(responseModel.getStartTime());
         lst.add(responseModel.getEndTime());
 
-        ArrayList<ArrayList<Object>> entireSchedule = this.getUserEntireSchedule();
+        ArrayList<ArrayList<Object>> allEvents = this.getUserEvents();
 
-        for (ArrayList<Object> objects : entireSchedule) {
+        for (ArrayList<Object> objects : allEvents) {
             if (objects.equals(lst)) {
-                entireSchedule.remove(objects);
-                DBObject updateObj = new BasicDBObject("schedules", entireSchedule);
+                allEvents.remove(objects);
+                DBObject updateObj = new BasicDBObject("events", allEvents);
                 collection.update(query, new BasicDBObject("$set", updateObj));
             }
         }

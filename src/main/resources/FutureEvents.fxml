@@ -31,8 +31,8 @@
                         <Font name="Gill Sans MT Condensed" size="23.0" />
                     </font>
                 </Label>
-                <TextField fx:id="scheduleTitle" layoutX="8.0" layoutY="42.0" prefHeight="26.0" prefWidth="319.0" promptText="Event title" />
-                <Button layoutX="246.0" layoutY="356.0" mnemonicParsing="false" onAction="#addScheduleAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #82AA68;" text="ADD" textFill="WHITE">
+                <TextField fx:id="eventTitle" layoutX="8.0" layoutY="42.0" prefHeight="26.0" prefWidth="319.0" promptText="Event title" />
+                <Button layoutX="246.0" layoutY="356.0" mnemonicParsing="false" onAction="#addEventAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #82AA68;" text="ADD" textFill="WHITE">
                     <font>
                         <Font name="Gill Sans MT Condensed" size="20.0" />
                     </font>
@@ -45,7 +45,7 @@
                   <Font name="Gill Sans MT Ext Condensed Bold" size="27.0" />
                </font>
             </Label>
-            <Button fx:id="cancelScheduleButton" layoutX="14.0" layoutY="356.0" mnemonicParsing="false" onAction="#cancelScheduleAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #82AA68;" text="CANCEL" textFill="WHITE">
+            <Button fx:id="cancelEventButton" layoutX="14.0" layoutY="356.0" mnemonicParsing="false" onAction="#cancelEventAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #82AA68;" text="CANCEL" textFill="WHITE">
                <font>
                   <Font name="Gill Sans MT Condensed" size="20.0" />
                </font>
