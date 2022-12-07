@@ -49,7 +49,7 @@ public class TimetableController {
         event.loadEvents();
     }
 
-    public void saveCalendarEntries(ActionEvent event, Label entriesSaved) throws UnknownHostException {
+    public void saveCalendarEntries(Label entriesSaved) throws UnknownHostException {
         DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername()); // should not be here
         CalendarView calendar = TimetableController.calendar; // should not be here
 
@@ -77,8 +77,6 @@ public class TimetableController {
     }
 
     public void saveEntrytoDB(Object entry) throws UnknownHostException {
-        System.out.println(entry.toString());
-        System.out.println("");
         //Finds the title in the values of the map
         int title_start = entry.toString().toUpperCase().indexOf("TITLE=") + ("TITLE=").length();
         int title_end = entry.toString().toUpperCase().indexOf(",");
@@ -118,7 +116,7 @@ public class TimetableController {
                 Integer.parseInt(newStartDate[1]),Integer.parseInt(newStartDate[2])), LocalDate.of(Integer.parseInt(newEndDate[0]),
                 Integer.parseInt(newEndDate[1]),Integer.parseInt(newEndDate[2])),
                 LocalTime.of(Integer.parseInt(newStartTime[0]),Integer.parseInt(newStartTime[1])), LocalTime.of(Integer.parseInt(newEndTime[0]),Integer.parseInt(newEndTime[1])));
-        if(!dataAccess.eventExists(request)) {
+        if(!dataAccess.eventExists(request)) { // eventExists should not be here as well
             newEvent.create(request);
         }
     }

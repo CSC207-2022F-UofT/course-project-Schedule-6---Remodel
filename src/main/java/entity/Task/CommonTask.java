@@ -1,7 +1,5 @@
 package entity.Task;
 
-import java.time.LocalDate;
-//get rid of privacySetting
 public class CommonTask implements Task {
 
     private String description;
@@ -31,14 +29,17 @@ public class CommonTask implements Task {
         return this.category;
     }
 
+    @Override
     public void setDescription(String newDescription ) {
         this.description = newDescription;
     }
 
+    @Override
     public void setDate(String newDate) {
         this.date = newDate;
     }
 
+    @Override
     public void setCategory(String newCategory) {
         this.category = newCategory;
     }

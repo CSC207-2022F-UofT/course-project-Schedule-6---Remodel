@@ -170,7 +170,7 @@ public class MongoDBAccess implements DataAccess {
         lst.add(responseModel.getDate().toString());
         lst.add(responseModel.getCategory());
 
-        ArrayList<ArrayList<Object>> entireTask = this.getUserEntireTask();
+        ArrayList<ArrayList<Object>> entireTask = this.getUserTasks();
 
         for (ArrayList<Object> objects : entireTask) {
             if (objects.equals(lst)) {
@@ -181,7 +181,7 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
-    public ArrayList<ArrayList<Object>> getUserEntireTask() {
+    public ArrayList<ArrayList<Object>> getUserTasks() {
         DBObject document = collection.findOne(this.username);
         BasicDBList list = (BasicDBList) document.get("tasks");
         ArrayList<ArrayList<Object>> entireList = new ArrayList<>();
@@ -200,7 +200,7 @@ public class MongoDBAccess implements DataAccess {
         lst.add(responseModel.getDate().toString());
         lst.add(responseModel.getCategory());
 
-        ArrayList<ArrayList<Object>> entireTask = this.getUserEntireTask();
+        ArrayList<ArrayList<Object>> entireTask = this.getUserTasks();
 
         for (ArrayList<Object> objects : entireTask) {
             if (objects.equals(lst)) {
@@ -212,7 +212,7 @@ public class MongoDBAccess implements DataAccess {
     }
     @Override
     public boolean getTaskExist(TaskResponseModel responseModel) {
-        ArrayList<ArrayList<Object>> entireTask = this.getUserEntireTask();
+        ArrayList<ArrayList<Object>> entireTask = this.getUserTasks();
 
         ArrayList<Object> lst = new ArrayList<>();
         lst.add(responseModel.getDescription());

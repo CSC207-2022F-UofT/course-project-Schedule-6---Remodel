@@ -1,8 +1,7 @@
 package boundary.Task;
 
 import requestModel.TaskRequestModel;
-import responseModel.Task.TaskResponseModel;
 
-public interface AddTaskItemInputBoundary {
+public interface UpdateTaskItemInputBoundary {
     void create(TaskRequestModel inputData);
 }
