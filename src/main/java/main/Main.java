@@ -1,14 +1,26 @@
 package main;
 
-import com.mongodb.*;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
-import java.net.UnknownHostException;
+import java.io.IOException;
+import java.net.URL;
 
-public class Main {
-    public static void main(String[] args) throws UnknownHostException {
+public class Main extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
+        URL location = Main.class.getClassLoader().getResource("LoginPage.fxml");
+        FXMLLoader fxmlLoader = new FXMLLoader(location);
+        Scene scene = new Scene(fxmlLoader.load(), 468, 600);
+        stage.initStyle(StageStyle.DECORATED);
+        stage.setScene(scene);
+        stage.show();
+    }
 
-        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
-        DB database = mongoClient.getDB("schedule6-testingdb");
-        DBCollection collection = database.getCollection("schedule6-testingcollection");
+    public static void main(String[] args) {
+        launch();
     }
 }

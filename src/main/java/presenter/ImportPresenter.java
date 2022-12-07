@@ -4,14 +4,13 @@ import boundary.Import.ImportOutputBoundary;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
-import controller.Schedule.TimetableController;
-import javafx.stage.Stage;
+import controller.Schedule.ScheduleController;
 import responseModel.Import.ImportResponseModel;
 
 public class ImportPresenter implements ImportOutputBoundary {
     @Override
     public ImportResponseModel successfulImport(ImportResponseModel responseModel){
-        CalendarView calendar = TimetableController.calendar;
+        CalendarView calendar = ScheduleController.calendar;
         int itemNum = responseModel.getTitles().size(); // the number of events imported from the file
         for(int i = 0; i < itemNum; i++) {
             Entry entry = new Entry(responseModel.getTitles().get(i));

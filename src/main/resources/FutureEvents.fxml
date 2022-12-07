@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="488.0" prefWidth="334.0" style="-fx-background-color: #82AA68;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.AddScheduleScreen">
+<AnchorPane prefHeight="488.0" prefWidth="334.0" style="-fx-background-color: #82AA68;" xmlns="http://javafx.com/javafx/18.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.FutureEventScreen">
     <children>
         <AnchorPane layoutX="1.0" layoutY="78.0" prefHeight="410.0" prefWidth="335.0" style="-fx-background-color: white;">
             <children>
@@ -32,7 +32,7 @@
                     </font>
                 </Label>
                 <TextField fx:id="scheduleTitle" layoutX="8.0" layoutY="42.0" prefHeight="26.0" prefWidth="319.0" promptText="Event title" />
-                <Button fx:id="addScheduleButton" layoutX="246.0" layoutY="356.0" mnemonicParsing="false" onAction="#addScheduleAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #82AA68;" text="ADD" textFill="WHITE">
+                <Button layoutX="246.0" layoutY="356.0" mnemonicParsing="false" onAction="#addScheduleAction" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #82AA68;" text="ADD" textFill="WHITE">
                     <font>
                         <Font name="Gill Sans MT Condensed" size="20.0" />
                     </font>

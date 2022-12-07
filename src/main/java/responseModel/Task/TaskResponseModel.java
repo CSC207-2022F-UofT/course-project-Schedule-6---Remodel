@@ -5,11 +5,11 @@ import java.time.LocalDate;
 public class TaskResponseModel {
     private String description;
 
-    private LocalDate date;
+    private String date;
 
     private String category;
 
-    public TaskResponseModel(String description, LocalDate date, String category){
+    public TaskResponseModel(String description, String date, String category){
         this.description = description;
         this.date = date;
         this.category = category;
@@ -17,7 +17,7 @@ public class TaskResponseModel {
 
     public String getDescription(){ return this.description;}
 
-    public LocalDate getDate(){ return this.date;}
+    public String getDate(){ return this.date;}
 
     public String getCategory() { return this.category;}
 }

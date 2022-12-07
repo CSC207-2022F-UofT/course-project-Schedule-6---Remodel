@@ -1,6 +1,7 @@
 package database;
 
 import com.mongodb.*;
+import requestModel.ScheduleItemRequestModel;
 import responseModel.Schedule.ScheduleItemResponseModel;
 import responseModel.Task.TaskResponseModel;
 import requestModel.ImportRequestModel;
@@ -38,10 +39,31 @@ public class MongoDBAccess implements DataAccess {
     }
 
     @Override
+    public boolean scheduleExists(ScheduleItemRequestModel request){
+        ArrayList<ArrayList<Object>> schedules = this.getUserEntireSchedule();
+        for(ArrayList<Object> schedule: schedules){
+            if((schedule.get(0).equals(request.getTitle())) && (schedule.get(1).equals(request.getStartDate().toString())) &&
+                    (schedule.get(2).equals(request.getEndDate().toString())) && (schedule.get(3).equals(request.getStartTime().toString())) &&
+                    (schedule.get(4).equals(request.getEndTime().toString()))){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
     public void resetSchedule(){
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
         DBObject updateObj = new BasicDBObject("schedules", lst);
+        this.collection.update(query, new BasicDBObject("$set", updateObj));
+    }
+
+    @Override
+    public void resetTask(){
+        DBObject query = new BasicDBObject("_id", this.username);
+        ArrayList<Object> lst = new ArrayList<>();
+        DBObject updateObj = new BasicDBObject("tasks", lst);
         this.collection.update(query, new BasicDBObject("$set", updateObj));
     }
 

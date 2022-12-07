@@ -1,8 +1,6 @@
 package controller.User;
 
 
-import boundary.User.loadUserScheduleInputBoundary;
-import controller.Schedule.TimetableController;
 import entity.User.CommonUser;
 import entity.User.User;
 import javafx.animation.FadeTransition;
@@ -16,15 +14,12 @@ import screens.CreateRegistrationScreen;
 import screens.CreateScheduleScreen;
 import java.net.UnknownHostException;
 
-import screens.TimeTableScreen;
-import useCaseInteractor.DataAccess;
-import useCaseInteractor.User.loadUserSchedule;
 import useCaseInteractor.User.setUsername;
 import useCaseInteractor.User.userCollection;
 import database.MongoDBAccess;
 import main.collectCollection;
 
-public class LoginPageController {
+public class MainController {
 
     public void cancelButtonAction(ActionEvent event, Button cancelButton){
         Stage stage = (Stage) cancelButton.getScene().getWindow();
@@ -73,8 +68,7 @@ public class LoginPageController {
         MongoDBAccess client = new MongoDBAccess(collectCollection.main(), usernameTextField.getText());
 
         if(client.getUserExist(usernameTextField.getText()) && client.checkPassword(passwordTextField.getText())){
-            User user = new CommonUser(usernameTextField.getText(), passwordTextField.getText());
-            return user;
+            return new CommonUser(usernameTextField.getText(), passwordTextField.getText());
         }
         return null;
     }

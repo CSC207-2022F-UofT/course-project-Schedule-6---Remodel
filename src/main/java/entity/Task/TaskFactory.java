@@ -3,5 +3,5 @@ package entity.Task;
 import java.time.LocalDate;
 
 public interface TaskFactory {
-    Task create(String description, LocalDate date, String category);
+    Task create(String description, String date, String category);
 }

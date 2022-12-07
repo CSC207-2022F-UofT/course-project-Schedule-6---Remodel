@@ -1,0 +1,77 @@
+Index: src/main/java/database/MongoDBAccess.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/database/MongoDBAccess.java b/src/main/java/database/MongoDBAccess.java
+--- a/src/main/java/database/MongoDBAccess.java	
++++ b/src/main/java/database/MongoDBAccess.java	
+@@ -1,6 +1,7 @@
+ package database;
+ 
+ import com.mongodb.*;
++import requestModel.ScheduleItemRequestModel;
+ import responseModel.Schedule.ScheduleItemResponseModel;
+ import responseModel.Task.TaskResponseModel;
+ import requestModel.ImportRequestModel;
+@@ -45,7 +46,18 @@
+ 
+ 
+ 
+-
++    @Override
++    public boolean getScheduleExist(ScheduleItemRequestModel request){
++        ArrayList<ArrayList<Object>> schedules = this.getUserEntireSchedule();
++        for(ArrayList<Object> schedule : schedules){
++            if((schedule.get(0) == request.getTitle()) && (schedule.get(1) == request.getStartDate()) &&
++                    (schedule.get(2) == request.getEndDate()) && (schedule.get(3) == request.getStartTime()) &&
++                    (schedule.get(4) == request.getEndTime())){
++                return true;
++            }
++        }
++        return false;
++    }
+ 
+     @Override
+     public void resetSchedule(){
+Index: src/main/java/presenter/TimetablePresenter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/presenter/TimetablePresenter.java b/src/main/java/presenter/TimetablePresenter.java
+--- a/src/main/java/presenter/TimetablePresenter.java	
++++ b/src/main/java/presenter/TimetablePresenter.java	
+@@ -133,10 +133,12 @@
+                     Integer.parseInt(newStartDate[1]),Integer.parseInt(newStartDate[2])), LocalDate.of(Integer.parseInt(newEndDate[0]),
+                     Integer.parseInt(newEndDate[1]),Integer.parseInt(newEndDate[2])),
+                     LocalTime.of(Integer.parseInt(newStartTime[0]),Integer.parseInt(newStartTime[1])), LocalTime.of(Integer.parseInt(newEndTime[0]),Integer.parseInt(newEndTime[1])));
+-
+-            addSchedule.create(request);
+-    }
++            if(!dataAccess.getScheduleExist(request)){
++                addSchedule.create(request);
++            }
+ 
++    }
++
+     public void addScheduleAction(TextField scheduleTitle, DatePicker startDate, DatePicker endDate,
+                                   TextField startTime, TextField endTime, Label errorMessage) {
+         CalendarView calendar = TimetableController.calendar;
+Index: src/main/java/useCaseInteractor/DataAccess.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/useCaseInteractor/DataAccess.java b/src/main/java/useCaseInteractor/DataAccess.java
+--- a/src/main/java/useCaseInteractor/DataAccess.java	
++++ b/src/main/java/useCaseInteractor/DataAccess.java	
+@@ -14,6 +14,8 @@
+ 
+     String getFnameLname();
+ 
++    boolean getScheduleExist(ScheduleItemRequestModel request);
++
+     void resetSchedule();
+ 
+     void resetTask();

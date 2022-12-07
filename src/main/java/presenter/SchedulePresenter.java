@@ -4,7 +4,7 @@ import boundary.Schedule.UpdateScheduleInputBoundary;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
-import controller.Schedule.TimetableController;
+import controller.Schedule.ScheduleController;
 import database.MongoDBAccess;
 import entity.Schedule.CommonScheduleItemFactory;
 import entity.Schedule.ScheduleItemFactory;
@@ -17,7 +17,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import entity.Schedule.TimeManagement;
-import main.LoginPage;
+import main.Main;
 import main.collectCollection;
 import requestModel.ScheduleItemRequestModel;
 import useCaseInteractor.DataAccess;
@@ -26,13 +26,12 @@ import useCaseInteractor.User.userCollection;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.*;
 
 
-public class TimetablePresenter {
+public class SchedulePresenter {
 
     private final TimeManagement TM  = new TimeManagement();
 
@@ -63,9 +62,9 @@ public class TimetablePresenter {
         return entry;
     }
     public void printCalendarEntries(Label entriesSaved) throws UnknownHostException {
-        CalendarView calendar = TimetableController.calendar;
+        CalendarView calendar = ScheduleController.calendar;
         Set<String> newSet = null;
-        Map map = new HashMap();
+        Map<LocalDate, List<Entry<?>>> map = new HashMap<>();
         DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
         for (Calendar temp : calendar.getCalendars()) {
             map = temp.findEntries(TM.getStartDate(), TM.getEndDate(), TM.getTimeZone());
@@ -119,13 +118,10 @@ public class TimetablePresenter {
         int endTime_start = entry.toString().toUpperCase().indexOf("ENDTIME=") + ("ENDTIME=").length();
         int endTime_end = endTime_start + 5;
         String endTime = entry.toString().substring(endTime_start, endTime_end);
-//        System.out.println("Event" + ": " + title + ", " + startDate + ", " + endDate +
-//                ", " + startTime + ", " + endTime);
             String[] newStartDate = startDate.split("-");
             String[] newEndDate = endDate.split("-");
             String[] newStartTime = startTime.split(":");
             String[] newEndTime = endTime.split(":");
-//            System.out.println(newStartDate[0] + ", "+newEndDate.toString()+", "+newStartTime[0]+", "+newEndDate.toString());
             ScheduleItemFactory item = new CommonScheduleItemFactory();
             DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
             UpdateScheduleInputBoundary addSchedule = new UpdateScheduleItem(dataAccess, item);
@@ -133,66 +129,67 @@ public class TimetablePresenter {
                     Integer.parseInt(newStartDate[1]),Integer.parseInt(newStartDate[2])), LocalDate.of(Integer.parseInt(newEndDate[0]),
                     Integer.parseInt(newEndDate[1]),Integer.parseInt(newEndDate[2])),
                     LocalTime.of(Integer.parseInt(newStartTime[0]),Integer.parseInt(newStartTime[1])), LocalTime.of(Integer.parseInt(newEndTime[0]),Integer.parseInt(newEndTime[1])));
-
-            addSchedule.create(request);
+            if(!dataAccess.scheduleExists(request)) {
+                addSchedule.create(request);
+            }
     }
 
     public void addScheduleAction(TextField scheduleTitle, DatePicker startDate, DatePicker endDate,
                                   TextField startTime, TextField endTime, Label errorMessage) {
-        CalendarView calendar = TimetableController.calendar;
+        CalendarView calendar = ScheduleController.calendar;
+        try {
+            if (!inputTimeChecker(startTime.getText(), endTime.getText())) {
+                errorMessage.setText("Please Fill a Valid Time as HH:MM".toUpperCase());
+                FadeTransition FTNotValidTime = new FadeTransition(Duration.millis(3950), errorMessage);
+                FTNotValidTime.setFromValue(1.0);
+                FTNotValidTime.setToValue(0.0);
+                FTNotValidTime.setAutoReverse(true);
+                FTNotValidTime.play();
+            }
+            if (isNotBlank(scheduleTitle, startDate, endDate, startTime, endTime)) {
+                errorMessage.setText("Please Fill in All Fields".toUpperCase());
+                FadeTransition FTBlank = new FadeTransition(Duration.millis(2850), errorMessage);
+                FTBlank.setFromValue(1.0);
+                FTBlank.setToValue(0.0);
+                FTBlank.setAutoReverse(true);
+                FTBlank.play();
+            }
+            if (startDate.getValue().isAfter(endDate.getValue()) || endDate.getValue().isBefore(startDate.getValue())) {
+                errorMessage.setText("Start date can't be after the end date".toUpperCase());
+                FadeTransition FTNotValidDate = new FadeTransition(Duration.millis(3950), errorMessage);
+                FTNotValidDate.setFromValue(1.0);
+                FTNotValidDate.setToValue(0.0);
+                FTNotValidDate.setAutoReverse(true);
+                FTNotValidDate.play();
+            }
 
-        if (isNotBlank(scheduleTitle, startDate, endDate, startTime, endTime)) {
-            errorMessage.setText("Please Fill in All Fields".toUpperCase());
-            FadeTransition FTBlank = new FadeTransition(Duration.millis(2850), errorMessage);
-            FTBlank.setFromValue(1.0);
-            FTBlank.setToValue(0.0);
-            FTBlank.setAutoReverse(true);
-            FTBlank.play();
-        }
-        if (!inputTimeChecker(startTime.getText(), endTime.getText())) {
-            errorMessage.setText("Please Fill a Valid Time as HH:MM".toUpperCase());
-            FadeTransition FTNotValidTime = new FadeTransition(Duration.millis(3950), errorMessage);
-            FTNotValidTime.setFromValue(1.0);
-            FTNotValidTime.setToValue(0.0);
-            FTNotValidTime.setAutoReverse(true);
-            FTNotValidTime.play();
-        }
-        if (startDate.getValue().isAfter(endDate.getValue()) || endDate.getValue().isBefore(startDate.getValue())) {
-            errorMessage.setText("Start date can't be after the end date".toUpperCase());
-            FadeTransition FTNotValidDate = new FadeTransition(Duration.millis(3950), errorMessage);
-            FTNotValidDate.setFromValue(1.0);
-            FTNotValidDate.setToValue(0.0);
-            FTNotValidDate.setAutoReverse(true);
-            FTNotValidDate.play();
-        }
+            String[] arrayStartTime = startTime.getText().split(":");
+            String[] arrayEndTime = endTime.getText().split(":");
+            LocalTime LTS = LocalTime.of(Integer.parseInt(arrayStartTime[0]), Integer.parseInt(arrayStartTime[1]));
+            LocalTime LTE = LocalTime.of(Integer.parseInt(arrayEndTime[0]), Integer.parseInt(arrayEndTime[1]));
 
-        String[] arrayStartTime = startTime.getText().split(":");
-        String[] arrayEndTime = endTime.getText().split(":");
-        LocalTime LTS = LocalTime.of(Integer.parseInt(arrayStartTime[0]), Integer.parseInt(arrayStartTime[1]));
-        LocalTime LTE = LocalTime.of(Integer.parseInt(arrayEndTime[0]), Integer.parseInt(arrayEndTime[1]));
-
-        if (LTS.isAfter(LTE) || LTE.isBefore(LTS)){
-            errorMessage.setText("Start time can't be after the end time".toUpperCase());
-            FadeTransition FTNotValidTime = new FadeTransition(Duration.millis(3950), errorMessage);
-            FTNotValidTime.setFromValue(1.0);
-            FTNotValidTime.setToValue(0.0);
-            FTNotValidTime.setAutoReverse(true);
-            FTNotValidTime.play();
-        }
-        //Makes the event with the name scheduleTitle
-        Entry entry = new Entry(scheduleTitle.getText());
-        //sets the days and time for the entry.
-        entry.setInterval(startDate.getValue(), LTS, endDate.getValue(), LTE);
-        for (Calendar temp : calendar.getCalendars()) {
-            temp.addEntry(entry);
-        }
-        Stage stage = (Stage) scheduleTitle.getScene().getWindow();
-        stage.close();
+            if (LTS.isAfter(LTE) || LTE.isBefore(LTS)){
+                errorMessage.setText("Start time can't be after the end time".toUpperCase());
+                FadeTransition FTNotValidTime = new FadeTransition(Duration.millis(3950), errorMessage);
+                FTNotValidTime.setFromValue(1.0);
+                FTNotValidTime.setToValue(0.0);
+                FTNotValidTime.setAutoReverse(true);
+                FTNotValidTime.play();
+            }
+            //Makes the event with the name scheduleTitle
+            Entry entry = new Entry(scheduleTitle.getText());
+            //sets the days and time for the entry.
+            entry.setInterval(startDate.getValue(), LTS, endDate.getValue(), LTE);
+            for (Calendar temp : calendar.getCalendars()) {
+                temp.addEntry(entry);
+            }
+            Stage stage = (Stage) scheduleTitle.getScene().getWindow();
+            stage.close();
+        } catch (Exception e) {}
     }
 
     public boolean inputTimeChecker(String startTime, String endTime) {
         String[] time = (startTime + ":" + endTime).split(":");
-        //if startTime = "12:30" and endTime is "2:15", then time = ["12", "30", "2", "15"]
         return (startTime.matches("\\d{2}:\\d{2}") || startTime.matches("\\d:\\d{2}")) &&
                 (endTime.matches("\\d{2}:\\d{2}") || endTime.matches("\\d:\\d{2}")) &&
                 (Integer.parseInt(time[0]) <= 12) && (Integer.parseInt(time[0]) > 0) &&
@@ -207,9 +204,8 @@ public class TimetablePresenter {
         }
         return false;
     }
-
     public void loadTODO(GridPane TODO) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getClassLoader().getResource("todo.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getClassLoader().getResource("Tasks.fxml"));
         TODO.getChildren().add(fxmlLoader.load());
     }
 }
