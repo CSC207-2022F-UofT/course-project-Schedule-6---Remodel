@@ -1,7 +1,7 @@
 package useCaseInteractor;
 
-import requestModel.ImportRequestModel;
 import requestModel.EventItemRequestModel;
+import requestModel.ImportRequestModel;
 import responseModel.Event.EventItemResponseModel;
 import responseModel.Task.TaskResponseModel;
 
@@ -21,25 +21,13 @@ public interface DataAccess {
 
     void setEvent(EventItemResponseModel responseModel);
 
-    ArrayList<Object> getSingleEvent(EventItemResponseModel responseModel);
-
     void setImportEvents(ImportRequestModel requestModel);
 
     ArrayList<ArrayList<Object>> getUserEvents();
 
-    void deleteEventItem(EventItemResponseModel responseModel);
-
     void setTask(TaskResponseModel responseModel);
 
-    ArrayList<Object> getSingleTask(TaskResponseModel responseModel);
-
     ArrayList<ArrayList<Object>> getUserTasks();
-
-    void deleteTask(TaskResponseModel responseModel);
-
-    boolean getTaskExist(TaskResponseModel responseModel);
-
-    Object getUserData();
 
     void setPassword(String password);
 

@@ -15,6 +15,7 @@ public class Main extends Application {
         URL location = Main.class.getClassLoader().getResource("LoginPage.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
         Scene scene = new Scene(fxmlLoader.load(), 468, 600);
+        stage.setResizable(false);
         stage.initStyle(StageStyle.DECORATED);
         stage.setScene(scene);
         stage.show();

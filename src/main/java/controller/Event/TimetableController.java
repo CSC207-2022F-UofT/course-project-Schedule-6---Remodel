@@ -2,46 +2,47 @@ package controller.Event;
 
 import boundary.Event.LoadEventsInputBoundary;
 import boundary.Event.UpdateEventInputBoundary;
-import com.calendarfx.model.Entry;
-import com.calendarfx.view.CalendarView;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.CalendarSource;
+import com.calendarfx.model.Entry;
+import com.calendarfx.view.CalendarView;
+import controller.User.userCollection;
+import database.MongoDBAccess;
 import entity.Event.CommonEventItemFactory;
 import entity.Event.EventItemFactory;
 import entity.Event.TimeManagement;
 import javafx.animation.FadeTransition;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-
-import java.io.IOException;
-import java.net.UnknownHostException;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.*;
-
-import database.MongoDBAccess;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import main.collectCollection;
 import presenter.EventsPresenter;
 import requestModel.EventItemRequestModel;
 import screens.CreateNewEntryScreen;
 import useCaseInteractor.DataAccess;
 import useCaseInteractor.Event.UpdateEventItem;
 import useCaseInteractor.Event.loadEventsUseCase;
-import controller.User.userCollection;
-import main.collectCollection;
+
+import java.io.IOException;
+import java.net.UnknownHostException;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class TimetableController {
     public static CalendarView calendar = new CalendarView();
 
     private final EventsPresenter eventsPresenter = new EventsPresenter();
 
-    private final TimeManagement TM  = new TimeManagement();
+    private final TimeManagement TM = new TimeManagement();
 
     public void loginLoadEvents() throws UnknownHostException {
         DataAccess database = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
@@ -113,17 +114,17 @@ public class TimetableController {
         EventItemFactory item = new CommonEventItemFactory();
         UpdateEventInputBoundary newEvent = new UpdateEventItem(dataAccess, item);
         EventItemRequestModel request = new EventItemRequestModel(title, LocalDate.of(Integer.parseInt(newStartDate[0]),
-                Integer.parseInt(newStartDate[1]),Integer.parseInt(newStartDate[2])), LocalDate.of(Integer.parseInt(newEndDate[0]),
-                Integer.parseInt(newEndDate[1]),Integer.parseInt(newEndDate[2])),
-                LocalTime.of(Integer.parseInt(newStartTime[0]),Integer.parseInt(newStartTime[1])), LocalTime.of(Integer.parseInt(newEndTime[0]),Integer.parseInt(newEndTime[1])));
-        if(!dataAccess.eventExists(request)) { // eventExists should not be here as well
+                Integer.parseInt(newStartDate[1]), Integer.parseInt(newStartDate[2])), LocalDate.of(Integer.parseInt(newEndDate[0]),
+                Integer.parseInt(newEndDate[1]), Integer.parseInt(newEndDate[2])),
+                LocalTime.of(Integer.parseInt(newStartTime[0]), Integer.parseInt(newStartTime[1])), LocalTime.of(Integer.parseInt(newEndTime[0]), Integer.parseInt(newEndTime[1])));
+        if (!dataAccess.eventExists(request)) { // eventExists should not be here as well
             newEvent.create(request);
         }
     }
 
 
     //adds "Add Future Events" onto calendar
-    public void addEventAction(ActionEvent event, TextField eventTitle, DatePicker startDate,
+    public void addEventAction(TextField eventTitle, DatePicker startDate,
                                DatePicker endDate, TextField startTime, TextField endTime, Label errorMessage) {
         CalendarView calendar = TimetableController.calendar; // should not be here
 
@@ -164,7 +165,8 @@ public class TimetableController {
                 Stage stage = (Stage) eventTitle.getScene().getWindow();
                 stage.close();
             }
-        } catch (Exception ignored) {}
+        } catch (Exception ignored) {
+        }
     }
 
     public void textFade(int number, Label errorMessage) {
@@ -184,13 +186,15 @@ public class TimetableController {
                 (Integer.parseInt(time[1]) <= 59) && (Integer.parseInt(time[3]) <= 59);
     }
 
-    public void setUsernameChangeLabel(String name){
-        for (Calendar temp: calendar.getCalendars()) {
+    public void setUsernameChangeLabel(String name) {
+        for (Calendar temp : calendar.getCalendars()) {
             temp.setName(name);
         }
     }
-    public void futureEventButton(ActionEvent event){
-        CreateNewEntryScreen.newForm();}
+
+    public void futureEventButton() {
+        CreateNewEntryScreen.newForm();
+    }
 
     public void loadCalendar(GridPane Gridlock) {
         CalendarSource myCalendarSource = new CalendarSource("");
@@ -231,7 +235,7 @@ public class TimetableController {
         eventsPresenter.loadTODO(TODO);
     }
 
-    public void cancelEventAction(ActionEvent event, Button cancelButton) {
+    public void cancelEventAction(Button cancelButton) {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }

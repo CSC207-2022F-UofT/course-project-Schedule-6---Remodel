@@ -15,6 +15,12 @@ import java.util.Map;
 
 public class TaskScreen {
     @FXML
+    public Button deleteTaskButton;
+    @FXML
+    public Button saveButton;
+    @FXML
+    public Button taskAdd;
+    @FXML
     private TableColumn<Map, String> taskDescription = new TableColumn<>("Description");
 
     @FXML

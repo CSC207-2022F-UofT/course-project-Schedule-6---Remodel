@@ -10,7 +10,7 @@ public class UserLogin implements UserLoginInputBoundary {
 
     private final DataAccess dataAccess;
 
-    private UserLoginRequestModel requestModel;
+    private final UserLoginRequestModel requestModel;
 
     private final UserLoginOutputBoundary outputBoundary;
 
