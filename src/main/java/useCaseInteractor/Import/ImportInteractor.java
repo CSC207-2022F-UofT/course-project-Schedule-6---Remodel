@@ -29,8 +29,8 @@ public class ImportInteractor implements ImportInputBoundary {
                     requestModel.getEndDates().get(i),
                     requestModel.getStartTime().get(i),
                     requestModel.getEndTime().get(i));
+            dataAccess.setImportEvents(requestModel);
         }
-        dataAccess.setImportEvents(requestModel);
 
         ImportResponseModel responseModel = new ImportResponseModel(requestModel.getTitles(),
                 requestModel.getStartDates(),

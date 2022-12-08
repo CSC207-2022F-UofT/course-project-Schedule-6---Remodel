@@ -80,20 +80,13 @@ public class MongoDBAccess implements DataAccess {
     public void setImportEvents(ImportRequestModel requestModel) {
         DBObject query = new BasicDBObject("_id", this.username);
         ArrayList<Object> lst = new ArrayList<>();
-        for(int i = 0; i < requestModel.getTitles().size(); i++) {
-            lst.add(requestModel.getTitles().get(i));
-            lst.add(requestModel.getStartDates().get(i));
-            lst.add(requestModel.getEndDates().get(i));
-            lst.add(requestModel.getStartTime().get(i));
-            lst.add(requestModel.getEndTime().get(i));
-            DBObject updateObj = new BasicDBObject("events", lst);
-            this.collection.update(query, new BasicDBObject("$push", updateObj));
-            lst.remove(requestModel.getTitles().get(i));
-            lst.remove(requestModel.getStartDates().get(i));
-            lst.remove(requestModel.getEndDates().get(i));
-            lst.remove(requestModel.getStartTime().get(i));
-            lst.remove(requestModel.getEndTime().get(i));
-        }
+        lst.add(requestModel.getTitles());
+        lst.add(requestModel.getStartDates().toString());
+        lst.add(requestModel.getEndDates().toString());
+        lst.add(requestModel.getStartTime().toString());
+        lst.add(requestModel.getEndTime().toString());
+        DBObject updateObj = new BasicDBObject("events", lst);
+        this.collection.update(query, new BasicDBObject("$push", updateObj));
     }
 
     @Override
