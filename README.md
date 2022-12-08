@@ -12,3 +12,12 @@ Students can use this application to enter class schedules, events, and assignme
 - Mike Wang([@mikewzh418](https://github.com/mikewzh418))
 - Tristen White([@Tristenwhite](https://github.com/Tristenwhite))
 - Brian Xue([@Bri-xX](https://github.com/Bri-xX))
+
+# Entities 
+
+## Entities.User
+### Attributes
+## Entities.Entry
+### Attributes
+## Entities.Task
+### Attributes
