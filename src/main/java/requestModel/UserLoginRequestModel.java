@@ -2,9 +2,9 @@ package requestModel;
 
 public class UserLoginRequestModel {
 
-    private String username;
+    private final String username;
 
-    private String password;
+    private final String password;
 
     public UserLoginRequestModel(String username, String password) {
         this.username = username;

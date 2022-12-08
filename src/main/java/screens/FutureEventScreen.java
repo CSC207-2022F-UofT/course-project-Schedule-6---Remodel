@@ -3,7 +3,10 @@ package screens;
 import controller.Event.TimetableController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class FutureEventScreen {
 
@@ -27,10 +30,12 @@ public class FutureEventScreen {
     private Button cancelEventButton;
     private final TimetableController timetableController = new TimetableController();
 
-    public void addEventAction(ActionEvent event){
-        timetableController.addEventAction(
-            event, eventTitle, startDate, endDate, startTime, endTime, errorMessage);}
-    public void cancelEventAction(ActionEvent event){
-        timetableController.cancelEventAction(event, cancelEventButton);}
+    public void addEventAction(ActionEvent event) {
+        timetableController.addEventAction(eventTitle, startDate, endDate, startTime, endTime, errorMessage);
+    }
+
+    public void cancelEventAction(ActionEvent event) {
+        timetableController.cancelEventAction(cancelEventButton);
+    }
 
 }

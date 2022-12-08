@@ -30,7 +30,7 @@ public class CommonTask implements Task {
     }
 
     @Override
-    public void setDescription(String newDescription ) {
+    public void setDescription(String newDescription) {
         this.description = newDescription;
     }
 

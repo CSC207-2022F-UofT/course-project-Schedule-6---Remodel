@@ -4,9 +4,7 @@ import boundary.User.UserRegisterInputBoundary;
 import entity.User.CommonUserFactory;
 import entity.User.User;
 import entity.User.UserFactory;
-import presenter.UserRegisterPresenter;
 import requestModel.UserRegisterRequestModel;
-import responseModel.User.UserRegisterResponseModel;
 import useCaseInteractor.DataAccess;
 
 public class UserRegister implements UserRegisterInputBoundary {
@@ -25,6 +23,6 @@ public class UserRegister implements UserRegisterInputBoundary {
         User user = userFactory.create(requestModel.getUsername(), requestModel.getPassword(),
                 requestModel.getFirstName(), requestModel.getLastName());
         dataAccess.createUser(user.getPassword(), user.getFirstName(), user.getLastName());
-        }
+    }
 }
 
