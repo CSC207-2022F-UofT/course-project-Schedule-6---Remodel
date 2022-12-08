@@ -19,7 +19,7 @@ import main.collectCollection;
 import presenter.ImportPresenter;
 import useCaseInteractor.DataAccess;
 import useCaseInteractor.Import.ImportInteractor;
-import useCaseInteractor.User.userCollection;
+import controller.User.userCollection;
 
 
 import java.io.IOException;

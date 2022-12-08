@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import java.net.UnknownHostException;
+
 public class RegistrationScreen {
     @FXML
     public Button RGclosebutton;
@@ -27,10 +28,12 @@ public class RegistrationScreen {
     @FXML
     private Label passwordMisMatch;
 
-    private UserRegisterController URG = new UserRegisterController();
-    public void cancelButtonAction(ActionEvent event) {URG.cancelButtonAction(event, RGclosebutton);}
-    public void registerButtonOnAction(ActionEvent event) throws UnknownHostException
-    {URG.registerButtonOnAction(event, registrationMessage, passwordMisMatch, RGfirstname,
-            RGlastname, RGusername, RGpassword, RGconfirmpassword, RGclosebutton, inUseLabel);}
+    private final UserRegisterController userRegisterController = new UserRegisterController();
+    public void cancelButtonAction(ActionEvent event) {
+        userRegisterController.cancelButtonAction(event, RGclosebutton);}
+    public void registerButtonOnAction(ActionEvent event) throws UnknownHostException {
+        userRegisterController.registerButtonOnAction(event, registrationMessage, inUseLabel, passwordMisMatch,
+                RGfirstname, RGlastname, RGusername, RGpassword, RGconfirmpassword, RGclosebutton);
+    }
 }
 

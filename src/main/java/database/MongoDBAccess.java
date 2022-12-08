@@ -15,27 +15,23 @@ public class MongoDBAccess implements DataAccess {
     private final DBCollection collection;
 
     public MongoDBAccess(DBCollection collection, String username) {
-
         this.username = username;
         this.collection = collection;
     }
 
     @Override
-    public boolean createUser(String password, String fName, String lName){
-        if(this.getUserExist()){
-            return false;
-        }
+    public void createUser(String password, String fName, String lName){
         ArrayList<Object> events = new ArrayList<>();
         ArrayList<Object> tasks = new ArrayList<>();
-        ArrayList<Object> followers = new ArrayList<>();
-        ArrayList<Object> requests = new ArrayList<>();
         DBObject person = new BasicDBObject("_id", this.username)
                 .append("password", password).append("firstName", fName).append("lastName", lName)
-                .append("events", events).append("tasks", tasks)
-                .append("followers", followers)
-                .append("requests", requests);
+                .append("events", events).append("tasks", tasks);
         collection.insert(person);
-        return true;
+    }
+
+    @Override
+    public boolean getUserExist(String username){
+        return this.collection.findOne(username) != null;
     }
 
     @Override
@@ -227,14 +223,6 @@ public class MongoDBAccess implements DataAccess {
         //return false if task does not exist
         return false;
     }
-    @Override
-    public boolean getUserExist(String username){
-        return this.collection.findOne(username) != null;
-    }
-
-
-    @Override
-    public boolean getUserExist(){ return this.collection.findOne(this.username) != null;}
 
     //returns all user data
     @Override
@@ -252,59 +240,9 @@ public class MongoDBAccess implements DataAccess {
         collection.update(query, updateObj);
     }
 
-    //returns following list
-    @Override
-    public Object getFollowing(){
-        return collection.findOne(this.username).get("followers");
-    }
-
-    //add follower to following list
-    @Override
-    public void appendFollowing(String username){
-        DBObject query = new BasicDBObject("_id", this.username);
-
-        DBObject updateObj = new BasicDBObject("followers", username);
-
-        collection.update(query, new BasicDBObject("$push", updateObj));
-    }
-
     @Override
     public boolean checkPassword(String password){
         return collection.findOne(this.username).get("password").equals(password);
-    }
-
-    @Override
-    public void setFollowing(ArrayList<String> following){
-        DBObject query = new BasicDBObject("_id", this.username);
-
-        DBObject updateObj = new BasicDBObject("followers", this.username);
-
-        this.collection.update(query, updateObj);
-    }
-    //returns current request, you can accept or decline a request
-    @Override
-    public Object getRequests(){
-        return collection.findOne(this.username).get("requests");
-    }
-
-    //adds a request to list of requests.
-    @Override
-    public void appendRequests(String username){
-        DBObject query = new BasicDBObject("_id", this.username);
-
-        DBObject updateObj = new BasicDBObject("requests", username);
-
-        collection.update(query, new BasicDBObject("$push", updateObj));
-    }
-
-    //sets a new request list when a request is accepted or declined
-    @Override
-    public void setRequests(ArrayList<String> usernames){
-        DBObject query = new BasicDBObject("_id", this.username);
-
-        DBObject updateObj = new BasicDBObject("requests", this.username);
-
-        this.collection.update(query, updateObj);
     }
 }
 
