@@ -35,8 +35,5 @@ public class MainScreen {
     public void registerButtonAction() {
         mainController.registerButtonAction();
     }
-    public void registerButtonAction(ActionEvent event){
-        mainController.registerButtonAction(event);
-    }
 }
 
