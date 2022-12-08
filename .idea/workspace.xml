@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Finished the Tests for all the entities which includes CommonTaskTest, CommonTaskFactoryTest, CommonEventItemTest, CommonEventItemFactoryTest, CommonUserTest, and CommonUserFactoryTest." />
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="reformated and refactored" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,10 +18,13 @@
       </list>
     </option>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="136-dashboard-bug-fix" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,6 +47,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="ProjectId" id="2INA223FaAmzXW1zgH1gGhjfbAe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -61,10 +67,11 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="应用程序.LoginPage">
     <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
       <module name="schedule-6---Remodel" />
@@ -91,27 +98,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommonTaskTest.setDescription_test_example_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="schedule-6---Remodel" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TaskEntityTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TaskEntityTest" />
-      <option name="MAIN_CLASS_NAME" value="TaskEntityTest.CommonTaskTest" />
-      <option name="METHOD_NAME" value="setDescription_test_example_1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.CommonTaskTest.setDescription_test_example_1" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -153,7 +139,7 @@
       <workItem from="1670343411364" duration="22879000" />
       <workItem from="1670431078909" duration="18535000" />
       <workItem from="1670463956862" duration="13997000" />
-      <workItem from="1670483991939" duration="16119000" />
+      <workItem from="1670517773534" duration="2981000" />
     </task>
     <task id="LOCAL-00004" summary="Added DeleteTaskInputBoundary and EditTaskInputBoundary">
       <created>1670012955360</created>
@@ -351,14 +337,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670448439614</updated>
     </task>
-    <task id="LOCAL-00033" summary="Finished the Tests for all the entities which includes CommonTaskTest, CommonTaskFactoryTest, CommonEventItemTest, CommonEventItemFactoryTest, CommonUserTest, and CommonUserFactoryTest.">
-      <created>1670536875253</created>
+    <task id="LOCAL-00033" summary="reformated and refactored">
+      <created>1670525065145</created>
       <option name="number" value="00033" />
       <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
-      <updated>1670536875253</updated>
+      <updated>1670525065145</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="reformated and refactored">
+      <created>1670525370276</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1670525370276</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,8 +387,8 @@
     <MESSAGE value="update xml files" />
     <MESSAGE value="EVERYTHING WORKS" />
     <MESSAGE value="fixing CA, refactoring" />
-    <MESSAGE value="Finished the Tests for all the entities which includes CommonTaskTest, CommonTaskFactoryTest, CommonEventItemTest, CommonEventItemFactoryTest, CommonUserTest, and CommonUserFactoryTest." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished the Tests for all the entities which includes CommonTaskTest, CommonTaskFactoryTest, CommonEventItemTest, CommonEventItemFactoryTest, CommonUserTest, and CommonUserFactoryTest." />
+    <MESSAGE value="reformated and refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformated and refactored" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
