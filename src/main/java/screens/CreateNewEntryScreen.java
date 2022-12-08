@@ -17,7 +17,6 @@ public class CreateNewEntryScreen {
             createFutureEventStage.initStyle(StageStyle.DECORATED);
             createFutureEventStage.setScene(scene);
             createFutureEventStage.show();
-
         } catch (Exception e) {
             e.printStackTrace();
             e.getCause();

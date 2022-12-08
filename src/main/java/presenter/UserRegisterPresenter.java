@@ -30,7 +30,7 @@ public class UserRegisterPresenter {
         ft.play();
         PauseTransition delay = new PauseTransition(Duration.seconds(3.5));
         Stage stage = (Stage) closeButton.getScene().getWindow();
-        delay.setOnFinished( events -> stage.close() );
+        delay.setOnFinished(events -> stage.close());
         delay.play();
     }
 }

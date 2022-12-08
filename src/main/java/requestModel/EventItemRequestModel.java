@@ -5,15 +5,15 @@ import java.time.LocalTime;
 
 public class EventItemRequestModel {
 
-    private String title;
+    private final String title;
 
-    private LocalDate startDate;
+    private final LocalDate startDate;
 
-    private LocalDate endDate;
+    private final LocalDate endDate;
 
-    private LocalTime startTime;
+    private final LocalTime startTime;
 
-    private LocalTime endTime;
+    private final LocalTime endTime;
 
     public EventItemRequestModel(String title, LocalDate startDate, LocalDate endDate,
                                  LocalTime startTime, LocalTime endTime) {
@@ -32,7 +32,9 @@ public class EventItemRequestModel {
         return this.startDate;
     }
 
-    public LocalDate getEndDate() {return this.endDate;}
+    public LocalDate getEndDate() {
+        return this.endDate;
+    }
 
     public LocalTime getStartTime() {
         return this.startTime;
