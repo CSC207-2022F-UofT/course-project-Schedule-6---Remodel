@@ -20,7 +20,7 @@ public class CommonUserFactoryTest {
     CommonUserFactory test_example_2 = new CommonUserFactory();
 
     // In order to test the CommonUserFactory, we only need to test if the type of the return is the same type as the
-    // CommonUserFactory class.
+    // CommonUserFactory class. (fixed)
 
     @Test
     void Task_create_test_example_1() {
