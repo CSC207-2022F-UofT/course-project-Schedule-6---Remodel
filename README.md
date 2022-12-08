@@ -13,34 +13,44 @@ Students can use this application to enter class schedules, events, and assignme
 - Tristen White([@Tristenwhite](https://github.com/Tristenwhite))
 - Brian Xue([@Bri-xX](https://github.com/Bri-xX))
 
-# Entities 
+# 1 Entities 
 
 ## Entities.User
+The User entity stores information about individual schedule 6 users.
 ### Attributes
-- userName
-- password
+* `userName`
+* `password`
 ## Entities.Entry
+The Entry entity stores information on each individual event created by the User.
 ### Attributes
-- title
-- StartDate
-- EndDate
-- startTime
-- endTime
+* `title`
+* `StartDate`
+* `EndDate`
+* `startTime`
+* `endTime`
 ## Entities.Task
+The Task entity stores information on each individual task created by the User.
 ### Attributes
-- description
-- date
-- category
+* `description`
+* `date`
+* `category`
 
-# Usecases
+# 2 Usecases
 ## Event 
 ### Functions
+* `create()`
+* `loadEvents()`
 ## Import
 ### Functions
+* `create()`
 ## Task 
 ### Functions
+* `create()`
+* `loadTasks()`
 ## User
 ### Functions
+* `loginCheck()`
+* `create()`
 
-# User Interface (UI)
+# 3 User Interface (UI)
 

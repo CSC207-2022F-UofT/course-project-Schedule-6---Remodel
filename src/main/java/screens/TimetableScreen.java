@@ -19,7 +19,7 @@ import main.collectCollection;
 import presenter.ImportPresenter;
 import useCaseInteractor.DataAccess;
 import useCaseInteractor.Import.ImportInteractor;
-import useCaseInteractor.User.userCollection;
+import controller.User.userCollection;
 
 
 import java.io.IOException;
@@ -55,6 +55,7 @@ public class TimetableScreen {
     private final ImportInputBoundary importInputBoundary= new ImportInteractor(presenter, factory, dataAccess);
 
     private final ImportController importControl = new ImportController(importInputBoundary, presenter);
+
     public void saveCalenderEntries(ActionEvent event) throws UnknownHostException {
         timetableController.saveCalendarEntries(allEntriesSavedLabel);
     }
@@ -62,8 +63,9 @@ public class TimetableScreen {
     public void addFutureEntries(ActionEvent event) {
         timetableController.futureEventButton(event);
     }
+
     public void addNewFile(ActionEvent event) {
-        importControl.addNewFile(event, fileImportButton, filePicker);
+        importControl.addNewFile(event, fileImportButton, filePicker, allEntriesSavedLabel);
     }
     public void initialize() throws IOException {
         timetableController.loadCalendar(Gridlock);

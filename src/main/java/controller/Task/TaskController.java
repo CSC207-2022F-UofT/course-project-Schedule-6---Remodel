@@ -5,21 +5,18 @@ import boundary.Task.UpdateTaskItemInputBoundary;
 import database.MongoDBAccess;
 import entity.Task.CommonTaskFactory;
 import entity.Task.TaskFactory;
-import javafx.animation.FadeTransition;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.util.Duration;
 import main.collectCollection;
 import presenter.TaskPresenter;
 import requestModel.TaskRequestModel;
 import useCaseInteractor.DataAccess;
 import useCaseInteractor.Task.LoadTasksUseCase;
 import useCaseInteractor.Task.UpdateTask;
-import useCaseInteractor.User.userCollection;
+import controller.User.userCollection;
 
 import java.net.UnknownHostException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
