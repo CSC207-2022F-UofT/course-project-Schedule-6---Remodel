@@ -11,12 +11,12 @@ public class CreateNewEntryScreen {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getClassLoader().getResource
                     ("FutureEvents.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 336, 488);
-            Stage loginStage = new Stage();
-            loginStage.initStyle(StageStyle.DECORATED);
-            loginStage.setScene(scene);
-            loginStage.show();
-
+            Scene scene = new Scene(fxmlLoader.load(), 336 , 488);
+            Stage createFutureEventStage = new Stage();
+            createFutureEventStage.setResizable(false);
+            createFutureEventStage.initStyle(StageStyle.DECORATED);
+            createFutureEventStage.setScene(scene);
+            createFutureEventStage.show();
         } catch (Exception e) {
             e.printStackTrace();
             e.getCause();

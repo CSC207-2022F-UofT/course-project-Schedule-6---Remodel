@@ -13,10 +13,11 @@ public class CreateRegistrationScreen {
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getClassLoader().getResource(
                     "RegistrationPage.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 468, 600);
-            Stage loginStage = new Stage();
-            loginStage.initStyle(StageStyle.DECORATED);
-            loginStage.setScene(scene);
-            loginStage.show();
+            Stage registrationStage = new Stage();
+            registrationStage.setResizable(false);
+            registrationStage.initStyle(StageStyle.DECORATED);
+            registrationStage.setScene(scene);
+            registrationStage.show();
 
         } catch (Exception e) {
             e.printStackTrace();

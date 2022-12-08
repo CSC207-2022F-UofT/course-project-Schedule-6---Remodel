@@ -8,7 +8,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import responseModel.User.UserLoginResponseModel;
-import screens.CreateEventScreen;
+import screens.CreateTimetableScreen;
 import screens.TimetableScreen;
 
 public class UserLoginPresenter implements UserLoginOutputBoundary {
@@ -38,7 +38,7 @@ public class UserLoginPresenter implements UserLoginOutputBoundary {
         Stage stage = (Stage) button.getScene().getWindow();
         stage.close();
         //The event form opens
-        CreateEventScreen.newForm();
+        CreateTimetableScreen.newForm();
         TimetableScreen.usernameChangeLabel.setText(userCollection.getUsername());
     }
 
