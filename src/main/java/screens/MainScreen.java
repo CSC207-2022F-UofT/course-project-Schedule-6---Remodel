@@ -1,7 +1,6 @@
 package screens;
 
 import controller.User.MainController;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -25,15 +24,15 @@ public class MainScreen {
 
     private final MainController mainController = new MainController();
 
-    public void cancelButtonAction(ActionEvent event) {
+    public void cancelButtonAction() {
         mainController.cancelButtonAction(cancelButton);
     }
 
-    public void loginButtonAction(ActionEvent event) throws UnknownHostException {
+    public void loginButtonAction() throws UnknownHostException {
         mainController.loginButtonAction(usernameTextField, passwordTextField, loginButton, loginMessageLabel);
     }
 
-    public void registerButtonAction(ActionEvent event) {
+    public void registerButtonAction() {
         mainController.registerButtonAction();
     }
 }
