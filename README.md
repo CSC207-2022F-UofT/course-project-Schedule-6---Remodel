@@ -39,7 +39,9 @@ The Task entity stores information on each individual task created by the User.
 ## Event 
 ### Functions
 * `create()`
+- Creates an instance of Event 
 * `loadEvents()`
+- Fetches & Loads existing events in the DataBase
 ## Import
 ### Functions
 * `create()`
