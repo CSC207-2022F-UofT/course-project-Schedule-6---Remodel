@@ -5,9 +5,11 @@ import com.calendarfx.model.Calendar;
 import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
 import controller.Event.TimetableController;
+import javafx.scene.control.Label;
 import responseModel.Import.ImportResponseModel;
 
 public class ImportPresenter implements ImportOutputBoundary {
+
     @Override
     public ImportResponseModel successfulImport(ImportResponseModel responseModel){
         CalendarView calendar = TimetableController.calendar;
@@ -27,7 +29,8 @@ public class ImportPresenter implements ImportOutputBoundary {
         return responseModel;
     }
 
-    public ImportResponseModel failedImport(String error){
+    public ImportResponseModel failedImport(Label label, String error){
+        label.setText(error);
         return null;
     }
     //td: reflect the error on the view
