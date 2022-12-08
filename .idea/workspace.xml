@@ -4,45 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="fixing CA, refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/User/UserLoginInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/User/UserLoginOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/User/UserRegisterInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/User/userCollection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/UserLoginPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/UserRegisterPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/requestModel/UserLoginRequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/requestModel/UserRegisterRequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/responseModel/User/UserLoginResponseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/responseModel/User/UserRegisterResponseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/UserLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/UserRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m__[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m___Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m__[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m___Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Event/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Event/TimetableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/CommonUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/CommonUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/CommonUserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/CommonUserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/Request.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/Search.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/UserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/TaskPresenterInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/User/searchResponseModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/RegistrationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/RegistrationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/TaskScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TaskScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimetableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimetableScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Search/launchSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/setUsername.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/userCollection.java" beforeDir="false" />
-    </list>
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Finished the Tests for all the entities which includes CommonTaskTest, CommonTaskFactoryTest, CommonEventItemTest, CommonEventItemFactoryTest, CommonUserTest, and CommonUserFactoryTest." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,21 +50,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Git.Branch.Popup.ShowAllRemotes": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.508046"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Main">
+}</component>
+  <component name="RunManager" selected="应用程序.LoginPage">
     <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
       <module name="schedule-6---Remodel" />
@@ -129,10 +91,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CommonTaskTest.setDescription_test_example_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="schedule-6---Remodel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TaskEntityTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TaskEntityTest" />
+      <option name="MAIN_CLASS_NAME" value="TaskEntityTest.CommonTaskTest" />
+      <option name="METHOD_NAME" value="setDescription_test_example_1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.LoginPage" />
+        <item itemvalue="应用程序.Main" />
+        <item itemvalue="应用程序.LoginPage" />
+        <item itemvalue="JUnit.CommonTaskTest.setDescription_test_example_1" />
       </list>
     </recent_temporary>
   </component>
@@ -176,6 +155,7 @@
       <workItem from="1670343411364" duration="22879000" />
       <workItem from="1670431078909" duration="18535000" />
       <workItem from="1670463956862" duration="13997000" />
+      <workItem from="1670483991939" duration="16119000" />
     </task>
     <task id="LOCAL-00004" summary="Added DeleteTaskInputBoundary and EditTaskInputBoundary">
       <created>1670012955360</created>
@@ -373,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670448439614</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Finished the Tests for all the entities which includes CommonTaskTest, CommonTaskFactoryTest, CommonEventItemTest, CommonEventItemFactoryTest, CommonUserTest, and CommonUserFactoryTest.">
+      <created>1670536875253</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1670536875253</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +396,8 @@
     <MESSAGE value="update xml files" />
     <MESSAGE value="EVERYTHING WORKS" />
     <MESSAGE value="fixing CA, refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing CA, refactoring" />
+    <MESSAGE value="Finished the Tests for all the entities which includes CommonTaskTest, CommonTaskFactoryTest, CommonEventItemTest, CommonEventItemFactoryTest, CommonUserTest, and CommonUserFactoryTest." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished the Tests for all the entities which includes CommonTaskTest, CommonTaskFactoryTest, CommonEventItemTest, CommonEventItemFactoryTest, CommonUserTest, and CommonUserFactoryTest." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
