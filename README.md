@@ -21,3 +21,9 @@ Students can use this application to enter class schedules, events, and assignme
 ### Attributes
 ## Entities.Task
 ### Attributes
+
+# Usecases
+## 
+
+# User Interface (UI)
+
