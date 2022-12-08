@@ -25,10 +25,15 @@ public class MainScreen {
     private final MainController mainController = new MainController();
 
     public void cancelButtonAction(ActionEvent event) {
-        mainController.cancelButtonAction(event, cancelButton);}
+        mainController.cancelButtonAction(event, cancelButton);
+    }
+
     public void loginButtonAction(ActionEvent event) throws UnknownHostException {
         mainController.loginButtonAction(event, usernameTextField, passwordTextField, loginButton, loginMessageLabel);
     }
+
     public void registerButtonAction(ActionEvent event){
-        mainController.registerButtonAction(event);}
+        mainController.registerButtonAction(event);
+    }
 }
+
