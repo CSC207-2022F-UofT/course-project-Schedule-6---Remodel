@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="reformated and refactored" />
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Finished the Tests for all the entities which includes CommonTaskTest, CommonTaskFactoryTest, CommonEventItemTest, CommonEventItemFactoryTest, CommonUserTest, and CommonUserFactoryTest.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="136-dashboard-bug-fix" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -351,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670525370276</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Finished the Tests for all the entities which includes CommonTaskTest, CommonTaskFactoryTest, CommonEventItemTest, CommonEventItemFactoryTest, CommonUserTest, and CommonUserFactoryTest.">
+      <created>1670537641018</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1670537641018</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +397,8 @@
     <MESSAGE value="EVERYTHING WORKS" />
     <MESSAGE value="fixing CA, refactoring" />
     <MESSAGE value="reformated and refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="reformated and refactored" />
+    <MESSAGE value="Finished the Tests for all the entities which includes CommonTaskTest, CommonTaskFactoryTest, CommonEventItemTest, CommonEventItemFactoryTest, CommonUserTest, and CommonUserFactoryTest." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished the Tests for all the entities which includes CommonTaskTest, CommonTaskFactoryTest, CommonEventItemTest, CommonEventItemFactoryTest, CommonUserTest, and CommonUserFactoryTest." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
