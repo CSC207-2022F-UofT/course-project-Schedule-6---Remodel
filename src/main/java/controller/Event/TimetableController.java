@@ -33,7 +33,7 @@ import screens.CreateNewEntryScreen;
 import useCaseInteractor.DataAccess;
 import useCaseInteractor.Event.UpdateEventItem;
 import useCaseInteractor.Event.loadEventsUseCase;
-import useCaseInteractor.User.userCollection;
+import controller.User.userCollection;
 import main.collectCollection;
 
 public class TimetableController {

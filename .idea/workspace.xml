@@ -5,32 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="fixing CA, refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/Task/LoadTaskInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/Task/LoadTasksOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/responseModel/Task/LoadTasksResponseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/LoadTasksUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/User/UserLoginInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/User/UserLoginOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/User/UserRegisterInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/User/userCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/UserLoginPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/presenter/UserRegisterPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/requestModel/UserLoginRequestModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/requestModel/UserRegisterRequestModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/responseModel/User/UserLoginResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/responseModel/User/UserRegisterResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/UserLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/UserRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m__[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m___Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m__[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m___Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Task/AddTaskItemInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Task/UpdateTaskItemInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Task/DeleteTaskInputBoundary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Task/EditTaskInputBoundary.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Event/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Event/TimetableController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/TaskListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTaskFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/TaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/TaskFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/TaskPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/TaskPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/tempPre.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/MainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/CommonUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/CommonUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/CommonUserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/CommonUserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/Request.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/Search.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/UserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/TaskPresenterInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/User/searchResponseModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/RegistrationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/RegistrationScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/TaskScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TaskScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimetableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimetableScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/AddTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/UpdateTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/DeleteTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/EditTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Timetable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Timetable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Search/launchSearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/setUsername.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/userCollection.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,8 +98,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.508046"
   }
 }]]></component>
   <component name="RunManager" selected="Application.Main">
@@ -163,7 +174,8 @@
       <workItem from="1670211710393" duration="399000" />
       <workItem from="1670214559499" duration="20639000" />
       <workItem from="1670343411364" duration="22879000" />
-      <workItem from="1670431078909" duration="12701000" />
+      <workItem from="1670431078909" duration="18535000" />
+      <workItem from="1670463956862" duration="13997000" />
     </task>
     <task id="LOCAL-00004" summary="Added DeleteTaskInputBoundary and EditTaskInputBoundary">
       <created>1670012955360</created>
@@ -354,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670373901907</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fixing CA, refactoring">
+      <created>1670448439614</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1670448439614</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,6 +417,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NumberFormatException" package="java.lang" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
