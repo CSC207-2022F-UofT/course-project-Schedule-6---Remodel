@@ -34,13 +34,13 @@ Students can use this application to enter class schedules, events, and assignme
 
 # Usecases
 ## Event 
-### Attributes
+### Functions
 ## Import
-### Attributes
+### Functions
 ## Task 
-### Attributes
+### Functions
 ## User
-### Attributes
+### Functions
 
 # User Interface (UI)
 
