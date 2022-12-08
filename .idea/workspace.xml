@@ -4,15 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="fixing CA, refactoring">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01,_10_32_a_m__[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_1.xml" beforeDir="false" />
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="reformated and refactored">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Task/LoadTasksOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Task/LoadTasksOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Task/TaskCreationOutputBoundary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/User/UserLoginInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/User/UserLoginInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/User/UserLoginOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/User/UserLoginOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/User/UserRegisterInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/User/UserRegisterInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Event/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Event/TimetableController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Import/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Import/ImportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/userCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/userCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Event/CommonEventItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Event/CommonEventItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Event/TimeManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Event/TimeManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/collectCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/collectCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/EventsPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/EventsPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/presenter/ImportPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/ImportPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/TaskCreationPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/UserLoginPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/UserLoginPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/UserRegisterPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/UserRegisterPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/EventItemRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/EventItemRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/ImportRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/ImportRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/TaskRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/TaskRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/UserLoginRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/UserLoginRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/UserRegisterRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/UserRegisterRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/Event/EventItemResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/responseModel/Event/EventItemResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/Import/ImportResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/responseModel/Import/ImportResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/Task/TaskResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/responseModel/Task/TaskResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/User/UserLoginResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/responseModel/User/UserLoginResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/CreateNewEntryScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateNewEntryScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/CreateRegistrationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateRegistrationScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/FutureEventScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/FutureEventScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/MainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/RegistrationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/RegistrationScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/TaskScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TaskScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimetableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimetableScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/IcsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/IcsParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/LoadTasksUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/LoadTasksUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/UserLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/UserRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/UserRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FutureEvents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FutureEvents.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/RegistrationPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/RegistrationPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Tasks.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Tasks.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Timetable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Timetable.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +70,13 @@
       </list>
     </option>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="136-dashboard-bug-fix" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,26 +99,30 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="ProjectId" id="2INA223FaAmzXW1zgH1gGhjfbAe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.508046",
+    "settings.editor.selected.configurable": "actions.on.save"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
@@ -381,7 +431,8 @@
     <MESSAGE value="update xml files" />
     <MESSAGE value="EVERYTHING WORKS" />
     <MESSAGE value="fixing CA, refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing CA, refactoring" />
+    <MESSAGE value="reformated and refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformated and refactored" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

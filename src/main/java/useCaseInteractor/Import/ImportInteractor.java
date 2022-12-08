@@ -21,9 +21,9 @@ public class ImportInteractor implements ImportInputBoundary {
     }
 
     @Override
-    public ImportResponseModel create(ImportRequestModel requestModel){
+    public void create(ImportRequestModel requestModel) {
         int itemNum = requestModel.getTitles().size(); // the number of events imported from the file
-        for(int i = 0; i < itemNum; i++){
+        for (int i = 0; i < itemNum; i++) {
             EventItem item = factory.create(requestModel.getTitles().get(i),
                     requestModel.getStartDates().get(i),
                     requestModel.getEndDates().get(i),
@@ -41,6 +41,6 @@ public class ImportInteractor implements ImportInputBoundary {
         // Area for improvement: The Import usecase might share response model with AddSchecule to avoid lazy class
 
         ImportOutputBoundary output = new ImportPresenter();
-        return output.successfulImport(responseModel);
+        output.successfulImport(responseModel);
     }
 }

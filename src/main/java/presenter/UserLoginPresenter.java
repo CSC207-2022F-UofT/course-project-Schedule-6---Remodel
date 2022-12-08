@@ -13,9 +13,9 @@ import screens.TimetableScreen;
 
 public class UserLoginPresenter implements UserLoginOutputBoundary {
 
-    private Label label;
+    private final Label label;
 
-    private Button button;
+    private final Button button;
 
     public UserLoginPresenter(Label label, Button button) {
         this.label = label;

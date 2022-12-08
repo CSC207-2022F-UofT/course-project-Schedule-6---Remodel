@@ -2,6 +2,7 @@ package controller.Task;
 
 import boundary.Task.LoadTaskInputBoundary;
 import boundary.Task.UpdateTaskItemInputBoundary;
+import controller.User.userCollection;
 import database.MongoDBAccess;
 import entity.Task.CommonTaskFactory;
 import entity.Task.TaskFactory;
@@ -14,7 +15,6 @@ import requestModel.TaskRequestModel;
 import useCaseInteractor.DataAccess;
 import useCaseInteractor.Task.LoadTasksUseCase;
 import useCaseInteractor.Task.UpdateTask;
-import controller.User.userCollection;
 
 import java.net.UnknownHostException;
 import java.util.HashMap;
@@ -54,7 +54,7 @@ public class TaskController {
         DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
         dataAccess.resetTask(); // should not be here
 
-        for (int i = 0 ; i < todoTable.getItems().size() ; i++) {
+        for (int i = 0; i < todoTable.getItems().size(); i++) {
             TaskFactory task = new CommonTaskFactory();
             UpdateTaskItemInputBoundary inputBoundary = new UpdateTask(dataAccess, task);
             TaskRequestModel requestModel = new TaskRequestModel(

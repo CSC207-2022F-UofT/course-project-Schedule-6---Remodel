@@ -24,23 +24,23 @@ public class ImportRequestModel {
         this.rRules = data.getRRules();
     }
 
-    public ArrayList<String> getTitles(){
+    public ArrayList<String> getTitles() {
         return this.titles;
     }
 
-    public ArrayList<String> getRRules(){
+    public ArrayList<String> getRRules() {
         return this.rRules;
     }
 
-    public ArrayList<LocalDate> getStartDates(){
+    public ArrayList<LocalDate> getStartDates() {
         return getDates(this.starts);
     }
 
-    public ArrayList<LocalDate> getEndDates(){
+    public ArrayList<LocalDate> getEndDates() {
         return getDates(this.ends);
     }
 
-    private ArrayList<LocalDate> getDates(ArrayList<String> input){
+    private ArrayList<LocalDate> getDates(ArrayList<String> input) {
         ArrayList<LocalDate> dates = new ArrayList<>();
         for (String dateEntry : input) {
             int index = dateEntry.indexOf("2"); //The index where the date expression starts
@@ -51,7 +51,7 @@ public class ImportRequestModel {
         return dates;
     }
 
-    public ArrayList<LocalTime> getStartTime(){
+    public ArrayList<LocalTime> getStartTime() {
         return getTime(this.starts);
     }
 
@@ -59,7 +59,7 @@ public class ImportRequestModel {
         return getTime(this.ends);
     }
 
-    private ArrayList<LocalTime> getTime(ArrayList<String> input){
+    private ArrayList<LocalTime> getTime(ArrayList<String> input) {
         ArrayList<LocalTime> timeList = new ArrayList<>();
         for (String dateEntry : input) {
             int index = dateEntry.indexOf("2"); //The index where the date expression starts

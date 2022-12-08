@@ -11,10 +11,10 @@ import responseModel.Import.ImportResponseModel;
 public class ImportPresenter implements ImportOutputBoundary {
 
     @Override
-    public ImportResponseModel successfulImport(ImportResponseModel responseModel){
+    public ImportResponseModel successfulImport(ImportResponseModel responseModel) {
         CalendarView calendar = TimetableController.calendar;
         int itemNum = responseModel.getTitles().size(); // the number of events imported from the file
-        for(int i = 0; i < itemNum; i++) {
+        for (int i = 0; i < itemNum; i++) {
             Entry entry = new Entry(responseModel.getTitles().get(i));
             //sets the days and time for the entry.
             entry.setInterval(responseModel.getStartDates().get(i),
@@ -29,7 +29,7 @@ public class ImportPresenter implements ImportOutputBoundary {
         return responseModel;
     }
 
-    public ImportResponseModel failedImport(Label label, String error){
+    public ImportResponseModel failedImport(Label label, String error) {
         label.setText(error);
         return null;
     }

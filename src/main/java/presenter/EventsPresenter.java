@@ -16,7 +16,7 @@ import responseModel.Event.LoadEventsResponseModel;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.*;
+import java.util.ArrayList;
 
 
 public class EventsPresenter implements LoadEventsOutputBoundary {
@@ -35,18 +35,18 @@ public class EventsPresenter implements LoadEventsOutputBoundary {
     public Entry<String> createEntry(ArrayList<Object> events) {
         Entry<String> entry = new Entry<>((String) events.get(0));
 
-        String[] startDate = ((String )events.get(1)).split("-");
-        String[] endDate = ((String )events.get(2)).split("-");
-        String[] startTime = ((String )events.get(3)).split(":");
-        String[] endTime = ((String )events.get(4)).split(":");
+        String[] startDate = ((String) events.get(1)).split("-");
+        String[] endDate = ((String) events.get(2)).split("-");
+        String[] startTime = ((String) events.get(3)).split(":");
+        String[] endTime = ((String) events.get(4)).split(":");
 
         entry.setInterval(
                 LocalDate.of(
                         Integer.parseInt(startDate[0]), Integer.parseInt(startDate[1]), Integer.parseInt(startDate[2])),
-                LocalTime.of(Integer.parseInt(startTime[0]),Integer.parseInt(startTime[1])),
+                LocalTime.of(Integer.parseInt(startTime[0]), Integer.parseInt(startTime[1])),
                 LocalDate.of(
                         (Integer.parseInt(endDate[0])), Integer.parseInt(endDate[1]), Integer.parseInt(endDate[2])),
-                LocalTime.of(Integer.parseInt(endTime[0]),Integer.parseInt(endTime[1])));
+                LocalTime.of(Integer.parseInt(endTime[0]), Integer.parseInt(endTime[1])));
         return entry;
     }
 

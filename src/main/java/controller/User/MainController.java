@@ -2,29 +2,28 @@ package controller.User;
 
 
 import boundary.User.UserLoginInputBoundary;
-import javafx.event.ActionEvent;
+import database.MongoDBAccess;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import main.collectCollection;
 import presenter.UserLoginPresenter;
 import requestModel.UserLoginRequestModel;
 import screens.CreateRegistrationScreen;
-import java.net.UnknownHostException;
-
 import useCaseInteractor.DataAccess;
-import database.MongoDBAccess;
-import main.collectCollection;
 import useCaseInteractor.User.UserLogin;
+
+import java.net.UnknownHostException;
 
 public class MainController {
 
-    public void cancelButtonAction(ActionEvent event, Button cancelButton){
+    public void cancelButtonAction(Button cancelButton) {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
 
-    public void loginButtonAction(ActionEvent event, TextField usernameTextField, TextField passwordTextField,
+    public void loginButtonAction(TextField usernameTextField, TextField passwordTextField,
                                   Button loginButton, Label loginMessageLabel) throws UnknownHostException {
 
         DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), usernameTextField.getText());
@@ -41,6 +40,7 @@ public class MainController {
         }
     }
 
-    public void registerButtonAction(ActionEvent event){
-        CreateRegistrationScreen.newForm();}
+    public void registerButtonAction() {
+        CreateRegistrationScreen.newForm();
+    }
 }

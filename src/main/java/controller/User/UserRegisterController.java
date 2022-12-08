@@ -3,16 +3,16 @@ package controller.User;
 import boundary.User.UserRegisterInputBoundary;
 import database.MongoDBAccess;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import java.net.UnknownHostException;
 import main.collectCollection;
 import presenter.UserRegisterPresenter;
 import requestModel.UserRegisterRequestModel;
 import useCaseInteractor.DataAccess;
 import useCaseInteractor.User.UserRegister;
+
+import java.net.UnknownHostException;
 
 public class UserRegisterController {
 
@@ -21,12 +21,12 @@ public class UserRegisterController {
     public UserRegisterController() {
     }
 
-    public void cancelButtonAction(ActionEvent event, Button RGclosebutton) {
+    public void cancelButtonAction(Button RGclosebutton) {
         Stage stage = (Stage) RGclosebutton.getScene().getWindow();
         stage.close();
     }
-    public void registerButtonOnAction(ActionEvent event,
-                                       Label registrationMessage, Label inUseLabel, Label passwordMisMatch,
+
+    public void registerButtonOnAction(Label registrationMessage, Label inUseLabel, Label passwordMisMatch,
                                        TextField RGfirstname, TextField RGlastname, TextField RGusername,
                                        TextField RGpassword, TextField RGconfirmpassword,
                                        Button RGclosebutton) throws UnknownHostException {
@@ -41,7 +41,7 @@ public class UserRegisterController {
             } else if (RGpassword.getText().equals(RGconfirmpassword.getText())) {
 
                 UserRegisterRequestModel requestModel = new UserRegisterRequestModel(RGusername.getText(),
-                        RGpassword.getText(), RGconfirmpassword.getText(), RGfirstname.getText(), RGlastname.getText());
+                        RGpassword.getText(), RGfirstname.getText(), RGlastname.getText());
                 UserRegisterInputBoundary inputBoundary = new UserRegister(dataAccess);
                 inputBoundary.create(requestModel);
                 presenter.prepeareSuccessAction(
