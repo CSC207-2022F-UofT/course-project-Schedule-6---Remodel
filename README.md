@@ -35,10 +35,15 @@ Students can use this application to enter class schedules, events, and assignme
 # Usecases
 ## Event 
 ### Functions
+* `create()`
+* `loadEvents()`
 ## Import
 ### Functions
+* `create()`
 ## Task 
 ### Functions
+* `create()`
+* `loadTasks()`
 ## User
 ### Functions
 
