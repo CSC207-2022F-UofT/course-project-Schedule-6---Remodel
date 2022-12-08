@@ -1,9 +1,8 @@
 package useCaseInteractor;
 
 import requestModel.ImportRequestModel;
-import requestModel.ScheduleItemRequestModel;
-import requestModel.TaskRequestModel;
-import responseModel.Schedule.ScheduleItemResponseModel;
+import requestModel.EventItemRequestModel;
+import responseModel.Event.EventItemResponseModel;
 import responseModel.Task.TaskResponseModel;
 
 import java.util.ArrayList;
@@ -12,27 +11,27 @@ public interface DataAccess {
 
     boolean createUser(String password, String fName, String lName);
 
-    boolean scheduleExists(ScheduleItemRequestModel request);
+    boolean eventExists(EventItemRequestModel request);
 
-    void resetSchedule();
+    void resetEvents();
 
     void resetTask();
 
-    void setSchedule(ScheduleItemResponseModel responseModel);
+    void setEvent(EventItemResponseModel responseModel);
 
-    ArrayList<Object> getSingleSchedule(ScheduleItemResponseModel responseModel);
+    ArrayList<Object> getSingleEvent(EventItemResponseModel responseModel);
 
-    void setImportSchedule(ImportRequestModel requestModel);
+    void setImportEvents(ImportRequestModel requestModel);
 
-    ArrayList<ArrayList<Object>> getUserEntireSchedule();
+    ArrayList<ArrayList<Object>> getUserEvents();
 
-    void deleteScheduleItem(ScheduleItemResponseModel responseModel);
+    void deleteEventItem(EventItemResponseModel responseModel);
 
     void setTask(TaskResponseModel responseModel);
 
     ArrayList<Object> getSingleTask(TaskResponseModel responseModel);
 
-    ArrayList<ArrayList<Object>> getUserEntireTask();
+    ArrayList<ArrayList<Object>> getUserTasks();
 
     void deleteTask(TaskResponseModel responseModel);
 

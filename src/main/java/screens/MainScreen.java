@@ -1,6 +1,6 @@
 package screens;
 
-import controller.Schedule.ScheduleController;
+import controller.Event.TimetableController;
 import controller.User.MainController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,13 +24,10 @@ public class MainScreen {
 
     private final MainController mainController = new MainController();
 
-    private final ScheduleController scheduleController = new ScheduleController();
-
     public void cancelButtonAction(ActionEvent event) {
         mainController.cancelButtonAction(event, cancelButton);}
     public void loginButtonAction(ActionEvent event) throws UnknownHostException {
         mainController.loginButtonAction(event, usernameTextField, passwordTextField, loginButton, loginMessageLabel);
-        scheduleController.loadSchedule();
     }
     public void registerButtonAction(ActionEvent event){
         mainController.registerButtonAction(event);}
