@@ -19,8 +19,8 @@ public class CommonUserFactoryTest {
 
     CommonUserFactory test_example_2 = new CommonUserFactory();
 
-    // In order to test the CommonEventItemFactory, we only need to test if the type of the return is the same type as the
-    // CommonEventItemFactory class.
+    // In order to test the CommonUserFactory, we only need to test if the type of the return is the same type as the
+    // CommonUserFactory class.
 
     @Test
     void Task_create_test_example_1() {
