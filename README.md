@@ -17,10 +17,20 @@ Students can use this application to enter class schedules, events, and assignme
 
 ## Entities.User
 ### Attributes
+- userName
+- password
 ## Entities.Entry
 ### Attributes
+- title
+- StartDate
+- EndDate
+- startTime
+- endTime
 ## Entities.Task
 ### Attributes
+- description
+- date
+- category
 
 # Usecases
 ## 
