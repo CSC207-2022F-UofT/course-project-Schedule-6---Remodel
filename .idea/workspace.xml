@@ -84,6 +84,8 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.LoginPage" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.LoginPage" />
       </list>
     </recent_temporary>
   </component>
