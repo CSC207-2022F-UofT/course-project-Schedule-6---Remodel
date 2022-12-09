@@ -1,6 +1,7 @@
 package Test.Entity.User;
 
 import entity.Event.CommonEventItem;
+import entity.User.CommonUser;
 import entity.User.CommonUserFactory;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -18,21 +19,21 @@ public class CommonUserFactoryTest {
 
     CommonUserFactory test_example_2 = new CommonUserFactory();
 
-    // In order to test the CommonEventItemFactory, we only need to test if the type of the return is the same type as the
-    // CommonEventItemFactory class.
+    // In order to test the CommonUserFactory, we only need to test if the type of the return is the same type as the
+    // CommonUserFactory class. (fixed)
 
     @Test
     void Task_create_test_example_1() {
         assertNotNull(test_example_1.create("mikewzh", "123", "Mike", "Wang"));
         assertTrue(test_example_1.create("mikewzh", "123", "Mike", "Wang")
-                instanceof CommonEventItem);
+                instanceof CommonUser);
     }
 
     @Test
     void Task_create_test_example_2() {
         assertNotNull(test_example_2.create("stevenli", "5555sl", "Steven", "Li"));
         assertTrue(test_example_2.create("stevenli", "5555sl", "Steven", "Li")
-                instanceof CommonEventItem);
+                instanceof CommonUser);
     }
 }
 
