@@ -1,9 +1,10 @@
-package java.responseModel.Event;
+package responseModel.Event;
 
-import responeModel.*;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -12,17 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-public class EventItemResponseModelTest{
+public class LoadEventsResponseModel{
+
 
     @BeforeEach
     void setUp() {
+
     }
-    LoadEventsResponseModel test_event = new LoadEventsResponseModel(ArrayList<ArrayList<Object>> );
-    @Test
-    void Event_Test_GetTitle(){
-        Array
-    }
-        assertNotNull(test_event.getTitle());
-        assertTrue(test_event.getTitle().equals("Finish testcases"));
 
 }
