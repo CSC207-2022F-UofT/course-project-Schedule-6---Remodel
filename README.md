@@ -39,10 +39,13 @@ The Task entity stores information on each individual task created by the User.
 ## Event 
 ### Functions
 * `create()`
+    * Creates an instance of Event 
 * `loadEvents()`
+    * Fetches & Loads existing events in the DataBase
 ## Import
 ### Functions
 * `create()`
+    * Creates events based on the imported Ics file
 ## Task 
 ### Functions
 * `create()`
@@ -52,5 +55,25 @@ The Task entity stores information on each individual task created by the User.
 * `loginCheck()`
 * `create()`
 
-# 3 User Interface (UI)
+# 3 Database
+## MongoDB
+## Data structure
+## Data storage
+## Data access
 
+# 4 User Interface (UI)
+## User login
+## User registration
+## Schedule
+## Import schedule
+## Add event
+## Edit event
+## Delete event
+## To-do list
+## Add task
+## Edit task
+## Delete task
+
+# 5 Project installation
+
+# 6 Running the project

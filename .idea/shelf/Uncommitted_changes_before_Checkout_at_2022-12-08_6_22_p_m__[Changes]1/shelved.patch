@@ -1,0 +1,1888 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m___Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m___Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m___Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m___Changes_.xml	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m__[Changes]" date="1669847241050" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m__[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022-11-30 5:27 p.m. [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m___Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m___Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m___Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m___Changes_.xml	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m__[Changes]" date="1669849071425" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m__[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022-11-30 5:57 p.m. [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01,_10_32_a_m__[Changes]1/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01,_10_32_a_m__[Changes]1/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01,_10_32_a_m__[Changes]1/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01,_10_32_a_m__[Changes]1/shelved.patch	
++++ /dev/null	
+@@ -1,187 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	
+-+++ b/.idea/workspace.xml	
+-@@ -4,7 +4,12 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Deleting ToDoList.java" />
+-+    <list default="true" id="dcf613bb-ea36-4ee1-8aab-9cab89d0b69c" name="Changes" comment="Cleaned up login controller">
+-+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoTesting.java" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ToDoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ToDoList.java" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" afterDir="false" />
+-+    </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-@@ -34,25 +39,28 @@
+-     <option name="hideEmptyMiddlePackages" value="true" />
+-     <option name="showLibraryContents" value="true" />
+-   </component>
+--  <component name="PropertiesComponent">{
+--  &quot;keyToString&quot;: {
+--    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+--    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+--    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+--    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+--    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+--    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+--    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+--    &quot;last_opened_file_path&quot;: &quot;C:/Users/RAZER/IdeaProjects/Remodel&quot;,
+--    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+--    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+--    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
+-+  <component name="PropertiesComponent"><![CDATA[{
+-+  "keyToString": {
+-+    "Downloaded.Files.Path.Enabled": "false",
+-+    "Repository.Attach.Annotations": "false",
+-+    "Repository.Attach.JavaDocs": "false",
+-+    "Repository.Attach.Sources": "false",
+-+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-+    "RunOnceActivity.ShowReadmeOnStart": "true",
+-+    "WebServerToolWindowFactoryState": "false",
+-+    "last_opened_file_path": "C:/Users/RAZER/IdeaProjects/Remodel",
+-+    "node.js.detected.package.eslint": "true",
+-+    "node.js.selected.package.eslint": "(autodetect)",
+-+    "node.js.selected.package.tslint": "(autodetect)",
+-+    "project.structure.last.edited": "Libraries",
+-+    "project.structure.proportion": "0.15",
+-+    "project.structure.side.proportion": "0.508046"
+-   }
+--}</component>
+-+}]]></component>
+-   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+-   <component name="TaskManager">
+-     <task active="true" id="Default" summary="Default task">
+--      <changelist id="58ef2c0d-dda3-46fe-b813-6c5d6882ba56" name="Changes" comment="" />
+-+      <changelist id="dcf613bb-ea36-4ee1-8aab-9cab89d0b69c" name="Changes" comment="Cleaned up login controller" />
+-       <created>1668802068292</created>
+-       <option name="number" value="Default" />
+-       <option name="presentableId" value="Default" />
+-@@ -65,6 +73,7 @@
+-       <workItem from="1669584312630" duration="260000" />
+-       <workItem from="1669584585127" duration="4428000" />
+-       <workItem from="1669615677647" duration="1066000" />
+-+      <workItem from="1669907111119" duration="546000" />
+-     </task>
+-     <task id="LOCAL-00001" summary="xml files">
+-       <created>1668808131245</created>
+-@@ -122,7 +131,35 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1669615912380</updated>
+-     </task>
+--    <option name="localTasksCounter" value="9" />
+-+    <task id="LOCAL-00009" summary="Started working on viewing friends">
+-+      <created>1669760545894</created>
+-+      <option name="number" value="00009" />
+-+      <option name="presentableId" value="LOCAL-00009" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669760545894</updated>
+-+    </task>
+-+    <task id="LOCAL-00010" summary="added category setters and getters for DB">
+-+      <created>1669761438357</created>
+-+      <option name="number" value="00010" />
+-+      <option name="presentableId" value="LOCAL-00010" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669761438357</updated>
+-+    </task>
+-+    <task id="LOCAL-00011" summary="added category variabe when creating user">
+-+      <created>1669761583038</created>
+-+      <option name="number" value="00011" />
+-+      <option name="presentableId" value="LOCAL-00011" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669761583038</updated>
+-+    </task>
+-+    <task id="LOCAL-00012" summary="Cleaned up login controller">
+-+      <created>1669761761994</created>
+-+      <option name="number" value="00012" />
+-+      <option name="presentableId" value="LOCAL-00012" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669761761994</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="13" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+-@@ -145,6 +182,10 @@
+-     <MESSAGE value="update from main" />
+-     <MESSAGE value="pull issue from misc" />
+-     <MESSAGE value="reorganized packages" />
+--    <option name="LAST_COMMIT_MESSAGE" value="reorganized packages" />
+-+    <MESSAGE value="Started working on viewing friends" />
+-+    <MESSAGE value="added category setters and getters for DB" />
+-+    <MESSAGE value="added category variabe when creating user" />
+-+    <MESSAGE value="Cleaned up login controller" />
+-+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up login controller" />
+-   </component>
+- </project>
+-\ No newline at end of file
+-Index: src/main/java/database/MongoTesting.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/main/java/database/MongoTesting.java b/src/main/java/database/MongoTesting.java
+---- a/src/main/java/database/MongoTesting.java	
+-+++ b/src/main/java/database/MongoTesting.java	
+-@@ -27,6 +27,7 @@
+-         DB database = mongoClient.getDB("schedule6-testingdb");
+-         DBCollection collection = database.getCollection("schedule6-testingcollection");
+- 
+-+        String password = "123";
+-         ArrayList<Object> list = new ArrayList<>();
+-         ArrayList<Object> sublist_1 = new ArrayList<>();
+-         sublist_1.add("Meeting");
+-@@ -40,17 +41,24 @@
+-         sublist_2.add(LocalTime.of(3, 30));
+-         list.add(sublist_2);
+-         list.add(sublist_1);
+--        DBObject person = new BasicDBObject("_id", "nizar")
+--                .append("schedule", list);
+--        collection.insert(person);
+-+        //DBObject person = new BasicDBObject("_id", "selena")
+-+        //        .append("schedule", list).append("password", password);
+-+        //collection.insert(person);
+- 
+--        DBObject query = new BasicDBObject("_id", "test_user123");
+-+        DBObject query = new BasicDBObject("_id", "n21");
+- 
+-         // Adding to DB
+-+        /**
+-         list.remove(sublist_1);
+--        DBObject updateObj = new BasicDBObject("schedule", list);
+-+         **/
+-+        ArrayList<String> list3 = new ArrayList<>();
+-+        list3.add("friend1");
+-+        list3.add("friend2");
+-+        list3.add("friend3");
+-+        DBObject updateObj = new BasicDBObject("followers", list3);
+-         collection.update(query, new BasicDBObject("$set", updateObj));
+- 
+-+
+-         // Getting from DB
+- //        DBObject document = collection.findOne(query);
+- //        BasicDBList list = (BasicDBList) document.get("schedule");
+-Index: src/main/java/entity/ToDoList.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/main/java/entity/ToDoList.java b/src/main/java/entity/ToDoList.java
+---- a/src/main/java/entity/ToDoList.java	
+-+++ b/src/main/java/entity/ToDoList.java	
+-@@ -23,7 +23,7 @@
+-     }
+- 
+-     public void addCategory(String name, boolean status, String hex){
+--        this.categories.add(new CommonCategory(name, status, hex));
+-+        //this.categories.add(new CommonCategory(name, status, hex));
+-     }
+- 
+-     public void deleteCategory(Category category){
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m__[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m__[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m__[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m__[Changes]/shelved.patch	
++++ /dev/null	
+@@ -1,66 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0d9985c1-50bb-47d9-ac9c-80a8e10d5223\" name=\"Changes\" comment=\"fixes\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/controller/Task/TaskCreationController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/controller/Task/TaskCreationController.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"calendarEntries\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GithubProjectSettings\">\r\n    <option name=\"branchProtectionPatterns\">\r\n      <list>\r\n        <option value=\"main\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2HjcjUqh7888EexIO8QR2YAnepC\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\r\n    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/RAZER/IdeaProjects/Remodel&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Application.LoginPage\">\r\n    <configuration name=\"LoginPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"ALTERNATIVE_JRE_PATH\" value=\"$PROJECT_DIR$/../Library/Java/JavaVirtualMachines/corretto-18.0.2/Contents/Home\" />\r\n      <option name=\"ALTERNATIVE_JRE_PATH_ENABLED\" value=\"true\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.LoginPage\" />\r\n      <module name=\"course-project-Schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.Main\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ScheduleButton\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.ScheduleButton\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"TodoPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.TodoPage\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.LoginPage\" />\r\n      <item itemvalue=\"Application.Main\" />\r\n      <item itemvalue=\"Application.ScheduleButton\" />\r\n      <item itemvalue=\"Application.TodoPage\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.LoginPage\" />\r\n        <item itemvalue=\"Application.TodoPage\" />\r\n        <item itemvalue=\"Application.ScheduleButton\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.TodoPage\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0d9985c1-50bb-47d9-ac9c-80a8e10d5223\" name=\"Changes\" comment=\"Deleting ToDoList.java\" />\r\n      <created>1668802068292</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1668802068292</updated>\r\n      <workItem from=\"1668802069624\" duration=\"3530000\" />\r\n      <workItem from=\"1668807659999\" duration=\"1154000\" />\r\n      <workItem from=\"1669044599623\" duration=\"4572000\" />\r\n      <workItem from=\"1669049487638\" duration=\"290000\" />\r\n      <workItem from=\"1669426214323\" duration=\"1955000\" />\r\n      <workItem from=\"1669584312630\" duration=\"260000\" />\r\n      <workItem from=\"1669584585127\" duration=\"4428000\" />\r\n      <workItem from=\"1669615677647\" duration=\"1066000\" />\r\n      <workItem from=\"1669688229778\" duration=\"10150000\" />\r\n      <workItem from=\"1669741252610\" duration=\"5437000\" />\r\n      <workItem from=\"1669817334281\" duration=\"7904000\" />\r\n      <workItem from=\"1669825733264\" duration=\"7660000\" />\r\n      <workItem from=\"1669836924977\" duration=\"11194000\" />\r\n      <workItem from=\"1669925219335\" duration=\"918000\" />\r\n      <workItem from=\"1669927052496\" duration=\"499000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"xml files\">\r\n      <created>1668808131245</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668808131245</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"xml files\">\r\n      <created>1668808143558</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668808143558</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"xml files\">\r\n      <created>1669049406927</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669049406927</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"MongoTesting\">\r\n      <created>1669426351649</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669426351649</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"update from main\">\r\n      <created>1669426474403</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669426474403</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"pull issue from misc\">\r\n      <created>1669615586305</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669615586305</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"pull issue from misc\">\r\n      <created>1669615697867</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669615697867</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"reorganized packages\">\r\n      <created>1669615912380</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669615912380</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Added the create screen and screen for the register account. The controller is also fixed to follow code outline better.\">\r\n      <created>1669703154808</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669703154808</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Added the create screen and screen for the login. The controller is also fixed to follow code outline better.\">\r\n      <created>1669742784809</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669742784809</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"removed creationTime and added status to CategoryCreationResponseModel\">\r\n      <created>1669783434218</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669783434218</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"implemented CCResponseModel in AddCategoryController, nameChecker WIP\">\r\n      <created>1669783486316</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669783486316</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"workspace.xml update\">\r\n      <created>1669783503635</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669783503635</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"workspace.xml update\">\r\n      <created>1669783676850</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669783676850</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"workspace.xml update\">\r\n      <created>1669818714583</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818714583</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"added setCategory to DataAccess\">\r\n      <created>1669818753831</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818753831</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"changed isStatus to getStatus\">\r\n      <created>1669818773542</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818773542</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"made everything public\">\r\n      <created>1669818795490</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818795490</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"changed isStatus to getStatus\">\r\n      <created>1669818808358</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818808358</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"implemented AddCommonCategory\">\r\n      <created>1669818853252</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818853252</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"AddCategoryPresenter\">\r\n      <created>1669818878150</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818878150</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"AddCategoryController\">\r\n      <created>1669818910431</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818910431</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"implemented setCategory\">\r\n      <created>1669820235345</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669820235345</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"update workspace.xml\">\r\n      <created>1669820324774</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669820324774</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00025\" summary=\"moved createCategoryForm from useCase to screen\">\r\n      <created>1669825508522</created>\r\n      <option name=\"number\" value=\"00025\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669825508522</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00026\" summary=\"renamed CategoryCreationResponseModel to CategoryResponseModel\">\r\n      <created>1669834068354</created>\r\n      <option name=\"number\" value=\"00026\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669834068354</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00027\" summary=\"Added EditCategory and EditCategoryInputBoundary\">\r\n      <created>1669834096118</created>\r\n      <option name=\"number\" value=\"00027\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669834096118</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00028\" summary=\"workspace.xml update\">\r\n      <created>1669834109976</created>\r\n      <option name=\"number\" value=\"00028\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669834109976</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00029\" summary=\"Made the calendar name in the calendars tab be the same as the username and removed the add calendar button.\">\r\n      <created>1669838510849</created>\r\n      <option name=\"number\" value=\"00029\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669838510850</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00030\" summary=\"changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch.\">\r\n      <created>1669841110300</created>\r\n      <option name=\"number\" value=\"00030\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00030\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669841110300</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00031\" summary=\"resolved errors related to the removal of category entity\">\r\n      <created>1669911507063</created>\r\n      <option name=\"number\" value=\"00031\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00031\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669911507063</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00032\" summary=\"deleted unneeded file\">\r\n      <created>1669911655041</created>\r\n      <option name=\"number\" value=\"00032\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00032\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669911655041</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00033\" summary=\"workspace update\">\r\n      <created>1669911665904</created>\r\n      <option name=\"number\" value=\"00033\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00033\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669911665904</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00034\" summary=\"fixed all errors related to data\">\r\n      <created>1669911870053</created>\r\n      <option name=\"number\" value=\"00034\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00034\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669911870053</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00035\" summary=\"update from workspace\">\r\n      <created>1669911899157</created>\r\n      <option name=\"number\" value=\"00035\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00035\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669911899157</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00036\" summary=\"fixes\">\r\n      <created>1669924961951</created>\r\n      <option name=\"number\" value=\"00036\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00036\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669924961951</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00037\" summary=\"fixes\">\r\n      <created>1669925363045</created>\r\n      <option name=\"number\" value=\"00037\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00037\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669925363045</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00038\" summary=\"fixes\">\r\n      <created>1669925431303</created>\r\n      <option name=\"number\" value=\"00038\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00038\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669925431303</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00039\" summary=\"fixes\">\r\n      <created>1669925497594</created>\r\n      <option name=\"number\" value=\"00039\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00039\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669925497594</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"40\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"reorganized packages\" />\r\n    <MESSAGE value=\"Added the create screen and screen for the register account. The controller is also fixed to follow code outline better.\" />\r\n    <MESSAGE value=\"Added the create screen and screen for the login. The controller is also fixed to follow code outline better.\" />\r\n    <MESSAGE value=\"removed creationTime and added status to CategoryCreationResponseModel\" />\r\n    <MESSAGE value=\"implemented CCResponseModel in AddCategoryController, nameChecker WIP\" />\r\n    <MESSAGE value=\"added setCategory to DataAccess\" />\r\n    <MESSAGE value=\"made everything public\" />\r\n    <MESSAGE value=\"changed isStatus to getStatus\" />\r\n    <MESSAGE value=\"implemented AddCommonCategory\" />\r\n    <MESSAGE value=\"AddCategoryPresenter\" />\r\n    <MESSAGE value=\"AddCategoryController\" />\r\n    <MESSAGE value=\"implemented setCategory\" />\r\n    <MESSAGE value=\"update workspace.xml\" />\r\n    <MESSAGE value=\"moved createCategoryForm from useCase to screen\" />\r\n    <MESSAGE value=\"renamed CategoryCreationResponseModel to CategoryResponseModel\" />\r\n    <MESSAGE value=\"Added EditCategory and EditCategoryInputBoundary\" />\r\n    <MESSAGE value=\"workspace.xml update\" />\r\n    <MESSAGE value=\"Made the calendar name in the calendars tab be the same as the username and removed the add calendar button.\" />\r\n    <MESSAGE value=\"changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch.\" />\r\n    <MESSAGE value=\"resolved errors related to the removal of category entity\" />\r\n    <MESSAGE value=\"deleted unneeded file\" />\r\n    <MESSAGE value=\"workspace update\" />\r\n    <MESSAGE value=\"fixed all errors related to data\" />\r\n    <MESSAGE value=\"update from workspace\" />\r\n    <MESSAGE value=\"fixes\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"fixes\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.NullPointerException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision b94becdeab564d10e95d89bc38178f97857d7668)
+-+++ b/.idea/workspace.xml	(date 1669928511583)
+-@@ -4,11 +4,7 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="fixes">
+--      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/TaskCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/TaskCreationController.java" afterDir="false" />
+--    </list>
+-+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="update from main" />
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-@@ -168,7 +164,7 @@
+-       <workItem from="1669825733264" duration="7660000" />
+-       <workItem from="1669836924977" duration="11194000" />
+-       <workItem from="1669925219335" duration="918000" />
+--      <workItem from="1669927052496" duration="499000" />
+-+      <workItem from="1669927052496" duration="1183000" />
+-     </task>
+-     <task id="LOCAL-00001" summary="xml files">
+-       <created>1668808131245</created>
+-@@ -443,7 +439,14 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1669925497594</updated>
+-     </task>
+--    <option name="localTasksCounter" value="40" />
+-+    <task id="LOCAL-00040" summary="update from main">
+-+      <created>1669927611670</created>
+-+      <option name="number" value="00040" />
+-+      <option name="presentableId" value="LOCAL-00040" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669927611670</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="41" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+-@@ -461,7 +464,6 @@
+-     </option>
+-   </component>
+-   <component name="VcsManagerConfiguration">
+--    <MESSAGE value="reorganized packages" />
+-     <MESSAGE value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
+-     <MESSAGE value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
+-     <MESSAGE value="removed creationTime and added status to CategoryCreationResponseModel" />
+-@@ -486,7 +488,8 @@
+-     <MESSAGE value="fixed all errors related to data" />
+-     <MESSAGE value="update from workspace" />
+-     <MESSAGE value="fixes" />
+--    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+-+    <MESSAGE value="update from main" />
+-+    <option name="LAST_COMMIT_MESSAGE" value="update from main" />
+-   </component>
+-   <component name="XDebuggerManager">
+-     <breakpoint-manager>
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m___Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m___Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m___Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m___Changes_.xml	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m__[Changes]" date="1669928532077" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_02_p_m__[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 2022-12-01 4:02 p.m. [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m__[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m__[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m__[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_57_p_m__[Changes]/shelved.patch	
++++ /dev/null	
+@@ -1,252 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0d9985c1-50bb-47d9-ac9c-80a8e10d5223\" name=\"Changes\" comment=\"Reverted some of the changes to fix the errors. pt.4\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"Interface\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GithubProjectSettings\">\r\n    <option name=\"branchProtectionPatterns\">\r\n      <list>\r\n        <option value=\"main\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2HjcjUqh7888EexIO8QR2YAnepC\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\r\n    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/RAZER/IdeaProjects/Remodel&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Application.LoginPage\">\r\n    <configuration name=\"LoginPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.LoginPage\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.Main\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ScheduleButton\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.ScheduleButton\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"TodoPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.TodoPage\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.LoginPage\" />\r\n        <item itemvalue=\"Application.TodoPage\" />\r\n        <item itemvalue=\"Application.ScheduleButton\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.LoginPage\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0d9985c1-50bb-47d9-ac9c-80a8e10d5223\" name=\"Changes\" comment=\"Deleting ToDoList.java\" />\r\n      <created>1668802068292</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1668802068292</updated>\r\n      <workItem from=\"1668802069624\" duration=\"3530000\" />\r\n      <workItem from=\"1668807659999\" duration=\"1154000\" />\r\n      <workItem from=\"1669044599623\" duration=\"4572000\" />\r\n      <workItem from=\"1669049487638\" duration=\"290000\" />\r\n      <workItem from=\"1669426214323\" duration=\"1955000\" />\r\n      <workItem from=\"1669584312630\" duration=\"260000\" />\r\n      <workItem from=\"1669584585127\" duration=\"4428000\" />\r\n      <workItem from=\"1669615677647\" duration=\"1066000\" />\r\n      <workItem from=\"1669688229778\" duration=\"10150000\" />\r\n      <workItem from=\"1669741252610\" duration=\"5437000\" />\r\n      <workItem from=\"1669817334281\" duration=\"7904000\" />\r\n      <workItem from=\"1669825733264\" duration=\"7660000\" />\r\n      <workItem from=\"1669836924977\" duration=\"1308000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"xml files\">\r\n      <created>1668808131245</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668808131245</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"xml files\">\r\n      <created>1668808143558</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668808143558</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"xml files\">\r\n      <created>1669049406927</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669049406927</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"MongoTesting\">\r\n      <created>1669426351649</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669426351649</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"update from main\">\r\n      <created>1669426474403</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669426474403</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"pull issue from misc\">\r\n      <created>1669615586305</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669615586305</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"pull issue from misc\">\r\n      <created>1669615697867</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669615697867</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"reorganized packages\">\r\n      <created>1669615912380</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669615912380</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Added the create screen and screen for the register account. The controller is also fixed to follow code outline better.\">\r\n      <created>1669703154808</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669703154808</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Added the create screen and screen for the login. The controller is also fixed to follow code outline better.\">\r\n      <created>1669742784809</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669742784809</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"removed creationTime and added status to CategoryCreationResponseModel\">\r\n      <created>1669783434218</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669783434218</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"implemented CCResponseModel in AddCategoryController, nameChecker WIP\">\r\n      <created>1669783486316</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669783486316</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"workspace.xml update\">\r\n      <created>1669783503635</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669783503635</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"workspace.xml update\">\r\n      <created>1669783676850</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669783676850</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"workspace.xml update\">\r\n      <created>1669818714583</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818714583</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"added setCategory to DataAccess\">\r\n      <created>1669818753831</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818753831</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"changed isStatus to getStatus\">\r\n      <created>1669818773542</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818773542</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"made everything public\">\r\n      <created>1669818795490</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818795490</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"changed isStatus to getStatus\">\r\n      <created>1669818808358</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818808358</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"implemented AddCommonCategory\">\r\n      <created>1669818853252</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818853252</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"AddCategoryPresenter\">\r\n      <created>1669818878150</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818878150</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"AddCategoryController\">\r\n      <created>1669818910431</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669818910431</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"implemented setCategory\">\r\n      <created>1669820235345</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669820235345</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"update workspace.xml\">\r\n      <created>1669820324774</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669820324774</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00025\" summary=\"moved createCategoryForm from useCase to screen\">\r\n      <created>1669825508522</created>\r\n      <option name=\"number\" value=\"00025\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669825508522</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00026\" summary=\"renamed CategoryCreationResponseModel to CategoryResponseModel\">\r\n      <created>1669834068354</created>\r\n      <option name=\"number\" value=\"00026\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669834068354</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00027\" summary=\"Added EditCategory and EditCategoryInputBoundary\">\r\n      <created>1669834096118</created>\r\n      <option name=\"number\" value=\"00027\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669834096118</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00028\" summary=\"workspace.xml update\">\r\n      <created>1669834109976</created>\r\n      <option name=\"number\" value=\"00028\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669834109976</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"29\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"xml files\" />\r\n    <MESSAGE value=\"MongoTesting\" />\r\n    <MESSAGE value=\"update from main\" />\r\n    <MESSAGE value=\"pull issue from misc\" />\r\n    <MESSAGE value=\"reorganized packages\" />\r\n    <MESSAGE value=\"Added the create screen and screen for the register account. The controller is also fixed to follow code outline better.\" />\r\n    <MESSAGE value=\"Added the create screen and screen for the login. The controller is also fixed to follow code outline better.\" />\r\n    <MESSAGE value=\"removed creationTime and added status to CategoryCreationResponseModel\" />\r\n    <MESSAGE value=\"implemented CCResponseModel in AddCategoryController, nameChecker WIP\" />\r\n    <MESSAGE value=\"added setCategory to DataAccess\" />\r\n    <MESSAGE value=\"made everything public\" />\r\n    <MESSAGE value=\"changed isStatus to getStatus\" />\r\n    <MESSAGE value=\"implemented AddCommonCategory\" />\r\n    <MESSAGE value=\"AddCategoryPresenter\" />\r\n    <MESSAGE value=\"AddCategoryController\" />\r\n    <MESSAGE value=\"implemented setCategory\" />\r\n    <MESSAGE value=\"update workspace.xml\" />\r\n    <MESSAGE value=\"moved createCategoryForm from useCase to screen\" />\r\n    <MESSAGE value=\"renamed CategoryCreationResponseModel to CategoryResponseModel\" />\r\n    <MESSAGE value=\"Added EditCategory and EditCategoryInputBoundary\" />\r\n    <MESSAGE value=\"workspace.xml update\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"workspace.xml update\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.NullPointerException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision 0801ce2eed384ff88cc9f7c74b3953d3ffd63cd0)
+-+++ b/.idea/workspace.xml	(date 1669847589019)
+-@@ -4,11 +4,9 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Reverted some of the changes to fix the errors. pt.4">
+-+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Added the create screen and screen for the login. The controller is also fixed to follow code outline better.">
+-+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimeTableScreen.java" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-@@ -19,14 +17,13 @@
+-     <option name="RECENT_TEMPLATES">
+-       <list>
+-         <option value="Class" />
+--        <option value="Interface" />
+-       </list>
+-     </option>
+-   </component>
+-   <component name="Git.Settings">
+-     <option name="RECENT_BRANCH_BY_REPOSITORY">
+-       <map>
+--        <entry key="$PROJECT_DIR$" value="main" />
+-+        <entry key="$PROJECT_DIR$" value="feature-2-schedule-editor" />
+-       </map>
+-     </option>
+-     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-@@ -58,7 +55,6 @@
+-   <component name="PropertiesComponent">{
+-   &quot;keyToString&quot;: {
+-     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+--    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+-     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+-     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+-     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+-@@ -70,7 +66,6 @@
+-     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+--    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+-     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-     &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
+-@@ -135,7 +130,6 @@
+-         <item itemvalue="Application.TodoPage" />
+-         <item itemvalue="Application.ScheduleButton" />
+-         <item itemvalue="Application.Main" />
+--        <item itemvalue="Application.LoginPage" />
+-       </list>
+-     </recent_temporary>
+-   </component>
+-@@ -157,9 +151,6 @@
+-       <workItem from="1669615677647" duration="1066000" />
+-       <workItem from="1669688229778" duration="10150000" />
+-       <workItem from="1669741252610" duration="5437000" />
+--      <workItem from="1669817334281" duration="7904000" />
+--      <workItem from="1669825733264" duration="7660000" />
+--      <workItem from="1669836924977" duration="1308000" />
+-     </task>
+-     <task id="LOCAL-00001" summary="xml files">
+-       <created>1668808131245</created>
+-@@ -231,133 +222,7 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1669742784809</updated>
+-     </task>
+--    <task id="LOCAL-00011" summary="removed creationTime and added status to CategoryCreationResponseModel">
+--      <created>1669783434218</created>
+--      <option name="number" value="00011" />
+--      <option name="presentableId" value="LOCAL-00011" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669783434218</updated>
+--    </task>
+--    <task id="LOCAL-00012" summary="implemented CCResponseModel in AddCategoryController, nameChecker WIP">
+--      <created>1669783486316</created>
+--      <option name="number" value="00012" />
+--      <option name="presentableId" value="LOCAL-00012" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669783486316</updated>
+--    </task>
+--    <task id="LOCAL-00013" summary="workspace.xml update">
+--      <created>1669783503635</created>
+--      <option name="number" value="00013" />
+--      <option name="presentableId" value="LOCAL-00013" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669783503635</updated>
+--    </task>
+--    <task id="LOCAL-00014" summary="workspace.xml update">
+--      <created>1669783676850</created>
+--      <option name="number" value="00014" />
+--      <option name="presentableId" value="LOCAL-00014" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669783676850</updated>
+--    </task>
+--    <task id="LOCAL-00015" summary="workspace.xml update">
+--      <created>1669818714583</created>
+--      <option name="number" value="00015" />
+--      <option name="presentableId" value="LOCAL-00015" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818714583</updated>
+--    </task>
+--    <task id="LOCAL-00016" summary="added setCategory to DataAccess">
+--      <created>1669818753831</created>
+--      <option name="number" value="00016" />
+--      <option name="presentableId" value="LOCAL-00016" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818753831</updated>
+--    </task>
+--    <task id="LOCAL-00017" summary="changed isStatus to getStatus">
+--      <created>1669818773542</created>
+--      <option name="number" value="00017" />
+--      <option name="presentableId" value="LOCAL-00017" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818773542</updated>
+--    </task>
+--    <task id="LOCAL-00018" summary="made everything public">
+--      <created>1669818795490</created>
+--      <option name="number" value="00018" />
+--      <option name="presentableId" value="LOCAL-00018" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818795490</updated>
+--    </task>
+--    <task id="LOCAL-00019" summary="changed isStatus to getStatus">
+--      <created>1669818808358</created>
+--      <option name="number" value="00019" />
+--      <option name="presentableId" value="LOCAL-00019" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818808358</updated>
+--    </task>
+--    <task id="LOCAL-00020" summary="implemented AddCommonCategory">
+--      <created>1669818853252</created>
+--      <option name="number" value="00020" />
+--      <option name="presentableId" value="LOCAL-00020" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818853252</updated>
+--    </task>
+--    <task id="LOCAL-00021" summary="AddCategoryPresenter">
+--      <created>1669818878150</created>
+--      <option name="number" value="00021" />
+--      <option name="presentableId" value="LOCAL-00021" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818878150</updated>
+--    </task>
+--    <task id="LOCAL-00022" summary="AddCategoryController">
+--      <created>1669818910431</created>
+--      <option name="number" value="00022" />
+--      <option name="presentableId" value="LOCAL-00022" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818910431</updated>
+--    </task>
+--    <task id="LOCAL-00023" summary="implemented setCategory">
+--      <created>1669820235345</created>
+--      <option name="number" value="00023" />
+--      <option name="presentableId" value="LOCAL-00023" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669820235345</updated>
+--    </task>
+--    <task id="LOCAL-00024" summary="update workspace.xml">
+--      <created>1669820324774</created>
+--      <option name="number" value="00024" />
+--      <option name="presentableId" value="LOCAL-00024" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669820324774</updated>
+--    </task>
+--    <task id="LOCAL-00025" summary="moved createCategoryForm from useCase to screen">
+--      <created>1669825508522</created>
+--      <option name="number" value="00025" />
+--      <option name="presentableId" value="LOCAL-00025" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669825508522</updated>
+--    </task>
+--    <task id="LOCAL-00026" summary="renamed CategoryCreationResponseModel to CategoryResponseModel">
+--      <created>1669834068354</created>
+--      <option name="number" value="00026" />
+--      <option name="presentableId" value="LOCAL-00026" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669834068354</updated>
+--    </task>
+--    <task id="LOCAL-00027" summary="Added EditCategory and EditCategoryInputBoundary">
+--      <created>1669834096118</created>
+--      <option name="number" value="00027" />
+--      <option name="presentableId" value="LOCAL-00027" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669834096118</updated>
+--    </task>
+--    <task id="LOCAL-00028" summary="workspace.xml update">
+--      <created>1669834109976</created>
+--      <option name="number" value="00028" />
+--      <option name="presentableId" value="LOCAL-00028" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669834109976</updated>
+--    </task>
+--    <option name="localTasksCounter" value="29" />
+-+    <option name="localTasksCounter" value="11" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+-@@ -382,21 +247,7 @@
+-     <MESSAGE value="reorganized packages" />
+-     <MESSAGE value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
+-     <MESSAGE value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
+--    <MESSAGE value="removed creationTime and added status to CategoryCreationResponseModel" />
+--    <MESSAGE value="implemented CCResponseModel in AddCategoryController, nameChecker WIP" />
+--    <MESSAGE value="added setCategory to DataAccess" />
+--    <MESSAGE value="made everything public" />
+--    <MESSAGE value="changed isStatus to getStatus" />
+--    <MESSAGE value="implemented AddCommonCategory" />
+--    <MESSAGE value="AddCategoryPresenter" />
+--    <MESSAGE value="AddCategoryController" />
+--    <MESSAGE value="implemented setCategory" />
+--    <MESSAGE value="update workspace.xml" />
+--    <MESSAGE value="moved createCategoryForm from useCase to screen" />
+--    <MESSAGE value="renamed CategoryCreationResponseModel to CategoryResponseModel" />
+--    <MESSAGE value="Added EditCategory and EditCategoryInputBoundary" />
+--    <MESSAGE value="workspace.xml update" />
+--    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml update" />
+-+    <option name="LAST_COMMIT_MESSAGE" value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
+-   </component>
+-   <component name="XDebuggerManager">
+-     <breakpoint-manager>
+-Index: .idea/misc.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_19\" default=\"true\" project-jdk-name=\"corretto-18\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/misc.xml b/.idea/misc.xml
+---- a/.idea/misc.xml	(revision 0801ce2eed384ff88cc9f7c74b3953d3ffd63cd0)
+-+++ b/.idea/misc.xml	(date 1669847251183)
+-@@ -7,7 +7,7 @@
+-       </list>
+-     </option>
+-   </component>
+--  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="corretto-18" project-jdk-type="JavaSDK">
+-+  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="corretto-18" project-jdk-type="JavaSDK">
+-     <output url="file://$PROJECT_DIR$/out" />
+-   </component>
+- </project>
+-\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28,_7_52_p_m__[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28,_7_52_p_m__[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28,_7_52_p_m__[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28,_7_52_p_m__[Changes]/shelved.patch	
++++ /dev/null	
+@@ -1,118 +0,0 @@
+-Index: src/main/java/database/MongoTesting.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>package database;//package database;\n\nimport com.mongodb.*;\nimport javafx.scene.control.TextField;\n\nimport java.net.UnknownHostException;\nimport java.time.LocalDate;\nimport java.time.LocalTime;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\nimport java.util.Objects;\n\npublic class MongoTesting {\n    public static void main(String[] args) throws UnknownHostException {\n\n        //My local database\n//        MongoClient mongoClient = new MongoClient(new MongoClientURI(\"mongodb://localhost:27017\"));\n\n        //Stevens remote database\n        MongoClient mongoClient = new MongoClient(new MongoClientURI(\"mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority\"));\n\n        //Brians remote database\n//        MongoClient mongoClient = new MongoClient(new MongoClientURI(\"mongodb+srv://123:123@cluster1.d3e1rhp.mongodb.net/?retryWrites=true&w=majority\"));\n\n\n        DB database = mongoClient.getDB(\"schedule6-testingdb\");\n        DBCollection collection = database.getCollection(\"schedule6-testingcollection\");\n\n        ArrayList<Object> list = new ArrayList<>();\n        ArrayList<Object> sublist_1 = new ArrayList<>();\n        sublist_1.add(\"Meeting\");\n        sublist_1.add(LocalDate.of(2022, 11, 26));\n        sublist_1.add(LocalTime.of(12, 15));\n        sublist_1.add(LocalTime.of(2, 30));\n        ArrayList<Object> sublist_2 = new ArrayList<>();\n        sublist_2.add(\"Workout\");\n        sublist_2.add(LocalDate.of(2022, 11, 26));\n        sublist_2.add(LocalTime.of(2, 15));\n        sublist_2.add(LocalTime.of(3, 30));\n        list.add(sublist_2);\n        list.add(sublist_1);\n        DBObject person = new BasicDBObject(\"_id\", \"nizar\")\n                .append(\"schedule\", list);\n        collection.insert(person);\n\n        DBObject query = new BasicDBObject(\"_id\", \"test_user123\");\n\n        // Adding to DB\n        list.remove(sublist_1);\n        DBObject updateObj = new BasicDBObject(\"schedule\", list);\n        collection.update(query, new BasicDBObject(\"$set\", updateObj));\n\n        // Getting from DB\n//        DBObject document = collection.findOne(query);\n//        BasicDBList list = (BasicDBList) document.get(\"schedule\");\n//\n//        ArrayList<ArrayList<Object>> res = new ArrayList<>();\n//\n//        for (Object sublist: list) {\n//            res.add((ArrayList<Object>) sublist);\n//        }\n//\n//        System.out.println(res.size());\n    }\n}\n\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/main/java/database/MongoTesting.java b/src/main/java/database/MongoTesting.java
+---- a/src/main/java/database/MongoTesting.java	(revision b5a3e548149d3e9b89c3377b3916997ef22ce09d)
+-+++ b/src/main/java/database/MongoTesting.java	(date 1669678858922)
+-@@ -27,6 +27,7 @@
+-         DB database = mongoClient.getDB("schedule6-testingdb");
+-         DBCollection collection = database.getCollection("schedule6-testingcollection");
+- 
+-+        String password = "123";
+-         ArrayList<Object> list = new ArrayList<>();
+-         ArrayList<Object> sublist_1 = new ArrayList<>();
+-         sublist_1.add("Meeting");
+-@@ -40,16 +41,18 @@
+-         sublist_2.add(LocalTime.of(3, 30));
+-         list.add(sublist_2);
+-         list.add(sublist_1);
+--        DBObject person = new BasicDBObject("_id", "nizar")
+--                .append("schedule", list);
+-+        DBObject person = new BasicDBObject("_id", "selena")
+-+                .append("schedule", list).append("password", password);
+-         collection.insert(person);
+- 
+-         DBObject query = new BasicDBObject("_id", "test_user123");
+- 
+-         // Adding to DB
+-+        /**
+-         list.remove(sublist_1);
+-         DBObject updateObj = new BasicDBObject("schedule", list);
+-         collection.update(query, new BasicDBObject("$set", updateObj));
+-+         **/
+- 
+-         // Getting from DB
+- //        DBObject document = collection.findOne(query);
+-Index: src/main/java/controller/Schedule/TimetableController.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>package controller.Schedule;\n\nimport com.calendarfx.view.CalendarView;\nimport com.calendarfx.model.Calendar;\nimport com.calendarfx.model.CalendarSource;\nimport javafx.application.Platform;\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.scene.control.Button;\nimport javafx.scene.control.Label;\nimport javafx.scene.layout.GridPane;\n\nimport java.time.LocalDate;\nimport java.time.LocalTime;\nimport java.time.ZoneId;\n\n\npublic class TimetableController {\n\n    @FXML\n    private Label TimetableUserName;\n    @FXML\n    private GridPane Gridlock;\n    @FXML\n    private Button saveButton;\n    @FXML\n    private Button newEvent;\n    public static Label usernameChageLabel;\n\n    private CalendarView calendar;\n\n    ZoneId TIMEZONE_ET = ZoneId.of(\"America/Toronto\");\n    LocalDate startDate = LocalDate.of(-99999,1,1);\n    LocalDate endDate = LocalDate.of(99999,12,31);\n    @FXML\n    private void printCalendarEntries(){\n        for (Calendar temp : calendar.getCalendars()) {\n            System.out.println(temp.findEntries(startDate, endDate, TIMEZONE_ET));\n        }\n    }\n    @FXML\n    public void scheduleInputsButton(ActionEvent event){}\n\n\n\n    private void loadCalendar() {\n        calendar = new CalendarView();\n\n        Calendar classes = new Calendar(\"null\");\n        Calendar meetings = new Calendar(\"Meetings\");\n\n        classes.setStyle(Calendar.Style.STYLE7);\n        meetings.setStyle(Calendar.Style.STYLE2);\n\n        CalendarSource myCalendarSource = new CalendarSource(\"Timetable\");\n        myCalendarSource.getCalendars().addAll(classes, meetings);\n\n        calendar.getCalendarSources().addAll(myCalendarSource);\n\n        calendar.setRequestedTime(LocalTime.now());\n\n\n        Thread updateTimeThread = new Thread(\"Calendar: Update Time Thread\") {\n            @Override\n            public void run() {\n                while (true) {\n                    Platform.runLater(() -> {\n                        calendar.setToday(LocalDate.now());\n                        calendar.setTime(LocalTime.now());\n                    });\n\n                    try {\n                        // update every 10 seconds\n                        sleep(10000);\n                    } catch (InterruptedException e) {\n                        e.printStackTrace();\n                    }\n\n                }\n            }\n        };\n\n        updateTimeThread.setPriority(Thread.MIN_PRIORITY);\n        updateTimeThread.setDaemon(true);\n        updateTimeThread.start();\n        //calendar.showMonthPage();\n        calendar.showWeekPage();\n        calendar.setShowAddCalendarButton(true);\n        calendar.setShowPrintButton(false);\n        calendar.setShowDeveloperConsole(false);\n        Gridlock.getChildren().add(calendar);\n    }\n\n    public void initialize(){\n        usernameChageLabel = TimetableUserName;\n        loadCalendar();\n    }\n}\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/main/java/controller/Schedule/TimetableController.java b/src/main/java/controller/Schedule/TimetableController.java
+---- a/src/main/java/controller/Schedule/TimetableController.java	(revision b5a3e548149d3e9b89c3377b3916997ef22ce09d)
+-+++ b/src/main/java/controller/Schedule/TimetableController.java	(date 1669678462888)
+-@@ -3,6 +3,10 @@
+- import com.calendarfx.view.CalendarView;
+- import com.calendarfx.model.Calendar;
+- import com.calendarfx.model.CalendarSource;
+-+import com.mongodb.DB;
+-+import com.mongodb.DBCollection;
+-+import com.mongodb.MongoClient;
+-+import com.mongodb.MongoClientURI;
+- import javafx.application.Platform;
+- import javafx.event.ActionEvent;
+- import javafx.fxml.FXML;
+-@@ -10,9 +14,13 @@
+- import javafx.scene.control.Label;
+- import javafx.scene.layout.GridPane;
+- 
+-+import java.net.UnknownHostException;
+- import java.time.LocalDate;
+- import java.time.LocalTime;
+- import java.time.ZoneId;
+-+import java.util.ArrayList;
+-+import database.MongoDBAccess;
+-+import useCaseInteractor.User.userCollection;
+- 
+- 
+- public class TimetableController {
+-@@ -46,6 +54,19 @@
+-     private void loadCalendar() {
+-         calendar = new CalendarView();
+- 
+-+
+-+        //MongoDBAccess client = new MongoDBAccess(collection, userCollection.getUsername());
+-+
+-+        //ArrayList<String> followers = (ArrayList<String>) client.getFollowing();
+-+
+-+        //ArrayList<java.util.Calendar> calendars = new ArrayList<>();
+-+
+-+        //for(String e : followers){
+-+        //    Calendar friends = new Calendar(e);
+-+        //    friends.setStyle(Calendar.Style.STYLE7);
+-+        //}
+-+
+-+        //EVERYTHING BELOW IS STABLE
+-         Calendar classes = new Calendar("null");
+-         Calendar meetings = new Calendar("Meetings");
+- 
+-@@ -91,8 +112,23 @@
+-         Gridlock.getChildren().add(calendar);
+-     }
+- 
+-+
+-     public void initialize(){
+-         usernameChageLabel = TimetableUserName;
+-         loadCalendar();
+-     }
+-+
+-+
+-+    public void main(String[] args) throws UnknownHostException {
+-+        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://stevenli:stevenli@cluster0.koruj0t.mongodb.net/?retryWrites=true&w=majority"));
+-+
+-+        //Brians remote database
+-+//        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://123:123@cluster1.d3e1rhp.mongodb.net/?retryWrites=true&w=majority"));
+-+
+-+
+-+        DB database = mongoClient.getDB("schedule6-testingdb");
+-+        DBCollection collection = database.getCollection("schedule6-testingcollection");
+-+
+-+        //this.loadCalendar(collection);
+-+    }
+- }
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m__[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m__[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m__[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-30_5_27_p_m__[Changes]/shelved.patch	
++++ /dev/null	
+@@ -1,67 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0d9985c1-50bb-47d9-ac9c-80a8e10d5223\" name=\"Changes\" comment=\"Added the create screen and screen for the login. The controller is also fixed to follow code outline better.\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/useCaseInteractor/Schedule/createScheduleForm.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/screens/CreateScheduleScreen.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/useCaseInteractor/User/setUsername.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/useCaseInteractor/User/setUsername.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/userTimeTable.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/userTimeTable.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"feature-2-schedule-editor\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GithubProjectSettings\">\r\n    <option name=\"branchProtectionPatterns\">\r\n      <list>\r\n        <option value=\"main\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2HjcjUqh7888EexIO8QR2YAnepC\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/RAZER/IdeaProjects/Remodel&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Application.LoginPage\">\r\n    <configuration name=\"LoginPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.LoginPage\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.Main\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ScheduleButton\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.ScheduleButton\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"TodoPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.TodoPage\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.LoginPage\" />\r\n        <item itemvalue=\"Application.TodoPage\" />\r\n        <item itemvalue=\"Application.ScheduleButton\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0d9985c1-50bb-47d9-ac9c-80a8e10d5223\" name=\"Changes\" comment=\"Deleting ToDoList.java\" />\r\n      <created>1668802068292</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1668802068292</updated>\r\n      <workItem from=\"1668802069624\" duration=\"3530000\" />\r\n      <workItem from=\"1668807659999\" duration=\"1154000\" />\r\n      <workItem from=\"1669044599623\" duration=\"4572000\" />\r\n      <workItem from=\"1669049487638\" duration=\"290000\" />\r\n      <workItem from=\"1669426214323\" duration=\"1955000\" />\r\n      <workItem from=\"1669584312630\" duration=\"260000\" />\r\n      <workItem from=\"1669584585127\" duration=\"4428000\" />\r\n      <workItem from=\"1669615677647\" duration=\"1066000\" />\r\n      <workItem from=\"1669688229778\" duration=\"10150000\" />\r\n      <workItem from=\"1669741252610\" duration=\"5437000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"xml files\">\r\n      <created>1668808131245</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668808131245</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"xml files\">\r\n      <created>1668808143558</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668808143558</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"xml files\">\r\n      <created>1669049406927</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669049406927</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"MongoTesting\">\r\n      <created>1669426351649</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669426351649</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"update from main\">\r\n      <created>1669426474403</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669426474403</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"pull issue from misc\">\r\n      <created>1669615586305</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669615586305</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"pull issue from misc\">\r\n      <created>1669615697867</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669615697867</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"reorganized packages\">\r\n      <created>1669615912380</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669615912380</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Added the create screen and screen for the register account. The controller is also fixed to follow code outline better.\">\r\n      <created>1669703154808</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669703154808</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Added the create screen and screen for the login. The controller is also fixed to follow code outline better.\">\r\n      <created>1669742784809</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669742784809</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"11\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"xml files\" />\r\n    <MESSAGE value=\"MongoTesting\" />\r\n    <MESSAGE value=\"update from main\" />\r\n    <MESSAGE value=\"pull issue from misc\" />\r\n    <MESSAGE value=\"reorganized packages\" />\r\n    <MESSAGE value=\"Added the create screen and screen for the register account. The controller is also fixed to follow code outline better.\" />\r\n    <MESSAGE value=\"Added the create screen and screen for the login. The controller is also fixed to follow code outline better.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Added the create screen and screen for the login. The controller is also fixed to follow code outline better.\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.NullPointerException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision a83d95f3637a2b900eaa77ddef98f230e5df1dc8)
+-+++ b/.idea/workspace.xml	(date 1669770620346)
+-@@ -4,13 +4,8 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Added the create screen and screen for the login. The controller is also fixed to follow code outline better.">
+-+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Added the create screen and screen for the schedule. The controller is also fixed to follow code outline better.">
+-       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Schedule/TimetableController.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/LoginPageController.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Schedule/createScheduleForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateScheduleScreen.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/setUsername.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/setUsername.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userTimeTable.fxml" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-@@ -154,7 +149,7 @@
+-       <workItem from="1669584585127" duration="4428000" />
+-       <workItem from="1669615677647" duration="1066000" />
+-       <workItem from="1669688229778" duration="10150000" />
+--      <workItem from="1669741252610" duration="5437000" />
+-+      <workItem from="1669741252610" duration="6711000" />
+-     </task>
+-     <task id="LOCAL-00001" summary="xml files">
+-       <created>1668808131245</created>
+-@@ -226,7 +221,21 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1669742784809</updated>
+-     </task>
+--    <option name="localTasksCounter" value="11" />
+-+    <task id="LOCAL-00011" summary="Added the create screen and screen for the schedule. The controller is also fixed to follow code outline better.">
+-+      <created>1669746724070</created>
+-+      <option name="number" value="00011" />
+-+      <option name="presentableId" value="LOCAL-00011" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669746724070</updated>
+-+    </task>
+-+    <task id="LOCAL-00012" summary="Added the create screen and screen for the schedule. The controller is also fixed to follow code outline better.">
+-+      <created>1669746742029</created>
+-+      <option name="number" value="00012" />
+-+      <option name="presentableId" value="LOCAL-00012" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669746742029</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="13" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+-@@ -251,7 +260,8 @@
+-     <MESSAGE value="reorganized packages" />
+-     <MESSAGE value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
+-     <MESSAGE value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
+--    <option name="LAST_COMMIT_MESSAGE" value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
+-+    <MESSAGE value="Added the create screen and screen for the schedule. The controller is also fixed to follow code outline better." />
+-+    <option name="LAST_COMMIT_MESSAGE" value="Added the create screen and screen for the schedule. The controller is also fixed to follow code outline better." />
+-   </component>
+-   <component name="XDebuggerManager">
+-     <breakpoint-manager>
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m__[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m__[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m__[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m__[Changes]/shelved.patch	
++++ /dev/null	
+@@ -1,456 +0,0 @@
+-Index: .idea/misc.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/misc.xml b/.idea/misc.xml
+-deleted file mode 100644
+---- a/.idea/misc.xml	(revision 015ab0c6f299e3c35983463a1663374edc2cfe0e)
+-+++ /dev/null	(revision 015ab0c6f299e3c35983463a1663374edc2cfe0e)
+-@@ -1,13 +0,0 @@
+--<?xml version="1.0" encoding="UTF-8"?>
+--<project version="4">
+--  <component name="MavenProjectsManager">
+--    <option name="originalFiles">
+--      <list>
+--        <option value="$PROJECT_DIR$/pom.xml" />
+--      </list>
+--    </option>
+--  </component>
+--  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="corretto-18" project-jdk-type="JavaSDK">
+--    <output url="file://$PROJECT_DIR$/out" />
+--  </component>
+--</project>
+-\ No newline at end of file
+-Index: .idea/workspace.xml
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+-deleted file mode 100644
+---- a/.idea/workspace.xml	(revision 015ab0c6f299e3c35983463a1663374edc2cfe0e)
+-+++ /dev/null	(revision 015ab0c6f299e3c35983463a1663374edc2cfe0e)
+-@@ -1,424 +0,0 @@
+--<?xml version="1.0" encoding="UTF-8"?>
+--<project version="4">
+--  <component name="AutoImportSettings">
+--    <option name="autoReloadType" value="SELECTIVE" />
+--  </component>
+--  <component name="ChangeListManager">
+--    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch.">
+--      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--    </list>
+--    <option name="SHOW_DIALOG" value="false" />
+--    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+--    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+--    <option name="LAST_RESOLUTION" value="IGNORE" />
+--  </component>
+--  <component name="FileTemplateManagerImpl">
+--    <option name="RECENT_TEMPLATES">
+--      <list>
+--        <option value="Class" />
+--        <option value="Interface" />
+--      </list>
+--    </option>
+--  </component>
+--  <component name="Git.Settings">
+--    <option name="RECENT_BRANCH_BY_REPOSITORY">
+--      <map>
+--        <entry key="$PROJECT_DIR$" value="main" />
+--      </map>
+--    </option>
+--    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+--  </component>
+--  <component name="GithubProjectSettings">
+--    <option name="branchProtectionPatterns">
+--      <list>
+--        <option value="main" />
+--      </list>
+--    </option>
+--  </component>
+--  <component name="MarkdownSettingsMigration">
+--    <option name="stateVersion" value="1" />
+--  </component>
+--  <component name="MavenImportPreferences">
+--    <option name="generalSettings">
+--      <MavenGeneralSettings>
+--        <option name="mavenHome" value="Use Maven wrapper" />
+--        <option name="useMavenConfig" value="true" />
+--      </MavenGeneralSettings>
+--    </option>
+--  </component>
+--  <component name="ProjectId" id="2HjcjUqh7888EexIO8QR2YAnepC" />
+--  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+--  <component name="ProjectViewState">
+--    <option name="hideEmptyMiddlePackages" value="true" />
+--    <option name="showLibraryContents" value="true" />
+--  </component>
+--  <component name="PropertiesComponent">{
+--  &quot;keyToString&quot;: {
+--    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+--    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+--    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+--    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+--    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+--    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+--    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+--    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+--    &quot;last_opened_file_path&quot;: &quot;C:/Users/RAZER/IdeaProjects/Remodel&quot;,
+--    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+--    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+--    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+--    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+--    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+--    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+--    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+--    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
+--  }
+--}</component>
+--  <component name="RunManager" selected="Application.LoginPage">
+--    <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+--      <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
+--      <module name="schedule-6---Remodel" />
+--      <extension name="coverage">
+--        <pattern>
+--          <option name="PATTERN" value="main.*" />
+--          <option name="ENABLED" value="true" />
+--        </pattern>
+--      </extension>
+--      <method v="2">
+--        <option name="Make" enabled="true" />
+--      </method>
+--    </configuration>
+--    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+--      <option name="MAIN_CLASS_NAME" value="main.Main" />
+--      <module name="schedule-6---Remodel" />
+--      <extension name="coverage">
+--        <pattern>
+--          <option name="PATTERN" value="main.*" />
+--          <option name="ENABLED" value="true" />
+--        </pattern>
+--      </extension>
+--      <method v="2">
+--        <option name="Make" enabled="true" />
+--      </method>
+--    </configuration>
+--    <configuration name="ScheduleButton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+--      <option name="MAIN_CLASS_NAME" value="main.ScheduleButton" />
+--      <module name="schedule-6---Remodel" />
+--      <extension name="coverage">
+--        <pattern>
+--          <option name="PATTERN" value="main.*" />
+--          <option name="ENABLED" value="true" />
+--        </pattern>
+--      </extension>
+--      <method v="2">
+--        <option name="Make" enabled="true" />
+--      </method>
+--    </configuration>
+--    <configuration name="TodoPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+--      <option name="MAIN_CLASS_NAME" value="main.TodoPage" />
+--      <module name="schedule-6---Remodel" />
+--      <extension name="coverage">
+--        <pattern>
+--          <option name="PATTERN" value="main.*" />
+--          <option name="ENABLED" value="true" />
+--        </pattern>
+--      </extension>
+--      <method v="2">
+--        <option name="Make" enabled="true" />
+--      </method>
+--    </configuration>
+--    <recent_temporary>
+--      <list>
+--        <item itemvalue="Application.LoginPage" />
+--        <item itemvalue="Application.TodoPage" />
+--        <item itemvalue="Application.ScheduleButton" />
+--        <item itemvalue="Application.Main" />
+--        <item itemvalue="Application.LoginPage" />
+--      </list>
+--    </recent_temporary>
+--  </component>
+--  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+--  <component name="TaskManager">
+--    <task active="true" id="Default" summary="Default task">
+--      <changelist id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="Deleting ToDoList.java" />
+--      <created>1668802068292</created>
+--      <option name="number" value="Default" />
+--      <option name="presentableId" value="Default" />
+--      <updated>1668802068292</updated>
+--      <workItem from="1668802069624" duration="3530000" />
+--      <workItem from="1668807659999" duration="1154000" />
+--      <workItem from="1669044599623" duration="4572000" />
+--      <workItem from="1669049487638" duration="290000" />
+--      <workItem from="1669426214323" duration="1955000" />
+--      <workItem from="1669584312630" duration="260000" />
+--      <workItem from="1669584585127" duration="4428000" />
+--      <workItem from="1669615677647" duration="1066000" />
+--      <workItem from="1669688229778" duration="10150000" />
+--      <workItem from="1669741252610" duration="5437000" />
+--      <workItem from="1669817334281" duration="7904000" />
+--      <workItem from="1669825733264" duration="7660000" />
+--      <workItem from="1669836924977" duration="4222000" />
+--    </task>
+--    <task id="LOCAL-00001" summary="xml files">
+--      <created>1668808131245</created>
+--      <option name="number" value="00001" />
+--      <option name="presentableId" value="LOCAL-00001" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1668808131245</updated>
+--    </task>
+--    <task id="LOCAL-00002" summary="xml files">
+--      <created>1668808143558</created>
+--      <option name="number" value="00002" />
+--      <option name="presentableId" value="LOCAL-00002" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1668808143558</updated>
+--    </task>
+--    <task id="LOCAL-00003" summary="xml files">
+--      <created>1669049406927</created>
+--      <option name="number" value="00003" />
+--      <option name="presentableId" value="LOCAL-00003" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669049406927</updated>
+--    </task>
+--    <task id="LOCAL-00004" summary="MongoTesting">
+--      <created>1669426351649</created>
+--      <option name="number" value="00004" />
+--      <option name="presentableId" value="LOCAL-00004" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669426351649</updated>
+--    </task>
+--    <task id="LOCAL-00005" summary="update from main">
+--      <created>1669426474403</created>
+--      <option name="number" value="00005" />
+--      <option name="presentableId" value="LOCAL-00005" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669426474403</updated>
+--    </task>
+--    <task id="LOCAL-00006" summary="pull issue from misc">
+--      <created>1669615586305</created>
+--      <option name="number" value="00006" />
+--      <option name="presentableId" value="LOCAL-00006" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669615586305</updated>
+--    </task>
+--    <task id="LOCAL-00007" summary="pull issue from misc">
+--      <created>1669615697867</created>
+--      <option name="number" value="00007" />
+--      <option name="presentableId" value="LOCAL-00007" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669615697867</updated>
+--    </task>
+--    <task id="LOCAL-00008" summary="reorganized packages">
+--      <created>1669615912380</created>
+--      <option name="number" value="00008" />
+--      <option name="presentableId" value="LOCAL-00008" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669615912380</updated>
+--    </task>
+--    <task id="LOCAL-00009" summary="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better.">
+--      <created>1669703154808</created>
+--      <option name="number" value="00009" />
+--      <option name="presentableId" value="LOCAL-00009" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669703154808</updated>
+--    </task>
+--    <task id="LOCAL-00010" summary="Added the create screen and screen for the login. The controller is also fixed to follow code outline better.">
+--      <created>1669742784809</created>
+--      <option name="number" value="00010" />
+--      <option name="presentableId" value="LOCAL-00010" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669742784809</updated>
+--    </task>
+--    <task id="LOCAL-00011" summary="removed creationTime and added status to CategoryCreationResponseModel">
+--      <created>1669783434218</created>
+--      <option name="number" value="00011" />
+--      <option name="presentableId" value="LOCAL-00011" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669783434218</updated>
+--    </task>
+--    <task id="LOCAL-00012" summary="implemented CCResponseModel in AddCategoryController, nameChecker WIP">
+--      <created>1669783486316</created>
+--      <option name="number" value="00012" />
+--      <option name="presentableId" value="LOCAL-00012" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669783486316</updated>
+--    </task>
+--    <task id="LOCAL-00013" summary="workspace.xml update">
+--      <created>1669783503635</created>
+--      <option name="number" value="00013" />
+--      <option name="presentableId" value="LOCAL-00013" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669783503635</updated>
+--    </task>
+--    <task id="LOCAL-00014" summary="workspace.xml update">
+--      <created>1669783676850</created>
+--      <option name="number" value="00014" />
+--      <option name="presentableId" value="LOCAL-00014" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669783676850</updated>
+--    </task>
+--    <task id="LOCAL-00015" summary="workspace.xml update">
+--      <created>1669818714583</created>
+--      <option name="number" value="00015" />
+--      <option name="presentableId" value="LOCAL-00015" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818714583</updated>
+--    </task>
+--    <task id="LOCAL-00016" summary="added setCategory to DataAccess">
+--      <created>1669818753831</created>
+--      <option name="number" value="00016" />
+--      <option name="presentableId" value="LOCAL-00016" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818753831</updated>
+--    </task>
+--    <task id="LOCAL-00017" summary="changed isStatus to getStatus">
+--      <created>1669818773542</created>
+--      <option name="number" value="00017" />
+--      <option name="presentableId" value="LOCAL-00017" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818773542</updated>
+--    </task>
+--    <task id="LOCAL-00018" summary="made everything public">
+--      <created>1669818795490</created>
+--      <option name="number" value="00018" />
+--      <option name="presentableId" value="LOCAL-00018" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818795490</updated>
+--    </task>
+--    <task id="LOCAL-00019" summary="changed isStatus to getStatus">
+--      <created>1669818808358</created>
+--      <option name="number" value="00019" />
+--      <option name="presentableId" value="LOCAL-00019" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818808358</updated>
+--    </task>
+--    <task id="LOCAL-00020" summary="implemented AddCommonCategory">
+--      <created>1669818853252</created>
+--      <option name="number" value="00020" />
+--      <option name="presentableId" value="LOCAL-00020" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818853252</updated>
+--    </task>
+--    <task id="LOCAL-00021" summary="AddCategoryPresenter">
+--      <created>1669818878150</created>
+--      <option name="number" value="00021" />
+--      <option name="presentableId" value="LOCAL-00021" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818878150</updated>
+--    </task>
+--    <task id="LOCAL-00022" summary="AddCategoryController">
+--      <created>1669818910431</created>
+--      <option name="number" value="00022" />
+--      <option name="presentableId" value="LOCAL-00022" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669818910431</updated>
+--    </task>
+--    <task id="LOCAL-00023" summary="implemented setCategory">
+--      <created>1669820235345</created>
+--      <option name="number" value="00023" />
+--      <option name="presentableId" value="LOCAL-00023" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669820235345</updated>
+--    </task>
+--    <task id="LOCAL-00024" summary="update workspace.xml">
+--      <created>1669820324774</created>
+--      <option name="number" value="00024" />
+--      <option name="presentableId" value="LOCAL-00024" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669820324774</updated>
+--    </task>
+--    <task id="LOCAL-00025" summary="moved createCategoryForm from useCase to screen">
+--      <created>1669825508522</created>
+--      <option name="number" value="00025" />
+--      <option name="presentableId" value="LOCAL-00025" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669825508522</updated>
+--    </task>
+--    <task id="LOCAL-00026" summary="renamed CategoryCreationResponseModel to CategoryResponseModel">
+--      <created>1669834068354</created>
+--      <option name="number" value="00026" />
+--      <option name="presentableId" value="LOCAL-00026" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669834068354</updated>
+--    </task>
+--    <task id="LOCAL-00027" summary="Added EditCategory and EditCategoryInputBoundary">
+--      <created>1669834096118</created>
+--      <option name="number" value="00027" />
+--      <option name="presentableId" value="LOCAL-00027" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669834096118</updated>
+--    </task>
+--    <task id="LOCAL-00028" summary="workspace.xml update">
+--      <created>1669834109976</created>
+--      <option name="number" value="00028" />
+--      <option name="presentableId" value="LOCAL-00028" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669834109976</updated>
+--    </task>
+--    <task id="LOCAL-00029" summary="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button.">
+--      <created>1669838510849</created>
+--      <option name="number" value="00029" />
+--      <option name="presentableId" value="LOCAL-00029" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669838510850</updated>
+--    </task>
+--    <task id="LOCAL-00030" summary="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch.">
+--      <created>1669841110300</created>
+--      <option name="number" value="00030" />
+--      <option name="presentableId" value="LOCAL-00030" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1669841110300</updated>
+--    </task>
+--    <option name="localTasksCounter" value="31" />
+--    <servers />
+--  </component>
+--  <component name="TypeScriptGeneratedFilesManager">
+--    <option name="version" value="3" />
+--  </component>
+--  <component name="Vcs.Log.Tabs.Properties">
+--    <option name="TAB_STATES">
+--      <map>
+--        <entry key="MAIN">
+--          <value>
+--            <State />
+--          </value>
+--        </entry>
+--      </map>
+--    </option>
+--  </component>
+--  <component name="VcsManagerConfiguration">
+--    <MESSAGE value="xml files" />
+--    <MESSAGE value="MongoTesting" />
+--    <MESSAGE value="update from main" />
+--    <MESSAGE value="pull issue from misc" />
+--    <MESSAGE value="reorganized packages" />
+--    <MESSAGE value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
+--    <MESSAGE value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
+--    <MESSAGE value="removed creationTime and added status to CategoryCreationResponseModel" />
+--    <MESSAGE value="implemented CCResponseModel in AddCategoryController, nameChecker WIP" />
+--    <MESSAGE value="added setCategory to DataAccess" />
+--    <MESSAGE value="made everything public" />
+--    <MESSAGE value="changed isStatus to getStatus" />
+--    <MESSAGE value="implemented AddCommonCategory" />
+--    <MESSAGE value="AddCategoryPresenter" />
+--    <MESSAGE value="AddCategoryController" />
+--    <MESSAGE value="implemented setCategory" />
+--    <MESSAGE value="update workspace.xml" />
+--    <MESSAGE value="moved createCategoryForm from useCase to screen" />
+--    <MESSAGE value="renamed CategoryCreationResponseModel to CategoryResponseModel" />
+--    <MESSAGE value="Added EditCategory and EditCategoryInputBoundary" />
+--    <MESSAGE value="workspace.xml update" />
+--    <MESSAGE value="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button." />
+--    <MESSAGE value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
+--    <option name="LAST_COMMIT_MESSAGE" value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
+--  </component>
+--  <component name="XDebuggerManager">
+--    <breakpoint-manager>
+--      <breakpoints>
+--        <breakpoint enabled="true" type="java-exception">
+--          <properties class="java.lang.NullPointerException" package="java.lang" />
+--          <option name="timeStamp" value="1" />
+--        </breakpoint>
+--      </breakpoints>
+--    </breakpoint-manager>
+--  </component>
+--</project>
+-\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_1.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_1.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_1.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__10_32_a_m___Changes_1.xml	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_2022-12-01,_10_32_a_m__[Changes]1" date="1669908778725" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01,_10_32_a_m__[Changes]1/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022-12-01, 10:32 a.m. [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m__[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m__[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m__[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m__[Changes]/shelved.patch	
++++ /dev/null	
+@@ -1,330 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0d9985c1-50bb-47d9-ac9c-80a8e10d5223\" name=\"Changes\" comment=\"workspace.xml update\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/useCaseInteractor/Category/AddCommonCategory.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/controller/Category/AddCategoryController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/controller/Category/AddCategoryController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/entity/Category/Category.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/entity/Category/Category.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/presenter/AddCateogoryPresenter.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/presenter/AddCategoryPresenter.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/requestModel/CategoryCreationRequestModel.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/requestModel/CategoryCreationRequestModel.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"feature-2-schedule-editor\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GithubProjectSettings\">\r\n    <option name=\"branchProtectionPatterns\">\r\n      <list>\r\n        <option value=\"main\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2HjcjUqh7888EexIO8QR2YAnepC\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/RAZER/IdeaProjects/Remodel&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Application.LoginPage\">\r\n    <configuration name=\"LoginPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.LoginPage\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.Main\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ScheduleButton\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.ScheduleButton\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"TodoPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.TodoPage\" />\r\n      <module name=\"schedule-6---Remodel\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.LoginPage\" />\r\n        <item itemvalue=\"Application.TodoPage\" />\r\n        <item itemvalue=\"Application.ScheduleButton\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0d9985c1-50bb-47d9-ac9c-80a8e10d5223\" name=\"Changes\" comment=\"Deleting ToDoList.java\" />\r\n      <created>1668802068292</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1668802068292</updated>\r\n      <workItem from=\"1668802069624\" duration=\"3530000\" />\r\n      <workItem from=\"1668807659999\" duration=\"1154000\" />\r\n      <workItem from=\"1669044599623\" duration=\"4572000\" />\r\n      <workItem from=\"1669049487638\" duration=\"290000\" />\r\n      <workItem from=\"1669426214323\" duration=\"1955000\" />\r\n      <workItem from=\"1669584312630\" duration=\"260000\" />\r\n      <workItem from=\"1669584585127\" duration=\"4428000\" />\r\n      <workItem from=\"1669615677647\" duration=\"1066000\" />\r\n      <workItem from=\"1669688229778\" duration=\"10150000\" />\r\n      <workItem from=\"1669741252610\" duration=\"5437000\" />\r\n      <workItem from=\"1669817334281\" duration=\"1352000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"xml files\">\r\n      <created>1668808131245</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668808131245</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"xml files\">\r\n      <created>1668808143558</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668808143558</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"xml files\">\r\n      <created>1669049406927</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669049406927</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"MongoTesting\">\r\n      <created>1669426351649</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669426351649</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"update from main\">\r\n      <created>1669426474403</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669426474403</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"pull issue from misc\">\r\n      <created>1669615586305</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669615586305</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"pull issue from misc\">\r\n      <created>1669615697867</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669615697867</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"reorganized packages\">\r\n      <created>1669615912380</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669615912380</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Added the create screen and screen for the register account. The controller is also fixed to follow code outline better.\">\r\n      <created>1669703154808</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669703154808</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Added the create screen and screen for the login. The controller is also fixed to follow code outline better.\">\r\n      <created>1669742784809</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669742784809</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"removed creationTime and added status to CategoryCreationResponseModel\">\r\n      <created>1669783434218</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669783434218</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"implemented CCResponseModel in AddCategoryController, nameChecker WIP\">\r\n      <created>1669783486316</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669783486316</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"workspace.xml update\">\r\n      <created>1669783503635</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669783503635</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"workspace.xml update\">\r\n      <created>1669783676850</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669783676850</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"15\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"xml files\" />\r\n    <MESSAGE value=\"MongoTesting\" />\r\n    <MESSAGE value=\"update from main\" />\r\n    <MESSAGE value=\"pull issue from misc\" />\r\n    <MESSAGE value=\"reorganized packages\" />\r\n    <MESSAGE value=\"Added the create screen and screen for the register account. The controller is also fixed to follow code outline better.\" />\r\n    <MESSAGE value=\"Added the create screen and screen for the login. The controller is also fixed to follow code outline better.\" />\r\n    <MESSAGE value=\"removed creationTime and added status to CategoryCreationResponseModel\" />\r\n    <MESSAGE value=\"implemented CCResponseModel in AddCategoryController, nameChecker WIP\" />\r\n    <MESSAGE value=\"workspace.xml update\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"workspace.xml update\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.NullPointerException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision b251613e32c17bd122f96126eb09d85156671aa0)
+-+++ b/.idea/workspace.xml	(date 1669928539382)
+-@@ -4,15 +4,10 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="workspace.xml update">
+--      <change afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Category/AddCommonCategory.java" afterDir="false" />
+-+    <list default="true" id="0d9985c1-50bb-47d9-ac9c-80a8e10d5223" name="Changes" comment="fixes">
+-+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Category/AddCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Category/AddCategoryController.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/Category.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category/CommonCategory.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/AddCateogoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/AddCategoryPresenter.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/CategoryCreationRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/CategoryCreationRequestModel.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/TaskCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/TaskCreationController.java" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-@@ -22,6 +17,7 @@
+-   <component name="FileTemplateManagerImpl">
+-     <option name="RECENT_TEMPLATES">
+-       <list>
+-+        <option value="Interface" />
+-         <option value="Class" />
+-       </list>
+-     </option>
+-@@ -29,7 +25,7 @@
+-   <component name="Git.Settings">
+-     <option name="RECENT_BRANCH_BY_REPOSITORY">
+-       <map>
+--        <entry key="$PROJECT_DIR$" value="feature-2-schedule-editor" />
+-+        <entry key="$PROJECT_DIR$" value="calendarEntries" />
+-       </map>
+-     </option>
+-     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-@@ -61,6 +57,7 @@
+-   <component name="PropertiesComponent">{
+-   &quot;keyToString&quot;: {
+-     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+-+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+-     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+-     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+-     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+-@@ -72,15 +69,18 @@
+-     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+--    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+-+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-     &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
+-   }
+- }</component>
+-   <component name="RunManager" selected="Application.LoginPage">
+-     <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../Library/Java/JavaVirtualMachines/corretto-18.0.2/Contents/Home" />
+-+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+-       <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
+--      <module name="schedule-6---Remodel" />
+-+      <module name="course-project-Schedule-6---Remodel" />
+-       <extension name="coverage">
+-         <pattern>
+-           <option name="PATTERN" value="main.*" />
+-@@ -130,12 +130,19 @@
+-         <option name="Make" enabled="true" />
+-       </method>
+-     </configuration>
+-+    <list>
+-+      <item itemvalue="Application.LoginPage" />
+-+      <item itemvalue="Application.Main" />
+-+      <item itemvalue="Application.ScheduleButton" />
+-+      <item itemvalue="Application.TodoPage" />
+-+    </list>
+-     <recent_temporary>
+-       <list>
+-         <item itemvalue="Application.LoginPage" />
+-         <item itemvalue="Application.TodoPage" />
+-         <item itemvalue="Application.ScheduleButton" />
+-         <item itemvalue="Application.Main" />
+-+        <item itemvalue="Application.TodoPage" />
+-       </list>
+-     </recent_temporary>
+-   </component>
+-@@ -157,7 +164,11 @@
+-       <workItem from="1669615677647" duration="1066000" />
+-       <workItem from="1669688229778" duration="10150000" />
+-       <workItem from="1669741252610" duration="5437000" />
+--      <workItem from="1669817334281" duration="1352000" />
+-+      <workItem from="1669817334281" duration="7904000" />
+-+      <workItem from="1669825733264" duration="7660000" />
+-+      <workItem from="1669836924977" duration="11194000" />
+-+      <workItem from="1669925219335" duration="918000" />
+-+      <workItem from="1669927052496" duration="499000" />
+-     </task>
+-     <task id="LOCAL-00001" summary="xml files">
+-       <created>1668808131245</created>
+-@@ -257,7 +268,182 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1669783676850</updated>
+-     </task>
+--    <option name="localTasksCounter" value="15" />
+-+    <task id="LOCAL-00015" summary="workspace.xml update">
+-+      <created>1669818714583</created>
+-+      <option name="number" value="00015" />
+-+      <option name="presentableId" value="LOCAL-00015" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669818714583</updated>
+-+    </task>
+-+    <task id="LOCAL-00016" summary="added setCategory to DataAccess">
+-+      <created>1669818753831</created>
+-+      <option name="number" value="00016" />
+-+      <option name="presentableId" value="LOCAL-00016" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669818753831</updated>
+-+    </task>
+-+    <task id="LOCAL-00017" summary="changed isStatus to getStatus">
+-+      <created>1669818773542</created>
+-+      <option name="number" value="00017" />
+-+      <option name="presentableId" value="LOCAL-00017" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669818773542</updated>
+-+    </task>
+-+    <task id="LOCAL-00018" summary="made everything public">
+-+      <created>1669818795490</created>
+-+      <option name="number" value="00018" />
+-+      <option name="presentableId" value="LOCAL-00018" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669818795490</updated>
+-+    </task>
+-+    <task id="LOCAL-00019" summary="changed isStatus to getStatus">
+-+      <created>1669818808358</created>
+-+      <option name="number" value="00019" />
+-+      <option name="presentableId" value="LOCAL-00019" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669818808358</updated>
+-+    </task>
+-+    <task id="LOCAL-00020" summary="implemented AddCommonCategory">
+-+      <created>1669818853252</created>
+-+      <option name="number" value="00020" />
+-+      <option name="presentableId" value="LOCAL-00020" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669818853252</updated>
+-+    </task>
+-+    <task id="LOCAL-00021" summary="AddCategoryPresenter">
+-+      <created>1669818878150</created>
+-+      <option name="number" value="00021" />
+-+      <option name="presentableId" value="LOCAL-00021" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669818878150</updated>
+-+    </task>
+-+    <task id="LOCAL-00022" summary="AddCategoryController">
+-+      <created>1669818910431</created>
+-+      <option name="number" value="00022" />
+-+      <option name="presentableId" value="LOCAL-00022" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669818910431</updated>
+-+    </task>
+-+    <task id="LOCAL-00023" summary="implemented setCategory">
+-+      <created>1669820235345</created>
+-+      <option name="number" value="00023" />
+-+      <option name="presentableId" value="LOCAL-00023" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669820235345</updated>
+-+    </task>
+-+    <task id="LOCAL-00024" summary="update workspace.xml">
+-+      <created>1669820324774</created>
+-+      <option name="number" value="00024" />
+-+      <option name="presentableId" value="LOCAL-00024" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669820324774</updated>
+-+    </task>
+-+    <task id="LOCAL-00025" summary="moved createCategoryForm from useCase to screen">
+-+      <created>1669825508522</created>
+-+      <option name="number" value="00025" />
+-+      <option name="presentableId" value="LOCAL-00025" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669825508522</updated>
+-+    </task>
+-+    <task id="LOCAL-00026" summary="renamed CategoryCreationResponseModel to CategoryResponseModel">
+-+      <created>1669834068354</created>
+-+      <option name="number" value="00026" />
+-+      <option name="presentableId" value="LOCAL-00026" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669834068354</updated>
+-+    </task>
+-+    <task id="LOCAL-00027" summary="Added EditCategory and EditCategoryInputBoundary">
+-+      <created>1669834096118</created>
+-+      <option name="number" value="00027" />
+-+      <option name="presentableId" value="LOCAL-00027" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669834096118</updated>
+-+    </task>
+-+    <task id="LOCAL-00028" summary="workspace.xml update">
+-+      <created>1669834109976</created>
+-+      <option name="number" value="00028" />
+-+      <option name="presentableId" value="LOCAL-00028" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669834109976</updated>
+-+    </task>
+-+    <task id="LOCAL-00029" summary="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button.">
+-+      <created>1669838510849</created>
+-+      <option name="number" value="00029" />
+-+      <option name="presentableId" value="LOCAL-00029" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669838510850</updated>
+-+    </task>
+-+    <task id="LOCAL-00030" summary="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch.">
+-+      <created>1669841110300</created>
+-+      <option name="number" value="00030" />
+-+      <option name="presentableId" value="LOCAL-00030" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669841110300</updated>
+-+    </task>
+-+    <task id="LOCAL-00031" summary="resolved errors related to the removal of category entity">
+-+      <created>1669911507063</created>
+-+      <option name="number" value="00031" />
+-+      <option name="presentableId" value="LOCAL-00031" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669911507063</updated>
+-+    </task>
+-+    <task id="LOCAL-00032" summary="deleted unneeded file">
+-+      <created>1669911655041</created>
+-+      <option name="number" value="00032" />
+-+      <option name="presentableId" value="LOCAL-00032" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669911655041</updated>
+-+    </task>
+-+    <task id="LOCAL-00033" summary="workspace update">
+-+      <created>1669911665904</created>
+-+      <option name="number" value="00033" />
+-+      <option name="presentableId" value="LOCAL-00033" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669911665904</updated>
+-+    </task>
+-+    <task id="LOCAL-00034" summary="fixed all errors related to data">
+-+      <created>1669911870053</created>
+-+      <option name="number" value="00034" />
+-+      <option name="presentableId" value="LOCAL-00034" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669911870053</updated>
+-+    </task>
+-+    <task id="LOCAL-00035" summary="update from workspace">
+-+      <created>1669911899157</created>
+-+      <option name="number" value="00035" />
+-+      <option name="presentableId" value="LOCAL-00035" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669911899157</updated>
+-+    </task>
+-+    <task id="LOCAL-00036" summary="fixes">
+-+      <created>1669924961951</created>
+-+      <option name="number" value="00036" />
+-+      <option name="presentableId" value="LOCAL-00036" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669924961951</updated>
+-+    </task>
+-+    <task id="LOCAL-00037" summary="fixes">
+-+      <created>1669925363045</created>
+-+      <option name="number" value="00037" />
+-+      <option name="presentableId" value="LOCAL-00037" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669925363045</updated>
+-+    </task>
+-+    <task id="LOCAL-00038" summary="fixes">
+-+      <created>1669925431303</created>
+-+      <option name="number" value="00038" />
+-+      <option name="presentableId" value="LOCAL-00038" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669925431303</updated>
+-+    </task>
+-+    <task id="LOCAL-00039" summary="fixes">
+-+      <created>1669925497594</created>
+-+      <option name="number" value="00039" />
+-+      <option name="presentableId" value="LOCAL-00039" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1669925497594</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="40" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+-@@ -275,17 +461,32 @@
+-     </option>
+-   </component>
+-   <component name="VcsManagerConfiguration">
+--    <MESSAGE value="xml files" />
+--    <MESSAGE value="MongoTesting" />
+--    <MESSAGE value="update from main" />
+--    <MESSAGE value="pull issue from misc" />
+-     <MESSAGE value="reorganized packages" />
+-     <MESSAGE value="Added the create screen and screen for the register account. The controller is also fixed to follow code outline better." />
+-     <MESSAGE value="Added the create screen and screen for the login. The controller is also fixed to follow code outline better." />
+-     <MESSAGE value="removed creationTime and added status to CategoryCreationResponseModel" />
+-     <MESSAGE value="implemented CCResponseModel in AddCategoryController, nameChecker WIP" />
+-+    <MESSAGE value="added setCategory to DataAccess" />
+-+    <MESSAGE value="made everything public" />
+-+    <MESSAGE value="changed isStatus to getStatus" />
+-+    <MESSAGE value="implemented AddCommonCategory" />
+-+    <MESSAGE value="AddCategoryPresenter" />
+-+    <MESSAGE value="AddCategoryController" />
+-+    <MESSAGE value="implemented setCategory" />
+-+    <MESSAGE value="update workspace.xml" />
+-+    <MESSAGE value="moved createCategoryForm from useCase to screen" />
+-+    <MESSAGE value="renamed CategoryCreationResponseModel to CategoryResponseModel" />
+-+    <MESSAGE value="Added EditCategory and EditCategoryInputBoundary" />
+-     <MESSAGE value="workspace.xml update" />
+--    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml update" />
+-+    <MESSAGE value="Made the calendar name in the calendars tab be the same as the username and removed the add calendar button." />
+-+    <MESSAGE value="changed the default calendar title to the username and added a label to the main page to tell users they have saved their data. Need to add a fadeout to the label to finish this branch." />
+-+    <MESSAGE value="resolved errors related to the removal of category entity" />
+-+    <MESSAGE value="deleted unneeded file" />
+-+    <MESSAGE value="workspace update" />
+-+    <MESSAGE value="fixed all errors related to data" />
+-+    <MESSAGE value="update from workspace" />
+-+    <MESSAGE value="fixes" />
+-+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+-   </component>
+-   <component name="XDebuggerManager">
+-     <breakpoint-manager>
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__3_01_p_m___Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__3_01_p_m___Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__3_01_p_m___Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01__3_01_p_m___Changes_.xml	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_2022-12-01,_3_01_p_m__[Changes]" date="1669924904054" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01,_3_01_p_m__[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022-12-01, 3:01 p.m. [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28__7_52_p_m___Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28__7_52_p_m___Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28__7_52_p_m___Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28__7_52_p_m___Changes_.xml	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_2022-11-28,_7_52_p_m__[Changes]" date="1669683166154" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-28,_7_52_p_m__[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022-11-28, 7:52 p.m. [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m___Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m___Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m___Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m___Changes_.xml	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m__[Changes]" date="1669928746856" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-12-01_4_05_p_m__[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 2022-12-01 4:05 p.m. [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m___Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m___Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m___Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m___Changes_.xml	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m__[Changes]" date="1669931157188" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01_4_45_p_m__[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022-12-01 4:45 p.m. [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01,_3_01_p_m__[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01,_3_01_p_m__[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01,_3_01_p_m__[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2022-12-01,_3_01_p_m__[Changes]/shelved.patch	
++++ /dev/null	
+@@ -1,260 +0,0 @@
+-Index: src/main/java/boundary/Category/CategoryCreationInputBoundary.java
+-===================================================================
+-diff --git a/src/main/java/boundary/Category/CategoryCreationInputBoundary.java b/src/main/java/boundary/Category/CategoryCreationInputBoundary.java
+-deleted file mode 100644
+---- a/src/main/java/boundary/Category/CategoryCreationInputBoundary.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-+++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-@@ -1,15 +0,0 @@
+--package boundary.Category;
+--
+--import requestModel.CategoryCreationRequestModel;
+--<<<<<<< HEAD
+--import responseModel.Category.CategoryCreationResponseModel;
+--
+--public interface CategoryCreationInputBoundary {
+--    CategoryCreationResponseModel create(CategoryCreationRequestModel requestModel);
+--=======
+--import responseModel.Category.CategoryResponseModel;
+--
+--public interface CategoryCreationInputBoundary {
+--    CategoryResponseModel create(CategoryCreationRequestModel requestModel);
+-->>>>>>> origin/feature-8-user
+--}
+-Index: src/main/java/controller/Category/AddCategoryController.java
+-===================================================================
+-diff --git a/src/main/java/controller/Category/AddCategoryController.java b/src/main/java/controller/Category/AddCategoryController.java
+-deleted file mode 100644
+---- a/src/main/java/controller/Category/AddCategoryController.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-+++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-@@ -1,42 +0,0 @@
+--package controller.Category;
+--
+--import boundary.Category.CategoryCreationInputBoundary;
+--import presenter.AddCategoryPresenter;
+--import requestModel.CategoryCreationRequestModel;
+--<<<<<<< HEAD
+--import responseModel.Category.CategoryCreationResponseModel;
+--=======
+--import responseModel.Category.CategoryResponseModel;
+-->>>>>>> origin/feature-8-user
+--
+--public class AddCategoryController {
+--    final  CategoryCreationInputBoundary categoryCreationInputBoundary;
+--
+--    final AddCategoryPresenter presenter;
+--
+--    public AddCategoryController(CategoryCreationInputBoundary categoryCreationInputBoundary, AddCategoryPresenter presenter) {
+--        this.categoryCreationInputBoundary = categoryCreationInputBoundary;
+--        this.presenter = presenter;
+--    }
+--
+--<<<<<<< HEAD
+--    public CategoryCreationResponseModel create(String name, boolean status) {
+--=======
+--    public CategoryResponseModel create(String name, boolean status) {
+-->>>>>>> origin/feature-8-user
+--        if (name.isBlank()) {
+--            return presenter.prepareFailView("Please fill in category name");
+--        } else if (!nameChecker(name)) {
+--            return presenter.prepareFailView("Category already exists");
+--        }
+--        CategoryCreationRequestModel inputData = new CategoryCreationRequestModel(name, status);
+--        return categoryCreationInputBoundary.create(inputData);
+--    }
+--
+--    //need to implement nameChecker
+--    public boolean nameChecker(String name) {
+--
+--        return true;
+--    }
+--    //cont..
+--}
+-Index: src/main/java/boundary/Category/EditCategoryInputBoundary.java
+-===================================================================
+-diff --git a/src/main/java/boundary/Category/EditCategoryInputBoundary.java b/src/main/java/boundary/Category/EditCategoryInputBoundary.java
+-deleted file mode 100644
+---- a/src/main/java/boundary/Category/EditCategoryInputBoundary.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-+++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-@@ -1,7 +0,0 @@
+--package boundary.Category;
+--
+--import responseModel.Category.CategoryResponseModel;
+--
+--public interface EditCategoryInputBoundary {
+--    //CategoryResponseModel edit();
+--}
+-Index: src/main/java/controller/Category/CategoryCreationController.java
+-===================================================================
+-diff --git a/src/main/java/controller/Category/CategoryCreationController.java b/src/main/java/controller/Category/CategoryCreationController.java
+-deleted file mode 100644
+---- a/src/main/java/controller/Category/CategoryCreationController.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-+++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-@@ -1,36 +0,0 @@
+--package controller.Category;
+--
+--import boundary.Category.CategoryCreationInputBoundary;
+--import presenter.AddCategoryPresenter;
+--import requestModel.CategoryCreationRequestModel;
+--<<<<<<< HEAD
+--import responseModel.Category.CategoryCreationResponseModel;
+--=======
+--import responseModel.Category.CategoryResponseModel;
+-->>>>>>> origin/feature-8-user
+--
+--public class CategoryCreationController {
+--    final CategoryCreationInputBoundary addCategoryInputBoundary;
+--
+--    final AddCategoryPresenter presenter;
+--
+--    public CategoryCreationController(CategoryCreationInputBoundary inputBoundary, AddCategoryPresenter presenter){
+--        this.addCategoryInputBoundary = inputBoundary;
+--        this.presenter = presenter;
+--    }
+--
+--<<<<<<< HEAD
+--    public CategoryCreationResponseModel create(String title, Boolean status){
+--=======
+--    public CategoryResponseModel create(String title, Boolean status){
+-->>>>>>> origin/feature-8-user
+--        if (title.isBlank() || (status == null)){
+--            return presenter.prepareFailView("Please Fill in ALl Fields");
+--        }
+--
+--        CategoryCreationRequestModel newInputData = new CategoryCreationRequestModel(title, status);
+--        return addCategoryInputBoundary.create(newInputData);
+--
+--    }
+--
+--}
+-Index: src/main/java/presenter/AddCategoryPresenter.java
+-===================================================================
+-diff --git a/src/main/java/presenter/AddCategoryPresenter.java b/src/main/java/presenter/AddCategoryPresenter.java
+-deleted file mode 100644
+---- a/src/main/java/presenter/AddCategoryPresenter.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-+++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-@@ -1,22 +0,0 @@
+--package presenter;
+--
+--<<<<<<< HEAD
+--import responseModel.Category.CategoryCreationResponseModel;
+--
+--
+--public interface AddCategoryPresenter {
+--    CategoryCreationResponseModel prepareSuccessView(CategoryCreationResponseModel categoryCreationResponseModel);
+--
+--
+--    CategoryCreationResponseModel prepareFailView(String error);
+--=======
+--import responseModel.Category.CategoryResponseModel;
+--
+--
+--public interface AddCategoryPresenter {
+--    CategoryResponseModel prepareSuccessView(CategoryResponseModel categoryResponseModel);
+--
+--
+--    CategoryResponseModel prepareFailView(String error);
+-->>>>>>> origin/feature-8-user
+--}
+-Index: src/main/java/useCaseInteractor/Category/EditCategory.java
+-===================================================================
+-diff --git a/src/main/java/useCaseInteractor/Category/EditCategory.java b/src/main/java/useCaseInteractor/Category/EditCategory.java
+-deleted file mode 100644
+---- a/src/main/java/useCaseInteractor/Category/EditCategory.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-+++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-@@ -1,5 +0,0 @@
+--package useCaseInteractor.Category;
+--
+--public class EditCategory {
+--
+--}
+-Index: src/main/java/useCaseInteractor/Category/AddCommonCategory.java
+-===================================================================
+-diff --git a/src/main/java/useCaseInteractor/Category/AddCommonCategory.java b/src/main/java/useCaseInteractor/Category/AddCommonCategory.java
+-deleted file mode 100644
+---- a/src/main/java/useCaseInteractor/Category/AddCommonCategory.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-+++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-@@ -1,42 +0,0 @@
+--package useCaseInteractor.Category;
+--
+--import boundary.Category.CategoryCreationInputBoundary;
+--import entity.Category.Category;
+--import entity.Category.CategoryFactory;
+--import presenter.AddCategoryPresenter;
+--import requestModel.CategoryCreationRequestModel;
+--<<<<<<< HEAD
+--import responseModel.Category.CategoryCreationResponseModel;
+--=======
+--import responseModel.Category.CategoryResponseModel;
+-->>>>>>> origin/feature-8-user
+--import useCaseInteractor.DataAccess;
+--
+--public class AddCommonCategory implements CategoryCreationInputBoundary {
+--    final DataAccess dataAccess;
+--
+--    final CategoryFactory categoryFactory;
+--
+--    final AddCategoryPresenter categoryPresenter;
+--
+--    public AddCommonCategory(DataAccess dataAccess, CategoryFactory categoryFactory, AddCategoryPresenter categoryPresenter) {
+--        this.dataAccess = dataAccess;
+--        this.categoryFactory = categoryFactory;
+--        this.categoryPresenter = categoryPresenter;
+--    }
+--
+--    @Override
+--<<<<<<< HEAD
+--    public CategoryCreationResponseModel create(CategoryCreationRequestModel requestModel) {
+--        Category category = categoryFactory.create(requestModel.getName(), requestModel.getStatus());
+--        dataAccess.setCategory(requestModel);
+--        CategoryCreationResponseModel responseModel = new CategoryCreationResponseModel(category.getName(), category.getStatus());
+--=======
+--    public CategoryResponseModel create(CategoryCreationRequestModel requestModel) {
+--        Category category = categoryFactory.create(requestModel.getName(), requestModel.getStatus());
+--        dataAccess.setCategory(requestModel);
+--        CategoryResponseModel responseModel = new CategoryResponseModel(category.getName(), category.isStatus());
+-->>>>>>> origin/feature-8-user
+--        return categoryPresenter.prepareSuccessView(responseModel);
+--    }
+--}
+-Index: src/main/java/responseModel/Category/CategoryResponseModel.java
+-===================================================================
+-diff --git a/src/main/java/responseModel/Category/CategoryResponseModel.java b/src/main/java/responseModel/Category/CategoryResponseModel.java
+-deleted file mode 100644
+---- a/src/main/java/responseModel/Category/CategoryResponseModel.java	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-+++ /dev/null	(revision 44475f2588d37ea5b786b3750b493c11137512f9)
+-@@ -1,35 +0,0 @@
+--package responseModel.Category;
+--
+--<<<<<<< HEAD
+--public class CategoryCreationResponseModel {
+--    String name;
+--    boolean status;
+--
+--    public CategoryCreationResponseModel (String name, boolean status) {
+--=======
+--public class CategoryResponseModel {
+--    String name;
+--    boolean status;
+--
+--    public CategoryResponseModel(String name, boolean status) {
+-->>>>>>> origin/feature-8-user
+--        this.name = name;
+--        this.status = status;
+--    }
+--
+--    public String getName() {
+--        return name;
+--    }
+--
+--    public void setName(String name) {
+--        this.name = name;
+--    }
+--
+--    public boolean getStatus() {
+--        return status;
+--    }
+--
+--    public void setStatus(boolean status) {
+--        this.status = status;
+--    }
+--}

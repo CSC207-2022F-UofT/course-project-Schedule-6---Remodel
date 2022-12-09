@@ -60,21 +60,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="136-dashboard-bug-fix" />
+        <entry key="$PROJECT_DIR$" value="feature-19-fixingOverlap" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,18 +78,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
-  <component name="OptimizeOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
-  <component name="ProjectId" id="2INA223FaAmzXW1zgH1gGhjfbAe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -155,24 +135,23 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="changed parameter privacySetting to boolean">
-      <created>1669961936020</created>
+    <task id="LOCAL-00001" summary="fixed CommonUserFactoryTest">
+      <created>1670542288536</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1669961936020</updated>
+      <updated>1670542288536</updated>
     </task>
-    <task id="LOCAL-00002" summary="implemented EditTask [WIP]">
-      <created>1669967017600</created>
+    <task id="LOCAL-00002" summary="fixed the comments for CommonUserFactoryTest">
+      <created>1670542896493</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1669967017600</updated>
+      <updated>1670542896493</updated>
     </task>
-    <task id="LOCAL-00003" summary="Added DeleteTaskController">
-      <created>1669967031403</created>
+    <task id="LOCAL-00003" summary="Tests for responseModels">
+      <created>1670548471530</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
@@ -418,9 +397,6 @@
     <option name="localTasksCounter" value="36" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -433,39 +409,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed parameter privacySetting to boolean" />
-    <MESSAGE value="implemented EditTask [WIP]" />
-    <MESSAGE value="Added DeleteTaskController" />
-    <MESSAGE value="Added DeleteTaskInputBoundary and EditTaskInputBoundary" />
-    <MESSAGE value="renamed AddTaskPresenter to TaskPresenter" />
-    <MESSAGE value="implemented DeleteTaskController" />
-    <MESSAGE value="changed title to description" />
-    <MESSAGE value="implemented DeleteTask, typo fix" />
-    <MESSAGE value="implemented EditTaskController" />
-    <MESSAGE value="typo" />
-    <MESSAGE value="misc.xml" />
-    <MESSAGE value="typos" />
-    <MESSAGE value="update from main" />
-    <MESSAGE value="added getTaskExist" />
-    <MESSAGE value="added [Todo] (possible bug we might run into)" />
-    <MESSAGE value="update xml files" />
-    <MESSAGE value="EVERYTHING WORKS" />
-    <MESSAGE value="fixing CA, refactoring" />
-    <MESSAGE value="reformated and refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="reformated and refactored" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NumberFormatException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="fixed CommonUserFactoryTest" />
+    <MESSAGE value="fixed the comments for CommonUserFactoryTest" />
+    <MESSAGE value="Tests for responseModels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests for responseModels" />
   </component>
 </project>
