@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="fixing tests">
       <change beforePath="$PROJECT_DIR$/src/test/java/responseModel/User/UserLoginResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/responseModel/User/UserLoginResponseModelTest.java" afterDir="false" />
-    <list default="true" id="f19b9ddd-4b1c-40dd-939a-9c17a547eb51" name="Changes" comment="fixing tests">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +86,6 @@
         <item itemvalue="Application.LoginPage" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.LoginPage" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
