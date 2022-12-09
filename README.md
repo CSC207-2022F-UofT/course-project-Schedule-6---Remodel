@@ -44,6 +44,9 @@ To edit an event, user can double click an event on the timetable, and make thei
 To delete an event, users can select an event, and click the delete button on their keyboard.
 ![Picture of deleting an event](image/delEvent.png)
 
+## Saving events
+To save any changes made to the Timetable, press the “SAVE” button at the top of the timetable screen, beside the “ADD FUTURE EVENT” button.
+
 ## Import
 If a user has an existing calendar that can be downloaded as an ICS file, users are able to import an ICS file to our project and have those events appear on their timetable.
 
@@ -62,6 +65,7 @@ To edit a task, the user can double click the description or the category of the
 ## Delete task
 To delete a task, the user can select the task they wish to delete by clicking on it and pressing the “DELETE” button at the top of the page. The selected task will be highlighted blue.
 
+## Saving tasks
 To save any changes made to the Tasks list, press the “SAVE” button at the top of the screen.
 
 
