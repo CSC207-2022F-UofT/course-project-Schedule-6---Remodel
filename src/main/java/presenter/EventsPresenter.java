@@ -21,6 +21,11 @@ import java.util.ArrayList;
 
 public class EventsPresenter implements LoadEventsOutputBoundary {
 
+    /**
+     * Called by the loadEventsUsecase, and this method displays allEvents onto the timetable
+     *
+     * @param allEvents an ArrayList that contains all of a Users event data
+     */
     @Override
     public void loadEvents(LoadEventsResponseModel allEvents) {
         CalendarView calendar = TimetableController.calendar;
@@ -32,6 +37,13 @@ public class EventsPresenter implements LoadEventsOutputBoundary {
         }
     }
 
+    /**
+     * A helper method for loadEvents
+     * Takes in a single event as an ArrayList and creates an Entry for the timetable to display
+     *
+     * @param events an ArrayList that contains the data for a single event
+     * @return an Entry data for the timetable to display
+     */
     public Entry<String> createEntry(ArrayList<Object> events) {
         Entry<String> entry = new Entry<>((String) events.get(0));
 
@@ -50,6 +62,11 @@ public class EventsPresenter implements LoadEventsOutputBoundary {
         return entry;
     }
 
+    /**
+     * When user clicks the Save button on the TimetableScreen, display this message
+     *
+     * @param entriesSaved a text label to display a message
+     */
     public void saveEntriesMessage(Label entriesSaved) {
         entriesSaved.setText("ALL ENTIRES SAVED");
         FadeTransition ft = new FadeTransition(Duration.millis(1850), entriesSaved);
@@ -62,5 +79,11 @@ public class EventsPresenter implements LoadEventsOutputBoundary {
     public void loadTODO(GridPane TODO) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getClassLoader().getResource("Tasks.fxml"));
         TODO.getChildren().add(fxmlLoader.load());
+    }
+
+    public void setUsernameChangeLabel(String name, CalendarView calendar) {
+        for (Calendar temp : calendar.getCalendars()) {
+            temp.setName(name);
+        }
     }
 }

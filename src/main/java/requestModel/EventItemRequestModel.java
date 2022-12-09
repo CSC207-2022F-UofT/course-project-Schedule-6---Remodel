@@ -15,6 +15,16 @@ public class EventItemRequestModel {
 
     private final LocalTime endTime;
 
+    /**
+     * Input data from the User
+     * Used to create a new EventItem entity in the use case
+     *
+     * @param title     title of event
+     * @param startDate start date of the event
+     * @param endDate   end date of the event
+     * @param startTime start time of the event in 24 Hour time
+     * @param endTime   end time of the event in 24 Hour time
+     */
     public EventItemRequestModel(String title, LocalDate startDate, LocalDate endDate,
                                  LocalTime startTime, LocalTime endTime) {
         this.title = title;

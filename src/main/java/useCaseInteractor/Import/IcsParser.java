@@ -16,6 +16,12 @@ import java.util.List;
 public class IcsParser {
     private final List<CalendarComponent> components;
 
+    /**
+     * This use case opens the ICS file and reads the event data into an ArrayList to allow
+     * for the other use cases to use, and save into MongoDB
+     *
+     * @param in The ICS file inputted by the User
+     */
     public IcsParser(FileInputStream in) throws ParserException, IOException {
         CalendarBuilder builder = new CalendarBuilder();
         //try{

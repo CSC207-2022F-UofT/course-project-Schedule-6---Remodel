@@ -20,6 +20,13 @@ public class ImportInteractor implements ImportInputBoundary {
         this.dataAccess = dataAccess;
     }
 
+    /**
+     * Method create() overrides its interfaces' method (ImportInputBoundary)
+     * This method loops through all the events in the requestModel and creates an EventItem entity,
+     * and stores that EventItem entity into our MongoDB database through the dataAccess interface.
+     *
+     * @param requestModel the ImportRequestModel that contains all the events in an ICS file
+     */
     @Override
     public void create(ImportRequestModel requestModel) {
         int itemNum = requestModel.getTitles().size(); // the number of events imported from the file

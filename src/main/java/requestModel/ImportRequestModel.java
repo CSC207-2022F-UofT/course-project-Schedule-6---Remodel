@@ -17,6 +17,12 @@ public class ImportRequestModel {
 
     private final ArrayList<String> rRules;
 
+
+    /**
+     * Used in the import use cases
+     *
+     * @param data parsed data from the ICS file
+     */
     public ImportRequestModel(IcsParser data) {
         this.titles = data.getTitles();
         this.starts = data.getStartDates();

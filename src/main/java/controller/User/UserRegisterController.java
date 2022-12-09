@@ -21,11 +21,34 @@ public class UserRegisterController {
     public UserRegisterController() {
     }
 
+    /**
+     * When the cancel button is clicked, the registration screen will close
+     *
+     * @param RGclosebutton a button on the registration screen
+     */
     public void cancelButtonAction(Button RGclosebutton) {
         Stage stage = (Stage) RGclosebutton.getScene().getWindow();
         stage.close();
     }
 
+    /**
+     * Once the user fills in the textfields, this method will be called when the user clicks the Register button
+     * Has input checkers to check basic inputs that the controller can see such as missing input fields or
+     * if the passwords doesn't match.
+     * <p>
+     * If all the inputs are filled out, username doesn't exist, and passwords match, the UserRegister use case
+     * will be called
+     *
+     * @param registrationMessage text label to display a message
+     * @param inUseLabel          text label to tell the user that this RGusername is already in use
+     * @param passwordMisMatch    text label to tell the user that the passwords does not match
+     * @param RGfirstname         inputted first name
+     * @param RGlastname          inputted last name
+     * @param RGusername          inputted username
+     * @param RGpassword          inputted password
+     * @param RGconfirmpassword   inputted repeated password
+     * @param RGclosebutton       close screen button
+     */
     public void registerButtonOnAction(Label registrationMessage, Label inUseLabel, Label passwordMisMatch,
                                        TextField RGfirstname, TextField RGlastname, TextField RGusername,
                                        TextField RGpassword, TextField RGconfirmpassword,

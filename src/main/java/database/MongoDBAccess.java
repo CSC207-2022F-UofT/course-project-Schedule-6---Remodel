@@ -23,6 +23,13 @@ public class MongoDBAccess implements DataAccess {
         this.collection = collection;
     }
 
+    /**
+     * Creates a new user in the database
+     *
+     * @param password users password
+     * @param fName    users first name
+     * @param lName    users last name
+     */
     @Override
     public void createUser(String password, String fName, String lName) {
         ArrayList<Object> events = new ArrayList<>();
@@ -33,11 +40,24 @@ public class MongoDBAccess implements DataAccess {
         collection.insert(person);
     }
 
+    /**
+     * Check if this user exists using the unique username identification
+     *
+     * @param username users username
+     * @return returns true if this username already exists in the database
+     */
     @Override
     public boolean getUserExist(String username) {
         return this.collection.findOne(username) != null;
     }
 
+    /**
+     * Check if this event already exists in the database.
+     * Parses through the database to see if any of the events matches request
+     *
+     * @param request contains the data of a single event
+     * @return returns true if this event already exists in the database
+     */
     @Override
     public boolean eventExists(EventItemRequestModel request) {
         ArrayList<ArrayList<Object>> events = this.getUserEvents();
@@ -124,16 +144,6 @@ public class MongoDBAccess implements DataAccess {
             entireList.add((ArrayList<Object>) sublist);
         }
         return entireList;
-    }
-
-    //reset/setting password
-    @Override
-    public void setPassword(String password) {
-        DBObject query = new BasicDBObject("_id", this.username);
-
-        DBObject updateObj = new BasicDBObject("password", password);
-
-        collection.update(query, updateObj);
     }
 
     @Override
