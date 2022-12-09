@@ -1,4 +1,4 @@
-package Test.Entity.Event;
+package entities.Event;
 
 import entity.Event.CommonEventItem;
 import org.junit.jupiter.api.BeforeAll;

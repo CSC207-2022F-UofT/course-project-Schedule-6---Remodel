@@ -1,4 +1,4 @@
-package Test.Entity.User;
+package entities.User;
 
 import entity.User.CommonUser;
 import org.junit.jupiter.api.BeforeAll;
