@@ -67,14 +67,23 @@ The Task entity stores information on each individual task created by the User.
 ## User registration
 ![Picture of registration](image/registration.png)
 ## Schedule
+![Picture of schedule](image/schedule.png)
 ## Import schedule
+![Picture of login](image/login.png)
 ## Add event
+![Picture of adding event](image/addEvent.png)
 ## Edit event
+![Picture of editing event](image/editEvent.png)
 ## Delete event
+![Picture of deleting an event](image/delEvent.png)
 ## To-do list
+![Picture of login](image/login.png)
 ## Add task
+![Picture of login](image/login.png)
 ## Edit task
+![Picture of login](image/login.png)
 ## Delete task
+![Picture of login](image/login.png)
 
 # 5 Project installation
 
