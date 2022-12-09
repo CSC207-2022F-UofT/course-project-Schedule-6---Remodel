@@ -1,4 +1,4 @@
-package Test.Entity.Event;
+package entities.Event;
 
 import entity.Event.CommonEventItem;
 import entity.Event.CommonEventItemFactory;
