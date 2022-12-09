@@ -35,12 +35,9 @@ On the login page, a first time user would need to register an account by clicki
 After an account is created, the user can re-enter their username and password to login.
 
 
-
-## User login
-
-
-## Schedule
+## Dashboard
 ![Picture of schedule](image/schedule.png)
+After logging in, the dashboard as seen below will show up. This dashboard contains the users timetable and to-do list. The first time a user logs in, both the timetable and to-do list will be empty, but an existing user who already has events and tasks saved, will see those same events and tasks show up on the timetable and to-do list when they log back in.
 ## Import schedule
 ![Picture of login](image/####.png)
 ## Add event
