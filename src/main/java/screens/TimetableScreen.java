@@ -37,12 +37,12 @@ public class TimetableScreen {
 
     private final ImportController importControl = new ImportController(presenter);
 
-    public void saveCalenderEntries(ActionEvent event) throws UnknownHostException {
+    public void saveCalenderEntries() throws UnknownHostException {
         timetableController.saveCalendarEntries(allEntriesSavedLabel);
     }
 
-    public void addFutureEntries(ActionEvent event) {
-        timetableController.futureEventButton(event);
+    public void addFutureEntries() {
+        timetableController.futureEventButton();
     }
 
     public void addNewFile(ActionEvent event) {

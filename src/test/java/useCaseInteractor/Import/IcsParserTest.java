@@ -28,14 +28,14 @@ public class IcsParserTest {
     void getFirstStartDate() throws IOException, ParserException {
         FileInputStream f = new FileInputStream("/Users/tammywang/IdeaProjects/course-project-Schedule-6---Remodel/src/test/coursesCalendar.ics");
         IcsParser parser = new IcsParser(f);
-        assertEquals(parser.getStartDates().get(0), "20220912T150000");
+        assertEquals(parser.getStartDateTime().get(0), "20220912T150000");
     }
 
     @Test
     void getFirstEndDate() throws IOException, ParserException {
         FileInputStream f = new FileInputStream("/Users/tammywang/IdeaProjects/course-project-Schedule-6---Remodel/src/test/coursesCalendar.ics");
         IcsParser parser = new IcsParser(f);
-        assertEquals(parser.getEndDates().get(0), "20220912T180000");
+        assertEquals(parser.getEndDateTime().get(0), "20220912T180000");
     }
 
     @Test
