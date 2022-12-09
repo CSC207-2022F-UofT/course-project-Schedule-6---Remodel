@@ -33,5 +33,4 @@ public class ImportPresenter implements ImportOutputBoundary {
         label.setText(error);
         return null;
     }
-    //td: reflect the error on the view
 }

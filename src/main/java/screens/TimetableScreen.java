@@ -2,12 +2,8 @@
 
 package screens;
 
-import boundary.Import.ImportInputBoundary;
 import controller.Import.ImportController;
 import controller.Event.TimetableController;
-import database.MongoDBAccess;
-import entity.Event.CommonEventItemFactory;
-import entity.Event.EventItemFactory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -15,10 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
 import javafx.stage.Stage;
-import main.collectCollection;
 import presenter.ImportPresenter;
-import useCaseInteractor.DataAccess;
-import useCaseInteractor.Import.ImportInteractor;
 import controller.User.userCollection;
 
 
@@ -42,19 +35,7 @@ public class TimetableScreen {
 
     private final ImportPresenter presenter = new ImportPresenter();
 
-    private final EventItemFactory factory = new CommonEventItemFactory();
-
-    private final DataAccess dataAccess;
-    {
-        try {
-            dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
-        } catch (UnknownHostException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    private final ImportInputBoundary importInputBoundary= new ImportInteractor(presenter, factory, dataAccess);
-
-    private final ImportController importControl = new ImportController(importInputBoundary, presenter);
+    private final ImportController importControl = new ImportController(presenter);
 
     public void saveCalenderEntries(ActionEvent event) throws UnknownHostException {
         timetableController.saveCalendarEntries(allEntriesSavedLabel);
