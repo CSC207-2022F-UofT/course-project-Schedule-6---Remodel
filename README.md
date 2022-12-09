@@ -48,10 +48,10 @@ To delete an event, users can select an event, and click the delete button on th
 If a user has an existing calendar that can be downloaded as an ICS file, users are able to import an ICS file to our project and have those events appear on their timetable.
 
 
-## To-do list
-![Picture of login](image/####.png)
+## Tasks
+The list of tasks is sorted by oldest to newest task added by default. If a user wants to sort their tasks, the user can click the headers at the top of the table. If the user clicks a header once, it will sort the tasks in an ascending order (0-9, then A-Z). If the user clicks a header again, it will sort the tasks in a descending order (Z-A, then 9-0). The third click will return the table to its default view. 
 ## Add task
-![Picture of login](image/task.png)
+<img src="https://github.com/CSC207-2022F-UofT/course-project-Schedule-6---Remodel/blob/main/image/task.png" width=50% height=50%>
 ## Edit task
 ![Picture of login](image/editTask.png)
 ## Delete task
