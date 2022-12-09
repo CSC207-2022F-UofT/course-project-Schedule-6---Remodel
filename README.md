@@ -41,12 +41,12 @@ After logging in, the dashboard as seen above will show up. This dashboard conta
 ## Events
 Users are able to add events in two ways:
 1. While in week view, users can directly click on any time of a day, and drag how long they would want their event to be.
-2. Click on the “ADD FUTURE EVENT” button on the top right, and a screen would pop up allowing users to input the required info for an event they want to create.
-
+2. Click on the “ADD FUTURE EVENT” button on the top right, and a screen would pop up allowing users to input the required info for an event they want to create (as shown below).
+![Picture of adding event](image/addEvent.png)
 ## Import schedule
 ![Picture of login](image/####.png)
-## Add event
-![Picture of adding event](image/addEvent.png)
+
+
 ## Edit event
 ![Picture of editing event](image/editEvent.png)
 ## Delete event
