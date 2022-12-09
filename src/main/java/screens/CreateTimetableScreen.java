@@ -14,7 +14,6 @@ public class CreateTimetableScreen {
                     ("Timetable.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1500, 700);
             Stage timetableStage = new Stage();
-            timetableStage.setResizable(false);
             timetableStage.initStyle(StageStyle.DECORATED);
             timetableStage.setScene(scene);
             timetableStage.show();
