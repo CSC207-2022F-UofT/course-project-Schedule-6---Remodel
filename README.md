@@ -37,7 +37,7 @@ After an account is created, the user can re-enter their username and password t
 
 ## Dashboard
 ![Picture of schedule](image/schedule.png)
-After logging in, the dashboard as seen below will show up. This dashboard contains the users timetable and to-do list. The first time a user logs in, both the timetable and to-do list will be empty, but an existing user who already has events and tasks saved, will see those same events and tasks show up on the timetable and to-do list when they log back in.
+After logging in, the dashboard as seen above will show up. This dashboard contains the users timetable and to-do list. The first time a user logs in, both the timetable and to-do list will be empty, but an existing user who already has events and tasks saved, will see those same events and tasks show up on the timetable and to-do list when they log back in.
 ## Import schedule
 ![Picture of login](image/####.png)
 ## Add event
