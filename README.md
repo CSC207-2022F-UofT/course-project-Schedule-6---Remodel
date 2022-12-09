@@ -15,55 +15,20 @@ Selena write here
 - Tristen White([@Tristenwhite](https://github.com/Tristenwhite))
 - Brian Xue([@Bri-xX](https://github.com/Bri-xX))
 
-# 1 Entities 
+# Project installation
+## Mac User Font Download
+Mac users need to download a font in order for the program to display properly. To do so, download the [Gill Sans MT Condensed font](https://www.dafontfree.net/gill-sans-mt-condensed-regular/f64848.htm). To add the font into the system, open Font Book through spotlight search (command + space) and find the plus button to add a new font. This will pull up a Finder window where the downloaded font can be selected and opened. Gill Sans MT Condensed will appear in the “User” section of Font Book
 
-## Entities.User
-The User entity stores information about individual schedule 6 users.
-### Attributes
-* `userName`
-* `password`
-## Entities.Entry
-The Entry entity stores information on each individual event created by the User.
-### Attributes
-* `title`
-* `StartDate`
-* `EndDate`
-* `startTime`
-* `endTime`
-## Entities.Task
-The Task entity stores information on each individual task created by the User.
-### Attributes
-* `description`
-* `date`
-* `category`
+# Running the project
+To run our project run Main in src/main/java/main
 
-# 2 Usecases
-## Event 
-### Functions
-* `create()`
-    * Creates an instance of Event 
-* `loadEvents()`
-    * Fetches & Loads existing events in the DataBase
-## Import
-### Functions
-* `create()`
-    * Creates events based on the imported Ics file
-## Task 
-### Functions
-* `create()`
-* `loadTasks()`
-## User
-### Functions
-* `loginCheck()`
-* `create()`
-
-# 3 Database
+# Database
 ## MongoDB
 ## Data structure
 ## Data storage
 ## Data access
 
-# 4 User Interface (UI)
+# User Interface (UI)
 ## User registration
 <img src="https://github.com/CSC207-2022F-UofT/course-project-Schedule-6---Remodel/blob/main/image/login.png" width=50% height=50%>
 On the login page, a first time user would need to register an account by clicking on the registration button, which opens up the registration page.
@@ -92,9 +57,4 @@ After an account is created, the user can re-enter their username and password t
 ## Delete task
 ![Picture of login](image/####.png)
 
-# 5 Project installation
-## Mac User Font Download
-Mac users need to download a font in order for the program to display properly. To do so, download the [Gill Sans MT Condensed font](https://www.dafontfree.net/gill-sans-mt-condensed-regular/f64848.htm). To add the font into the system, open Font Book through spotlight search (command + space) and find the plus button to add a new font. This will pull up a Finder window where the downloaded font can be selected and opened. Gill Sans MT Condensed will appear in the “User” section of Font Book
 
-# 6 Running the project
-To run our project run Main in src/main/java/main
