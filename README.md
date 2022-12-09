@@ -50,11 +50,16 @@ If a user has an existing calendar that can be downloaded as an ICS file, users 
 
 ## Tasks
 The list of tasks is sorted by oldest to newest task added by default. If a user wants to sort their tasks, the user can click the headers at the top of the table. If the user clicks a header once, it will sort the tasks in an ascending order (0-9, then A-Z). If the user clicks a header again, it will sort the tasks in a descending order (Z-A, then 9-0). The third click will return the table to its default view. 
+
 ## Add task
 <img src="https://github.com/CSC207-2022F-UofT/course-project-Schedule-6---Remodel/blob/main/image/task.png" width=50% height=50%>
+To add a new task, the user can input the description, category and date of the task in the space above the To-Do List table in the prompted text fields. To add the task to the table, the user can click the “ADD” button below their inputs. 
+
 ## Edit task
 ![Picture of login](image/editTask.png)
+To edit a task, the user can double click the description or the category of the task they want to edit. To finish editing, the user can press enter on their keyboard. 
+
 ## Delete task
-![Picture of login](image/####.png)
+To delete a task, the user can select the task they wish to delete by clicking on it and pressing the “DELETE” button at the top of the page. The selected task will be highlighted blue.
 
 
