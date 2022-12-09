@@ -43,7 +43,7 @@ Users are able to add events in two ways:
 1. While in week view, users can directly click on any time of a day, and drag how long they would want their event to be.
 2. Click on the “ADD FUTURE EVENT” button on the top right, and a screen would pop up allowing users to input the required info for an event they want to create (as shown below).
 <img src="https://github.com/CSC207-2022F-UofT/course-project-Schedule-6---Remodel/blob/main/image/addEvent.png" width=50% height=50%>
-## Import schedule
+
 ## Editing and deleting events
 To edit an event, user can double click an event on the timetable, and make their required edits to the event, as seen in the screenshot below
 ![Picture of editing event](image/editEvent.png)
