@@ -1,23 +1,27 @@
 package responseModel.Task;
 
-import java.time.LocalDate;
-
 public class TaskResponseModel {
-    private String description;
+    private final String description;
 
-    private String date;
+    private final String date;
 
-    private String category;
+    private final String category;
 
-    public TaskResponseModel(String description, String date, String category){
+    public TaskResponseModel(String description, String date, String category) {
         this.description = description;
         this.date = date;
         this.category = category;
     }
 
-    public String getDescription(){ return this.description;}
+    public String getDescription() {
+        return this.description;
+    }
 
-    public String getDate(){ return this.date;}
+    public String getDate() {
+        return this.date;
+    }
 
-    public String getCategory() { return this.category;}
+    public String getCategory() {
+        return this.category;
+    }
 }

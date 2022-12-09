@@ -1,12 +1,15 @@
 package entity.User;
 
+/**
+ * Interface that CommonUser implements
+ */
 public interface User {
-     String getUsername();
+    String getUsername();
 
-     String getPassword();
+    String getPassword();
 
-     String getFirstName();
+    String getFirstName();
 
-     String getLastName();
+    String getLastName();
 }
 

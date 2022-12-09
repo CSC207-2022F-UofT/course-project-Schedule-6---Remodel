@@ -46,6 +46,14 @@ public class TaskPresenter implements LoadTasksOutputBoundary {
         ft.play();
     }
 
+    /**
+     * Overrides the loadTasks method from its interface (LoadTasksOutputBoundary),
+     * and is called from the use case LoadTasksUseCase
+     * Presents allTasks onto tableView
+     *
+     * @param allTasks  an ArrayList that contains all tasks
+     * @param tableView a table that displays the tasks
+     */
     @Override
     public void loadTasks(LoadTasksResponseModel allTasks, TableView tableView) {
         for (ArrayList<Object> task : allTasks.getAllTasks()) {

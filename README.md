@@ -4,6 +4,8 @@ Schedule 6 is a schedule, and task manager application. Users are able to import
 
 Students can use this application to enter class schedules, events, and assignments in order to keep track of their tasks. With this program students are able to access all of their calendar events and tasks from one place.
 
+# Requirements for running 
+Selena write here 
 # Group members
 - Nizar Abdouss([@nizarabdouss](https://github.com/nizarabdouss))
 - Steven Li([@stevenli-uoft](https://github.com/stevenli-uoft))
@@ -39,10 +41,13 @@ The Task entity stores information on each individual task created by the User.
 ## Event 
 ### Functions
 * `create()`
+    * Creates an instance of Event 
 * `loadEvents()`
+    * Fetches & Loads existing events in the DataBase
 ## Import
 ### Functions
 * `create()`
+    * Creates events based on the imported Ics file
 ## Task 
 ### Functions
 * `create()`
@@ -52,5 +57,36 @@ The Task entity stores information on each individual task created by the User.
 * `loginCheck()`
 * `create()`
 
-# 3 User Interface (UI)
+# 3 Database
+## MongoDB
+## Data structure
+## Data storage
+## Data access
 
+# 4 User Interface (UI)
+## User login
+![Picture of login](image/login.png)
+## User registration
+![Picture of registration](image/registration.png)
+## Schedule
+![Picture of schedule](image/schedule.png)
+## Import schedule
+![Picture of login](image/####.png)
+## Add event
+![Picture of adding event](image/addEvent.png)
+## Edit event
+![Picture of editing event](image/editEvent.png)
+## Delete event
+![Picture of deleting an event](image/delEvent.png)
+## To-do list
+![Picture of login](image/####.png)
+## Add task
+![Picture of login](image/task.png)
+## Edit task
+![Picture of login](image/editTask.png)
+## Delete task
+![Picture of login](image/####.png)
+
+# 5 Project installation
+
+# 6 Running the project

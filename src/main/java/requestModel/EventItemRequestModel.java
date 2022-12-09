@@ -5,16 +5,26 @@ import java.time.LocalTime;
 
 public class EventItemRequestModel {
 
-    private String title;
+    private final String title;
 
-    private LocalDate startDate;
+    private final LocalDate startDate;
 
-    private LocalDate endDate;
+    private final LocalDate endDate;
 
-    private LocalTime startTime;
+    private final LocalTime startTime;
 
-    private LocalTime endTime;
+    private final LocalTime endTime;
 
+    /**
+     * Input data from the User
+     * Used to create a new EventItem entity in the use case
+     *
+     * @param title     title of event
+     * @param startDate start date of the event
+     * @param endDate   end date of the event
+     * @param startTime start time of the event in 24 Hour time
+     * @param endTime   end time of the event in 24 Hour time
+     */
     public EventItemRequestModel(String title, LocalDate startDate, LocalDate endDate,
                                  LocalTime startTime, LocalTime endTime) {
         this.title = title;
@@ -32,7 +42,9 @@ public class EventItemRequestModel {
         return this.startDate;
     }
 
-    public LocalDate getEndDate() {return this.endDate;}
+    public LocalDate getEndDate() {
+        return this.endDate;
+    }
 
     public LocalTime getStartTime() {
         return this.startTime;

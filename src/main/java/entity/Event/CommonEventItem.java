@@ -5,16 +5,25 @@ import java.time.LocalTime;
 
 public class CommonEventItem implements EventItem {
 
-    private String title;
+    private final String title;
 
-    private LocalDate startDate;
+    private final LocalDate startDate;
 
-    private LocalDate endDate;
+    private final LocalDate endDate;
 
-    private LocalTime startTime;
+    private final LocalTime startTime;
 
-    private LocalTime endTime;
+    private final LocalTime endTime;
 
+    /**
+     * This entity is a single event that contains info about an event
+     *
+     * @param title     title of event
+     * @param startDate start date of the event
+     * @param endDate   end date of the event
+     * @param startTime start time of the event in 24 Hour time
+     * @param endTime   end time of the event in 24 Hour time
+     */
     public CommonEventItem(String title, LocalDate startDate, LocalDate endDate,
                            LocalTime startTime, LocalTime endTime) {
         this.title = title;

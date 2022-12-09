@@ -2,29 +2,43 @@ package controller.User;
 
 
 import boundary.User.UserLoginInputBoundary;
-import javafx.event.ActionEvent;
+import database.MongoDBAccess;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import main.collectCollection;
 import presenter.UserLoginPresenter;
 import requestModel.UserLoginRequestModel;
 import screens.CreateRegistrationScreen;
-import java.net.UnknownHostException;
-
 import useCaseInteractor.DataAccess;
-import database.MongoDBAccess;
-import main.collectCollection;
 import useCaseInteractor.User.UserLogin;
+
+import java.net.UnknownHostException;
 
 public class MainController {
 
-    public void cancelButtonAction(ActionEvent event, Button cancelButton){
+    /**
+     * When the cancel button is clicked, the login screen will close and program will stop running
+     *
+     * @param cancelButton close button on the login screen
+     */
+    public void cancelButtonAction(Button cancelButton) {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
 
-    public void loginButtonAction(ActionEvent event, TextField usernameTextField, TextField passwordTextField,
+    /**
+     * When user fills in the fields and clicks the login button, this method will be called.
+     * Will check if the input fields are filled, if the user exists in the database, and if
+     * the username and password match
+     *
+     * @param usernameTextField user inputted username
+     * @param passwordTextField user inputted password
+     * @param loginButton       login button
+     * @param loginMessageLabel text label to display a message on the screen
+     */
+    public void loginButtonAction(TextField usernameTextField, TextField passwordTextField,
                                   Button loginButton, Label loginMessageLabel) throws UnknownHostException {
 
         DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), usernameTextField.getText());
@@ -41,6 +55,10 @@ public class MainController {
         }
     }
 
-    public void registerButtonAction(ActionEvent event){
-        CreateRegistrationScreen.newForm();}
+    /**
+     * Called when the user clicks the registration button
+     */
+    public void registerButtonAction() {
+        CreateRegistrationScreen.newForm();
+    }
 }

@@ -10,7 +10,7 @@ public class UserLogin implements UserLoginInputBoundary {
 
     private final DataAccess dataAccess;
 
-    private UserLoginRequestModel requestModel;
+    private final UserLoginRequestModel requestModel;
 
     private final UserLoginOutputBoundary outputBoundary;
 
@@ -21,6 +21,13 @@ public class UserLogin implements UserLoginInputBoundary {
         this.outputBoundary = outputBoundary;
     }
 
+    /**
+     * Overrides loginCheck() from this classes interface (UserLoginInputBoundary)
+     * Checks if the login attempts username and password match, and if the username exists in the database.
+     * If the username doesn't exist, or username and password doesn't match,
+     * it will return a message "USERNAME OR PASSWORD INCORRECT"
+     * If user exists, and password matches, it will prepareSuccessView
+     */
     @Override
     public void loginCheck() {
         if (dataAccess.getUserExist(requestModel.getUsername()) &&

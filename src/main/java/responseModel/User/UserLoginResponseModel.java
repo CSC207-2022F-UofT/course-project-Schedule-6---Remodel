@@ -2,7 +2,7 @@ package responseModel.User;
 
 public class UserLoginResponseModel {
 
-    private String message;
+    private final String message;
 
     public UserLoginResponseModel(String message) {
         this.message = message;

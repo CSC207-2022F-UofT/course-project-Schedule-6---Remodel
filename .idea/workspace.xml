@@ -4,26 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="refactored and add javadoc for import">
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Import/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Import/ImportController.java" afterDir="false" />
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="fixing tests">
+      <change beforePath="$PROJECT_DIR$/src/test/java/responseModel/User/UserLoginResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/responseModel/User/UserLoginResponseModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="testing-events" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,15 +30,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
-  <component name="ProjectId" id="2INA223FaAmzXW1zgH1gGhjfbAe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -63,7 +49,8 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.508046&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;
   }
 }</component>
   <component name="RunManager" selected="Application.Main">
@@ -82,7 +69,7 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <module name="course-project-Schedule-6---Remodel" />
+      <module name="schedule-6---Remodel" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="main.*" />
@@ -97,27 +84,28 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.LoginPage" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.LoginPage" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="changed parameter privacySetting to boolean">
-      <created>1669961936020</created>
+    <task id="LOCAL-00001" summary="fixed CommonUserFactoryTest">
+      <created>1670542288536</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1669961936020</updated>
+      <updated>1670542288536</updated>
     </task>
-    <task id="LOCAL-00002" summary="implemented EditTask [WIP]">
-      <created>1669967017600</created>
+    <task id="LOCAL-00002" summary="fixed the comments for CommonUserFactoryTest">
+      <created>1670542896493</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1669967017600</updated>
+      <updated>1670542896493</updated>
     </task>
-    <task id="LOCAL-00003" summary="Added DeleteTaskController">
-      <created>1669967031403</created>
+    <task id="LOCAL-00003" summary="Tests for responseModels">
+      <created>1670548471530</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
@@ -141,6 +129,7 @@
       <workItem from="1670431078909" duration="18535000" />
       <workItem from="1670463956862" duration="13997000" />
       <workItem from="1670517773534" duration="2981000" />
+      <workItem from="1670528544282" duration="13838000" />
     </task>
     <task id="LOCAL-00004" summary="Added DeleteTaskInputBoundary and EditTaskInputBoundary">
       <created>1670012955360</created>
@@ -338,25 +327,29 @@
       <option name="project" value="LOCAL" />
       <updated>1670448439614</updated>
     </task>
-    <task id="LOCAL-00033" summary="Fixed Clean Architecture">
-      <created>1670549224609</created>
+    <task id="LOCAL-00033" summary="reformated and refactored">
+      <created>1670525065145</created>
       <option name="number" value="00033" />
       <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
-      <updated>1670549224609</updated>
+      <updated>1670525065145</updated>
     </task>
-    <task id="LOCAL-00034" summary="refactored and add javadoc for import">
-      <created>1670558598210</created>
+    <task id="LOCAL-00034" summary="reformated and refactored">
+      <created>1670525370276</created>
       <option name="number" value="00034" />
       <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
-      <updated>1670558598210</updated>
+      <updated>1670525370276</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="reformated and refactored">
+      <created>1670525446102</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1670525446102</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -370,40 +363,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed parameter privacySetting to boolean" />
-    <MESSAGE value="implemented EditTask [WIP]" />
-    <MESSAGE value="Added DeleteTaskController" />
-    <MESSAGE value="Added DeleteTaskInputBoundary and EditTaskInputBoundary" />
-    <MESSAGE value="renamed AddTaskPresenter to TaskPresenter" />
-    <MESSAGE value="implemented DeleteTaskController" />
-    <MESSAGE value="changed title to description" />
-    <MESSAGE value="implemented DeleteTask, typo fix" />
-    <MESSAGE value="implemented EditTaskController" />
-    <MESSAGE value="typo" />
-    <MESSAGE value="misc.xml" />
-    <MESSAGE value="typos" />
-    <MESSAGE value="update from main" />
-    <MESSAGE value="added getTaskExist" />
-    <MESSAGE value="added [Todo] (possible bug we might run into)" />
-    <MESSAGE value="update xml files" />
-    <MESSAGE value="EVERYTHING WORKS" />
-    <MESSAGE value="fixing CA, refactoring" />
-    <MESSAGE value="Fixed Clean Architecture" />
-    <MESSAGE value="refactored and add javadoc for import" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored and add javadoc for import" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NumberFormatException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="fixed CommonUserFactoryTest" />
+    <MESSAGE value="fixed the comments for CommonUserFactoryTest" />
+    <MESSAGE value="Tests for responseModels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests for responseModels" />
   </component>
 </project>
