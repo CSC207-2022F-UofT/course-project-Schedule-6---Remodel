@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="fixing tests">
-      <change beforePath="$PROJECT_DIR$/src/test/java/responseModel/User/UserLoginResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/responseModel/User/UserLoginResponseModelTest.java" afterDir="false" />
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="fixed an error">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/useCaseInteractor/Import/IcsParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/useCaseInteractor/Import/IcsParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/useCaseInteractor/Import/ImportInteractorTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +55,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.IcsParserTest.getRRule">
     <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.LoginPage" />
       <module name="schedule-6---Remodel" />
@@ -80,8 +82,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IcsParserTest.getRRule" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course-project-Schedule-6---Remodel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="useCaseInteractor.Import.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="useCaseInteractor.Import" />
+      <option name="MAIN_CLASS_NAME" value="useCaseInteractor.Import.IcsParserTest" />
+      <option name="METHOD_NAME" value="getRRule" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IcsParserTest.getRRule" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.LoginPage" />
         <item itemvalue="Application.Main" />
@@ -348,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670525446102</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fixed an error">
+      <created>1670559646527</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1670559646527</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -366,6 +392,7 @@
     <MESSAGE value="fixed CommonUserFactoryTest" />
     <MESSAGE value="fixed the comments for CommonUserFactoryTest" />
     <MESSAGE value="Tests for responseModels" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests for responseModels" />
+    <MESSAGE value="fixed an error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed an error" />
   </component>
 </project>

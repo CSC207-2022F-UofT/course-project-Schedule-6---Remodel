@@ -2,36 +2,36 @@ package useCaseInteractor.Import;
 
 import boundary.Import.ImportInputBoundary;
 import boundary.Import.ImportOutputBoundary;
-import entity.Event.EventItem;
+import entity.Event.CommonEventItemFactory;
 import entity.Event.EventItemFactory;
 import presenter.ImportPresenter;
 import requestModel.ImportRequestModel;
 import responseModel.Import.ImportResponseModel;
 import useCaseInteractor.DataAccess;
 
-public class ImportInteractor implements ImportInputBoundary {
-    final ImportPresenter presenter;
-    final EventItemFactory factory;
+/**
+ * The useCase of importing files
+ */
+public class ImportUseCase implements ImportInputBoundary {
     final DataAccess dataAccess;
 
-    public ImportInteractor(ImportPresenter presenter, EventItemFactory factory, DataAccess dataAccess) {
-        this.presenter = presenter;
-        this.factory = factory;
+    /**
+     * The constructor of ImportUseCase
+     * @param dataAccess the interface used to access external database, so the EventItems created can be stored
+     */
+    public ImportUseCase(DataAccess dataAccess) {
         this.dataAccess = dataAccess;
     }
 
     /**
-     * Method create() overrides its interfaces' method (ImportInputBoundary)
-     * This method loops through all the events in the requestModel and creates an EventItem entity,
-     * and stores that EventItem entity into our MongoDB database through the dataAccess interface.
-     *
-     * @param requestModel the ImportRequestModel that contains all the events in an ICS file
+     * {@inheritDoc}
      */
     @Override
-    public void create(ImportRequestModel requestModel) {
+    public ImportResponseModel create(ImportRequestModel requestModel){
+        EventItemFactory factory = new CommonEventItemFactory();
         int itemNum = requestModel.getTitles().size(); // the number of events imported from the file
-        for (int i = 0; i < itemNum; i++) {
-            EventItem item = factory.create(requestModel.getTitles().get(i),
+        for(int i = 0; i < itemNum; i++){
+            factory.create(requestModel.getTitles().get(i),
                     requestModel.getStartDates().get(i),
                     requestModel.getEndDates().get(i),
                     requestModel.getStartTime().get(i),
@@ -45,9 +45,9 @@ public class ImportInteractor implements ImportInputBoundary {
                 requestModel.getStartTime(),
                 requestModel.getEndTime(),
                 requestModel.getRRules());
-        // Area for improvement: The Import usecase might share response model with AddSchecule to avoid lazy class
+        // Area for improvement: The Import useCase might share response model with EventItemResponseModel
 
         ImportOutputBoundary output = new ImportPresenter();
-        output.successfulImport(responseModel);
+        return output.successfulImport(responseModel);
     }
 }
