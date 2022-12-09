@@ -43,6 +43,11 @@ To edit an event, user can double click an event on the timetable, and make thei
 ![Picture of editing event](image/editEvent.png)
 To delete an event, users can select an event, and click the delete button on their keyboard.
 ![Picture of deleting an event](image/delEvent.png)
+
+## Import
+If a user has an existing calendar that can be downloaded as an ICS file, users are able to import an ICS file to our project and have those events appear on their timetable.
+
+
 ## To-do list
 ![Picture of login](image/####.png)
 ## Add task
