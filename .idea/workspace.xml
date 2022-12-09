@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="fixing tests">
-      <change beforePath="$PROJECT_DIR$/src/test/java/responseModel/User/UserLoginResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/responseModel/User/UserLoginResponseModelTest.java" afterDir="false" />
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Test for request model">
+      <change afterPath="$PROJECT_DIR$/src/test/java/controller/User/UserRegisterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/requestModel/Import/ImportRequestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -348,7 +357,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670525446102</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Test for request model">
+      <created>1670559373145</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1670559373145</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Test for request model">
+      <created>1670559609363</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1670559609363</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Test for request model">
+      <created>1670559700551</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1670559700551</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -366,6 +396,7 @@
     <MESSAGE value="fixed CommonUserFactoryTest" />
     <MESSAGE value="fixed the comments for CommonUserFactoryTest" />
     <MESSAGE value="Tests for responseModels" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests for responseModels" />
+    <MESSAGE value="Test for request model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test for request model" />
   </component>
 </project>
