@@ -38,6 +38,11 @@ After an account is created, the user can re-enter their username and password t
 ## Dashboard
 ![Picture of schedule](image/schedule.png)
 After logging in, the dashboard as seen above will show up. This dashboard contains the users timetable and to-do list. The first time a user logs in, both the timetable and to-do list will be empty, but an existing user who already has events and tasks saved, will see those same events and tasks show up on the timetable and to-do list when they log back in.
+## Events
+Users are able to add events in two ways:
+1. While in week view, users can directly click on any time of a day, and drag how long they would want their event to be.
+2. Click on the “ADD FUTURE EVENT” button on the top right, and a screen would pop up allowing users to input the required info for an event they want to create.
+
 ## Import schedule
 ![Picture of login](image/####.png)
 ## Add event
