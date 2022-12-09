@@ -1,4 +1,4 @@
-package Test.Entity.Task;
+package entities.Task;
 
 import entity.Task.CommonTask;
 import org.junit.jupiter.api.BeforeAll;

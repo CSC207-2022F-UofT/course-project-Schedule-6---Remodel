@@ -1,4 +1,4 @@
-package Test.Entity.User;
+package entities.User;
 
 import entity.Event.CommonEventItem;
 import entity.User.CommonUser;
