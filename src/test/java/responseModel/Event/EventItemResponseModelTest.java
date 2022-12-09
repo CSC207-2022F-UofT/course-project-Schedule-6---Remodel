@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 package responseModel.Event;
 
 import org.junit.jupiter.api.BeforeEach;
-=======
-package java.responseModel.Event;
-
-import responeModel.*;
->>>>>>> fed824d (Tests for responseModels)
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
