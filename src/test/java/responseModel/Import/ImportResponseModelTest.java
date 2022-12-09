@@ -13,6 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ImportResponseModelTest{
 
+    @BeforeEach
+    void setUp() {
+    }
     ImportResponseModel test_import = new ImportResponseModel(["1","2","3"], [LocalDate.now(), LocalDate.now().plusDays(1),
     LocalDate.now().plusDays(2)], [LocalDate.now(), LocalDate.now().plusDays(2),
     LocalDate.now().plusDays(2)], [LocalTime.now(), LocalTime.now().plusHours(1), LocalTime.now().plusHours(3)],

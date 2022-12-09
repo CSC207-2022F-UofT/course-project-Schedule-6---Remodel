@@ -13,6 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class EventItemResponseModelTest{
 
+    @BeforeEach
+    void setUp() {
+    }
     EventItemResponseModel test_event = new EventItemResponseModel("Finish testcases", LocalDate.now(),
             LocalDate.now().plusDays(1), LocalTime.now(),  LocalTime.now().plusHours(1));
 
