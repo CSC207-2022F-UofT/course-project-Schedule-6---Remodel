@@ -64,10 +64,14 @@ The Task entity stores information on each individual task created by the User.
 ## Data access
 
 # 4 User Interface (UI)
-## User login
-![Picture of login](image/login.png)
 ## User registration
+On the login page, a first time user would need to register an account by clicking on the registration button, which opens up the registration page.
 ![Picture of registration](image/registration.png)
+
+## User login
+After an account is created, the user can re-enter their username and password to login.
+![Picture of login](image/login.png)
+
 ## Schedule
 ![Picture of schedule](image/schedule.png)
 ## Import schedule
