@@ -4,46 +4,76 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
+/**
+ * The response model for importing ics files
+ */
 public class ImportResponseModel {
-    private final ArrayList<String> titles;
-    private final ArrayList<LocalDate> startDates;
-    private final ArrayList<LocalDate> endDates;
-    private final ArrayList<LocalTime> startTimes;
-    private final ArrayList<LocalTime> endTimes;
-    private final ArrayList<String> rRules;
+    private final ArrayList<String> TITLES;
+    private final ArrayList<LocalDate> SD;
+    private final ArrayList<LocalDate> ED;
+    private final ArrayList<LocalTime> ST;
+    private final ArrayList<LocalTime> ET;
+    private final ArrayList<String> RULES;
 
+    /**
+     * The constructor of ImportResponseModel
+     * @param titles of EventItems
+     * @param startDates of EventItems
+     * @param endDates of EventItems
+     * @param startTimes of EventItems
+     * @param endTimes of EventItems
+     * @param rRules of EventItems
+     */
     public ImportResponseModel(ArrayList<String> titles, ArrayList<LocalDate> startDates,
                                ArrayList<LocalDate> endDates, ArrayList<LocalTime> startTimes,
-                               ArrayList<LocalTime> endTimes, ArrayList<String> rRules) {
-        this.titles = titles;
-        this.startDates = startDates;
-        this.endDates = endDates;
-        this.startTimes = startTimes;
-        this.endTimes = endTimes;
-        this.rRules = rRules;
+                               ArrayList<LocalTime> endTimes, ArrayList<String> rRules){
+        this.TITLES = titles;
+        this.SD = startDates;
+        this.ED = endDates;
+        this.ST = startTimes;
+        this.ET = endTimes;
+        this.RULES = rRules;
     }
 
-    public ArrayList<String> getTitles() {
-        return this.titles;
+    /**
+     * @return the titles of all EventItems created as an ArrayList of Strings
+     */
+    public ArrayList<String> getTitles(){
+        return this.TITLES;
     }
 
-    public ArrayList<String> getRRules() {
-        return this.rRules;
+    /**
+     * @return the recurrence rules of all EventItems created as an ArrayList of Strings
+     */
+    public ArrayList<String> getRRules(){
+        return this.RULES;
     }
 
-    public ArrayList<LocalDate> getStartDates() {
-        return this.startDates;
+    /**
+     * @return the start dates of all EventItems created as an ArrayList of LocalDate
+     */
+    public ArrayList<LocalDate> getStartDates(){
+        return this.SD;
     }
 
-    public ArrayList<LocalDate> getEndDates() {
-        return this.endDates;
+    /**
+     * @return the end dates of all EventItems created as an ArrayList of LocalDate
+     */
+    public ArrayList<LocalDate> getEndDates(){
+        return this.ED;
     }
 
-    public ArrayList<LocalTime> getStartTimes() {
-        return this.startTimes;
+    /**
+     * @return the start times of all EventItems created as an ArrayList of LocalTime
+     */
+    public ArrayList<LocalTime> getStartTimes(){
+        return this.ST;
     }
 
-    public ArrayList<LocalTime> getEndTimes() {
-        return this.endTimes;
+    /**
+     * @return the end times of all EventItems created as an ArrayList of LocalTime
+     */
+    public ArrayList<LocalTime> getEndTimes(){
+        return this.ET;
     }
 }

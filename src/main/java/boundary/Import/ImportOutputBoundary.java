@@ -3,9 +3,12 @@ package boundary.Import;
 import responseModel.Import.ImportResponseModel;
 
 /**
- * Interface for ImportPresenter
- * Allows for use case (ImportInteractor) to call the presenter (ImportPresenter)
+ * An interface for the ImportUseCase to indirectly access the ImportPresenter
  */
 public interface ImportOutputBoundary {
-    ImportResponseModel successfulImport(ImportResponseModel calendar);
+    /**
+     * @param responseModel keeps track of the attributes of EventItems created
+     * @return ImportResponseModel of successful import and EventItem creations
+     */
+    ImportResponseModel successfulImport(ImportResponseModel responseModel);
 }

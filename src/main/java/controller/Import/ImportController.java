@@ -1,35 +1,78 @@
 package controller.Import;
 
 import boundary.Import.ImportInputBoundary;
+import controller.User.userCollection;
+import database.MongoDBAccess;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
+import main.collectCollection;
 import net.fortuna.ical4j.data.ParserException;
 import presenter.ImportPresenter;
-import requestModel.ImportRequestModel;
+import useCaseInteractor.DataAccess;
 import useCaseInteractor.Import.IcsParser;
+import requestModel.ImportRequestModel;
+import responseModel.Import.ImportResponseModel;
+import useCaseInteractor.Import.ImportUseCase;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+import java.net.UnknownHostException;
 
+/**
+ * The controller for importing ics files. Users can interact with TimetableScreen to select an input file.
+ */
 public class ImportController {
-    final ImportInputBoundary input;
-    final ImportPresenter presenter;
+    final ImportPresenter PRESENTER;
 
-    public ImportController(ImportInputBoundary gateway, ImportPresenter presenter) {
-        this.input = gateway;
-        this.presenter = presenter;
+    /**
+     * The constructor of ImportController
+     * @param presenter the presenter that this controller interacts with
+     */
+    public ImportController(ImportPresenter presenter) {
+        this.PRESENTER = presenter;
     }
 
     /**
-     * When user clicks Import ICS button, this method will be called
+     * This method creates an ImportRequest when the user opens an ics file in the file selection window.
+     * Calls the useCase to create new eventItems or the presenter to prepare the failed view if there's an error.
+     * @param in the file path of selected file
+     * @param errorMessage the label that prepares an error message
+     * @return a response model for creating EventItems or a response model to reflect the failure of doing so.
      */
-    public void addNewFile(Button fileImportButton, Stage stage, Label errorMessage) {
+    ImportResponseModel create(FileInputStream in, Label errorMessage) {
+        try {
+            IcsParser icsParser = new IcsParser(in);
+            ImportRequestModel requestModel = new ImportRequestModel(icsParser);
+            ImportInputBoundary input = new ImportUseCase(createDataAccess());
+            return input.create(requestModel);
+        } catch (IOException | ParserException ex) {
+            return PRESENTER.failedImport(errorMessage, "File format is invalid");
+            /* Area for improvement: having the useCase to reflect a failure in import to presenter
+            through outputBoundary would better adhere to the clean architecture*/
+        }
+    }
+
+    private DataAccess createDataAccess(){
+        try {
+            DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
+            return dataAccess;
+        } catch (UnknownHostException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * This method opens a file selection window for the user to choose an ics file to import onto the timetable.
+     * @param event the action when the user clicks on the import button
+     * @param fileImportButton the import button on the UI
+     * @param stage the window for file selection
+     * @param errorMessage the label that displays an error message to the user if an Exception has occurred
+     */
+    public void addNewFile(ActionEvent event, Button fileImportButton, Stage stage, Label errorMessage){
 
         FileChooser file_chooser = new FileChooser();
         file_chooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text Files", "*.ics"));
@@ -39,7 +82,7 @@ public class ImportController {
                 File file = file_chooser.showOpenDialog(stage);
                 try {
                     FileInputStream inputStream = new FileInputStream(file);
-                    // calls the create method to create a new request
+                    // calls the create method to create a new import request
                     create(inputStream, errorMessage);
                 } catch (FileNotFoundException ex) {
                     errorMessage.setText("File is invalid");
@@ -47,23 +90,5 @@ public class ImportController {
             }
         };
         fileImportButton.setOnAction(e);
-    }
-
-    /**
-     * Takes in the ICS file data and calls the ImportInteractor use case
-     *
-     * @param in           ICS file
-     * @param errorMessage label to display a message on the screen
-     */
-    void create(FileInputStream in, Label errorMessage) {
-        try {
-            IcsParser icsParser = new IcsParser(in);
-            ImportRequestModel requestModel = new ImportRequestModel(icsParser);
-            this.input.create(requestModel);
-        } catch (IOException | ParserException ex) {
-            presenter.failedImport(errorMessage, "File format is invalid");
-            /* Area for improvement: having the useCase interactor to reflect a failure in import to presenter
-            through outputBoundary would better adhere to the clean architecture*/
-        }
     }
 }
