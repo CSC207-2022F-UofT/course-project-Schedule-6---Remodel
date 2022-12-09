@@ -8,8 +8,16 @@ import controller.Event.TimetableController;
 import javafx.scene.control.Label;
 import responseModel.Import.ImportResponseModel;
 
+/**
+ * The presenter for importing files
+ */
 public class ImportPresenter implements ImportOutputBoundary {
 
+    /**
+     * This method adds all the events extracted from the file onto TimeTable
+     * @param responseModel keeps track of the attributes of EventItems created
+     * @return ImportResponseModel of successful import and EventItem creations
+     */
     @Override
     public ImportResponseModel successfulImport(ImportResponseModel responseModel){
         CalendarView calendar = TimetableController.calendar;
@@ -29,6 +37,12 @@ public class ImportPresenter implements ImportOutputBoundary {
         return responseModel;
     }
 
+    /**
+     * This method notify the user of a failed import
+     * @param label displays error message when the import fails
+     * @param error is message that notifies the user about the failure
+     * @return null
+     */
     public ImportResponseModel failedImport(Label label, String error){
         label.setText(error);
         return null;

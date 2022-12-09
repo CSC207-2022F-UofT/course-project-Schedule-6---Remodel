@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="fixing CA, refactoring">
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="Fixed Clean Architecture">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportOutputBoundary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Import/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Import/ImportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/presenter/ImportPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/ImportPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/UserLoginPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/UserLoginPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/CreateEventScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateTimetableScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/CreateNewEntryScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateNewEntryScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/CreateRegistrationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/CreateRegistrationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/MainScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/TimetableScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/TimetableScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/ImportRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/ImportRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/responseModel/Import/ImportResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/responseModel/Import/ImportResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/IcsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/IcsParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportUseCase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670448439614</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Fixed Clean Architecture">
+      <created>1670549224609</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1670549224609</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +390,8 @@
     <MESSAGE value="update xml files" />
     <MESSAGE value="EVERYTHING WORKS" />
     <MESSAGE value="fixing CA, refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing CA, refactoring" />
+    <MESSAGE value="Fixed Clean Architecture" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Clean Architecture" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
