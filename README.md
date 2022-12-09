@@ -56,7 +56,7 @@ The list of tasks is sorted by oldest to newest task added by default. If a user
 To add a new task, the user can input the description, category and date of the task in the space above the To-Do List table in the prompted text fields. To add the task to the table, the user can click the “ADD” button below their inputs. 
 
 ## Edit task
-![Picture of login](image/editTask.png)
+<img src="https://github.com/CSC207-2022F-UofT/course-project-Schedule-6---Remodel/blob/main/image/editTask.png" width=50% height=50%>
 To edit a task, the user can double click the description or the category of the task they want to edit. To finish editing, the user can press enter on their keyboard. 
 
 ## Delete task
