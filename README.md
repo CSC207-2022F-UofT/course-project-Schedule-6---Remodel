@@ -20,12 +20,6 @@ Mac users need to download a font in order for the program to display properly. 
 # Running the project
 To run our project run `Main` in `src/main/java/main`
 
-# Database
-## MongoDB
-## Data structure
-## Data storage
-## Data access
-
 # User Interface (UI)
 ## User registration and login
 <img src="https://github.com/CSC207-2022F-UofT/course-project-Schedule-6---Remodel/blob/main/image/login.png" width=50% height=50%>
