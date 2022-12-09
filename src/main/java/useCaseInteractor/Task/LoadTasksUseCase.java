@@ -22,6 +22,13 @@ public class LoadTasksUseCase implements LoadTaskInputBoundary {
         this.table = table;
     }
 
+    /**
+     * This method overrides its interfaces' method (LoadTaskInputBoundary)
+     * This method is called when the User logs in
+     * It calls the MongoDBAccess interface (dataAccess) and creates a LoadTasksResponseModel
+     * which contains an ArrayList of all the tasks of this User and
+     * calls the presenter through the interface (LoadTasksOutputBoundary)
+     */
     @Override
     public void loadTasks() {
         ArrayList<ArrayList<Object>> lst = dataAccess.getUserTasks();

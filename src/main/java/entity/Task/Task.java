@@ -1,5 +1,8 @@
 package entity.Task;
 
+/**
+ * Interface that CommonTask implements
+ */
 public interface Task {
 
     String getDescription();

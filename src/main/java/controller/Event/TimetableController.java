@@ -10,7 +10,6 @@ import controller.User.userCollection;
 import database.MongoDBAccess;
 import entity.Event.CommonEventItemFactory;
 import entity.Event.EventItemFactory;
-import entity.Event.TimeManagement;
 import javafx.animation.FadeTransition;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
@@ -44,15 +43,27 @@ public class TimetableController {
 
     private final TimeManagement TM = new TimeManagement();
 
+
+    /**
+     * When user clicks the login button on the LoginScreen, this method will be initiated
+     * Will call the laodEventsUseCase that gets data from the database and have it presented on eventsPresenter
+     */
     public void loginLoadEvents() throws UnknownHostException {
         DataAccess database = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
         LoadEventsInputBoundary event = new loadEventsUseCase(database, eventsPresenter);
         event.loadEvents();
     }
 
+    /**
+     * saveCalendarEntries takes all the Event entries on the timetable, and saves all of those events
+     * onto the database.
+     * Called when the user clicks the Save button on the timetable
+     *
+     * @param entriesSaved a text label on the TimetableScreen that displays a message for the user to see
+     */
     public void saveCalendarEntries(Label entriesSaved) throws UnknownHostException {
-        DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername()); // should not be here
-        CalendarView calendar = TimetableController.calendar; // should not be here
+        DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
+        CalendarView calendar = TimetableController.calendar;
 
         ArrayList<String> listEntries = new ArrayList<>();
         Map<LocalDate, List<Entry<?>>> map = new HashMap<>();
@@ -69,7 +80,7 @@ public class TimetableController {
             listEntries.add(singleDayData);
         }
 
-        dataAccess.resetEvents(); // should not be here
+        dataAccess.resetEvents();
 
         for (String s : listEntries) {
             saveEntrytoDB(s);
@@ -77,6 +88,12 @@ public class TimetableController {
         eventsPresenter.saveEntriesMessage(entriesSaved);
     }
 
+
+    /**
+     * A helper method for saveCalendarEntries. Takes in a single event entry and saves it to the database
+     *
+     * @param entry a single Event entry from the timetable
+     */
     public void saveEntrytoDB(Object entry) throws UnknownHostException {
         //Finds the title in the values of the map
         int title_start = entry.toString().toUpperCase().indexOf("TITLE=") + ("TITLE=").length();
@@ -108,8 +125,6 @@ public class TimetableController {
         String[] newStartTime = startTime.split(":");
         String[] newEndTime = endTime.split(":");
 
-        // adds entry to database
-        // breaks CA
         DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
         EventItemFactory item = new CommonEventItemFactory();
         UpdateEventInputBoundary newEvent = new UpdateEventItem(dataAccess, item);
@@ -117,13 +132,26 @@ public class TimetableController {
                 Integer.parseInt(newStartDate[1]), Integer.parseInt(newStartDate[2])), LocalDate.of(Integer.parseInt(newEndDate[0]),
                 Integer.parseInt(newEndDate[1]), Integer.parseInt(newEndDate[2])),
                 LocalTime.of(Integer.parseInt(newStartTime[0]), Integer.parseInt(newStartTime[1])), LocalTime.of(Integer.parseInt(newEndTime[0]), Integer.parseInt(newEndTime[1])));
-        if (!dataAccess.eventExists(request)) { // eventExists should not be here as well
+        if (!dataAccess.eventExists(request)) {
             newEvent.create(request);
         }
     }
 
 
     //adds "Add Future Events" onto calendar
+
+    /**
+     * Called when the user clicks "Add Future Event" button on the timetable screen
+     * Takes in the user inputs and checks if the inputs are valid
+     * If all the inputs are valid, this method will add the new entry onto the timetable
+     *
+     * @param eventTitle   title of event
+     * @param startDate    start date of event
+     * @param endDate      end date of event
+     * @param startTime    start time of event
+     * @param endTime      end time of event
+     * @param errorMessage text label on the screen to display messages
+     */
     public void addEventAction(TextField eventTitle, DatePicker startDate,
                                DatePicker endDate, TextField startTime, TextField endTime, Label errorMessage) {
         CalendarView calendar = TimetableController.calendar; // should not be here
@@ -169,6 +197,13 @@ public class TimetableController {
         }
     }
 
+
+    /**
+     * Makes the label on the screen fade in and out
+     *
+     * @param number       duration of the fade
+     * @param errorMessage label to be displayed
+     */
     public void textFade(int number, Label errorMessage) {
         FadeTransition FTNotValidTime = new FadeTransition(Duration.millis(number), errorMessage);
         FTNotValidTime.setFromValue(1.0);
@@ -177,6 +212,15 @@ public class TimetableController {
         FTNotValidTime.play();
     }
 
+
+    /**
+     * Checks if the user inputs for startTime and endTime are valid times, and returns a boolean
+     * Valid time means it fits in a 24 Hours clock in the format of "HH:MM"
+     *
+     * @param startTime user inputted start time
+     * @param endTime   user inputted end time
+     * @return returns true if user input times are valid
+     */
     public boolean inputTimeChecker(String startTime, String endTime) {
         String[] time = (startTime + ":" + endTime).split(":");
         return (startTime.matches("\\d{2}:\\d{2}")) &&
@@ -186,16 +230,26 @@ public class TimetableController {
                 (Integer.parseInt(time[1]) <= 59) && (Integer.parseInt(time[3]) <= 59);
     }
 
+    /**
+     * Calls the presenter to show that Users username on the header
+     *
+     * @param name username
+     */
     public void setUsernameChangeLabel(String name) {
-        for (Calendar temp : calendar.getCalendars()) {
-            temp.setName(name);
-        }
+        eventsPresenter.setUsernameChangeLabel(name, calendar);
     }
 
+    /**
+     * Called when user clicks the "Add Future Event" button
+     */
     public void futureEventButton() {
         CreateNewEntryScreen.newForm();
     }
 
+
+    /**
+     * Loads the timetable onto the dashboard
+     */
     public void loadCalendar(GridPane Gridlock) {
         CalendarSource myCalendarSource = new CalendarSource("");
         calendar.getCalendarSources().addAll(myCalendarSource);
@@ -231,10 +285,16 @@ public class TimetableController {
         Gridlock.getChildren().add(calendar);
     }
 
+    /**
+     * Loads the to-do list onto the dashboard
+     */
     public void loadTODO(GridPane TODO) throws IOException {
         eventsPresenter.loadTODO(TODO);
     }
 
+    /**
+     * If user decides not to add future event, this button will close that screen
+     */
     public void cancelEventAction(Button cancelButton) {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
