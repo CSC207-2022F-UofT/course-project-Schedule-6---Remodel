@@ -1,6 +1,6 @@
-package java.responseModel.Event;
+package responseModel.Event;
 
-import responeModel.*;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
