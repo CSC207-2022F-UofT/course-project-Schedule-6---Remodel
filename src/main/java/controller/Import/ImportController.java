@@ -58,7 +58,8 @@ public class ImportController {
 
     private DataAccess createDataAccess(){
         try {
-            return new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
+            DataAccess dataAccess = new MongoDBAccess(collectCollection.main(), userCollection.getUsername());
+            return dataAccess;
         } catch (UnknownHostException e) {
             throw new RuntimeException(e);
         }
