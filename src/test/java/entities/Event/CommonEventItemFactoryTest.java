@@ -3,7 +3,7 @@ package entities.Event;
 import entity.Event.CommonEventItem;
 import entity.Event.CommonEventItemFactory;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
