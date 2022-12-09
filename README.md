@@ -20,6 +20,9 @@ Mac users need to download a font in order for the program to display properly. 
 # Running the project
 To run our project run `Main` in `src/main/java/main`
 
+# Saving user data
+The application features two save buttons, the left for the calendar and the right for tasks. Users are responsible for saving their calendar entries and tasks. When a entry to the calendar is made or an task is added users need to click the save button to upload their personal data to the server.
+
 # User Interface (UI)
 ## User registration and login
 <img src="https://github.com/CSC207-2022F-UofT/course-project-Schedule-6---Remodel/blob/main/image/login.png" width=50% height=50%>
