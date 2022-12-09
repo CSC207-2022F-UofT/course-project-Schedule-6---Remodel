@@ -4,11 +4,6 @@ SSchedule 6 is a timetable, and task manager application. Users are able to impo
 
 Students can use this application to enter class schedules, events, and assignments in order to keep track of their tasks. With this program, students are able to access all of their calendar events and tasks from one place and across multiple devices.
 
-# Installation
-
-# Running the project
-To run our project, run `Main` in `src/main/java/main`
-
 # Group members
 - Nizar Abdouss([@nizarabdouss](https://github.com/nizarabdouss))
 - Steven Li([@stevenli-uoft](https://github.com/stevenli-uoft))
@@ -23,7 +18,7 @@ To run our project, run `Main` in `src/main/java/main`
 Mac users need to download a font in order for the program to display properly. To do so, download the [Gill Sans MT Condensed font](https://www.dafontfree.net/gill-sans-mt-condensed-regular/f64848.htm). To add the font into the system, open Font Book through spotlight search (command + space) and find the plus button to add a new font. This will pull up a Finder window where the downloaded font can be selected and opened. Gill Sans MT Condensed will appear in the “User” section of Font Book
 
 # Running the project
-To run our project run Main in src/main/java/main
+To run our project run `Main` in `src/main/java/main`
 
 # Database
 ## MongoDB
