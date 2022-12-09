@@ -62,4 +62,6 @@ To edit a task, the user can double click the description or the category of the
 ## Delete task
 To delete a task, the user can select the task they wish to delete by clicking on it and pressing the “DELETE” button at the top of the page. The selected task will be highlighted blue.
 
+To save any changes made to the Tasks list, press the “SAVE” button at the top of the screen.
+
 
