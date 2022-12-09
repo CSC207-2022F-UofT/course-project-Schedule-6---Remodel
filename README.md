@@ -88,5 +88,7 @@ The Task entity stores information on each individual task created by the User.
 ![Picture of login](image/####.png)
 
 # 5 Project installation
+## Mac User Font Download
+Mac users need to download a font in order for the program to display properly. To do so, download the [Gill Sans MT Condensed font](https://www.dafontfree.net/gill-sans-mt-condensed-regular/f64848.htm). To add the font into the system, open Font Book through spotlight search (command + space) and find the plus button to add a new font. This will pull up a Finder window where the downloaded font can be selected and opened. Gill Sans MT Condensed will appear in the “User” section of Font Book
 
 # 6 Running the project
