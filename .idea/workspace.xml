@@ -4,56 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="reformated and refactored">
+    <list default="true" id="8ef2ecaa-91cc-4747-aeed-5efd224948ce" name="Changes" comment="fixing tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Event/LoadEventsInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Event/LoadEventsInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Event/LoadEventsOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Event/LoadEventsOutputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Event/UpdateEventInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Event/UpdateEventInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Import/ImportOutputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Task/LoadTaskInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Task/LoadTaskInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Task/LoadTasksOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Task/LoadTasksOutputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Task/UpdateTaskItemInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Task/UpdateTaskItemInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/User/UserLoginInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/User/UserLoginInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/User/UserLoginOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/User/UserLoginOutputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/User/UserRegisterInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/User/UserRegisterInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Event/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Event/TimetableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Import/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Import/ImportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Task/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Task/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/UserRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/User/userCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/User/userCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MongoDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Event/CommonEventItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Event/CommonEventItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Event/CommonEventItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Event/CommonEventItemFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Event/EventItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Event/EventItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Event/EventItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Event/EventItemFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Event/TimeManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Event/TimeManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/CommonTaskFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Task/TaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Task/TaskFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/CommonUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/CommonUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/CommonUserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/CommonUserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User/UserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/EventsPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/EventsPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/ImportPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/ImportPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/TaskPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenter/TaskPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/EventItemRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/EventItemRequestModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/ImportRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/ImportRequestModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/TaskRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/TaskRequestModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/UserLoginRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/UserLoginRequestModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/requestModel/UserRegisterRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestModel/UserRegisterRequestModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/DataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Event/UpdateEventItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Event/UpdateEventItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Event/loadEventsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Event/loadEventsUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/IcsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/IcsParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Import/ImportInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/LoadTasksUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/LoadTasksUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/UpdateTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/Task/UpdateTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/UserLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/UserRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useCaseInteractor/User/UserRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/responseModel/Event/EventItemResponseModelTest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/responseModel/Event/LoadEventsResponseModel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/responseModel/Import/ImportResponseModelTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature-19-fixingOverlap" />
+        <entry key="$PROJECT_DIR$" value="testing-events" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -130,6 +85,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.LoginPage" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.LoginPage" />
       </list>
