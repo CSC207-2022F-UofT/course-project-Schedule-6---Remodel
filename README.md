@@ -47,7 +47,7 @@ Users are able to add events in two ways:
 ## Editing and deleting events
 To edit an event, user can double click an event on the timetable, and make their required edits to the event, as seen in the screenshot below
 ![Picture of editing event](image/editEvent.png)
-## Delete event
+To delete an event, users can select an event, and click the delete button on their keyboard.
 ![Picture of deleting an event](image/delEvent.png)
 ## To-do list
 ![Picture of login](image/####.png)
