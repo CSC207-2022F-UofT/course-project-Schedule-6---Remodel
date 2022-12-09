@@ -27,14 +27,17 @@ To run our project run `Main` in `src/main/java/main`
 ## Data access
 
 # User Interface (UI)
-## User registration
+## User registration and login
 <img src="https://github.com/CSC207-2022F-UofT/course-project-Schedule-6---Remodel/blob/main/image/login.png" width=50% height=50%>
 On the login page, a first time user would need to register an account by clicking on the registration button, which opens up the registration page.
 
+<img src="https://github.com/CSC207-2022F-UofT/course-project-Schedule-6---Remodel/blob/main/image/registration.png" width=50% height=50%>
+After an account is created, the user can re-enter their username and password to login.
+
+
 
 ## User login
-After an account is created, the user can re-enter their username and password to login.
-![Picture of login](image/login.png)
+
 
 ## Schedule
 ![Picture of schedule](image/schedule.png)
