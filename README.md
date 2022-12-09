@@ -65,8 +65,9 @@ The Task entity stores information on each individual task created by the User.
 
 # 4 User Interface (UI)
 ## User registration
-On the login page, a first time user would need to register an account by clicking on the registration button, which opens up the registration page.
 <img src="https://github.com/CSC207-2022F-UofT/course-project-Schedule-6---Remodel/blob/main/image/login.png" width=50% height=50%>
+On the login page, a first time user would need to register an account by clicking on the registration button, which opens up the registration page.
+
 
 ## User login
 After an account is created, the user can re-enter their username and password to login.
