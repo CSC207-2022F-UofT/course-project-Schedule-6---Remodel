@@ -63,6 +63,7 @@ The Task entity stores information on each individual task created by the User.
 
 # 4 User Interface (UI)
 ## User login
+![Picture of login](image/login.png)
 ## User registration
 ## Schedule
 ## Import schedule
