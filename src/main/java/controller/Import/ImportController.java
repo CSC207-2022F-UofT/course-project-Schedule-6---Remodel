@@ -26,18 +26,9 @@ public class ImportController {
         this.presenter = presenter;
     }
 
-    void create(FileInputStream in, Label errorMessage) {
-        try {
-            IcsParser icsParser = new IcsParser(in);
-            ImportRequestModel requestModel = new ImportRequestModel(icsParser);
-            this.input.create(requestModel);
-        } catch (IOException | ParserException ex) {
-            presenter.failedImport(errorMessage, "File format is invalid");
-            /* Area for improvement: having the useCase interactor to reflect a failure in import to presenter
-            through outputBoundary would better adhere to the clean architecture*/
-        }
-    }
-
+    /**
+     * When user clicks Import ICS button, this method will be called
+     */
     public void addNewFile(Button fileImportButton, Stage stage, Label errorMessage) {
 
         FileChooser file_chooser = new FileChooser();
@@ -56,5 +47,23 @@ public class ImportController {
             }
         };
         fileImportButton.setOnAction(e);
+    }
+
+    /**
+     * Takes in the ICS file data and calls the ImportInteractor use case
+     *
+     * @param in           ICS file
+     * @param errorMessage label to display a message on the screen
+     */
+    void create(FileInputStream in, Label errorMessage) {
+        try {
+            IcsParser icsParser = new IcsParser(in);
+            ImportRequestModel requestModel = new ImportRequestModel(icsParser);
+            this.input.create(requestModel);
+        } catch (IOException | ParserException ex) {
+            presenter.failedImport(errorMessage, "File format is invalid");
+            /* Area for improvement: having the useCase interactor to reflect a failure in import to presenter
+            through outputBoundary would better adhere to the clean architecture*/
+        }
     }
 }

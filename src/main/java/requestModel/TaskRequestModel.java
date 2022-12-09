@@ -9,6 +9,15 @@ public class TaskRequestModel {
 
     private final String category;
 
+
+    /**
+     * Input data from the User
+     * Used to create a new Task entity in the use case
+     *
+     * @param description description of the task
+     * @param date        deadline of the task
+     * @param category    the category that this task falls under
+     */
     public TaskRequestModel(String description, String date, String category) {
         this.description = description;
         this.date = date;

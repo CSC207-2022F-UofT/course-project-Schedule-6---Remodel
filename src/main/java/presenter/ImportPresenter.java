@@ -29,9 +29,8 @@ public class ImportPresenter implements ImportOutputBoundary {
         return responseModel;
     }
 
-    public ImportResponseModel failedImport(Label label, String error) {
+    public void failedImport(Label label, String error) {
         label.setText(error);
-        return null;
     }
     //td: reflect the error on the view
 }

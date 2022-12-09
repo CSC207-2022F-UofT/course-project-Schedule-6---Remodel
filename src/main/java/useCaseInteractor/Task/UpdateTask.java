@@ -18,6 +18,13 @@ public class UpdateTask implements UpdateTaskItemInputBoundary {
         this.taskFactory = taskFactory;
     }
 
+    /**
+     * Method create() overrides its interfaces' method (UpdateTaskInputBoundary) and is called in the
+     * TimetableController layer. This method creates a Task entity, and stores that Task
+     * entity into our MongoDB database through the dataAccess interface.
+     *
+     * @param inputData the TaskRequestModel that contains a single task data
+     */
     @Override
     public void create(TaskRequestModel inputData) {
         Task task = taskFactory.create(inputData.getDescription(), inputData.getDate(), inputData.getCategory());

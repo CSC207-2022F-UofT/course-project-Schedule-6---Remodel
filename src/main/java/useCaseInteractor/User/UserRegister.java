@@ -17,7 +17,13 @@ public class UserRegister implements UserRegisterInputBoundary {
         this.dataAccess = dataAccess;
     }
 
-
+    /**
+     * Overrides create() method in its interface (UserRegisterInputBoundary)
+     * Called when a user registers a new account, and then this User entity is created a
+     * and stored in the database
+     *
+     * @param requestModel contains all the User info required for created a new account
+     */
     @Override
     public void create(UserRegisterRequestModel requestModel) {
         User user = userFactory.create(requestModel.getUsername(), requestModel.getPassword(),
